@@ -1,8 +1,63 @@
-.container {
-	position: relative;
-	width: 100%;
-	max-width: 1200px;
+@import 'constants';
+
+.cup {
+	max-width: $desktop;
 	margin: 0 auto;
-	padding: 0 20px;
-	box-sizing: border-box; 
+
+	.straw {
+		display: flex;
+	  flex-wrap: wrap;
+	  list-style: none;
+	  margin: 0;
+	  padding: 0;
+
+		.boba {
+			flex: 1;
+		}
+	}
+}
+
+/* Alignment of 'straws' */
+.cup-top {
+	align-items: flex-start;
+}
+.cup-bottom {
+	align-items: flex-end;
+}
+.cup-center {
+	align-items: center;
+}
+.cup-justifyCenter {
+	justify-content: center;
+}
+
+/* Alignment of 'boba' */
+.boba-top {
+  align-self: flex-start;
+}
+.boba-bottom {
+  align-self: flex-end;
+}
+.boba-center {
+  align-self: center;
+}
+.boba-autoSize {
+  flex: none;
+}
+
+/* Base classes for all media */
+.cup-fit > .boba {
+  flex: 1;
+}
+.cup-full > .boba {
+  flex: 0 0 100%;
+}
+.cup-half > .boba {
+  flex: 0 0 50%
+}
+.cup-third > .boba {
+  flex: 0 0 33.3333%
+}
+.cup-quarter > .boba {
+  flex: 0 0 25%
 }
