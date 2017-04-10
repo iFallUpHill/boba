@@ -33,6 +33,9 @@
 .straw-justifyCenter {
 	justify-content: center;
 }
+.straw-spaceAround {
+	justify-content: space-around;
+}
 
 /* Alignment of 'boba' */
 .boba-top {
@@ -44,32 +47,14 @@
 .boba-center {
   align-self: center;
 }
-.boba-autoSize {
-  flex: none;
-}
 
-/* Base classes for all media */
-.straw-fit > .boba {
-  flex: 1;
-}
-.straw-full > .boba {
-  flex: 0 0 100%;
-}
-.straw-three-quarters > .boba {
-  flex: 0 0 75%;
-}
-.straw-two-thirds > .boba {
-  flex: 0 0 66.6667%;
-}
-.straw-half > .boba {
-  flex: 0 0 50%
-}
-.straw-third > .boba {
-  flex: 0 0 33.3333%
-}
-.straw-quarter > .boba {
-  flex: 0 0 25%
-}
+/* 'boba' width */
+@for $i from 1 through 12
+	.straw > &.boba-#{$i}
+    flex: none
+    width: ($i / 12) * 100%
+  .straw > &.boba-offset-#{$i}
+    margin-left: ($i / 12) * 100%
 
 @media screen and (min-width: $mobile) {
 	.straw {
