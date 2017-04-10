@@ -6,6 +6,7 @@
 
 	.straw {
 		display: flex;
+		flex-direction: column;
 	  flex-wrap: wrap;
 	  list-style: none;
 	  margin: 0;
@@ -13,21 +14,23 @@
 
 		.boba {
 			flex: 1;
+			margin: auto;
+			padding: 0.6em;
 		}
 	}
 }
 
 /* Alignment of 'straws' */
-.cup-top {
+.straw-top {
 	align-items: flex-start;
 }
-.cup-bottom {
+.straw-bottom {
 	align-items: flex-end;
 }
-.cup-center {
+.straw-center {
 	align-items: center;
 }
-.cup-justifyCenter {
+.straw-justifyCenter {
 	justify-content: center;
 }
 
@@ -46,18 +49,31 @@
 }
 
 /* Base classes for all media */
-.cup-fit > .boba {
+.straw-fit > .boba {
   flex: 1;
 }
-.cup-full > .boba {
+.straw-full > .boba {
   flex: 0 0 100%;
 }
-.cup-half > .boba {
+.straw-three-quarters > .boba {
+  flex: 0 0 75%;
+}
+.straw-two-thirds > .boba {
+  flex: 0 0 66.6667%;
+}
+.straw-half > .boba {
   flex: 0 0 50%
 }
-.cup-third > .boba {
+.straw-third > .boba {
   flex: 0 0 33.3333%
 }
-.cup-quarter > .boba {
+.straw-quarter > .boba {
   flex: 0 0 25%
+}
+
+@media screen and (min-width: $mobile) {
+	.straw {
+		display: flex;
+		flex-direction: row;
+	}
 }
