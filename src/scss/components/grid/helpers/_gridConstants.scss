@@ -24,6 +24,15 @@
 		      &.one-quarter-#{$suffix} {
 		        flex: 0 0 25%;
 		      }
+
+		      @for $i from 1 through 12 {
+		      	&.#{$suffix}-#{$i} {
+		      		flex: 0 0 ($i / 12) * 100%;
+		      	}
+		      	&.offset-#{$suffix}-#{$i} {
+		      		margin-left: ($i / 12) * 100%;
+		      	}
+		      }
 		    }
 
 		    /* 'boba' width */
@@ -31,7 +40,6 @@
 		      .boba-#{$suffix}-#{$i} {
 		        @include boba-base;
 		        flex: 0 0 ($i / 12) * 100%;
-		        max-width: ($i / 12) * 100%;
 		      }
 		      .boba-offset-#{$suffix}-#{$i} {
 		        margin-left: ($i / 12) * 100%;
