@@ -25,6 +25,23 @@
 		        flex: 0 0 25%;
 		      }
 
+		      &.offset-three-quarters-#{$suffix} {
+		        margin-left: 75%;
+		      }
+		      &.offset-two-thirds-#{$suffix} {
+		        margin-left: 66.66666666%;
+		      }
+		      &.offset-half-#{$suffix} {
+		        margin-left: 50%;
+		      }
+		      &.offset-one-third-#{$suffix} {
+		        margin-left: 33.33333333%;
+		      }
+		      &.offset-one-quarter-#{$suffix} {
+		        margin-left: 25%;
+		      }
+
+
 		      @for $i from 1 through 12 {
 		      	&.#{$suffix}-#{$i} {
 		      		flex: 0 0 ($i / 12) * 100%;
