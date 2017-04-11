@@ -1,6 +1,6 @@
 @import '../../helpers/constants';
 @import 'helpers/gridConstants';
 
-@each $prefix, $measurement in $resolution-dict {
-	@include default-boba-behavior(#{$prefix}, #{$measurement});
+@each $suffix, $measurement in $resolution-dict {
+	@include default-boba-behavior(#{$suffix}, #{$measurement});
 }
