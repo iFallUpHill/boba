@@ -1,11 +1,13 @@
-$desktop: 75em;
+$desktopHd: 90em;
+$desktop: 70em;
 $laptop: 50em;
 $tablet: 30em;
 $mobile: 0em;
 
-$resolution-suffixes: sm, md, lg, xl;
+$resolution-suffixes: xs, sm, md, lg, xl;
 
-$resolution-dict: 	(sm, $mobile),
-				 	(md, $tablet),
-				 	(lg, $laptop),
-				 	(xl, $desktop);
+$resolution-dict: 	(xs, $mobile),
+				 	(sm, $tablet),
+				 	(md, $laptop),
+				 	(lg, $desktop),
+				 	(xl, $desktopHd);
