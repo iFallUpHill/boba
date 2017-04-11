@@ -1,0 +1,29 @@
+@import 'helpers/gridConstants';
+
+.cup {
+	max-width: $desktop;
+  width: 100%;
+	margin: 0 auto;
+}
+.straw {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  .boba {
+    @include boba-base;
+  }
+
+  /* 'boba' width */
+  @for $i from 1 through 12 {
+    .boba-sm-#{$i},.boba-md-#{$i},.boba-lg-#{$i},.boba-xl-#{$i} {
+      @include boba-base;
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    .boba-offset-md-#{$i} {
+      margin-left: ($i / 12) * 100%;
+    }
+  }
+}

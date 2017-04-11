@@ -1,0 +1,22 @@
+@import '../../helpers/constants';
+@import 'helpers/gridConstants';
+
+@media screen and (min-width: $desktop) {
+  .straw {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+
+    /* 'boba' width */
+    @for $i from 1 through 12 {
+      .boba-xl-#{$i} {
+        @include boba-base;
+        flex: 0 0 ($i / 12) * 100%;
+        max-width: ($i / 12) * 100%;
+      }
+      .boba-offset-xl-#{$i} {
+        margin-left: ($i / 12) * 100%;
+      }
+    }
+  }
+}

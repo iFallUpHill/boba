@@ -1,0 +1,27 @@
+/* Alignment of 'straws' */
+.straw-top {
+	align-items: flex-start;
+}
+.straw-bottom {
+	align-items: flex-end;
+}
+.straw-center {
+	align-items: center;
+}
+.straw-justifyCenter {
+	justify-content: center;
+}
+.straw-spaceAround {
+	justify-content: space-around;
+}
+
+/* Alignment of 'boba' */
+.boba-top {
+	align-self: flex-start;
+}
+.boba-bottom {
+	align-self: flex-end;
+}
+.boba-center {
+	align-self: center;
+}
