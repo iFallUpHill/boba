@@ -1,0 +1,127 @@
+@import '../../helpers/colors';
+@import '../../helpers/constants';
+
+@-webkit-keyframes bugfix { from {padding:0;} to {padding:0;} } /* needed for checkbox hack */
+
+#nav {
+  position:relative;
+  ul {
+    display:none;
+    width:100%;
+    list-style:none;
+    margin:0px;
+    padding:0px;
+    li {
+      a {
+        display:block;
+        padding:1em;
+        background:$color-dark;
+        color:$color-light;
+        text-decoration:none;
+        &:hover {
+          background:$color-salient;
+        }
+      }
+      &:last-of-type {
+        a {
+          border-right:0px;
+        }
+      }
+      // 2nd level
+      ul {
+        li {
+          a {
+            padding-left:1.5em;
+          }
+          ul {
+            li {
+              a {
+                padding-left:3.125em;
+              }
+            }
+          }
+        }
+      }
+    } // li
+  } // ul
+
+  input.trigger {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    &:checked ~ ul,&:checked ~ ul li ul {
+      display:block !important;
+      @media (min-width:$laptop){
+        display: flex;
+        flex-direction: row;
+      }
+    }
+  }
+  label {
+    position:relative;
+    display:block;
+    min-height:2em;
+    padding:.45em;
+    font-size:1.1em;
+    margin:0;
+    cursor:pointer;
+    background:$color-dark;
+    line-height: 2em;
+    color:$color-light;
+  }
+
+  label:after {
+    position: absolute;
+    right: 1em;
+    top: .2em;
+    content:"\2261";
+    font-size:1.8em;
+    color:$color-light;
+  }
+
+  @media(min-width:$laptop){
+    ul {
+      display: flex;
+      flex-direction: row;
+
+      li {
+        position:relative;
+        text-align: center;
+        flex: 1;
+
+        // 2nd level
+        ul {
+          display:none !important;
+          position:absolute;
+          top:3.0625em;
+          left:0;
+          display:block;
+          width:100%;
+          z-index:200;
+          li {
+            text-align:left;
+            ul {
+              z-index: 300;
+              top:0px;
+              left: (100% - .1);
+              li {
+                a {
+                  padding-left:30px !important;
+                }
+              }
+            }
+          }
+        } // ul 2nd level
+
+        &:hover > ul {
+          display: block !important;
+        }
+
+      } // li
+    } // ul
+    label {
+      display:none;
+    }
+  } // breakpoint
+
+} // nav
