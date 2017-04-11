@@ -4,3 +4,39 @@
   margin: 0;
   padding: 0;
 }
+
+@mixin default-boba-behavior($prefix, $measurement) {
+	@media screen and (min-width: #{$measurement}) {
+		.straw {
+			.boba {
+		      &.three-quarters-#{$prefix} {
+		        flex: 0 0 75%;
+		      }
+		      &.two-thirds-#{$prefix} {
+		        flex: 0 0 66.66666666%;
+		      }
+		      &.half-#{$prefix} {
+		        flex: 0 0 50%;
+		      }
+		      &.one-third-#{$prefix} {
+		        flex: 0 0 33.33333333%;
+		      }
+		      &.one-quarter-#{$prefix} {
+		        flex: 0 0 25%;
+		      }
+		    }
+
+		    /* 'boba' width */
+		    @for $i from 1 through 12 {
+		      .boba-#{$prefix}-#{$i} {
+		        @include boba-base;
+		        flex: 0 0 ($i / 12) * 100%;
+		        max-width: ($i / 12) * 100%;
+		      }
+		      .boba-offset-#{$prefix}-#{$i} {
+		        margin-left: ($i / 12) * 100%;
+		      }
+		    }
+		}
+	}
+}

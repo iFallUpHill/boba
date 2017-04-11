@@ -4,40 +4,11 @@
 
 // Temporarily here but move when finalized nomenclature
 @import 'helpers/colors';
-.bg-info {
-	background: $color-info;
-}
 
-.bg-success {
-	background: $color-success;
-}
-
-.bg-warning {
-	background: $color-warning;
-}
-
-.bg-danger {
-	background: $color-danger;
-}
-
-.bg-salient {
-	background: $color-salient;
-}
-
-.bg-misc {
-	background: $color-misc;
-}
-
-.bg-alt {
-	background: $color-alt;
-}
-
-.bg-light {
-	background: $color-light;
-}
-
-.bg-dark {
-	background: $color-dark;
+@each $colorName, $color in $color-list {
+	.bg-#{$colorName} {
+		background: #{$color};
+	}
 }
 
 

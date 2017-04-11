@@ -1,3 +1,4 @@
+@import '../../helpers/constants';
 @import 'helpers/gridConstants';
 
 .cup {
@@ -8,23 +9,32 @@
 .straw {
   box-sizing: border-box;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   padding-bottom: 1em;
 
   .boba {
     @include boba-base;
+
+    @each $size in $resolution-sizes {
+      &.three-quarters-#{$size}, &.two-thirds-#{$size}, &.half-#{$size},&.one-third-#{$size}, &.one-quarter-#{$size} {
+        flex: 0 0 100%;
+      }
+    }
+
   }
 
   /* 'boba' width */
   @for $i from 1 through 12 {
-    .boba-sm-#{$i}, .boba-md-#{$i}, .boba-lg-#{$i}, .boba-xl-#{$i} {
-      @include boba-base;
-      flex: 0 0 100%;
-      max-width: 100%;
-    }
-    .boba-offset-sm-#{$i}, .boba-offset-md-#{$i}, .boba-offset-lg-#{$i}, .boba-offset-xl-#{$i} {
-      margin-left: 0;
+    @each $size in $resolution-sizes {
+      .boba-#{$size}-#{$i} {
+        @include boba-base;
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+      .boba-offset-#{$size}-#{$i} {
+        margin-left: 0;
+      }
     }
   }
 
@@ -37,12 +47,14 @@
     }
 
     @for $i from 1 through 12 {
-      .boba-sm-#{$i}, .boba-md-#{$i}, .boba-lg-#{$i}, .boba-xl-#{$i} {
-        padding: 1em 0 0 1em;
-
-      }
-      .boba-offset-sm-#{$i}, .boba-offset-md-#{$i}, .boba-offset-lg-#{$i}, .boba-offset-xl-#{$i} {
-        padding: 1em 0 0 1em;
+      @each $size in $resolution-sizes {
+        .boba-#{$size}-#{$i} {
+          padding: 1em 0 0 1em;
+        }
+        .boba-offset-#{$size}-#{$i} {
+          padding: 1em 0 0 1em;
+        
+        }
       }
     }
   }

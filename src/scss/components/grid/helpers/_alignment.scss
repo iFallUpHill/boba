@@ -16,12 +16,15 @@
 }
 
 /* Alignment of 'boba' */
-.boba-top {
+.boba-float {
 	align-self: flex-start;
 }
-.boba-bottom {
-	align-self: flex-end;
-}
-.boba-center {
+
+.boba-swim {
 	align-self: center;
 }
+
+.boba-sink {
+	align-self: flex-end;
+}
+

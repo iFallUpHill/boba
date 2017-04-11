@@ -2,3 +2,10 @@ $desktop: 75em;
 $laptop: 50em;
 $tablet: 30em;
 $mobile: 0em;
+
+$resolution-sizes: sm, md, lg, xl;
+
+$resolution-dict: 	(sm, $mobile),
+				 	(md, $tablet),
+				 	(lg, $laptop),
+				 	(xl, $desktop);
