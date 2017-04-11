@@ -1,3 +1,40 @@
 @import 'vendor/normalize';
 
 @import 'components/grid/base';
+
+// Temporarily here but move when finalized nomenclature
+@import 'helpers/colors';
+.bg-info {
+	background: $color-info;
+}
+
+.bg-success {
+	background: $color-success;
+}
+
+.bg-warning {
+	background: $color-warning;
+}
+
+.bg-danger {
+	background: $color-danger;
+}
+
+.bg-salient {
+	background: $color-salient;
+}
+
+.bg-misc {
+	background: $color-misc;
+}
+
+.bg-light {
+	background: $color-light;
+}
+
+.bg-dark {
+	background: $color-dark;
+}
+
+
+
