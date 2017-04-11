@@ -3,10 +3,6 @@
 
 @media screen and (min-width: $tablet) {
   .straw {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-
     /* 'boba' width */
     @for $i from 1 through 12 {
       .boba-md-#{$i} {

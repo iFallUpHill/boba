@@ -17,13 +17,13 @@
 
   /* 'boba' width */
   @for $i from 1 through 12 {
-    .boba-sm-#{$i},.boba-md-#{$i},.boba-lg-#{$i},.boba-xl-#{$i} {
+    .boba-sm-#{$i}, .boba-md-#{$i}, .boba-lg-#{$i}, .boba-xl-#{$i} {
       @include boba-base;
       flex: 0 0 100%;
       max-width: 100%;
     }
-    .boba-offset-md-#{$i} {
-      margin-left: ($i / 12) * 100%;
+    .boba-offset-sm-#{$i}, .boba-offset-md-#{$i}, .boba-offset-lg-#{$i}, .boba-offset-xl-#{$i} {
+      margin-left: 0;
     }
   }
 }
