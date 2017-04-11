@@ -7,6 +7,7 @@ const gulp            = require('gulp'),
       uglify          = require('gulp-uglify'),
       sourcemaps      = require('gulp-sourcemaps'),
       gulpif          = require('gulp-if'),
+      browserSync     = require('browser-sync'),
       onError         = require('./helpers/onError.js');
 
 module.exports = (gulp, config , isDist) => {
@@ -29,5 +30,6 @@ module.exports = (gulp, config , isDist) => {
             .pipe(minifyCSS())
             .pipe(gulpif(!isDist, sourcemaps.write()))
             .pipe(gulp.dest(config.dist.css))
+            .pipe(browserSync.reload({stream: true}))
     };
 };

@@ -6,12 +6,15 @@ const gulp    = require('gulp'),
       argv    = require('yargs').argv,
       del     = require('del'),
       runSeq  = require("run-sequence"),
+      browserSync = require('browser-sync'),
       isDist  = argv.prod ? true : false,
       config  = {
             src: {
+                html: 'src/**/*.html',
                 sass: 'src/scss/all.scss',
             },
             dist: {
+                html: 'build',
                 css: 'dist',
                 min_css: 'boba.min.css',
             },
@@ -33,6 +36,7 @@ function getTask(task) {
 // --------------------------------------------------------------------
 
 gulp.task('sass', getTask('sass'));
+gulp.task('html', getTask('html'));
 
 // --------------------------------------------------------------------
 // Extra Task: Clean
@@ -47,7 +51,13 @@ gulp.task('clean', function() {
 // --------------------------------------------------------------------
 
 gulp.task('watch', function() {
+    browserSync.init({
+        server: './build'
+    });
     gulp.watch(config.watch.sass, ['sass']);
+    gulp.watch(config.src.html, ['sass']);
+    gulp.watch(config.src.html, ['html']).on('change', browserSync.reload);
+
 });
 
 // --------------------------------------------------------------------
@@ -55,7 +65,7 @@ gulp.task('watch', function() {
 // --------------------------------------------------------------------
 
 gulp.task('build', function(callback) {
-    runSeq('clean', ['sass'], callback);
+    runSeq('clean', ['sass', 'html'], callback);
 });
 
 // --------------------------------------------------------------------
@@ -63,5 +73,5 @@ gulp.task('build', function(callback) {
 // --------------------------------------------------------------------
 
 gulp.task('default', function(callback) {
-    runSeq('clean', ['sass'], 'watch', callback);
+    runSeq('clean', ['sass', 'html'], 'watch', callback);
 });
