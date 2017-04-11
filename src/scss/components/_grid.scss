@@ -1,22 +1,37 @@
-@import 'constants';
+@import '../helpers/constants';
 
 .cup {
 	max-width: $desktop;
 	margin: 0 auto;
 
 	.straw {
-		display: flex;
-		flex-direction: column;
-	  flex-wrap: wrap;
-	  list-style: none;
-	  margin: 0;
-	  padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: $mobile) {
+      display: flex;
+  		flex-direction: row;
+    }
 
 		.boba {
-			flex: 1;
-			margin: auto;
-			padding: 0.6em;
+      box-sizing: border-box;
+      flex: 1;
+      margin: 0.6em;
+      padding: 0.6em;
 		}
+    /* 'boba' width */
+    @for $i from 1 through 12 {
+      .boba-#{$i} {
+        @extend .boba;
+        flex: 0 0 ($i / 12) * 100%;
+        max-width: ($i / 12) * 100%;
+      }
+      .boba-offset-#{$i} {
+        margin-left: ($i / 12) * 100%;
+      }
+    }
 	}
 }
 
@@ -39,26 +54,11 @@
 
 /* Alignment of 'boba' */
 .boba-top {
-  align-self: flex-start;
+	align-self: flex-start;
 }
 .boba-bottom {
-  align-self: flex-end;
+	align-self: flex-end;
 }
 .boba-center {
-  align-self: center;
-}
-
-/* 'boba' width */
-@for $i from 1 through 12
-	.straw > &.boba-#{$i}
-    flex: none
-    width: ($i / 12) * 100%
-  .straw > &.boba-offset-#{$i}
-    margin-left: ($i / 12) * 100%
-
-@media screen and (min-width: $mobile) {
-	.straw {
-		display: flex;
-		flex-direction: row;
-	}
+	align-self: center;
 }

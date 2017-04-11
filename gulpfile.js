@@ -14,6 +14,9 @@ const gulp    = require('gulp'),
             dist: {
                 css: 'dist',
                 min_css: 'boba.min.css',
+            },
+            watch: {
+              sass: 'src/scss/**/*.scss',
             }
         };
 
@@ -44,7 +47,7 @@ gulp.task('clean', function() {
 // --------------------------------------------------------------------
 
 gulp.task('watch', function() {
-    gulp.watch(config.src.sass, ['sass']);
+    gulp.watch(config.watch.sass, ['sass']);
 });
 
 // --------------------------------------------------------------------
