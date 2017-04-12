@@ -1,33 +1,81 @@
 @import '../../../helpers/colors';
 
+$border-radius: 0.2em;
+
+@mixin message-base {
+    border-radius: $border-radius;
+    font-size: 1em;
+    &:not(:last-child) {
+        margin-bottom: 1.5em;
+    }
+}
+
+@mixin message-header-base {
+    align-items: center;
+    border-radius: $border-radius $border-radius 0 0;
+    display: flex;
+    justify-content: space-between;
+    line-height: 0.5em;
+    padding: 0 1em;
+    position: relative;
+    & + .message-body {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-top: none;
+    }
+}
+
+@mixin message-body-base {
+    border-radius: $border-radius;
+    padding: 1em 1.25em;
+}
+
 @mixin default-messages-styles($colorName, $color) {
     .message-#{$colorName} {
-        background: whitesmoke;
+        @include message-base;
 
         .message-header {
+            @include message-header-base;
             background-color: #{$color};
             color: $color-light;
+
+            .text-#{$colorName} {
+                margin: 0;
+                color: #{$color};
+            }
         }
 
         .message-body {
+            @include message-body-base;
             border: solid 1px #{$color};
             color: #{$color};
+            .text-#{$colorName} {
+                margin: 0;
+                color: #{$color};
+            }
         }
     }
 }
 
 @mixin custom-messages-styles($colorName, $color) {
     .message {
-        background: #{$color};
-
         .message-header-#{$colorName} {
+            @include message-header-base;
             background-color: #{$color};
             color: $color-light;
+            .text-#{$colorName} {
+                margin: 0;
+                color: #{$color};
+            }
         }
 
         .message-body-#{$colorName} {
+            @include message-body-base;
             border: solid 1px #{$color};
-            color: #{$color};
+            .text-#{$colorName} {
+                margin: 0;
+                color: #{$color};
+            }
         }
     }
 }

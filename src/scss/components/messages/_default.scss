@@ -1,35 +1,19 @@
 @import '../../helpers/colors';
-
-$border-radius: 0.2em;
+@import 'helpers/messageConstants';
 
 .message {
+    @include message-base;
     background: whitesmoke;
-    border-radius: $border-radius;
-    font-size: 1em;
-    &:not(:last-child) {
-        margin-bottom: 1.5em;
-    }
+
     .message-header {
+        @include message-header-base;
         background-color: $color-dark;
-        align-items: center;
-        border-radius: $border-radius $border-radius 0 0;
         color: $color-light;
-        display: flex;
-        justify-content: space-between;
-        line-height: 0.5em;
-        padding: 0 1em;
-        position: relative;
-        & + .message-body {
-            border-top-left-radius: 0;
-            border-top-right-radius: 0;
-            border-top: none;
-        }
     }
 
     .message-body {
-        border-radius: $border-radius;
+        @include message-body-base;
         border: solid 1px $color-dark;
         color: $color-dark;
-        padding: 1em 1.25em;
     }
 }
