@@ -14,16 +14,15 @@
     padding-bottom: 1em;
     margin: -1em 0 0 -1em;
 
-  .pearl {
-    @include pearl-base;
+    .pearl {
+        @include pearl-base;
 
-    @each $suffix in $resolution-suffixes {
-        &.three-quarters-#{$suffix}, &.two-thirds-#{$suffix}, &.half-#{$suffix},&.one-third-#{$suffix}, &.one-quarter-#{$suffix} {
-            flex: 0 0 100%;
+        @each $suffix in $resolution-suffixes {
+            &.three-quarters-#{$suffix}, &.two-thirds-#{$suffix}, &.half-#{$suffix},&.one-third-#{$suffix}, &.one-quarter-#{$suffix} {
+                flex: 0 0 100%;
+            }
         }
     }
-
-  }
 
     /* Gutters */
     &.pearl-gapless {

@@ -1,0 +1,17 @@
+@import '../../../helpers/colors';
+
+@mixin default-messages-styles($colorName, $color) {
+    .message-#{$colorName} {
+        background: whitesmoke; // change once new color scheme is available
+
+        .message-header {
+            background-color: #{$color};
+            color: $color-light;
+        }
+
+        .message-body {
+            border: solid 1px #{$color};
+            color: #{$color};
+        }
+    }
+}

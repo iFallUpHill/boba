@@ -61,7 +61,7 @@ $color-shade-list: (lighten-1, lighten-2, lighten-3, darken-1, darken-2, darken-
 }
 
 
-@mixin generate-colors($attribute, $prefix, $important: null) {
+@mixin generate-base-colors($attribute, $prefix, $important: null) {
 	@each $colorName, $color in $color-list {
 		.#{$prefix}-#{$colorName} {
 			#{$attribute}: #{$color} $important;
@@ -93,4 +93,5 @@ $color-shade-list: (lighten-1, lighten-2, lighten-3, darken-1, darken-2, darken-
 	}
 }
 
-@include generate-colors(background, bg, !important);
+@include generate-base-colors(background, bg, !important);
+@include generate-base-colors(color, text, !important);

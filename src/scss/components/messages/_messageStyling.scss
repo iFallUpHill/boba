@@ -1,0 +1,6 @@
+@import '../../helpers/colors';
+@import 'helpers/messageConstants';
+
+@each $colorName, $color in $color-list {
+	@include default-messages-styles(#{$colorName}, #{$color});
+}
