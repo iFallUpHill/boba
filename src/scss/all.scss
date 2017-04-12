@@ -1,5 +1,7 @@
 @import 'vendor/normalize';
-
+body {
+  margin: 0;
+}
 @import 'components/grid/base';
 
 // Temporarily here but move when finalized nomenclature

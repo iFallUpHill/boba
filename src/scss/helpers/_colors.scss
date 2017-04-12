@@ -9,13 +9,15 @@ $color-misc: #1ca091;
 $color-alt: #FF9EB9;
 $color-dark: #414A63;
 $color-light: #EAEAEA;
+$color-black: #000;
+$color-white: #fff;
 
 $color-list: 	(info, $color-info), 
-				(success, $color-success), 
-				(warning, $color-warning), 
-				(danger, $color-danger), 
-				(salient, $color-salient), 
-				(misc, $color-misc), 
-				(alt, $color-alt), 
-				(dark, $color-dark), 
+				(success, $color-success),
+				(warning, $color-warning),
+				(danger, $color-danger),
+				(salient, $color-salient),
+				(misc, $color-misc),
+				(alt, $color-alt),
+				(dark, $color-dark),
 				(light, $color-light);
