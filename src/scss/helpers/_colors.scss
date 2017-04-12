@@ -93,5 +93,41 @@ $color-shade-list: (lighten-1, lighten-2, lighten-3, darken-1, darken-2, darken-
 	}
 }
 
+@mixin generate-hover-colors($attribute, $prefix, $important: null) {
+	@each $colorName, $color in $color-list {
+		.#{$prefix}-hover-#{$colorName} {
+            &:hover {
+                #{$attribute}: #{$color} $important;
+
+                &.lighten-1 {
+                    #{$attribute}: lighten-1($color) $important;
+                }
+
+                &.lighten-2 {
+                    #{$attribute}: lighten-2($color) $important;
+                }
+
+                &.lighten-3 {
+                    #{$attribute}: lighten-3($color) $important;
+                }
+
+                &.darken-1 {
+                    #{$attribute}: darken-1($color) $important;
+                }
+
+                &.darken-2 {
+                    #{$attribute}: darken-2($color) $important;
+                }
+
+                &.darken-3 {
+                    #{$attribute}: darken-3($color) $important;
+                }
+            }
+		}
+	}
+}
+
 @include generate-base-colors(background, bg, !important);
 @include generate-base-colors(color, text, !important);
+@include generate-hover-colors(background, bg, !important);
+@include generate-hover-colors(color, text, !important);
