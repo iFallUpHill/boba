@@ -24,38 +24,12 @@
 
   }
 
-  /* 'boba' width */
-  @for $i from 1 through 12 {
-    @each $suffix in $resolution-suffixes {
-      .boba-#{$suffix}-#{$i} {
-        @include boba-base;
-        flex: 0 0 100%;
-        max-width: 100%;
-      }
-      .boba-offset-#{$suffix}-#{$i} {
-        margin-left: 0;
-      }
-    }
-  }
-
   /* Gutters */
   &.boba-gaps {
     margin: -1em 0 0 -1em;
     
     .boba {
       padding: 1em 0 0 1em;
-    }
-
-    @for $i from 1 through 12 {
-      @each $suffix in $resolution-suffixes {
-        .boba-#{$suffix}-#{$i} {
-          padding: 1em 0 0 1em;
-        }
-        .boba-offset-#{$suffix}-#{$i} {
-          padding: 1em 0 0 1em;
-        
-        }
-      }
     }
   }
 }

@@ -3,181 +3,139 @@
 
 /* header */
 .navbar {
-  background-color: $color-light;
-  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
-  width: 100%;
-  z-index: 3;
-  position: absolute;
-
-  &.fixed {
-    position: fixed;
-  }
-
-  a {
-    color: $color-dark;
-  }
-
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    overflow: hidden;
     background-color: $color-light;
-  }
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    width: 100%;
+    z-index: 3;
+    position: absolute;
 
-  li {
+    &.fixed {
+        position: fixed;
+    }
+
     a {
-      display: block;
-      padding: 1.25em 1.25em;
-      text-decoration: none;
+        color: $color-dark;
     }
 
-    a:hover, .menu-btn:hover {
-      background-color: $color-white;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+        background-color: $color-light;
     }
-  }
 
-  .logo {
-    display: block;
-    float: left;
-    font-size: 2em;
-    padding: 0.3em 0.6em;
-    text-decoration: none;
-  }
+    li {
+        a {
+            display: block;
+            padding: 1.25em 1.25em;
+            text-decoration: none;
+            transition:color 0.15s ease-in-out, background 0.15s ease-in-out;
+        }
+
+        a:hover, .menu-btn:hover {
+            background-color: $color-white;
+        }
+    }
+
+    .logo {
+        display: block;
+        float: left;
+        font-size: 2em;
+        padding: 0.3em 0.6em;
+        text-decoration: none;
+    }
 
 /* menu */
-  .menu {
-    clear: both;
-    max-height: 0;
-    transition: max-height .2s ease-out;
-    position: relative;
-  }
-
-  /* menu icon */
-  .menu-icon {
-    cursor: pointer;
-    display: inline-block;
-    float: right;
-    padding: 1.75em 1.25em;
-    position: relative;
-    user-select: none;
-
-    .navicon {
-      background: $color-dark;
-      display: block;
-      height: 0.125em;
-      position: relative;
-      transition: background .2s ease-out;
-      width: 1.125em;
-
-      &:before,
-      &:after {
-        background: $color-dark;
-        content: '';
-        display: block;
-        height: 100%;
-        position: absolute;
-        transition: all .2s ease-out;
-        width: 100%;
-      }
-
-      &:before {
-        top: 0.3em;
-      }
-
-      &:after {
-        top: -0.3em;
-      }
+    .menu {
+        clear: both;
+        max-height: 0;
+        transition: max-height .2s ease-out;
+        position: relative;
     }
-  }
+
+    /* menu icon */
+    .menu-icon {
+        cursor: pointer;
+        display: inline-block;
+        float: right;
+        padding: 1.75em 1.25em;
+        position: relative;
+        user-select: none;
+
+        .navicon {
+            background: $color-dark;
+            display: block;
+            height: 0.125em;
+            position: relative;
+            transition: background .2s ease-out;
+            width: 1.125em;
+
+            &:before,
+            &:after {
+                background: $color-dark;
+                content: '';
+                display: block;
+                height: 100%;
+                position: absolute;
+                transition: all .2s ease-out;
+                width: 100%;
+            }
+
+            &:before {
+                top: 0.3em;
+            }
+
+            &:after {
+                top: -0.3em;
+            }
+        }
+    }
 
   /* menu btn */
-  .menu-btn {
-    display: none;
+    .menu-btn {
+        display: none;
 
-    &:checked {
-      & ~ .menu {
-        max-height: 15em;
-      }
-      & ~ .menu-icon {
-        .navicon {
-          background: transparent;
-          &:before {
-            transform: rotate(-45deg);
-          }
-          &:after {
-            transform: rotate(45deg);
-          }
-        }
-        &:not(.steps) .navicon {
-          &:before, &:after {
-            top: 0;
-          }
-        }
-      }
+        &:checked {
+            & ~ .menu {
+                max-height: 15em;
+            }
+            & ~ .menu-icon {
+                .navicon {
+                    background: transparent;
+                    &:before {
+                        transform: rotate(-45deg);
+                    }
+                    &:after {
+                        transform: rotate(45deg);
+                    }
+                }
+                &:not(.steps) .navicon {
+                    &:before, &:after {
+                        top: 0;
+                    }
+                }
+            }
 
+        }
     }
-  }
 }
 
 @media (min-width: $laptop) {
-  .navbar {
-    li {
-      float: left;
+    .navbar {
+        li {
+            float: left;
+        }
+        a {
+            padding: 1.25em 1.875em;
+        }
+        .menu {
+            clear: none;
+            float: right;
+            max-height: none;
+        }
+        .menu-icon {
+            display: none;
+        }
     }
-    a {
-      padding: 1.25em 1.875em;
-    }
-    .menu {
-      clear: none;
-      float: right;
-      max-height: none;
-    }
-    .menu-icon {
-      display: none;
-    }
-  }
-}
-
-
-/* section */
-
-.section {
-  overflow: hidden;
-  margin: auto;
-  max-width: $desktopHd;
-  a {
-    position: relative;
-    float: left;
-    width: 100%;
-    img {
-      width: 100%;
-      display: block;
-    }
-    span {
-      color: $color-light;
-      position: absolute;
-      left: 5%;
-      bottom: 5%;
-      font-size: 2em;
-      text-shadow: 1px 1px 0 #000;
-    }
-  }
-}
-
-.section-split a {
-  span {
-    display: none;
-  }
-  &:hover {
-    span {
-      display: block;
-    }
-  }
-}
-
-@media (min-width: $laptop) {
-  .section-split a {
-    width: 50%;
-  }
 }
