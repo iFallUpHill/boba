@@ -1,9 +1,13 @@
 // Core Imports
+@import 'vendor/fonts';
 @import 'vendor/normalize';
 @import 'helpers/reset';
 
 // Palette
 @import 'helpers/colors';
+
+// Typography 
+@import 'helpers/typography';
 
 // Grid Framework
 @import 'components/grid/base';
