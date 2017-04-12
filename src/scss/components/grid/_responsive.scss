@@ -2,5 +2,5 @@
 @import 'helpers/gridConstants';
 
 @each $suffix, $measurement in $resolution-dict {
-	@include default-boba-behavior(#{$suffix}, #{$measurement});
+	@include default-pearl-behavior(#{$suffix}, #{$measurement});
 }

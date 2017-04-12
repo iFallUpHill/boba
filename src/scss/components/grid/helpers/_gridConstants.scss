@@ -1,55 +1,55 @@
-@mixin boba-base {
-  box-sizing: border-box;
-  flex: 1;
-  margin: 0;
-  padding: 0;
+@mixin pearl-base {
+	box-sizing: border-box;
+	flex: 1;
+	margin: 0;
+	padding: 1em 0 0 1em;
 }
 
-@mixin default-boba-behavior($suffix, $measurement) {
+@mixin default-pearl-behavior($suffix, $measurement) {
 	@media screen and (min-width: #{$measurement}) {
 		.straw {
-			.boba {
-		      &.three-quarters-#{$suffix} {
-		        flex: 0 0 75%;
-		      }
-		      &.two-thirds-#{$suffix} {
-		        flex: 0 0 66.66666666%;
-		      }
-		      &.half-#{$suffix} {
-		        flex: 0 0 50%;
-		      }
-		      &.one-third-#{$suffix} {
-		        flex: 0 0 33.33333333%;
-		      }
-		      &.one-quarter-#{$suffix} {
-		        flex: 0 0 25%;
-		      }
+			.pearl {
+				&.three-quarters-#{$suffix} {
+					flex: 0 0 75%;
+				}
+				&.two-thirds-#{$suffix} {
+					flex: 0 0 66.66666666%;
+				}
+				&.half-#{$suffix} {
+					flex: 0 0 50%;
+				}
+				&.one-third-#{$suffix} {
+					flex: 0 0 33.33333333%;
+				}
+				&.one-quarter-#{$suffix} {
+					flex: 0 0 25%;
+				}
 
-		      &.offset-three-quarters-#{$suffix} {
-		        margin-left: 75%;
-		      }
-		      &.offset-two-thirds-#{$suffix} {
-		        margin-left: 66.66666666%;
-		      }
-		      &.offset-half-#{$suffix} {
-		        margin-left: 50%;
-		      }
-		      &.offset-one-third-#{$suffix} {
-		        margin-left: 33.33333333%;
-		      }
-		      &.offset-one-quarter-#{$suffix} {
-		        margin-left: 25%;
-		      }
+				&.offset-three-quarters-#{$suffix} {
+					margin-left: 75%;
+				}
+				&.offset-two-thirds-#{$suffix} {
+					margin-left: 66.66666666%;
+				}
+				&.offset-half-#{$suffix} {
+					margin-left: 50%;
+				}
+				&.offset-one-third-#{$suffix} {
+					margin-left: 33.33333333%;
+				}
+				&.offset-one-quarter-#{$suffix} {
+					margin-left: 25%;
+				}
 
 
-		      @for $i from 1 through 12 {
-		      	&.#{$suffix}-#{$i} {
-		      		flex: 0 0 ($i / 12) * 100%;
-		      	}
-		      	&.offset-#{$suffix}-#{$i} {
-		      		margin-left: ($i / 12) * 100%;
-		      	}
-		      }
+				@for $i from 1 through 12 {
+					&.#{$suffix}-#{$i} {
+						flex: 0 0 ($i / 12) * 100%;
+					}
+					&.offset-#{$suffix}-#{$i} {
+						margin-left: ($i / 12) * 100%;
+					}
+				}
 		    }
 		}
 	}

@@ -3,33 +3,34 @@
 
 .cup {
 	max-width: $desktop;
-  width: 100%;
+    width: 100%;
 	margin: 0 auto;
 }
 .straw {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding-bottom: 1em;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 1em;
+    margin: -1em 0 0 -1em;
 
-  .boba {
-    @include boba-base;
+  .pearl {
+    @include pearl-base;
 
     @each $suffix in $resolution-suffixes {
-      &.three-quarters-#{$suffix}, &.two-thirds-#{$suffix}, &.half-#{$suffix},&.one-third-#{$suffix}, &.one-quarter-#{$suffix} {
-        flex: 0 0 100%;
-      }
+        &.three-quarters-#{$suffix}, &.two-thirds-#{$suffix}, &.half-#{$suffix},&.one-third-#{$suffix}, &.one-quarter-#{$suffix} {
+            flex: 0 0 100%;
+        }
     }
 
   }
 
-  /* Gutters */
-  &.boba-gaps {
-    margin: -1em 0 0 -1em;
-    
-    .boba {
-      padding: 1em 0 0 1em;
+    /* Gutters */
+    &.pearl-gapless {
+        margin: 0;
+
+        .pearl {
+            padding: 0;
+        }
     }
-  }
 }

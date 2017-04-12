@@ -25,3 +25,11 @@ $color-list: 	(blue, $color-blue),
 				(light, $color-light),
 				(black, $color-black),
 				(white, $color-white);
+
+
+@each $colorName, $color in $color-list {
+	.bg-#{$colorName} {
+		background: #{$color} !important;
+	}
+}
+

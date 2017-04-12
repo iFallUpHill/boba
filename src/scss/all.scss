@@ -1,16 +1,11 @@
+// Core Imports
 @import 'vendor/normalize';
-body {
-  margin: 0;
-}
-@import 'components/grid/base';
+@import 'helpers/reset';
 
-// Temporarily here but move when finalized nomenclature
+// Palette
 @import 'helpers/colors';
 
-@each $colorName, $color in $color-list {
-	.bg-#{$colorName} {
-		background: #{$color} !important;
-	}
-}
-
+// Navbar
 @import 'components/nav/nav';
+// Grid Framework
+@import 'components/grid/base';
