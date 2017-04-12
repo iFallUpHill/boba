@@ -2,7 +2,7 @@
 
 @mixin default-messages-styles($colorName, $color) {
     .message-#{$colorName} {
-        background: whitesmoke; // change once new color scheme is available
+        background: whitesmoke;
 
         .message-header {
             background-color: #{$color};
@@ -10,6 +10,22 @@
         }
 
         .message-body {
+            border: solid 1px #{$color};
+            color: #{$color};
+        }
+    }
+}
+
+@mixin custom-messages-styles($colorName, $color) {
+    .message {
+        background: #{$color};
+
+        .message-header-#{$colorName} {
+            background-color: #{$color};
+            color: $color-light;
+        }
+
+        .message-body-#{$colorName} {
             border: solid 1px #{$color};
             color: #{$color};
         }

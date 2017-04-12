@@ -4,3 +4,7 @@
 @each $colorName, $color in $color-list {
 	@include default-messages-styles(#{$colorName}, #{$color});
 }
+
+@each $colorName, $color in $color-list {
+	@include custom-messages-styles(#{$colorName}, #{$color});
+}

@@ -3,7 +3,7 @@
 $border-radius: 0.2em;
 
 .message {
-    background: whitesmoke; // change once new color scheme is available
+    background: whitesmoke;
     border-radius: $border-radius;
     font-size: 1em;
     &:not(:last-child) {
