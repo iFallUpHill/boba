@@ -9,7 +9,7 @@ body {
 
 @each $colorName, $color in $color-list {
 	.bg-#{$colorName} {
-		background: #{$color};
+		background: #{$color} !important;
 	}
 }
 

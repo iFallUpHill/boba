@@ -25,15 +25,16 @@
     background-color: $color-light;
   }
 
-  li a {
-    display: block;
-    padding: 1.25em 1.25em;
-    border-right: 1px solid $color-light;
-    text-decoration: none;
-  }
+  li {
+    a {
+      display: block;
+      padding: 1.25em 1.25em;
+      text-decoration: none;
+    }
 
-  li a:hover, .menu-btn:hover {
-    background-color: $color-light;
+    a:hover, .menu-btn:hover {
+      background-color: $color-white;
+    }
   }
 
   .logo {
