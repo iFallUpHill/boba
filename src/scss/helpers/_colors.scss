@@ -94,6 +94,7 @@ $color-shade-list: (lighten-1, lighten-2, lighten-3, darken-1, darken-2, darken-
         .#{$prefix}-hover-#{$colorName} {
             &:hover {
                 #{$attribute}: #{$color} $important;
+                transition:color 0.15s ease-in-out, background 0.15s ease-in-out;
 
                 &.lighten-1 {
                     #{$attribute}: lighten-1($color) $important;

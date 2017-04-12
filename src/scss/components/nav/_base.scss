@@ -29,11 +29,6 @@
             display: block;
             padding: 1.25em 1.25em;
             text-decoration: none;
-            transition:color 0.15s ease-in-out, background 0.15s ease-in-out;
-        }
-
-        a:hover, .menu-btn:hover {
-            background-color: $color-white;
         }
     }
 
