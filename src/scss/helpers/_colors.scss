@@ -26,10 +26,71 @@ $color-list: 	(blue, $color-blue),
 				(black, $color-black),
 				(white, $color-white);
 
+// Color shift configuration
+$lighten-1-percent: 7%;
+$lighten-2-percent: 14%;
+$lighten-3-percent: 21%;
+$darken-1-percent: 7%;
+$darken-2-percent: 14%;
+$darken-3-percent: 21%;
 
-@each $colorName, $color in $color-list {
-	.bg-#{$colorName} {
-		background: #{$color} !important;
+$color-shade-list: (lighten-1, lighten-2, lighten-3, darken-1, darken-2, darken-3);
+
+@function lighten-1($base-color) {
+	@return lighten($base-color, $lighten-1-percent);
+}
+
+@function lighten-2($base-color) {
+	@return lighten($base-color, $lighten-2-percent);
+}
+
+@function lighten-3($base-color) {
+	@return lighten($base-color, $lighten-3-percent);
+}
+
+@function darken-1($base-color) {
+	@return darken($base-color, $darken-1-percent);
+}
+
+@function darken-2($base-color) {
+	@return darken($base-color, $darken-2-percent);
+}
+
+@function darken-3($base-color) {
+	@return darken($base-color, $darken-3-percent);
+}
+
+
+@mixin generate-colors($attribute, $prefix, $important: null) {
+	@each $colorName, $color in $color-list {
+		.#{$prefix}-#{$colorName} {
+			#{$attribute}: #{$color} $important;
+
+			&.lighten-1 {
+				#{$attribute}: lighten-1($color) $important;
+			}
+
+			&.lighten-2 {
+				#{$attribute}: lighten-2($color) $important;
+			}
+
+			&.lighten-3 {
+				#{$attribute}: lighten-3($color) $important;
+			}
+
+			&.darken-1 {
+				#{$attribute}: darken-1($color) $important;
+			}
+
+			&.darken-2 {
+				#{$attribute}: darken-2($color) $important;
+			}
+
+			&.darken-3 {
+				#{$attribute}: darken-3($color) $important;
+			}
+		}
 	}
 }
 
+@include generate-colors(background, bg, !important);
