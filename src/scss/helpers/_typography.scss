@@ -3,8 +3,8 @@
 
 // Header Styling
 $header-font-family:            'Nunito', sans-serif !default;
-$header-font-weight:            400 !default;
-$header-font-weight-lighter:    300 !default;
+$header-font-weight:            $base-font-weight-default !default;
+$header-font-weight-light:      $base-font-weight-light !default;
 $header-color:                  $color-dark !default;
 $header-vertical-margin:        0.5em;
 $header-margin-top:             0.5em;
@@ -39,7 +39,7 @@ h6, .h6 {
     }
 
     &.thin {
-        font-weight: $header-font-weight-lighter;
+        font-weight: $header-font-weight-light;
     }
 }
 

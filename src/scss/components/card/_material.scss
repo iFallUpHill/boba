@@ -1,0 +1,66 @@
+@import '../../helpers/constants';
+@import '../../helpers/colors';
+@import 'helpers/cardConstants';
+
+.card-alt {
+    position: relative;
+    background-color: $color-white;
+    color: $color-dark;
+    max-width: 100%;
+    margin-bottom: 1em;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.1);
+
+
+    .card-header {
+        display: flex;
+        align-items: stretch;
+    }
+
+    .card-header-title {
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+        font-weight: $base-font-weight-bold;
+        padding: $card-padding-default;
+        padding-bottom: 0;
+    }
+
+    .card-header-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: $card-padding-default;
+        cursor: pointer;
+    }
+        
+    .card-image {
+        display: block;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    .card-content {
+        padding: 0 $card-padding-default;
+    }
+
+    .card-footer {
+        display: flex;
+        align-items: stretch;
+        border-top: 1px solid $card-border-color;
+    }
+        
+    .card-footer-item {
+        display: flex;
+        flex: 0 0 0;
+        align-items: center;
+        justify-content: center;
+        padding: $card-padding-footer-items $card-padding-default;
+    }
+
+}
