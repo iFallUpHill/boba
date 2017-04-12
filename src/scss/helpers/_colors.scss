@@ -1,23 +1,25 @@
 // Selected by Cathy Du
 
-$color-info: #6192F4;
-$color-success: #76D37E;
-$color-warning: #f9d675;
-$color-danger: #ff7e75;
-$color-salient: #8d68E2;
-$color-misc: #1ca091;
-$color-alt: #FF9EB9;
+$color-blue: #6192F4;
+$color-green: #76D37E;
+$color-yellow: #f9d675;
+$color-red: #ff7e75;
+$color-purple: #8d68E2;
+$color-teal: #1ca091;
+$color-pink: #FF9EB9;
 $color-dark: #414A63;
 $color-light: #EAEAEA;
 $color-black: #000;
 $color-white: #fff;
 
-$color-list: 	(info, $color-info), 
-				(success, $color-success),
-				(warning, $color-warning),
-				(danger, $color-danger),
-				(salient, $color-salient),
-				(misc, $color-misc),
-				(alt, $color-alt),
+$color-list: 	(blue, $color-blue),
+				(green, $color-green),
+				(yellow, $color-yellow),
+				(red, $color-red),
+				(purple, $color-purple),
+				(teal, $color-teal),
+				(pink, $color-pink),
 				(dark, $color-dark),
-				(light, $color-light);
+				(light, $color-light),
+				(black, $color-black),
+				(white, $color-white);
