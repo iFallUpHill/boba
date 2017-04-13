@@ -1,7 +1,7 @@
 const gulp 			= require('gulp'),
       browserSync   = require('browser-sync');
 
-module.exports = (gulp, config , isDist) => {
+module.exports = (gulp, config , isDist, minify) => {
     return () => {
         return gulp.src(config.src.html, { base : './src' })
             .pipe(gulp.dest(config.dist.html))

@@ -8,6 +8,7 @@ const gulp    = require('gulp'),
       runSeq  = require("run-sequence"),
       browserSync = require('browser-sync'),
       isDist  = argv.prod ? true : false,
+      minify  = argv.nomin ? false : true,
       config  = {
             src: {
                 html: 'src/**/*.html',
@@ -28,7 +29,7 @@ const gulp    = require('gulp'),
 // --------------------------------------------------------------------
 
 function getTask(task) {
-    return require('./gulp_tasks/' + task)(gulp, config, isDist);
+    return require('./gulp_tasks/' + task)(gulp, config, isDist, minify);
 }
 
 // --------------------------------------------------------------------

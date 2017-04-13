@@ -1,0 +1,75 @@
+@import '../../helpers/constants';
+@import '../../helpers/colors';
+@import 'helpers/buttonConstants';
+@import 'buttonStyling';
+
+.button, button, input[type="submit"],
+input[type="reset"],input[type="button"] {
+    @include button-base;
+    color: $color-white;
+    background-color: $color-dark;
+    border: 1px solid $color-dark;
+
+    &.inverted, &.outlined {
+        color: $color-dark;
+        border-color: $color-dark;
+        background-color: rgba(0, 0, 0, 0);
+
+        &[disabled] {
+            color: $color-dark;
+            border-color: $color-dark;
+            background-color: rgba(0, 0, 0, 0);
+            opacity: 0.5;
+        }
+        
+    }
+
+    &:hover, &:focus {
+        color: $color-white;
+        background-color: darken-1($color-dark);
+        border-color: darken-1($color-dark);
+        outline: 0;
+    }
+
+    &:active {
+        background-color: darken-2($color-dark);
+        outline: 0;
+    }
+
+    &[disabled] {
+        color: $color-white;
+        background-color: $color-dark;
+        border: 1px solid $color-dark;
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+    &.outlined {
+        &:hover, &:focus{
+            color: darken-1($color-dark);
+            border-color: darken-1($color-dark);
+            background-color: rgba(0, 0, 0, 0);
+
+        }
+
+        &:active {
+            color: darken-2($color-dark);
+            border-color: darken-2($color-dark);
+            background-color: rgba(0, 0, 0, 0);
+        }
+    }
+
+    
+
+    @include button-colors;
+
+    @each $size, $fontSize, $spacing, $padding in $button-font-sizing-spacing-padding-list {
+        &.#{$size} {
+                height: $spacing;
+                padding: 0 $padding;
+                font-size: $fontSize;
+                line-height: $spacing;
+        }        
+    }
+
+}

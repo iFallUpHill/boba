@@ -3,7 +3,7 @@
 $color-blue: #6192F4;
 $color-green: #76D37E;
 $color-yellow: #f9d675;
-$color-red: #ff7e75;
+$color-red: #fc6b61;
 $color-purple: #9b76f2;
 $color-orange: #FFA565;
 $color-teal: #20b6a5;
@@ -12,6 +12,7 @@ $color-dark: #414A63;
 $color-light: #EAEAEA;
 $color-black: #000;
 $color-white: #fff;
+$color-transparent: rgba(0, 0, 0, 0);
 
 $color-list: 	(blue, $color-blue),
 				(green, $color-green),
@@ -24,7 +25,8 @@ $color-list: 	(blue, $color-blue),
 				(dark, $color-dark),
 				(light, $color-light),
 				(black, $color-black),
-				(white, $color-white);
+				(white, $color-white),
+				(transparent, $color-transparent);
 
 // Color shift configuration
 $lighten-1-percent: 7%;
@@ -66,57 +68,88 @@ $color-shade-list: (lighten-1, lighten-2, lighten-3, darken-1, darken-2, darken-
 		.#{$prefix}-#{$colorName} {
 			#{$attribute}: #{$color} $important;
 
-			&.lighten-1 {
+			&.lighten-#{$prefix}-1 {
 				#{$attribute}: lighten-1($color) $important;
 			}
 
-			&.lighten-2 {
+			&.lighten-#{$prefix}-2 {
 				#{$attribute}: lighten-2($color) $important;
 			}
 
-			&.lighten-3 {
+			&.lighten-#{$prefix}-3 {
 				#{$attribute}: lighten-3($color) $important;
 			}
 
-			&.darken-1 {
+			&.darken-#{$prefix}-1 {
 				#{$attribute}: darken-1($color) $important;
 			}
 
-			&.darken-2 {
+			&.darken-#{$prefix}-2 {
 				#{$attribute}: darken-2($color) $important;
 			}
 
-			&.darken-3 {
+			&.darken-#{$prefix}-3 {
 				#{$attribute}: darken-3($color) $important;
 			}
 		}
 
         .#{$prefix}-hover-#{$colorName} {
-            &:hover {
+            &:not(:active):hover, &:not(:active):focus {
                 #{$attribute}: #{$color} $important;
                 transition:color 0.15s ease-in-out, background 0.15s ease-in-out;
 
-                &.lighten-1 {
+                &.lighten-#{$prefix}-hover-1 {
                     #{$attribute}: lighten-1($color) $important;
                 }
 
-                &.lighten-2 {
+                &.lighten-#{$prefix}-hover-2 {
                     #{$attribute}: lighten-2($color) $important;
                 }
 
-                &.lighten-3 {
+                &.lighten-#{$prefix}-hover-3 {
                     #{$attribute}: lighten-3($color) $important;
                 }
 
-                &.darken-1 {
+                &.darken-#{$prefix}-hover-1 {
                     #{$attribute}: darken-1($color) $important;
                 }
 
-                &.darken-2 {
+                &.darken-#{$prefix}-hover-2 {
                     #{$attribute}: darken-2($color) $important;
                 }
 
-                &.darken-3 {
+                &.darken-#{$prefix}-hover-3 {
+                    #{$attribute}: darken-3($color) $important;
+                }
+            }
+        }
+
+        .#{$prefix}-active-#{$colorName} {
+            &:active {
+                #{$attribute}: #{$color} $important;
+                transition:color 0.15s ease-in-out, background 0.15s ease-in-out;
+
+                &.lighten-#{$prefix}-active-1 {
+                    #{$attribute}: lighten-1($color) $important;
+                }
+
+                &.lighten-#{$prefix}-active-2 {
+                    #{$attribute}: lighten-2($color) $important;
+                }
+
+                &.lighten-#{$prefix}-active-3 {
+                    #{$attribute}: lighten-3($color) $important;
+                }
+
+                &.darken-#{$prefix}-active-1 {
+                    #{$attribute}: darken-1($color) $important;
+                }
+
+                &.darken-#{$prefix}-active-2 {
+                    #{$attribute}: darken-2($color) $important;
+                }
+
+                &.darken-#{$prefix}-active-3 {
                     #{$attribute}: darken-3($color) $important;
                 }
             }
@@ -126,3 +159,5 @@ $color-shade-list: (lighten-1, lighten-2, lighten-3, darken-1, darken-2, darken-
 
 @include generate-base-colors(background, bg, !important);
 @include generate-base-colors(color, text, !important);
+@include generate-base-colors(border-color, border, !important);
+
