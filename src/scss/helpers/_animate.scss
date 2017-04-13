@@ -1,0 +1,80 @@
+// 2D Transformations
+.hover-grow {
+    &:hover{
+        transform: scale(1.05, 1.05);
+        transition-duration: 0.3s;
+        transition-property: transform;
+    }
+}
+.hover-shrink {
+    &:hover{
+        transform: scale(0.95, 0.95);
+        transition-duration: 0.3s;
+        transition-property: transform;
+    }
+}
+.hover-float {
+    &:hover{
+        transform: translateY(-0.35em);
+        transition-duration: 0.3s;
+        transition-property: transform;
+    }
+}
+.hover-sink {
+    &:hover{
+        transform: translateY(0.35em);
+        transition-duration: 0.3s;
+        transition-property: transform;
+    }
+}
+.hover-pulse {
+    &:hover{
+        animation: pulse 1s linear;
+        animation-iteration-count: infinite;
+        @keyframes pulse {
+            0% {
+                transform: scale(0.95, 0.95);
+            }
+            50% {
+                transform: scale(1.05, 1.05);
+            }
+            100% {
+                transform: scale(0.95, 0.95);
+            }
+        }
+    }
+}
+.hover-bob {
+    &:hover{
+        animation: bob 1s linear;
+        animation-iteration-count: infinite;
+        @keyframes bob {
+            0% {
+                transform: translateY(-0.25em);
+            }
+            50% {
+                transform: translateY(-0.55em);
+            }
+            100% {
+                transform: translateY(-0.25em);
+            }
+        }
+    }
+}
+.hover-hang {
+    &:hover{
+        animation: hang 1s linear;
+        animation-iteration-count: infinite;
+        @keyframes hang {
+            0% {
+                transform: translateY(0.25em);
+            }
+            50% {
+                transform: translateY(0.55em);
+            }
+            100% {
+                transform: translateY(0.25em);
+            }
+        }
+    }
+}
