@@ -1,6 +1,48 @@
 @import '../../helpers/colors';
 @import 'helpers/messageConstants';
 
-@each $colorName, $color in $color-list {
-	@include default-messages-styles(#{$colorName}, #{$color});
+
+@mixin message-base {
+    border-radius: $border-radius;
+    font-size: 1em;
+    &:not(:last-child) {
+        margin-bottom: 1.5em;
+    }
+}
+
+@mixin message-header-base {
+    align-items: center;
+    border-radius: $border-radius $border-radius 0 0;
+    display: flex;
+    justify-content: space-between;
+    line-height: 0.5em;
+    padding: 0 1em;
+    position: relative;
+    & + .message-body {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-top: none;
+    }
+}
+
+@mixin message-body-base {
+    border-radius: $border-radius;
+    padding: 1em 1.25em;
+}
+
+@mixin default-messages-styles {
+    @each $colorName, $color in $color-list {
+        &.#{$colorName}{
+
+            .message-header {
+                background-color: #{$color};
+                color: $color-light;
+            }
+
+            .message-body {
+                border: solid 1px #{$color};
+                color: #{$color};
+            }
+        }
+    }
 }

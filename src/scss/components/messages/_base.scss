@@ -1,2 +1,21 @@
-@import 'default';
+@import '../../helpers/colors';
 @import 'messageStyling';
+
+
+.message {
+    @include message-base;
+    background: whitesmoke;
+
+    .message-header {
+        @include message-header-base;
+        background-color: $color-dark;
+        color: $color-light;
+    }
+
+    .message-body {
+        @include message-body-base;
+        border: solid 1px $color-dark;
+        color: $color-dark;
+    }
+    @include default-messages-styles;
+}
