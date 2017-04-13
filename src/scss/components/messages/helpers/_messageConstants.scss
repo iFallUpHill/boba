@@ -31,35 +31,16 @@ $border-radius: 0.2em;
 }
 
 @mixin default-messages-styles($colorName, $color) {
-    .message-#{$colorName} {
-        @include message-base;
+    .message.#{$colorName} {
 
         .message-header {
-            @include message-header-base;
             background-color: #{$color};
             color: $color-light;
-
         }
 
         .message-body {
-            @include message-body-base;
             border: solid 1px #{$color};
             color: #{$color};
-        }
-    }
-}
-
-@mixin custom-messages-styles($colorName, $color) {
-    .message {
-        .message-header-#{$colorName} {
-            @include message-header-base;
-            background-color: #{$color};
-            color: $color-light;
-        }
-
-        .message-body-#{$colorName} {
-            @include message-body-base;
-            border: solid 1px #{$color};
         }
     }
 }
