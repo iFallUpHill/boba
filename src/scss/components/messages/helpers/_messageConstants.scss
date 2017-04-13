@@ -39,20 +39,12 @@ $border-radius: 0.2em;
             background-color: #{$color};
             color: $color-light;
 
-            .text-#{$colorName} {
-                margin: 0;
-                color: #{$color};
-            }
         }
 
         .message-body {
             @include message-body-base;
             border: solid 1px #{$color};
             color: #{$color};
-            .text-#{$colorName} {
-                margin: 0;
-                color: #{$color};
-            }
         }
     }
 }
@@ -63,19 +55,11 @@ $border-radius: 0.2em;
             @include message-header-base;
             background-color: #{$color};
             color: $color-light;
-            .text-#{$colorName} {
-                margin: 0;
-                color: #{$color};
-            }
         }
 
         .message-body-#{$colorName} {
             @include message-body-base;
             border: solid 1px #{$color};
-            .text-#{$colorName} {
-                margin: 0;
-                color: #{$color};
-            }
         }
     }
 }
