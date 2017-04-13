@@ -1,3 +1,5 @@
+$enable-shades: true;
+
 // Selected by Cathy Du
 
 $color-blue: #6192F4;
@@ -67,30 +69,34 @@ $color-shade-list: (lighten-1, lighten-2, lighten-3, darken-1, darken-2, darken-
 	@each $colorName, $color in $color-list {
 		.#{$prefix}-#{$colorName} {
 			#{$attribute}: #{$color} $important;
+            transition:color 0.15s ease-in-out, background 0.15s ease-in-out;
 
-			&.lighten-#{$prefix}-1 {
-				#{$attribute}: lighten-1($color) $important;
+			@if $enable-shades {
+				&.lighten-#{$prefix}-1 {
+					#{$attribute}: lighten-1($color) $important;
+				}
+
+				&.lighten-#{$prefix}-2 {
+					#{$attribute}: lighten-2($color) $important;
+				}
+
+				&.lighten-#{$prefix}-3 {
+					#{$attribute}: lighten-3($color) $important;
+				}
+
+				&.darken-#{$prefix}-1 {
+					#{$attribute}: darken-1($color) $important;
+				}
+
+				&.darken-#{$prefix}-2 {
+					#{$attribute}: darken-2($color) $important;
+				}
+
+				&.darken-#{$prefix}-3 {
+					#{$attribute}: darken-3($color) $important;
+				}
 			}
 
-			&.lighten-#{$prefix}-2 {
-				#{$attribute}: lighten-2($color) $important;
-			}
-
-			&.lighten-#{$prefix}-3 {
-				#{$attribute}: lighten-3($color) $important;
-			}
-
-			&.darken-#{$prefix}-1 {
-				#{$attribute}: darken-1($color) $important;
-			}
-
-			&.darken-#{$prefix}-2 {
-				#{$attribute}: darken-2($color) $important;
-			}
-
-			&.darken-#{$prefix}-3 {
-				#{$attribute}: darken-3($color) $important;
-			}
 		}
 
         .#{$prefix}-hover-#{$colorName} {
@@ -98,29 +104,31 @@ $color-shade-list: (lighten-1, lighten-2, lighten-3, darken-1, darken-2, darken-
                 #{$attribute}: #{$color} $important;
                 transition:color 0.15s ease-in-out, background 0.15s ease-in-out;
 
-                &.lighten-#{$prefix}-hover-1 {
-                    #{$attribute}: lighten-1($color) $important;
-                }
+                @if $enable-shades {
+	                &.lighten-#{$prefix}-hover-1 {
+	                    #{$attribute}: lighten-1($color) $important;
+	                }
 
-                &.lighten-#{$prefix}-hover-2 {
-                    #{$attribute}: lighten-2($color) $important;
-                }
+	                &.lighten-#{$prefix}-hover-2 {
+	                    #{$attribute}: lighten-2($color) $important;
+	                }
 
-                &.lighten-#{$prefix}-hover-3 {
-                    #{$attribute}: lighten-3($color) $important;
-                }
+	                &.lighten-#{$prefix}-hover-3 {
+	                    #{$attribute}: lighten-3($color) $important;
+	                }
 
-                &.darken-#{$prefix}-hover-1 {
-                    #{$attribute}: darken-1($color) $important;
-                }
+	                &.darken-#{$prefix}-hover-1 {
+	                    #{$attribute}: darken-1($color) $important;
+	                }
 
-                &.darken-#{$prefix}-hover-2 {
-                    #{$attribute}: darken-2($color) $important;
-                }
+	                &.darken-#{$prefix}-hover-2 {
+	                    #{$attribute}: darken-2($color) $important;
+	                }
 
-                &.darken-#{$prefix}-hover-3 {
-                    #{$attribute}: darken-3($color) $important;
-                }
+	                &.darken-#{$prefix}-hover-3 {
+	                    #{$attribute}: darken-3($color) $important;
+	                }
+	            }
             }
         }
 
@@ -129,29 +137,31 @@ $color-shade-list: (lighten-1, lighten-2, lighten-3, darken-1, darken-2, darken-
                 #{$attribute}: #{$color} $important;
                 transition:color 0.15s ease-in-out, background 0.15s ease-in-out;
 
-                &.lighten-#{$prefix}-active-1 {
-                    #{$attribute}: lighten-1($color) $important;
-                }
+                @if $enable-shades {
+	                &.lighten-#{$prefix}-active-1 {
+	                    #{$attribute}: lighten-1($color) $important;
+	                }
 
-                &.lighten-#{$prefix}-active-2 {
-                    #{$attribute}: lighten-2($color) $important;
-                }
+	                &.lighten-#{$prefix}-active-2 {
+	                    #{$attribute}: lighten-2($color) $important;
+	                }
 
-                &.lighten-#{$prefix}-active-3 {
-                    #{$attribute}: lighten-3($color) $important;
-                }
+	                &.lighten-#{$prefix}-active-3 {
+	                    #{$attribute}: lighten-3($color) $important;
+	                }
 
-                &.darken-#{$prefix}-active-1 {
-                    #{$attribute}: darken-1($color) $important;
-                }
+	                &.darken-#{$prefix}-active-1 {
+	                    #{$attribute}: darken-1($color) $important;
+	                }
 
-                &.darken-#{$prefix}-active-2 {
-                    #{$attribute}: darken-2($color) $important;
-                }
+	                &.darken-#{$prefix}-active-2 {
+	                    #{$attribute}: darken-2($color) $important;
+	                }
 
-                &.darken-#{$prefix}-active-3 {
-                    #{$attribute}: darken-3($color) $important;
-                }
+	                &.darken-#{$prefix}-active-3 {
+	                    #{$attribute}: darken-3($color) $important;
+	                }
+	            }
             }
         }
 	}
