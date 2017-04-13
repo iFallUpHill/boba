@@ -1,6 +1,6 @@
 @import '../../helpers/constants';
 @import '../../helpers/colors';
-@import 'helpers/buttonConstants';
+@import 'constants';
 
 @mixin button-base {
     display: inline-block;
@@ -10,7 +10,7 @@
     font-weight: $base-font-weight-bold;
     line-height: $button-spacing-default;
     border-radius: 0.2em;
-    box-sizing: border-box;   
+    box-sizing: border-box;
     text-align: center;
     letter-spacing: .1em;
     text-transform: uppercase;
@@ -55,7 +55,7 @@
                     border-color: darken-1($color);
                     background-color: rgba(0, 0, 0, 0);
                 }
-        
+
                 &:active {
                     color: darken-2($color);
                     border-color: darken-2($color);

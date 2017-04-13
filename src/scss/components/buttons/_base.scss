@@ -1,7 +1,7 @@
 @import '../../helpers/constants';
 @import '../../helpers/colors';
-@import 'helpers/buttonConstants';
-@import 'buttonStyling';
+@import 'constants';
+@import 'styling';
 
 .button, button, input[type="submit"],
 input[type="reset"],input[type="button"] {
@@ -21,7 +21,7 @@ input[type="reset"],input[type="button"] {
             background-color: rgba(0, 0, 0, 0);
             opacity: 0.5;
         }
-        
+
     }
 
     &:hover, &:focus {
@@ -59,7 +59,7 @@ input[type="reset"],input[type="button"] {
         }
     }
 
-    
+
 
     @include button-colors;
 
@@ -69,7 +69,7 @@ input[type="reset"],input[type="button"] {
                 padding: 0 $padding;
                 font-size: $fontSize;
                 line-height: $spacing;
-        }        
+        }
     }
 
 }

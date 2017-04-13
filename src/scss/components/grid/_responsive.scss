@@ -1,5 +1,5 @@
 @import '../../helpers/constants';
-@import 'helpers/gridConstants';
+@import 'constants';
 
 @each $suffix, $measurement in $resolution-dict {
 	@include default-pearl-behavior(#{$suffix}, #{$measurement});
