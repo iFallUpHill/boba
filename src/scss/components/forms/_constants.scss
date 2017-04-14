@@ -1,0 +1,8 @@
+$form-font-size-default: 1em;
+$form-height-default: 2.4em;
+$form-padding-default: 0.375em 0.625em;
+
+$form-size-list: (large, $form-font-size-default + 0.4em, $form-height-default + 0.4em, $form-padding-default + 0.4em),
+                  (medium, $form-font-size-default + 0.2em, $form-height-default + 0.2em, $form-padding-default + 0.2em),
+                  (default, $form-font-size-default, $form-height-default, $form-padding-default),
+                  (small, $form-font-size-default - 0.2em, $form-height-default - 0.2em, $form-padding-default - 0.2em);
