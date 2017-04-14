@@ -44,7 +44,7 @@
     .menu {
         clear: both;
         max-height: 0;
-        transition: max-height .2s ease-out;
+        transition: max-height .4s ease-out;
         position: relative;
     }
 
@@ -92,7 +92,7 @@
 
         &:checked {
             & ~ .menu {
-                max-height: 15em;
+                max-height: 30em;
             }
             & ~ .menu-icon {
                 .navicon {

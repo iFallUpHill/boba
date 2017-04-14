@@ -1,0 +1,21 @@
+@import "../../helpers/colors";
+
+.code-block {
+    code {
+        padding: .2em .5em;
+        margin: 1em .2em;
+        font-size: 90%;
+        white-space: nowrap;
+        background: lighten-1($color-light);
+        border: 1px solid darken-1($color-light);
+        border-radius: 4px;
+        color: $color-dark;
+    }
+    pre {
+        & > code {
+            display: block;
+            padding: 1em 1.5em;
+            white-space: pre;
+        }
+    }
+}
