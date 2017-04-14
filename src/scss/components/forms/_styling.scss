@@ -42,7 +42,6 @@
 @mixin form-colors {
     @each $colorName, $color in $color-list {
         &.#{$colorName}{
-            color: darken-3($color);
             background: lighten-3($color);
             border: solid 1px #{$color};
         }
