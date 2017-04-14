@@ -29,12 +29,12 @@ $color-list: 	(blue, $color-blue),
 				(transparent, $color-transparent);
 
 // Color shift configuration
-$lighten-1-percent: 7%;
-$lighten-2-percent: 14%;
-$lighten-3-percent: 21%;
-$darken-1-percent: 7%;
-$darken-2-percent: 14%;
-$darken-3-percent: 21%;
+$lighten-1-percent: 8%;
+$lighten-2-percent: 16%;
+$lighten-3-percent: 24%;
+$darken-1-percent: 8%;
+$darken-2-percent: 16%;
+$darken-3-percent: 24%;
 
 $color-shade-list: (lighten-1, lighten-2, lighten-3, darken-1, darken-2, darken-3);
 
@@ -168,6 +168,5 @@ $color-shade-list: (lighten-1, lighten-2, lighten-3, darken-1, darken-2, darken-
 @if $include-color-palette and $include-color-helpers {
 	@include generate-base-colors(background, bg, !important);
 	@include generate-base-colors(color, text, !important);
-	@include generate-base-colors(border-color, border, !important);	
+	@include generate-base-colors(border-color, border, !important);
 }
-

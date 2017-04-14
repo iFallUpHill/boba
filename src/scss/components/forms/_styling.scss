@@ -42,8 +42,10 @@
 @mixin form-colors {
     @each $colorName, $color in $color-list {
         &.#{$colorName}{
-            background: lighten-3($color);
             border: solid 1px #{$color};
+            &.filled {
+                background: lighten-3($color);
+            }
         }
     }
 }
