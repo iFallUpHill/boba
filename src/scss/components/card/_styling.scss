@@ -1,0 +1,8 @@
+@import 'constants';
+
+
+@mixin borderless-card-footer {
+    flex: 0 0 0;
+    padding: $card-padding-footer-items $card-padding-default;
+    border-right: none;
+}

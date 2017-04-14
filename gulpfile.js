@@ -9,6 +9,7 @@ const gulp    = require('gulp'),
       browserSync = require('browser-sync'),
       isDist  = argv.prod ? true : false,
       minify  = argv.nomin ? false : true,
+      buildAll = argv.buildall ? true : false;
       config  = {
             src: {
                 html: 'src/**/*.html',
@@ -18,6 +19,7 @@ const gulp    = require('gulp'),
                 html: 'dist',
                 css: 'dist',
                 min_css: 'boba.min.css',
+                min_css_core: 'boba-core.min.css',
             },
             watch: {
               sass: 'src/scss/**/*.scss',
@@ -29,7 +31,8 @@ const gulp    = require('gulp'),
 // --------------------------------------------------------------------
 
 function getTask(task) {
-    return require('./gulp_tasks/' + task)(gulp, config, isDist, minify);
+    return require('./gulp_tasks/' + task)(gulp, config, isDist, 
+                                              minify, buildAll);
 }
 
 // --------------------------------------------------------------------
@@ -56,7 +59,6 @@ gulp.task('watch', function() {
         server: './dist'
     });
     gulp.watch(config.watch.sass, ['sass']);
-    gulp.watch(config.src.html, ['sass']);
     gulp.watch(config.src.html, ['html']).on('change', browserSync.reload);
 
 });

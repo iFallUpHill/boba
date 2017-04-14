@@ -1,6 +1,4 @@
-@import '../../helpers/colors';
 @import 'styling';
-
 
 .message {
     @include message-base;
@@ -17,5 +15,8 @@
         border: solid 1px $color-dark;
         color: $color-dark;
     }
-    @include default-messages-styles;
+
+    @if $include-color-palette {
+        @include message-colors; 
+    }
 }

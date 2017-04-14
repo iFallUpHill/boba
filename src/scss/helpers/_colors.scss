@@ -1,5 +1,3 @@
-$enable-shades: true;
-
 // Selected by Cathy Du
 
 $color-blue: #6192F4;
@@ -71,7 +69,7 @@ $color-shade-list: (lighten-1, lighten-2, lighten-3, darken-1, darken-2, darken-
 			#{$attribute}: #{$color} $important;
             transition:color 0.15s ease-in-out, background 0.15s ease-in-out;
 
-			@if $enable-shades {
+			@if $include-color-palette and $include-color-helpers and $include-color-shades {
 				&.lighten-#{$prefix}-1 {
 					#{$attribute}: lighten-1($color) $important;
 				}
@@ -104,7 +102,7 @@ $color-shade-list: (lighten-1, lighten-2, lighten-3, darken-1, darken-2, darken-
                 #{$attribute}: #{$color} $important;
                 transition:color 0.15s ease-in-out, background 0.15s ease-in-out;
 
-                @if $enable-shades {
+                @if $include-color-palette and $include-color-helpers and $include-color-shades {
 	                &.lighten-#{$prefix}-hover-1 {
 	                    #{$attribute}: lighten-1($color) $important;
 	                }
@@ -137,7 +135,7 @@ $color-shade-list: (lighten-1, lighten-2, lighten-3, darken-1, darken-2, darken-
                 #{$attribute}: #{$color} $important;
                 transition:color 0.15s ease-in-out, background 0.15s ease-in-out;
 
-                @if $enable-shades {
+                @if $include-color-palette and $include-color-helpers and $include-color-shades {
 	                &.lighten-#{$prefix}-active-1 {
 	                    #{$attribute}: lighten-1($color) $important;
 	                }
@@ -167,7 +165,9 @@ $color-shade-list: (lighten-1, lighten-2, lighten-3, darken-1, darken-2, darken-
 	}
 }
 
-@include generate-base-colors(background, bg, !important);
-@include generate-base-colors(color, text, !important);
-@include generate-base-colors(border-color, border, !important);
+@if $include-color-palette and $include-color-helpers {
+	@include generate-base-colors(background, bg, !important);
+	@include generate-base-colors(color, text, !important);
+	@include generate-base-colors(border-color, border, !important);	
+}
 

@@ -1,5 +1,4 @@
-@import '../../helpers/constants';
-@import 'constants';
+@import 'styling';
 
 .cup {
 	max-width: $desktop;
@@ -16,12 +15,6 @@
 
     .pearl {
         @include pearl-base;
-
-        @each $suffix in $resolution-suffixes {
-            &.three-quarters-#{$suffix}, &.two-thirds-#{$suffix}, &.half-#{$suffix},&.one-third-#{$suffix}, &.one-quarter-#{$suffix} {
-                flex: 0 0 100%;
-            }
-        }
     }
 
     /* Gutters */

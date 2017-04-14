@@ -1,6 +1,0 @@
-@import '../../helpers/constants';
-@import 'constants';
-
-@each $suffix, $measurement in $resolution-dict {
-	@include default-pearl-behavior(#{$suffix}, #{$measurement});
-}

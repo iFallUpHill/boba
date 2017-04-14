@@ -1,7 +1,31 @@
+// ------------------------------------------------- //
+// --------------------  FLAGS  -------------------- //
+// ------------------------------------------------- //
+
+/* Note that none of these flags affect boba-core */
+
+// Enable default color scheme 
+$include-color-palette: true;
+
+// Enable bg-{color}, text-{color}, and border-{color} helpers
+// Requires color-palette
+$include-color-helpers: true;
+
+// Enable lighten/darken modifiers on color-helpers
+// Requires color-palette and color-helpers
+$include-color-shades: true;
+
+// ------------------------------------------------- //
+// ---------------------  END  --------------------- //
+// ------------------------------------------------- //
+
 // Core Imports
 @import 'vendor/fonts';
 @import 'vendor/normalize';
 @import 'helpers/reset';
+
+// Global Constants
+@import 'helpers/constants';
 
 // Alignment
 @import 'helpers/alignment';

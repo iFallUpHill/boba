@@ -1,6 +1,4 @@
-@import '../../helpers/colors';
 @import 'constants';
-
 
 @mixin message-base {
     border-radius: $border-radius;
@@ -30,7 +28,7 @@
     padding: 1em 1.25em;
 }
 
-@mixin default-messages-styles {
+@mixin message-colors {
     @each $colorName, $color in $color-list {
         &.#{$colorName}{
 

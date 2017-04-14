@@ -1,12 +1,6 @@
-@import '../../helpers/constants';
-@import '../../helpers/colors';
 @import 'constants';
+@import 'styling';
 
-@mixin borderless-card-footer {
-    flex: 0 0 0;
-    padding: $card-padding-footer-items $card-padding-default;
-    border-right: none;
-}
 
 .card {
     position: relative;

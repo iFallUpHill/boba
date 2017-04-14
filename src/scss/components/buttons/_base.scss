@@ -1,5 +1,3 @@
-@import '../../helpers/constants';
-@import '../../helpers/colors';
 @import 'constants';
 @import 'styling';
 
@@ -61,7 +59,9 @@ input[type="reset"],input[type="button"] {
         }
     }
 
-    @include button-colors;
+    @if $include-color-palette {
+        @include button-colors;
+    }
 
     @each $size, $fontSize, $spacing, $padding in $button-font-sizing-spacing-padding-list {
         &.#{$size} {
