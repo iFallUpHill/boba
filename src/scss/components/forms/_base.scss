@@ -1,4 +1,5 @@
-@import "constants";
+@import 'constants';
+@import 'styling';
 
 .form-control {
     padding: 1.5em 1em;
@@ -8,33 +9,25 @@
         margin-bottom: 0.3em;
     }
     input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], select, textarea {
-        width: 100%;
-        font-size: 1em;
-        appearance: none;
-        height: 2.4em;
-        padding: 0.375em 0.625em;
+        @include form-component-base;
         background-color: $color-white;
         border: 1px solid $color-dark;
-        border-radius: 0.25em;
-        box-shadow: none;
-        box-sizing: border-box;
         &::placeholder {
             color: $color-dark;
-            opacity: 0.25;
         }
         &[disabled] {
             color: $color-dark;
             border-color: $color-dark;
-            background-color: rgba(0, 0, 0, 0);
-            cursor: not-allowed;
-            opacity: 0.5;
         }
         @each $size, $fontSize, $height, $padding in $form-size-list {
             &.#{$size} {
-                    height: $height;
-                    padding: 0 $padding;
-                    font-size: $fontSize;
+                height: $height;
+                padding: 0 $padding;
+                font-size: $fontSize;
             }
+        }
+        @if $include-color-palette {
+            @include form-colors;
         }
     }
 
@@ -43,25 +36,11 @@
     }
 
     .select-icon {
-        display: block;
-        position: relative;
-        vertical-align: top;
+        @include select-icon-base;
         &::after {
             border: 1px solid $color-dark;
             border-right: 0;
             border-top: 0;
-            content: " ";
-            display: block;
-            height: 0.5em;
-            pointer-events: none;
-            position: absolute;
-            -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-            width: 0.5em;
-            margin-top: -0.375em;
-            right: 1.125em;
-            top: 50%;
-            z-index: 4;
         }
     }
 }
