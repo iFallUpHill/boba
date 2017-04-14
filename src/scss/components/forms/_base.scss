@@ -6,7 +6,7 @@
     label {
         display: block;
         font-size: 0.95em;
-        margin: 0 0 0.3em 0.3em;
+        margin-bottom: 0.3em;
     }
     input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], select, textarea {
         width: 100%;
@@ -19,12 +19,16 @@
         border-radius: 0.25em;
         box-shadow: none;
         box-sizing: border-box;
+        &::placeholder {
+            color: $color-dark;
+            opacity: 0.25;
+        }
         &[disabled] {
             color: $color-dark;
             border-color: $color-dark;
             background-color: rgba(0, 0, 0, 0);
-            opacity: 0.5;
             cursor: not-allowed;
+            opacity: 0.5;
         }
         @each $size, $fontSize, $height, $padding in $form-size-list {
             &.#{$size} {
@@ -37,13 +41,10 @@
 
     textarea {
         min-height: 4em;
-        padding-top: 0.375;
-        padding-bottom: 0.375;
     }
 
     .select-icon {
         display: block;
-        height: 2.25em;
         position: relative;
         vertical-align: top;
         &::after {

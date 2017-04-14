@@ -33,47 +33,50 @@
         animation-iteration-count: infinite;
         @keyframes pulse {
             0% {
-                transform: scale(0.95, 0.95);
+                transform: scale(1, 1);
             }
-            50% {
+            25% {
                 transform: scale(1.05, 1.05);
             }
-            100% {
+            75% {
                 transform: scale(0.95, 0.95);
+            }
+            100% {
+                transform: scale(1, 1);
             }
         }
     }
 }
 .hover-bob {
     &:hover{
-        animation: bob 1s linear;
+        animation: bob 0.9s linear;
         animation-iteration-count: infinite;
         @keyframes bob {
             0% {
-                transform: translateY(-0.25em);
+                transform: translateY(0em);
             }
             50% {
                 transform: translateY(-0.55em);
             }
             100% {
-                transform: translateY(-0.25em);
+                transform: translateY(0em);
             }
         }
     }
 }
 .hover-hang {
     &:hover{
-        animation: hang 1s linear;
+        animation: hang 0.9s linear;
         animation-iteration-count: infinite;
         @keyframes hang {
             0% {
-                transform: translateY(0.25em);
+                transform: translateY(0em);
             }
             50% {
                 transform: translateY(0.55em);
             }
             100% {
-                transform: translateY(0.25em);
+                transform: translateY(0em);
             }
         }
     }

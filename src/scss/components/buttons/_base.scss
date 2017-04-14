@@ -14,14 +14,6 @@ input[type="reset"],input[type="button"] {
         color: $color-dark;
         border-color: $color-dark;
         background-color: rgba(0, 0, 0, 0);
-
-        &[disabled] {
-            color: $color-dark;
-            border-color: $color-dark;
-            background-color: rgba(0, 0, 0, 0);
-            opacity: 0.5;
-        }
-
     }
 
     &:hover, &:focus {
@@ -59,7 +51,15 @@ input[type="reset"],input[type="button"] {
         }
     }
 
-
+    // Work around for disabling inverted/outlined buttons
+    &.inverted, &.outlined {
+        &[disabled] {
+            color: $color-dark;
+            border-color: $color-dark;
+            background-color: rgba(0, 0, 0, 0);
+            opacity: 0.5;
+        }
+    }
 
     @include button-colors;
 
