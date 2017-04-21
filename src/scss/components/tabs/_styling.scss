@@ -1,5 +1,53 @@
 @import 'constants';
 
-@mixin tab-base {
-    
+@mixin tabs-base {
+    user-select: none;
+    align-items: stretch;
+    display: flex;
+    font-size: 1rem;
+    justify-content: space-between;
+    overflow: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+    ul {
+        list-style: none;
+        align-items: center;
+        display: flex;
+        flex-grow: 1;
+        flex-shrink: 0;
+        justify-content: flex-start;
+    }
+    a {
+        cursor: pointer;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin-bottom: -1px;
+        padding: 0.5em 1em;
+        vertical-align: top;
+    }
+}
+
+@mixin tabs-colors {
+    @each $colorName, $color in $color-list {
+        &.#{$colorName}{
+            li {
+                &.active {
+                    a {
+                        border-bottom-color: $color;
+                        color: $color;
+                    }
+                }
+            }
+            &.boxed {
+                li {
+                    &.active {
+                        a {
+                            color: $color;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
