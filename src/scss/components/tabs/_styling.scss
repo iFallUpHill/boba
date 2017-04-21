@@ -16,6 +16,11 @@
         flex-grow: 1;
         flex-shrink: 0;
         justify-content: flex-start;
+        border-bottom: 1px solid darken-1($color-light);
+    }
+    li {
+        display: block;
+        margin-bottom: 0;
     }
     a {
         cursor: pointer;
@@ -25,6 +30,14 @@
         margin-bottom: -1px;
         padding: 0.5em 1em;
         vertical-align: top;
+        border-bottom: 1px solid darken-1($color-light);
+        color: $color-dark;
+    }
+    &.boxed {
+        a {
+            border: 1px solid transparent;
+            border-radius: 3px 3px 0 0;
+        }
     }
 }
 

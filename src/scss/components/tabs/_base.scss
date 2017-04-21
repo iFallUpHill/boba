@@ -4,23 +4,13 @@
 
 .tabs {
     @include tabs-base;
-
-    ul {
-        border-bottom: 1px solid darken-1($color-light);
-    }
     li {
-        display: block;
-        margin-bottom: 0;
         &.active {
             a {
                 border-bottom-color: $color-teal;
                 color: $color-teal;
             }
         }
-    }
-    a {
-        border-bottom: 1px solid darken-1($color-light);
-        color: $color-dark;
     }
     &.boxed {
         li {
@@ -32,10 +22,6 @@
                     color: $color-teal;
                 }
             }
-        }
-        a {
-            border: 1px solid transparent;
-            border-radius: 3px 3px 0 0;
         }
     }
     @each $size, $fontSize, $height, $padding in $form-size-list {
