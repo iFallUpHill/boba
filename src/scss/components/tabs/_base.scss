@@ -21,32 +21,37 @@
     li {
         display: block;
         &.active {
-
+            a {
+                border-bottom-color: #00d1b2;
+                color: #00d1b2;
+            }
         }
     }
     a {
+        cursor: pointer;
         align-items: center;
         border-bottom: 1px solid #dbdbdb;
         color: #4a4a4a;
         display: flex;
         justify-content: center;
-        margin-bottom: -1px;
+        margin-bottom: -6px;
         padding: 0.5em 1em;
         vertical-align: top;
     }
     &.boxed {
         li {
-            .active {
+            &.active {
                 a {
                     background-color: white;
                     border-color: #dbdbdb;
                     border-bottom-color: transparent !important;
+                    color: #00d1b2;
                 }
             }
-            a {
-                border: 1px solid transparent;
-                border-radius: 3px 3px 0 0;
-            }
+        }
+        a {
+            border: 1px solid transparent;
+            border-radius: 3px 3px 0 0;
         }
     }
 }
