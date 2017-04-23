@@ -1,0 +1,10 @@
+@import 'constants';
+
+@mixin table-base {
+	background-color: $table-background;
+	color: $table-color;
+	width: 100%;
+	margin-bottom: $table-margin-bottom;
+	border-spacing: 0px;
+    border-collapse: collapse;
+}

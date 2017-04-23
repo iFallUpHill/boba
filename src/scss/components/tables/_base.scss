@@ -1,0 +1,94 @@
+@import 'constants';
+@import 'styling';
+
+table {
+	@include table-base;
+
+	caption {
+		font-size: $base-xxs-font-size;
+		font-style: italic;
+		text-align: left;
+	}
+
+	td, th {
+		border: 1px solid $table-border;
+		border-width: 0 0 1px;
+		padding: $table-default-padding;
+		vertical-align: top;
+
+		&.narrow {
+			white-space: nowrap;
+			width: 1%;
+		}
+	}
+
+	th {
+		color: $color-dark;
+		text-align: left;
+	}
+
+	tr {
+		&:hover {
+			background-color: $table-row-hover-background;
+		}
+	}
+
+	thead {
+		td, th {
+			border-width: 0 0 2px;
+			color: $table-head;
+		}
+	}
+
+	tfoot {
+		td, th {
+			border-width: 2px 0 0;
+			color: $color-dark;
+		}
+	}
+
+	tbody {
+		tr {
+			&:last-child {
+				td, th {
+					border-bottom-width: 0;
+				}
+			}
+		}
+	}
+
+// Modifiers
+	&.narrow {
+		td, th {
+			padding: $table-narrow-padding;
+		}
+	}
+
+	&.bordered {
+		td, th {
+			border-width: 1px;
+		}
+
+		tr {
+			&:last-child {
+				td, th {
+					border-bottom-width: 1px;
+				}
+			}
+		}
+	}
+
+	&.striped {
+		tbody {
+			tr {
+				&:nth-child(odd) {
+					background-color: $table-row-striped-background;
+				}
+				&:hover {
+					background-color: $table-row-striped-hover-background;
+				}
+			}
+		}
+	}
+
+}

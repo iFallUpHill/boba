@@ -1,0 +1,13 @@
+$table-color: $color-dark;
+$table-background: $color-white;
+$table-border: $color-light;
+
+$table-head: $color-dark;
+$table-row-hover: $color-white;
+$table-row-hover-background: lighten($color-light, 5%);
+$table-row-striped-background: lighten($color-light, 5%);
+$table-row-striped-hover-background: lighten($color-light, 2%);
+
+$table-margin-bottom: 1em;		
+$table-default-padding: 0.5em 0.75em;
+$table-narrow-padding: 0.25em 0.5em;
