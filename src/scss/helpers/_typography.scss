@@ -44,6 +44,14 @@ h6, .h6 {
         font-weight: $header-font-weight-light;
     }
 
+    &.less-margin {
+        margin-bottom: $header-vertical-margin/2;
+    }
+
+    &.no-margin {
+        margin-bottom: 0;
+    }
+
 }
 
 // If element before header, add margin

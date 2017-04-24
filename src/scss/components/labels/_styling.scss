@@ -1,0 +1,20 @@
+@import 'constants';
+
+@mixin label-base {
+    display: inline-block;
+    padding: $label-vertical-padding $label-horizontal-padding;
+    background: $color-dark;
+    color: $color-white;
+    font-size: $label-font-size;
+    line-height: $label-line-height;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+@mixin label-colors {
+	@each $colorName, $color in $color-list {
+        &.#{$colorName} {
+        	background: $color;
+        }
+    }
+}

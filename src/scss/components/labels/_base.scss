@@ -1,0 +1,12 @@
+@import 'constants';
+@import 'styling';
+
+.label {
+    @include label-base;
+
+    @if $include-color-palette {
+        @include label-colors;
+    }
+}
+
+
