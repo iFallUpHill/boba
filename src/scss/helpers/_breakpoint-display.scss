@@ -1,0 +1,11 @@
+@mixin breakpoint-display-helper($suffix, $measurement) {
+	@media screen and (max-width: #{$measurement}) {
+		&.hide-#{$suffix} {
+			display: none;
+		}
+	}
+}
+
+@each $suffix, $measurement in $resolution-dict {
+	@include breakpoint-display-helper(#{$suffix}, #{$measurement});
+}
