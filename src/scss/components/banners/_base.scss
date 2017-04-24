@@ -1,0 +1,47 @@
+@import 'constants';
+@import 'styling';
+
+.banner {
+	@include banner-base;
+
+	.banner-header, .banner-footer {
+		flex-grow: 0;
+  		flex-shrink: 0;
+	}
+
+	.banner-body {
+		padding: $banner-body-vertical-padding $banner-body-horizontal-padding;
+	}
+
+// Override for Heading Margins
+	h1, .h1,
+	h2, .h2,
+	h3, .h3,
+	h4, .h4,
+	h5, .h5,
+	h6, .h6 {
+		margin-bottom: 0;
+
+		&.subheader {
+			margin-bottom: 0;
+		}
+	}
+
+	@if $include-color-palette {
+		@include banner-colors;
+	}
+
+// Sizes
+    @each $size, $padding in $banner-vertical-padding-list {
+        &.#{$size} {
+        	.banner-body {
+        		padding-top: $padding;
+        		padding-bottom: $padding;
+        	}
+        }
+    }
+
+    &.fullscreen {
+    	min-height: 100vh;
+    }
+}

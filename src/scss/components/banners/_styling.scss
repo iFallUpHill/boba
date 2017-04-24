@@ -1,0 +1,18 @@
+@import 'constants';
+
+@mixin banner-base {
+	display: flex;
+	color: $color-dark;
+	background-color: $color-light;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: space-between;
+}
+
+@mixin banner-colors {
+	@each $colorName, $color in $color-list {
+        &.#{$colorName} {
+			background-color: $color;
+        }
+    }
+}

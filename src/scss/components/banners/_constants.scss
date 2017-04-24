@@ -1,0 +1,8 @@
+$banner-body-vertical-padding: 3em;
+$banner-body-horizontal-padding: 1.5em;
+
+$banner-vertical-padding-list: (large, $banner-body-vertical-padding * 3),
+                               (medium, $banner-body-vertical-padding * 2),
+                               (default, $banner-body-vertical-padding),
+                               (small, $banner-body-vertical-padding / 2)
+
