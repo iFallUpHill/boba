@@ -95,6 +95,10 @@ table {
 		}
 	}
 
+	&.responsive {
+		overflow-x: auto;
+	}
+
 	@if $include-color-palette {
 		@include table-colors;
 

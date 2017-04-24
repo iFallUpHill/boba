@@ -44,47 +44,6 @@ h6, .h6 {
         font-weight: $header-font-weight-light;
     }
 
-// Dividers
-    &.text-divider {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        text-align: center;
-
-        &:before, &:after {
-            background-color: $header-color;
-            content: '\a0';
-            flex-grow: 1;
-            height: 1px;
-            position: relative;
-            top: 0.63em;
-        }
-
-        &:before {
-            margin-right: 0.7em;
-        }
-
-        &:after {
-            margin-left: 0.7em;
-        }
-    }
-}
-
-// Divider Line Positioning for Headers
-h1, .h1 {
-    &.text-divider {
-        &:before, &:after {
-            top: 0.57em;
-        }
-    }
-}
-
-h2, .h2 {
-    &.text-divider {
-        &:before, &:after {
-            top: 0.59em;
-        }
-    }
 }
 
 // If element before header, add margin
@@ -105,3 +64,32 @@ h2, .h2 {
     }
 }
 
+// Generic Dividers 
+.text-divider {
+    display: flex;
+    color: $color-dark;
+    margin: 8px 0px;
+    flex-basis: 100%;
+    align-items: center;
+
+    &:before, &:after {
+        background: $color-dark;
+        content: "";
+        height: 1px;
+        line-height: 0px;
+        font-size: 0px;
+        margin: 0px 16px;
+        flex-grow: 1;
+    }
+
+    // Workaround to make headings work
+    h1, .h1,
+    h2, .h2,
+    h3, .h3,
+    h4, .h4,
+    h5, .h5,
+    h6, .h6 {
+        margin-bottom: 0px;
+    }
+
+}
