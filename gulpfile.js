@@ -14,12 +14,14 @@ const gulp    = require('gulp'),
             src: {
                 html: 'src/**/*.html',
                 sass: 'src/scss/all.scss',
+                color_helpers: 'src/scss/color_helpers.scss'
             },
             dist: {
                 html: 'dist',
                 css: 'dist',
                 min_css: 'boba.min.css',
                 min_css_core: 'boba-core.min.css',
+                min_css_color_helpers: 'boba-color-helpers.min.css'
             },
             watch: {
               sass: 'src/scss/**/*.scss',

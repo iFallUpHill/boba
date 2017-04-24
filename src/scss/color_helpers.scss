@@ -1,0 +1,13 @@
+// Enable default color scheme
+$include-color-palette: true;
+
+// Enable bg-{color}, text-{color}, and border-{color} helpers
+// Requires color-palette
+$include-color-helpers: true;
+
+// Enable lighten/darken modifiers on color-helpers
+// Requires color-palette and color-helpers
+$include-color-shades: true;
+
+// Palette
+@import 'helpers/colors';

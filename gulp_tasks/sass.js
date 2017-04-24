@@ -63,7 +63,28 @@ module.exports = (gulp, config , isDist, minify, buildAll) => {
               .pipe(gulpif(!isDist, sourcemaps.write()))
               .pipe(gulp.dest(config.dist.css))
               .pipe(browserSync.reload({stream: true}))
-        }
-        
+
+          // boba-colors.min.css
+          // Only includes the color helpers (e.g. bg-*, text-*, etc.)
+          gulp.src(config.src.color_helpers)
+              .pipe(gulpif(!isDist, sourcemaps.init()))
+              .pipe(plumber({
+                  errorHandler: onError
+              }))
+              .pipe(sass())
+              .pipe(rename(config.dist.min_css_color_helpers))
+              .pipe(autoprefixer( {
+                      remove: false,
+                      browsers: [
+                          'last 2 versions',
+                          '> 5%'
+                      ]
+                  }
+              ))
+              .pipe(gulpif(minify, minifyCSS()))
+              .pipe(gulpif(!isDist, sourcemaps.write()))
+              .pipe(gulp.dest(config.dist.css))
+              .pipe(browserSync.reload({stream: true}))
+        }  
     };
 };
