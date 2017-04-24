@@ -1,0 +1,26 @@
+@import 'styling';
+
+.side-menu {
+    @include side-menu-base;
+    .menu-label {
+        background-color: $color-blue;
+        color: $color-light;
+    }
+    ul {
+        &.menu-list {
+            border: 1px solid lighten-2($color-blue);
+            li {
+                a {
+                    color: $color-dark;
+                    &:hover {
+                        background-color: lighten-1($color-blue);
+                        color: $color-light;
+                    }
+                }
+            }
+        }
+    }
+    @if $include-color-palette {
+        @include side-menu-colors;
+    }
+}

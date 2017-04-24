@@ -1,0 +1,57 @@
+@mixin side-menu-base {
+    padding: 1em;
+    font-size: 1em;
+    max-width: 20%;
+    .menu-label {
+        padding: 0.6em 1em;
+        border-radius: 4px;
+        &:not(:last-child) {
+            margin-bottom: 0.2em;
+        }
+        &:not(:first-child) {
+            margin-top: 1em;
+        }
+    }
+    ul {
+        list-style: none;
+        &.menu-list {
+            line-height: 1.25;
+            border-radius: 4px;
+            li {
+                position: relative;
+                margin-bottom: -1px;
+                a {
+                    cursor: pointer;
+                    border-radius: 2px;
+                    display: block;
+                    padding: 0.5em 0.75em;
+                }
+            }
+        }
+    }
+}
+
+@mixin side-menu-colors {
+    @each $colorName, $color in $color-list {
+        &.#{$colorName}{
+            .menu-label {
+                background-color: #{$color};
+                color: $color-light;
+            }
+            ul {
+                &.menu-list {
+                    border: 1px solid lighten-2($color);
+                    li {
+                        a {
+                            color: $color-dark;
+                            &:hover {
+                                background-color: lighten-1($color);
+                                color: $color-light;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
