@@ -8,3 +8,36 @@
 	border-spacing: 0px;
     border-collapse: collapse;
 }
+
+@mixin table-colors {
+    @each $colorName, $color in $color-list {
+        &.#{$colorName} {
+        	td, th {
+        		border-color: lighten($color, 12%);
+        	}
+
+        	tr {
+				&:hover {
+					background-color: lighten-3($color);
+				}
+			}
+
+            &.striped {
+				tbody {
+					tr {
+						&:nth-child(odd) {
+							background-color: lighten-3($color);
+						}	
+					}
+				}
+				thead, tfoot, tbody {
+					tr {
+						&:hover {
+							background-color: lighten-2($color);
+						}	
+					}
+				}
+			}
+        }
+    }
+}

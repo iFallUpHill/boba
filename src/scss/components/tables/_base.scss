@@ -84,6 +84,10 @@ table {
 				&:nth-child(odd) {
 					background-color: $table-row-striped-background;
 				}
+			}
+		}
+		thead, tfoot, tbody {
+			tr {
 				&:hover {
 					background-color: $table-row-striped-hover-background;
 				}
@@ -91,4 +95,23 @@ table {
 		}
 	}
 
+	@if $include-color-palette {
+		@include table-colors;
+
+		&.hover-only {
+			td, th {
+				border-color: $table-border;
+			}
+
+			&.striped {
+				tbody {
+					tr {
+						&:nth-child(odd) {
+							background-color: $table-row-striped-background;
+						}
+					}
+				}
+			}
+		}
+	}
 }
