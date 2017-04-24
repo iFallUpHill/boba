@@ -14,6 +14,9 @@
     }
     ul {
         list-style: none;
+        ul {
+            margin: 0.2em 0 0.2em 2.2em
+        }
         &.menu-list {
             line-height: 1.25;
             border-radius: 0 0 4px 4px;
@@ -47,6 +50,23 @@
                             &:hover {
                                 background-color: lighten-1($color);
                                 color: $color-light;
+                                border-radius: 0;
+                            }
+                        }
+                        &:last-child {
+                            a {
+                                &:hover {
+                                    border-radius: 0 0 4px 4px;
+                                }
+                            }
+                        }
+                        li {
+                            &:last-child {
+                                a {
+                                    &:hover {
+                                        border-radius: 0;
+                                    }
+                                }
                             }
                         }
                     }
