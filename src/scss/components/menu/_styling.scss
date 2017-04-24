@@ -50,23 +50,6 @@
                             &:hover {
                                 background-color: lighten-1($color);
                                 color: $color-light;
-                                border-radius: 0;
-                            }
-                        }
-                        &:last-child {
-                            a {
-                                &:hover {
-                                    border-radius: 0 0 4px 4px;
-                                }
-                            }
-                        }
-                        li {
-                            &:last-child {
-                                a {
-                                    &:hover {
-                                        border-radius: 0;
-                                    }
-                                }
                             }
                         }
                     }

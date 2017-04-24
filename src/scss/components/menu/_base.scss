@@ -3,18 +3,35 @@
 .side-menu {
     @include side-menu-base;
     .menu-label {
-        background-color: $color-blue;
+        background-color: $color-dark;
         color: $color-light;
     }
     ul {
         &.menu-list {
-            border: 1px solid lighten-2($color-blue);
+            border: 1px solid lighten-2($color-dark);
             li {
                 a {
                     color: $color-dark;
                     &:hover {
-                        background-color: lighten-1($color-blue);
+                        background-color: lighten-1($color-dark);
                         color: $color-light;
+                        border-radius: 0;
+                    }
+                }
+                &:last-child {
+                    a {
+                        &:hover {
+                            border-radius: 0 0 4px 4px;
+                        }
+                    }
+                }
+                li {
+                    &:last-child {
+                        a {
+                            &:hover {
+                                border-radius: 0;
+                            }
+                        }
                     }
                 }
             }

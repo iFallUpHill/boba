@@ -50,12 +50,13 @@
                         border-bottom-color: $color;
                         color: $color;
                         &:hover {
-                            background-color: lighten-3($color);
+                            background-color: lighten-2($color);
+                            color: $color-white;
                         }
                     }
                 }
                 &:hover {
-                    background-color: lighten-3($color);
+                    background-color: lighten-2($color);
                 }
             }
             &.boxed {
@@ -63,6 +64,9 @@
                     &.active {
                         a {
                             color: $color;
+                            &:hover {
+                                color: $color-white;
+                            }
                         }
                     }
                 }

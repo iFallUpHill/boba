@@ -6,12 +6,20 @@
     li {
         &.active {
             a {
-                border-bottom-color: $color-teal;
-                color: $color-teal;
+                border-bottom-color: $color-dark;
+                color: $color-dark;
+            }
+            &:hover {
+                a {
+                    color: $color-white;
+                }
             }
         }
         &:hover {
-            background-color: lighten-3($color-teal);
+            background-color: lighten-3($color-dark);
+            a {
+                color: $color-white;
+            }
         }
     }
     &.boxed {
@@ -21,14 +29,15 @@
                     background-color: white;
                     border-color: darken-1($color-light);
                     border-bottom-color: transparent !important;
-                    color: $color-teal;
+                    color: $color-dark;
                     &:hover {
-                        background-color: lighten-3($color-teal);
+                        background-color: lighten-2($color-dark);
+                        color: $color-white;
                     }
                 }
             }
             &:hover {
-                background-color: lighten-3($color-teal);
+                background-color: lighten-3($color-dark);
                 border-radius: 3px 3px 0 0;
             }
         }
