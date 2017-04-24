@@ -43,6 +43,48 @@ h6, .h6 {
     &.thin {
         font-weight: $header-font-weight-light;
     }
+
+// Dividers
+    &.text-divider {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+
+        &:before, &:after {
+            background-color: $header-color;
+            content: '\a0';
+            flex-grow: 1;
+            height: 1px;
+            position: relative;
+            top: 0.63em;
+        }
+
+        &:before {
+            margin-right: 0.7em;
+        }
+
+        &:after {
+            margin-left: 0.7em;
+        }
+    }
+}
+
+// Divider Line Positioning for Headers
+h1, .h1 {
+    &.text-divider {
+        &:before, &:after {
+            top: 0.57em;
+        }
+    }
+}
+
+h2, .h2 {
+    &.text-divider {
+        &:before, &:after {
+            top: 0.59em;
+        }
+    }
 }
 
 // If element before header, add margin
@@ -62,3 +104,4 @@ h6, .h6 {
         line-height: $spacing;
     }
 }
+
