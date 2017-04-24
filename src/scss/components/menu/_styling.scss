@@ -4,9 +4,9 @@
     max-width: 20%;
     .menu-label {
         padding: 0.6em 1em;
-        border-radius: 4px;
+        border-radius: 4px 4px 0 0;
         &:not(:last-child) {
-            margin-bottom: 0.2em;
+            margin-bottom: 0;
         }
         &:not(:first-child) {
             margin-top: 1em;
@@ -16,7 +16,7 @@
         list-style: none;
         &.menu-list {
             line-height: 1.25;
-            border-radius: 4px;
+            border-radius: 0 0 4px 4px;
             li {
                 position: relative;
                 margin-bottom: -1px;
