@@ -43,13 +43,19 @@
 
 @mixin tabs-colors {
     @each $colorName, $color in $color-list {
-        &.#{$colorName}{
+        &.#{$colorName} {
             li {
                 &.active {
                     a {
                         border-bottom-color: $color;
                         color: $color;
+                        &:hover {
+                            background-color: lighten-3($color);
+                        }
                     }
+                }
+                &:hover {
+                    background-color: lighten-3($color);
                 }
             }
             &.boxed {
@@ -58,6 +64,32 @@
                         a {
                             color: $color;
                         }
+                    }
+                }
+            }
+        }
+        &.hover-#{$colorName} {
+            li {
+                &.active {
+                    a {
+                        &:hover {
+                            background-color: $color !important;
+                        }
+                    }
+                }
+                &:hover {
+                    background-color: $color !important;
+                }
+            }
+            &.boxed {
+                li {
+                    &.active {
+                        &:hover {
+                            background-color: $color !important;
+                        }
+                    }
+                    &:hover {
+                        background-color: $color !important;
                     }
                 }
             }

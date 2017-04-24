@@ -10,6 +10,9 @@
                 color: $color-teal;
             }
         }
+        &:hover {
+            background-color: lighten-3($color-teal);
+        }
     }
     &.boxed {
         li {
@@ -19,7 +22,14 @@
                     border-color: darken-1($color-light);
                     border-bottom-color: transparent !important;
                     color: $color-teal;
+                    &:hover {
+                        background-color: lighten-3($color-teal);
+                    }
                 }
+            }
+            &:hover {
+                background-color: lighten-3($color-teal);
+                border-radius: 3px 3px 0 0;
             }
         }
     }
