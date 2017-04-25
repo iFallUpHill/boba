@@ -1,12 +1,12 @@
 deployment:  
   production:
-    branch: "master" 
+    branch: 'master'
     commands:
-      - "git fetch --unshallow"
+      - '[[ ! -e "$(git rev-parse --git-dir)/shallow" ]] || git fetch --unshallow'
       - sh ./deploy.sh
 dependencies:
     override:
-        - echo "dependencies"    
+        - echo 'dependencies'
 test:
     override:
-        - echo "test"  
+        - echo 'test'  
