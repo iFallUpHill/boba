@@ -2,6 +2,7 @@ deployment:
   production:
     branch: "master" 
     commands:
+      - "git fetch --unshallow"
       - sh ./deploy.sh
 dependencies:
     override:
