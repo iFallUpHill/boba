@@ -1,14 +1,14 @@
-@mixin pearl-base {
+@mixin col-base {
 	box-sizing: border-box;
 	flex: 1;
 	margin: 0;
 	padding: 1em 0 0 1em;
 }
 
-@mixin default-pearl-behavior($suffix, $measurement) {
+@mixin default-col-behavior($suffix, $measurement) {
 	@media screen and (min-width: #{$measurement}) {
-		.straw {
-			.pearl {
+		.row {
+			.col {
 				@for $i from 1 through 12 {
 					&.#{$suffix}-#{$i} {
 						flex: 0 0 ($i / 12) * 100%;

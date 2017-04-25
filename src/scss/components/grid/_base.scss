@@ -1,12 +1,12 @@
 @import 'styling';
 @import 'helpers';
 
-.cup {
+.container {
 	max-width: $desktop;
     width: 100%;
 	margin: 0 auto;
 }
-.straw {
+.row {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -14,20 +14,20 @@
     padding-bottom: 1em;
     margin: -1em 0 0 -1em;
 
-    .pearl {
-        @include pearl-base;
+    .col {
+        @include col-base;
     }
 
     /* Gutters */
-    &.pearl-gapless {
+    &.gapless {
         margin: 0;
 
-        .pearl {
+        .col {
             padding: 0;
         }
     }
 }
 
 @each $suffix, $measurement in $resolution-dict {
-	@include default-pearl-behavior(#{$suffix}, #{$measurement});
+	@include default-col-behavior(#{$suffix}, #{$measurement});
 }
