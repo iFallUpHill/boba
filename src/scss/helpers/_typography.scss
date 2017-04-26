@@ -1,7 +1,7 @@
 // Header Styling
-$header-font-family:            'Nunito', sans-serif !default;
-$header-font-weight:            $base-font-weight-default !default;
-$header-font-weight-light:      $base-font-weight-light !default;
+$header-font-family:            'Fira Sans', sans-serif !default;
+$header-font-weight:            $base-font-weight-semi-bold !default;
+$header-font-weight-light:      $base-font-weight-default !default;
 $header-color:                  $color-dark !default;
 $header-vertical-margin:        0.5em;
 $header-margin-top:             0.5em;
@@ -17,7 +17,7 @@ $font-sizing-spacing-list: (h1, $base-xxl-font-size, 1.2),
 
 // Set default font-family
 body {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Muli', sans-serif;
 }
 
 // Set defaults

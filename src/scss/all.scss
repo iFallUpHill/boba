@@ -40,7 +40,7 @@ $include-color-shades: true;
 @import 'helpers/animate';
 
 // Breakpoint Displays
-@import 'helpers/breakpoint-display';
+@import 'helpers/display';
 
 // Grid Framework
 @import 'components/grid/base';
@@ -70,3 +70,5 @@ $include-color-shades: true;
 @import 'components/badges/base';
 // Menu
 @import 'components/menu/base';
+// Counter
+@import 'components/counter/base';

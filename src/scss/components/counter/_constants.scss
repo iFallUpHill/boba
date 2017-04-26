@@ -1,0 +1,14 @@
+$counter-font-family:           		'Fira Sans', sans-serif !default;
+
+$counter-value-font-weight:           	$base-font-weight-semi-bold !default;
+$counter-value-font-size:				$base-lg-font-size !default;
+$counter-value-line-height:				1em;
+
+$counter-desc-font-weight:           	$base-font-weight-semi-bold !default;
+$counter-desc-font-size:				$base-xs-font-size !default;
+
+$counter-font-sizing-list: 	(large, $base-xxl-font-size),
+                   			(medium, $base-xl-font-size),
+                   			(default, $counter-value-font-size), 
+               				(small, $base-md-font-size),
+

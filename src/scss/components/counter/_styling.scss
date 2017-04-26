@@ -1,0 +1,16 @@
+@import 'constants';
+
+@mixin counter-base {
+	display: inline-flex;
+	flex-direction: column;
+	max-width: auto;
+	margin: 1em 0em;
+}
+
+@mixin counter-colors {
+	@each $colorName, $color in $color-list {
+        &.#{$colorName} {
+    		color: $color;
+        }
+    }
+}
