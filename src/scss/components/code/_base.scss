@@ -1,19 +1,23 @@
 .code-block {
+    max-width: 100%;
     code {
         color: $color-dark;
         background: lighten-1($color-light);
         border: 1px solid darken-1($color-light);
         border-radius: 4px;
-        padding: .2em .5em;
-        margin: 1em .2em;
         font-size: 90%;
         white-space: nowrap;
     }
     pre {
+        overflow: auto;
         & > code {
             display: block;
             padding: 1em 1.5em;
             white-space: pre;
+            direction: ltr;
+            text-align: left;
+            word-spacing: normal;
+            word-break: normal;
         }
     }
 }
