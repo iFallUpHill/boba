@@ -86,8 +86,15 @@ h6, .h6 {
         height: 1px;
         line-height: 0px;
         font-size: 0px;
-        margin: 0px 16px;
         flex-grow: 1;
+    }
+    
+    &:before {
+        margin: 0 16px 0 0;
+    }
+
+    &:after {
+        margin: 0 0 0 16px;
     }
 
     // Workaround to make headings work

@@ -4,10 +4,6 @@
 .counter {
 	@include counter-base;
 
-	+ .counter {
-  		margin-left: 1.5em;
-	}
-
 	& > .value {
 	  font-size: $counter-value-font-size;
 	  font-family: $counter-font-family;
@@ -21,10 +17,6 @@
 		~ .desc {
 			margin-top: 0rem;
 		}
-		
-		@if $include-color-palette {
-        	@include counter-colors;
-    	}
 	}
 
 	& > .desc {
@@ -38,10 +30,6 @@
 	  	// Description is on top of value
 		~ .value {
 			margin-top: 0em;
-		}
-	
-		@if $include-color-palette {
-	    	@include counter-colors;
 		}
 	}
 
