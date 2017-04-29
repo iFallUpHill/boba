@@ -21,3 +21,11 @@
 .main-content {
 	padding-top: 5em;
 }
+
+hr {
+    display: block;
+    background: $color-dark;
+    margin: 1.5em 0;
+    height: 1px;
+    border: none;
+}

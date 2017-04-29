@@ -24,14 +24,14 @@ $include-color-shades: true;
 @import 'vendor/normalize';
 @import 'helpers/reset';
 
+// Palette
+@import 'helpers/colors';
+
 // Global Constants
 @import 'helpers/constants';
 
 // Alignment
 @import 'helpers/alignment';
-
-// Palette
-@import 'helpers/colors';
 
 // Typography
 @import 'helpers/typography';
