@@ -1,6 +1,10 @@
 @import 'styling';
 @import 'helpers';
 
+.section {
+    padding: 2em 1em;
+}
+
 .container {
 	max-width: $desktopHD;
     width: 100%;

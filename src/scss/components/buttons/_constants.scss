@@ -1,6 +1,7 @@
 $button-font-size-default: 0.7em;
 $button-spacing-default: 3em;
 $button-padding-default: 2em;
+$button-margin-default: 0.2em;
 
 $button-font-sizing-spacing-padding-list: (large, $button-font-size-default + 0.4em, $button-spacing-default + 0.4em, $button-padding-default + 0.4em),
                                           (medium, $button-font-size-default + 0.2em, $button-spacing-default + 0.2em, $button-padding-default + 0.2em),

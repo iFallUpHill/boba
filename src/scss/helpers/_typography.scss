@@ -1,5 +1,5 @@
 // Header Styling
-$header-font-family:            'Fira Sans', sans-serif !default;
+$header-font-family:            $base-font-family-heading;
 $header-font-weight:            $base-font-weight-semi-bold !default;
 $header-font-weight-light:      $base-font-weight-default !default;
 $header-color:                  $color-dark !default;
@@ -17,7 +17,7 @@ $font-sizing-spacing-list: (h1, $base-xxl-font-size, 1.2),
 
 // Set default font-family
 body {
-	font-family: 'Muli', sans-serif;
+	font-family: $base-font-family-default;
 }
 
 // Set defaults

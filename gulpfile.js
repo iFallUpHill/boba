@@ -24,7 +24,7 @@ const gulp    = require('gulp'),
                 min_css_color_helpers: 'boba-color-helpers.min.css'
             },
             watch: {
-              sass: 'src/scss/**/*.scss',
+              sass: 'src/scss/**/*.scss', 
             }
         };
 
