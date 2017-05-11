@@ -32,4 +32,12 @@ hr {
     margin: 1.5em 0;
     height: 1px;
     border: none;
+
+	@if $include-color-palette {
+        @each $colorName, $color in $color-list {
+        	&.#{$colorName} {
+        		background: $color;
+        	}
+        }
+    }
 }

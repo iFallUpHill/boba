@@ -5,12 +5,12 @@
 .badge {
 	@include badge-base;
 
-	&:hover, &:focus {
-		color: $badge-color;
-		background: $badge-background-hover;
-		text-decoration: none;
-    	outline: none;
-	}
+	// &:hover, &:focus {
+	// 	color: $badge-color;
+	// 	background: $badge-background-hover;
+	// 	text-decoration: none;
+ //    	outline: none;
+	// }
 
 	@if $include-color-palette {
         @include badge-colors;
