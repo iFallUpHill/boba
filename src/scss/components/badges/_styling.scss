@@ -21,9 +21,9 @@
         &.#{$colorName} {
         	background: $color;
 
-        	&:hover, &:focus {
-				background: darken-1($color);
-			}
+   //      	&:hover, &:focus {
+			// 	background: darken-1($color);
+			// }
         }
     }
 }

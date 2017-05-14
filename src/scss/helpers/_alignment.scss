@@ -19,7 +19,11 @@
 }
 
 .main-content {
-	padding-top: 5em;
+	padding: 5em 1.5em 0;
+}
+
+.below-fixed-nav {
+	padding-top: 3.6em;
 }
 
 hr {
@@ -28,4 +32,12 @@ hr {
     margin: 1.5em 0;
     height: 1px;
     border: none;
+
+	@if $include-color-palette {
+        @each $colorName, $color in $color-list {
+        	&.#{$colorName} {
+        		background: $color;
+        	}
+        }
+    }
 }
