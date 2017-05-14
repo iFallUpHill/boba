@@ -50,13 +50,13 @@
                         border-bottom-color: $color;
                         color: $color;
                         &:hover {
-                            background-color: lighten-2($color);
+                            background-color: $color;
                             color: $color-white;
                         }
                     }
                 }
                 &:hover {
-                    background-color: lighten-2($color);
+                    background-color: $color;
                 }
             }
             &.boxed {

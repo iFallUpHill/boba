@@ -16,7 +16,7 @@
             }
         }
         &:hover {
-            background-color: lighten-3($color-dark);
+            background-color: $color-dark;
             a {
                 color: $color-white;
             }
@@ -31,13 +31,13 @@
                     border-bottom-color: transparent !important;
                     color: $color-dark;
                     &:hover {
-                        background-color: lighten-2($color-dark);
+                        background-color: $color-dark;
                         color: $color-white;
                     }
                 }
             }
             &:hover {
-                background-color: lighten-3($color-dark);
+                background-color: $color-dark;
                 border-radius: 3px 3px 0 0;
             }
         }
