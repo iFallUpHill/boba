@@ -19,6 +19,9 @@
             color: $color-dark;
             border-color: $color-dark;
         }
+        &.filled {
+          background: lighten-3($color-dark);
+        }
         @each $size, $fontSize, $height, $padding in $form-size-list {
             &.#{$size} {
                 height: $height;
