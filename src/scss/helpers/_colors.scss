@@ -37,6 +37,7 @@ $lighten-3-percent: 24%;
 $darken-1-percent: 8%;
 $darken-2-percent: 16%;
 $darken-3-percent: 24%;
+$transparent-opacity-default: 0.85;
 
 $color-shade-list: (lighten-1, lighten-2, lighten-3, darken-1, darken-2, darken-3);
 
@@ -64,6 +65,9 @@ $color-shade-list: (lighten-1, lighten-2, lighten-3, darken-1, darken-2, darken-
 	@return darken($base-color, $darken-3-percent);
 }
 
+@function transparentBG($base-color) {
+	@return transparentize($base-color, $transparent-opacity-default);
+}
 
 @mixin generate-base-colors($attribute, $prefix, $important: null) {
 	@each $colorName, $color in $color-list {

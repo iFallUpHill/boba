@@ -2,7 +2,7 @@
 
 .message {
     @include message-base;
-    background: whitesmoke;
+    background-color: transparentBG($color-dark);
 
     .message-header {
         @include message-header-base;
