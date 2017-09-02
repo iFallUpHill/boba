@@ -65,14 +65,27 @@ table {
 	}
 
 	&.bordered {
-		td, th {
-			border-width: 1px;
+		thead {
+			td, th {
+				border-width: 1px 1px 2px 1px;
+			}
 		}
 
-		tr {
-			&:last-child {
-				td, th {
-					border-bottom-width: 1px;
+		tfoot {
+			td, th {
+				border-width: 2px 1px 1px 1px;
+			}
+		}
+		tbody {
+			td, th {
+				border-width: 1px;
+			}
+
+			tr {
+				&:last-child {
+					td, th {
+						border-bottom-width: 1px;
+					}
 				}
 			}
 		}
