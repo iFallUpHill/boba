@@ -56,9 +56,8 @@
     .card-content {
         padding: $card-padding-default;
 
-        &.less-vertical-space {
+        &.no-top-padding {
             padding-top: 0;
-            padding-bottom: 0;
         }
     }
 
@@ -75,6 +74,14 @@
             padding: $card-padding-footer-items;
             &:not(:last-child) {
                 border-right: 1px solid $card-border-color;
+            }
+        }
+
+        &.borderless { 
+            border-top: 0;
+
+            .card-footer-item {
+                border: 0;
             }
         }
 
