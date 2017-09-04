@@ -113,10 +113,15 @@
                 <div class="row">
                 	<div class="col xs-12">
                         <h1 class="header">Images</h1>
-                        <h5 class="subheader thin no-margin">Replace the card title with an image</h5>
+                        <h5 class="subheader thin no-margin">Add an image to your card using card-image</h5>
                     </div>
                     <div class="col xs-12 md-6 col-middle">
 						<div class="card">
+							<div class="card-header">
+								<div class="card-header-title">
+									Card Component
+								</div>
+							</div>
 						    <div class="card-image">
 						        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=500&h=300" alt="Image">
 						    </div>
@@ -138,6 +143,11 @@
                     <div class="col xs-12 md-6 col-middle">
                         <div class="code-block">
                             <pre class="code"><code data-lang="html">&ltdiv class="card"&gt
+	&ltdiv class="card-header"&gt
+		&ltdiv class="card-header-title"&gt
+			Card Component
+		&lt/div&gt
+	&lt/div&gt
     &ltdiv class="card-image"&gt
         &ltimg src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=500&h=300" alt="Image"&gt
     &lt/div&gt
@@ -265,7 +275,7 @@
                     </div>
                     <div class="col xs-12">
                         <h5 class="header thin no-margin">No Top Padding</h5>
-                        <h6 class="subheader thin no-margin">Remove the padding between the card-header and card-content</h6>
+                        <h6 class="subheader thin no-margin">Remove the padding between a borderless card-header and card-content</h6>
                     </div>
                     <div class="col xs-12 md-6 col-middle">
 						<div class="card">
