@@ -33,18 +33,19 @@
 .row-space-around {
 	justify-content: space-around;
 }
-
-.row-direction-row {
-	flex-direction: row;
-}
-.row-direction-row-reverse {
-	flex-direction: row-reverse;
-}
-.row-direction-col {
-	flex-direction: column;
-}
-.row-direction-col-reverse {
-	flex-direction: column-reverse;
+.row {
+    &.row-direction-row {
+    	flex-direction: row;
+    }
+    &.row-direction-row-reverse {
+    	flex-direction: row-reverse;
+    }
+    &.row-direction-col {
+    	flex-direction: column;
+    }
+    &.row-direction-col-reverse {
+    	flex-direction: column-reverse;
+    }
 }
 
 /* Alignment of 'col' */
