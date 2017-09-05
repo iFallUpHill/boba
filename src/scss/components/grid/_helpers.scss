@@ -1,18 +1,50 @@
 /* Alignment of 'row' */
-.row-top {
+.row-align-top {
 	align-items: flex-start;
 }
-.row-bottom {
+.row-align-bottom {
 	align-items: flex-end;
 }
-.row-center {
+.row-align-center {
 	align-items: center;
+}
+.row-align-stretch {
+	align-items: stretch;
+}
+.row-align-space-between {
+	align-items: space-between;
+}
+.row-align-space-around {
+	align-items: space-around;
+}
+
+.row-justify-left {
+	justify-content: flex-start;
+}
+.row-justify-right {
+	justify-content: flex-end;
 }
 .row-justify-center {
 	justify-content: center;
 }
+.row-space-between {
+	justify-content: space-between;
+}
 .row-space-around {
 	justify-content: space-around;
+}
+
+.row-direction-row {
+	flex-direction: row;
+}
+.row-direction-row-reverse {
+	flex-direction: row-reverse;
+}
+.row-direction-col {
+	flex-direction: column;
+}
+.row-direction-col-reverse {
+	flex-direction: column-reverse;
 }
 
 /* Alignment of 'col' */
