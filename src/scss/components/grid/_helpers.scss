@@ -12,10 +12,10 @@
 	align-items: stretch;
 }
 .row-align-space-between {
-	align-items: space-between;
+	align-content: space-between;
 }
 .row-align-space-around {
-	align-items: space-around;
+	align-content: space-around;
 }
 
 .row-justify-left {

@@ -329,7 +329,7 @@
                         <h5 class="subheader thin no-margin">Align columns to your needs</h5>
                     </div>
                     <div class="col xs-12 col-middle">
-                      <div class="row" style="height:200px">
+                      <div class="row" style="min-height:200px">
                         <div class="col col-top xs-12 md-4">
                           <div class="bg-light text-center" style="height:50px; border: 1px solid #d3d3d3">
                               <code>.col-top</code>
@@ -350,7 +350,7 @@
                     </div>
                     <div class="col xs-12 col-middle">
                         <div class="code-block">
-                            <pre class="code"><code data-lang="html">&ltdiv class="row" style="height:200px"&gt
+                            <pre class="code"><code data-lang="html">&ltdiv class="row" style="min-height:200px"&gt
   &ltdiv class="col col-top xs-12 md-4"&gt
     &ltdiv class="bg-light text-center" style="height:50px; border: 1px solid #d3d3d3"&gt
       &ltcode&gt.col-top&lt/code&gt
@@ -376,55 +376,347 @@
                 <div class="row">
                     <div class="col xs-12">
                         <h1 class="header">Row Alignment</h1>
-                        <h5 class="subheader thin no-margin">Align rows to your needs</h5>
+                        <h5 class="subheader thin no-margin">Align row content to your needs</h5>
                     </div>
-                    <div class="col xs-12 col-middle">
-                      <div class="container" style="height:200px">
-                        <div class="row row-toprow-space-around" style="height:50px">
-                          <div class="bg-light text-center" style="height:50px; border: 1px solid #d3d3d3">
-                              top
-                          </div>
-                          <div class="bg-light text-center" style="height:50px; border: 1px solid #d3d3d3">
-                              top
-                          </div>
+                    <div class="col xs-12 md-6 col-middle">
+                      <div class="row row-align-top" style="min-height:200px; margin: 0px;">
+                        <div class="col xs-4 bg-light text-center" style="height:50px; border: 1px solid #d3d3d3">
+                            <code>.row-align-top</code>
                         </div>
-                        <div class="row row-center" style="height:50px">
-                          <div class="bg-light text-center" style="height:50px; border: 1px solid #d3d3d3">
-                              middle
-                          </div>
-                          <div class="bg-light text-center" style="height:50px; border: 1px solid #d3d3d3">
-                              middle
-                          </div>
+                        <div class="col xs-4 bg-light text-center" style="height:100px; border: 1px solid #d3d3d3">
+                            <code>.row-align-top</code>
                         </div>
-                        <div class="row row-bottom" style="height:50px">
-                          <div class="bg-light text-center" style="height:50px; border: 1px solid #d3d3d3">
-                              bottom
-                          </div>
-                          <div class="bg-light text-center" style="height:50px; border: 1px solid #d3d3d3">
-                              bottom
-                          </div>
+                        <div class="col xs-4 bg-light text-center" style="height:150px; border: 1px solid #d3d3d3">
+                            <code>.row-align-top</code>
                         </div>
                       </div>
                     </div>
-                    <div class="col xs-12 col-middle">
+                    <div class="col xs-12 md-6 col-middle">
                         <div class="code-block">
-                            <pre class="code"><code data-lang="html">&ltdiv class="row" style="height:200px"&gt
-  &ltdiv class="col col-top xs-12 md-4"&gt
-    &ltdiv class="bg-light text-center" style="height:50px; border: 1px solid #d3d3d3"&gt
-      &ltcode&gt.col-top&lt/code&gt
-    &lt/div&gt
+                            <pre class="code"><code data-lang="html">&ltdiv class="row row-align-top" style="min-height:200px"&gt
+  &ltdiv class="col xs-4 bg-light text-center" style="height:50px; border: 1px solid #d3d3d3"&gt
+    &ltcode&gt.row-align-top&lt/code&gt
   &lt/div&gt
 
-  &ltdiv class="col col-middle xs-12 md-4"&gt
-    &ltdiv class="bg-light text-center" style="height:50px; border: 1px solid #d3d3d3"&gt
-      &ltcode&gt.col-middle&lt/code&gt
-    &lt/div&gt
+  &ltdiv class="col xs-4 bg-light text-center" style="height:100px; border: 1px solid #d3d3d3"&gt
+    &ltcode&gt.row-align-top&lt/code&gt
   &lt/div&gt
 
-  &ltdiv class="col col-bottom xs-12 md-4"&gt
-    &ltdiv class="bg-light text-center" style="height:50px; border: 1px solid #d3d3d3"&gt
-      &ltcode&gt.col-bottom&lt/code&gt
-    &lt/div&gt
+  &ltdiv class="col xs-4 bg-light text-center" style="height:150px; border: 1px solid #d3d3d3"&gt
+    &ltcode&gt.row-align-top&lt/code&gt
+  &lt/div&gt
+&lt/div&gt</code></pre>
+                        </div>
+                    </div>
+                    <div class="col xs-12 md-6 col-middle">
+                      <div class="row row-align-center" style="min-height:200px; margin: 0px;">
+                        <div class="col xs-4 bg-light text-center" style="height:50px; border: 1px solid #d3d3d3">
+                            <code>.row-align-center</code>
+                        </div>
+                        <div class="col xs-4 bg-light text-center" style="height:100px; border: 1px solid #d3d3d3">
+                            <code>.row-align-center</code>
+                        </div>
+                        <div class="col xs-4 bg-light text-center" style="height:150px; border: 1px solid #d3d3d3">
+                            <code>.row-align-center</code>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col xs-12 md-6 col-middle">
+                        <div class="code-block">
+                            <pre class="code"><code data-lang="html">&ltdiv class="row row-align-center" style="min-height:200px"&gt
+  &ltdiv class="col xs-4 bg-light text-center" style="height:50px; border: 1px solid #d3d3d3"&gt
+    &ltcode&gt.row-align-center&lt/code&gt
+  &lt/div&gt
+
+  &ltdiv class="col xs-4 bg-light text-center" style="height:100px; border: 1px solid #d3d3d3"&gt
+    &ltcode&gt.row-align-center&lt/code&gt
+  &lt/div&gt
+
+  &ltdiv class="col xs-4 bg-light text-center" style="height:150px; border: 1px solid #d3d3d3"&gt
+    &ltcode&gt.row-align-center&lt/code&gt
+  &lt/div&gt
+&lt/div&gt</code></pre>
+                        </div>
+                    </div>
+                    <div class="col xs-12 md-6 col-middle">
+                      <div class="row row-align-bottom" style="min-height:200px; margin: 0px;">
+                        <div class="col xs-4 bg-light text-center" style="height:50px; border: 1px solid #d3d3d3">
+                            <code>.row-align-bottom</code>
+                        </div>
+                        <div class="col xs-4 bg-light text-center" style="height:100px; border: 1px solid #d3d3d3">
+                            <code>.row-align-bottom</code>
+                        </div>
+                        <div class="col xs-4 bg-light text-center" style="height:150px; border: 1px solid #d3d3d3">
+                            <code>.row-align-bottom</code>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col xs-12 md-6 col-middle">
+                        <div class="code-block">
+                            <pre class="code"><code data-lang="html">&ltdiv class="row row-align-bottom" style="min-height:200px"&gt
+  &ltdiv class="col xs-4 bg-light text-center" style="height:50px; border: 1px solid #d3d3d3"&gt
+    &ltcode&gt.row-align-bottom&lt/code&gt
+  &lt/div&gt
+
+  &ltdiv class="col xs-4 bg-light text-center" style="height:100px; border: 1px solid #d3d3d3"&gt
+    &ltcode&gt.row-align-bottom&lt/code&gt
+  &lt/div&gt
+
+  &ltdiv class="col xs-4 bg-light text-center" style="height:150px; border: 1px solid #d3d3d3"&gt
+    &ltcode&gt.row-align-bottom&lt/code&gt
+  &lt/div&gt
+&lt/div&gt</code></pre>
+                        </div>
+                    </div>
+                    <div class="col xs-12 md-6 col-middle">
+                      <div class="row row-align-stretch" style="min-height:200px; margin: 0px;">
+                        <div class="col xs-4 bg-light text-center" style="border: 1px solid #d3d3d3">
+                            <code>.row-align-stretch</code>
+                        </div>
+                        <div class="col xs-4 bg-light text-center" style="border: 1px solid #d3d3d3">
+                            <code>.row-align-stretch</code>
+                        </div>
+                        <div class="col xs-4 bg-light text-center" style="border: 1px solid #d3d3d3">
+                            <code>.row-align-stretch</code>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col xs-12 md-6 col-middle">
+                        <div class="code-block">
+                            <pre class="code"><code data-lang="html">&ltdiv class="row row-align-stretch" style="min-height:200px"&gt
+  &ltdiv class="col xs-4 bg-light text-center" style="border: 1px solid #d3d3d3"&gt
+    &ltcode&gt.row-align-stretch&lt/code&gt
+  &lt/div&gt
+
+  &ltdiv class="col xs-4 bg-light text-center" style="border: 1px solid #d3d3d3"&gt
+    &ltcode&gt.row-align-stretch&lt/code&gt
+  &lt/div&gt
+
+  &ltdiv class="col xs-4 bg-light text-center" style="border: 1px solid #d3d3d3"&gt
+    &ltcode&gt.row-align-stretch&lt/code&gt
+  &lt/div&gt
+&lt/div&gt</code></pre>
+                        </div>
+                    </div>
+                    <div class="col xs-12 md-6 col-middle">
+                      <div class="row row-align-space-between" style="margin: 0px;">
+                        <div class="col xs-6 bg-light text-center" style="border: 1px solid #d3d3d3">
+                            <code>.row-align-space-between</code>
+                        </div>
+                        <div class="col xs-6 bg-light text-center" style="border: 1px solid #d3d3d3">
+                            <code>.row-align-space-between</code>
+                        </div>
+                        <div class="col xs-6 bg-light text-center" style="border: 1px solid #d3d3d3">
+                            <code>.row-align-space-between</code>
+                        </div>
+                        <div class="col xs-6 bg-light text-center" style="border: 1px solid #d3d3d3">
+                            <code>.row-align-space-between</code>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col xs-12 md-6 col-middle">
+                        <div class="code-block">
+                            <pre class="code"><code data-lang="html">&ltdiv class="row row-align-space-between"&gt
+  &ltdiv class="col xs-2 bg-light text-center" style="border: 1px solid #d3d3d3"&gt
+    &ltcode&gt.row-align-space-between&lt/code&gt
+  &lt/div&gt
+
+  &ltdiv class="col xs-2 bg-light text-center" style="border: 1px solid #d3d3d3"&gt
+    &ltcode&gt.row-align-space-between&lt/code&gt
+  &lt/div&gt
+
+  &ltdiv class="col xs-2 bg-light text-center" style="border: 1px solid #d3d3d3"&gt
+    &ltcode&gt.row-align-space-between&lt/code&gt
+  &lt/div&gt
+&lt/div&gt</code></pre>
+                        </div>
+                    </div>
+                    <div class="col xs-12 md-6 col-middle">
+                      <div class="row row-align-space-around" style="margin: 0px;">
+                        <div class="col xs-6 bg-light text-center" style="border: 1px solid #d3d3d3">
+                            <code>.row-align-space-around</code>
+                        </div>
+                        <div class="col xs-6 bg-light text-center" style="border: 1px solid #d3d3d3">
+                            <code>.row-align-space-around</code>
+                        </div>
+                        <div class="col xs-6 bg-light text-center" style="border: 1px solid #d3d3d3">
+                            <code>.row-align-space-around</code>
+                        </div>
+                        <div class="col xs-6 bg-light text-center" style="border: 1px solid #d3d3d3">
+                            <code>.row-align-space-around</code>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col xs-12 md-6 col-middle">
+                        <div class="code-block">
+                            <pre class="code"><code data-lang="html">&ltdiv class="row row-align-space-around"&gt
+  &ltdiv class="col xs-2 bg-light text-center" style="border: 1px solid #d3d3d3"&gt
+    &ltcode&gt.row-align-space-around&lt/code&gt
+  &lt/div&gt
+
+  &ltdiv class="col xs-2 bg-light text-center" style="border: 1px solid #d3d3d3"&gt
+    &ltcode&gt.row-align-space-around&lt/code&gt
+  &lt/div&gt
+
+  &ltdiv class="col xs-2 bg-light text-center" style="border: 1px solid #d3d3d3"&gt
+    &ltcode&gt.row-align-space-around&lt/code&gt
+  &lt/div&gt
+&lt/div&gt</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <hr class="light" />
+                <div class="row">
+                    <div class="col xs-12">
+                        <h1 class="header">Row Justification</h1>
+                        <h5 class="subheader thin no-margin">Justify row content to your needs</h5>
+                    </div>
+                    <div class="col xs-12 md-6 col-middle">
+                      <div class="row row-justify-left" style="margin: 0px;">
+                        <div class="col xs-2 bg-light text-center" style="height:100px; border: 1px solid #d3d3d3">
+                            <code>.row-justify-left</code>
+                        </div>
+                        <div class="col xs-2 bg-light text-center" style="height:100px;; border: 1px solid #d3d3d3">
+                            <code>.row-justify-left</code>
+                        </div>
+                        <div class="col xs-2 bg-light text-center" style="height:100px;; border: 1px solid #d3d3d3">
+                            <code>.row-justify-left</code>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col xs-12 md-6 col-middle">
+                        <div class="code-block">
+                            <pre class="code"><code data-lang="html">&ltdiv class="row row-justify-left"&gt
+  &ltdiv class="col xs-2 bg-light text-center" style="height:100px; border: 1px solid #d3d3d3"&gt
+    &ltcode&gt.row-justify-left&lt/code&gt
+  &lt/div&gt
+
+  &ltdiv class="col xs-2 bg-light text-center" style="height:100px; border: 1px solid #d3d3d3"&gt
+    &ltcode&gt.row-justify-left&lt/code&gt
+  &lt/div&gt
+
+  &ltdiv class="col xs-2 bg-light text-center" style="height:100px; border: 1px solid #d3d3d3"&gt
+    &ltcode&gt.row-justify-left&lt/code&gt
+  &lt/div&gt
+&lt/div&gt</code></pre>
+                        </div>
+                    </div>
+                    <div class="col xs-12 md-6 col-middle">
+                      <div class="row row-justify-center" style="margin: 0px;">
+                        <div class="col xs-2 bg-light text-center" style="height:100px; border: 1px solid #d3d3d3">
+                            <code>.row-justify-center</code>
+                        </div>
+                        <div class="col xs-2 bg-light text-center" style="height:100px;; border: 1px solid #d3d3d3">
+                            <code>.row-justify-center</code>
+                        </div>
+                        <div class="col xs-2 bg-light text-center" style="height:100px;; border: 1px solid #d3d3d3">
+                            <code>.row-justify-center</code>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col xs-12 md-6 col-middle">
+                        <div class="code-block">
+                            <pre class="code"><code data-lang="html">&ltdiv class="row row-justify-center"&gt
+  &ltdiv class="col xs-2 bg-light text-center" style="height:100px; border: 1px solid #d3d3d3"&gt
+    &ltcode&gt.row-justify-center&lt/code&gt
+  &lt/div&gt
+
+  &ltdiv class="col xs-2 bg-light text-center" style="height:100px; border: 1px solid #d3d3d3"&gt
+    &ltcode&gt.row-justify-center&lt/code&gt
+  &lt/div&gt
+
+  &ltdiv class="col xs-2 bg-light text-center" style="height:100px; border: 1px solid #d3d3d3"&gt
+    &ltcode&gt.row-justify-center&lt/code&gt
+  &lt/div&gt
+&lt/div&gt</code></pre>
+                        </div>
+                    </div>
+                    <div class="col xs-12 md-6 col-middle">
+                      <div class="row row-justify-right" style="margin: 0px;">
+                        <div class="col xs-2 bg-light text-center" style="height:100px; border: 1px solid #d3d3d3">
+                            <code>.row-justify-right</code>
+                        </div>
+                        <div class="col xs-2 bg-light text-center" style="height:100px;; border: 1px solid #d3d3d3">
+                            <code>.row-justify-right</code>
+                        </div>
+                        <div class="col xs-2 bg-light text-center" style="height:100px;; border: 1px solid #d3d3d3">
+                            <code>.row-justify-right</code>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col xs-12 md-6 col-middle">
+                        <div class="code-block">
+                            <pre class="code"><code data-lang="html">&ltdiv class="row row-justify-right"&gt
+  &ltdiv class="col xs-2 bg-light text-center" style="height:100px; border: 1px solid #d3d3d3"&gt
+    &ltcode&gt.row-justify-right&lt/code&gt
+  &lt/div&gt
+
+  &ltdiv class="col xs-2 bg-light text-center" style="height:100px; border: 1px solid #d3d3d3"&gt
+    &ltcode&gt.row-justify-right&lt/code&gt
+  &lt/div&gt
+
+  &ltdiv class="col xs-2 bg-light text-center" style="height:100px; border: 1px solid #d3d3d3"&gt
+    &ltcode&gt.row-justify-right&lt/code&gt
+  &lt/div&gt
+&lt/div&gt</code></pre>
+                        </div>
+                    </div>
+                    <div class="col xs-12 md-6 col-middle">
+                      <div class="row row-space-between" style="margin: 0px;">
+                        <div class="col xs-2 bg-light text-center" style="height:100px; border: 1px solid #d3d3d3">
+                            <code>.row-space-between</code>
+                        </div>
+                        <div class="col xs-2 bg-light text-center" style="height:100px;; border: 1px solid #d3d3d3">
+                            <code>.row-space-between</code>
+                        </div>
+                        <div class="col xs-2 bg-light text-center" style="height:100px;; border: 1px solid #d3d3d3">
+                            <code>.row-space-between</code>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col xs-12 md-6 col-middle">
+                        <div class="code-block">
+                            <pre class="code"><code data-lang="html">&ltdiv class="row row-space-between"&gt
+  &ltdiv class="col xs-2 bg-light text-center" style="height:100px; border: 1px solid #d3d3d3"&gt
+    &ltcode&gt.row-space-between&lt/code&gt
+  &lt/div&gt
+
+  &ltdiv class="col xs-2 bg-light text-center" style="height:100px; border: 1px solid #d3d3d3"&gt
+    &ltcode&gt.row-space-between&lt/code&gt
+  &lt/div&gt
+
+  &ltdiv class="col xs-2 bg-light text-center" style="height:100px; border: 1px solid #d3d3d3"&gt
+    &ltcode&gt.row-space-between&lt/code&gt
+  &lt/div&gt
+&lt/div&gt</code></pre>
+                        </div>
+                    </div>
+                    <div class="col xs-12 md-6 col-middle">
+                      <div class="row row-space-around" style="margin: 0px;">
+                        <div class="col xs-2 bg-light text-center" style="height:100px; border: 1px solid #d3d3d3">
+                            <code>.row-space-around</code>
+                        </div>
+                        <div class="col xs-2 bg-light text-center" style="height:100px;; border: 1px solid #d3d3d3">
+                            <code>.row-space-around</code>
+                        </div>
+                        <div class="col xs-2 bg-light text-center" style="height:100px;; border: 1px solid #d3d3d3">
+                            <code>.row-space-around</code>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col xs-12 md-6 col-middle">
+                        <div class="code-block">
+                            <pre class="code"><code data-lang="html">&ltdiv class="row row-space-around"&gt
+  &ltdiv class="col xs-2 bg-light text-center" style="height:100px; border: 1px solid #d3d3d3"&gt
+    &ltcode&gt.row-space-around&lt/code&gt
+  &lt/div&gt
+
+  &ltdiv class="col xs-2 bg-light text-center" style="height:100px; border: 1px solid #d3d3d3"&gt
+    &ltcode&gt.row-space-around&lt/code&gt
+  &lt/div&gt
+
+  &ltdiv class="col xs-2 bg-light text-center" style="height:100px; border: 1px solid #d3d3d3"&gt
+    &ltcode&gt.row-space-around&lt/code&gt
   &lt/div&gt
 &lt/div&gt</code></pre>
                         </div>
