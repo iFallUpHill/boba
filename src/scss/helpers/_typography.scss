@@ -109,3 +109,16 @@ h6, .h6 {
     }
 
 }
+
+// Text Transforms
+.capitalize {
+    text-transform: capitalize;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
