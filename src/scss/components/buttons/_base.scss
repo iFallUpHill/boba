@@ -68,7 +68,7 @@ input[type="reset"],input[type="button"] {
                 height: $spacing;
                 padding: 0 $padding;
                 font-size: $fontSize;
-                line-height: $spacing;
+                line-height: $spacing - 2*$button-margin-default;
         }
     }
 
