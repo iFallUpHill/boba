@@ -44,7 +44,7 @@
         &.#{$colorName}{
             border: solid 1px #{$color};
             &.filled {
-                background: lighten-3($color);
+                background: transparentBG($color);
             }
         }
     }

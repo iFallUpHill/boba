@@ -20,7 +20,7 @@
             border-color: $color-dark;
         }
         &.filled {
-          background: lighten-3($color-dark);
+          background: transparentBG($color-dark);
         }
         @each $size, $fontSize, $height, $padding in $form-size-list {
             &.#{$size} {
