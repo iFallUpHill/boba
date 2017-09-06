@@ -43,6 +43,10 @@
     @each $colorName, $color in $color-list {
         &.#{$colorName}{
             border: solid 1px #{$color};
+            color: $color;
+            &::placeholder {
+                color: darken-3($color);
+            }
             &.filled {
                 background: transparentBG($color);
             }
