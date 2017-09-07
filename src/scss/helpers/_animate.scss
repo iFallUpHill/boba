@@ -49,9 +49,9 @@
 }
 .hover-hop {
     &:hover{
-        animation: bob 0.9s linear;
+        animation: hop 0.9s linear;
         animation-iteration-count: infinite;
-        @keyframes bob {
+        @keyframes hop {
             0% {
                 transform: translateY(0em);
             }
@@ -64,11 +64,11 @@
         }
     }
 }
-.hover-hang {
+.hover-bob {
     &:hover{
-        animation: hang 0.9s linear;
+        animation: bob 0.9s linear;
         animation-iteration-count: infinite;
-        @keyframes hang {
+        @keyframes bob {
             0% {
                 transform: translateY(0em);
             }
