@@ -49,7 +49,7 @@
 }
 .hover-hop {
     &:hover{
-        animation: hop 0.9s linear;
+        animation: hop 1s ease-in-out;
         animation-iteration-count: infinite;
         @keyframes hop {
             0% {
@@ -66,7 +66,7 @@
 }
 .hover-bob {
     &:hover{
-        animation: bob 0.9s linear;
+        animation: bob 1s ease-in-out;
         animation-iteration-count: infinite;
         @keyframes bob {
             0% {
