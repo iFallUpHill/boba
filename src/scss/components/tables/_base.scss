@@ -123,7 +123,7 @@ table {
 			&.striped {
 				tbody {
 					tr {
-						&:nth-child(odd) {
+						&:nth-child(odd):not(:hover) {
 							background-color: $table-row-striped-background;
 						}
 					}
