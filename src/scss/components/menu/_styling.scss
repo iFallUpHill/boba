@@ -37,8 +37,8 @@
     @each $colorName, $color in $color-list {
         &.#{$colorName}{
             .menu-label {
-                background-color: #{$color};
-                color: $color-light;
+                background-color: darken-1($color);
+                color: $color-white;
             }
             ul {
                 &.menu-list {
@@ -47,8 +47,12 @@
                         a {
                             color: $color-dark;
                             &:hover {
-                                background-color: lighten-1($color);
-                                color: $color-light;
+                                background-color: #{$color};
+                                color: $color-white;
+                            }
+                            &.active {
+                                background-color: #{$color};
+                                color: $color-white;
                             }
                         }
                     }

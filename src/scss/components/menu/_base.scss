@@ -3,8 +3,8 @@
 .side-menu {
     @include side-menu-base;
     .menu-label {
-        background-color: $color-dark;
-        color: $color-light;
+        background-color: darken-1($color-dark);
+        color: $color-white;
     }
     ul {
         &.menu-list {
@@ -13,9 +13,13 @@
                 a {
                     color: $color-dark;
                     &:hover {
-                        background-color: lighten-1($color-dark);
-                        color: $color-light;
+                        background-color: $color-dark;
+                        color: $color-white;
                         border-radius: 0;
+                    }
+                    &.active {
+                        background-color: $color-dark;
+                        color: $color-white;
                     }
                 }
                 &:last-child {
