@@ -18,7 +18,8 @@
             text-align: left;
             word-spacing: normal;
             word-break: normal;
-            white-space: pre-wrap;
+            white-space: pre;
+            overflow-x: auto;
         }
     }
 }

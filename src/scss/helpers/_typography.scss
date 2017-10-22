@@ -31,6 +31,7 @@ h6, .h6 {
     font-family: $header-font-family;
     font-weight: $header-font-weight;
     margin: 0 0 $header-vertical-margin 0;
+    word-break: break-word;
 
     &.header {
         margin-bottom: 0;

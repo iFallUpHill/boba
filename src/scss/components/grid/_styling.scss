@@ -3,6 +3,8 @@
 	flex: 1 1 auto;
 	margin: 0;
 	padding: 1em 0 0 1em;
+	min-width: 0;
+	max-width: 100%;
 }
 
 @mixin default-col-behavior($suffix, $measurement) {
