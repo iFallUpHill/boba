@@ -10,7 +10,6 @@
 
 @mixin message-header-base {
     align-items: center;
-    border-radius: $border-radius $border-radius 0 0;
     display: flex;
     justify-content: space-between;
     line-height: 0.5em;
@@ -24,7 +23,6 @@
 }
 
 @mixin message-body-base {
-    border-radius: $border-radius;
     padding: 1em 1.25em;
 }
 
@@ -32,13 +30,14 @@
     @each $colorName, $color in $color-list {
         &.#{$colorName}{
             background-color: transparentBG($color);
+            border: solid 1px #{$color};
 
             .message-header {
                 background-color: #{$color};
             }
 
             .message-body {
-                border: solid 1px #{$color};
+                
                 color: darken-3($color);
             }
         }

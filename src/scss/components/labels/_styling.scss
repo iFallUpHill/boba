@@ -1,20 +1,36 @@
 @import 'constants';
 
 @mixin label-base {
-    display: inline-block;
+    display: inline-flex;
     padding: $label-vertical-padding $label-horizontal-padding;
+    border-radius: $label-border-radius;
+    border: 1px solid $color-dark;
     background: $color-dark;
     color: $color-white;
     font-size: $label-font-size;
     line-height: $label-line-height;
-    vertical-align: middle;
     white-space: nowrap;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.2em;
+    height: $label-height;
+}
+
+@mixin label-rounded {
+    border-radius: $label-rounded-border-radius;
 }
 
 @mixin label-colors {
 	@each $colorName, $color in $color-list {
         &.#{$colorName} {
         	background: $color;
+            border-color: $color;
+
+            &.outlined {
+                background-color: rgba(0,0,0,0);
+                color: $color;
+            }
         }
     }
 }

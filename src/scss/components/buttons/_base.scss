@@ -65,10 +65,10 @@ input[type="reset"],input[type="button"] {
 
     @each $size, $fontSize, $spacing, $padding in $button-font-sizing-spacing-padding-list {
         &.#{$size} {
-                height: $spacing;
-                padding: 0 $padding;
-                font-size: $fontSize;
-                line-height: $spacing - 2*$button-margin-default;
+            height: $spacing;
+            padding: 0 $padding;
+            font-size: $fontSize;
+            line-height: $spacing - 2*$button-margin-default;
         }
     }
 

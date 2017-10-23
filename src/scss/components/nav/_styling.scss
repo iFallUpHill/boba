@@ -1,0 +1,163 @@
+@import 'constants';
+
+@mixin navbar-base {
+    background-color: $color-dark;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    width: 100%;
+    z-index: 3;
+    display: inline-block;
+
+    &.fixed {
+        position: fixed;
+    }
+
+    a {
+        color: $color-white;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+
+        li {
+	        margin-bottom: 0;
+	        a {
+	            display: block;
+	            padding: 1.25em 1.25em;
+	            text-decoration: none;
+
+	            &:hover, &:focus, &:active {
+	        		color: $color-white;
+		        }
+	        }
+
+	        &:hover, &:focus {
+	        	background-color: darken-1($color-dark);
+	        }
+
+	        &:active {
+	        	background-color: darken-2($color-dark);
+	        }
+	    }
+    }
+
+    .logo {
+        display: block;
+        float: left;
+        font-size: 2em;
+        padding: 0.3em 0.6em;
+        text-decoration: none;
+    }
+
+/* menu */
+    .menu {
+        clear: both;
+        max-height: 0;
+        transition: max-height .4s ease-out;
+        position: relative;
+    }
+
+    /* menu icon */
+    .menu-icon {
+        cursor: pointer;
+        display: inline-block;
+        float: right;
+        padding: 1.75em 1.25em;
+        position: relative;
+        user-select: none;
+
+        .navicon {
+            background: $color-white;
+            display: block;
+            height: 0.125em;
+            position: relative;
+            transition: background .2s ease-out;
+            width: 1.125em;
+
+            &:before,
+            &:after {
+                background: $color-white;
+                content: '';
+                display: block;
+                height: 100%;
+                position: absolute;
+                transition: all .2s ease-out;
+                width: 100%;
+            }
+
+            &:before {
+                top: 0.3em;
+            }
+
+            &:after {
+                top: -0.3em;
+            }
+        }
+    }
+
+  /* menu btn */
+    .menu-btn {
+        display: none;
+
+        &:checked {
+            & ~ .menu {
+                max-height: 30em;
+            }
+            & ~ .menu-icon {
+                .navicon {
+                    background: transparent;
+                    &:before {
+                        transform: rotate(-45deg);
+                    }
+                    &:after {
+                        transform: rotate(45deg);
+                    }
+                }
+                &:not(.steps) .navicon {
+                    &:before, &:after {
+                        top: 0;
+                    }
+                }
+            }
+
+        }
+    }
+
+    @media (min-width: $laptop) {
+	    li {
+	        float: left;
+	    }
+	    a {
+	        padding: 1.25em 1.875em;
+	    }
+	    .menu {
+	        clear: none;
+	        float: right;
+	        max-height: none;
+	    }
+	    .menu-icon {
+	        display: none;
+	    }
+	}
+}
+
+@mixin navbar-colors {
+	@each $colorName, $color in $color-list {
+        &.#{$colorName} {
+        	background-color: $color;
+        	ul {
+		        li {
+			        &:hover, &:focus {
+			        	background-color: darken-1($color);
+			        }
+
+			        &:active {
+			        	background-color: darken-2($color);
+			        }
+			    }
+		    }
+        }
+    }
+}

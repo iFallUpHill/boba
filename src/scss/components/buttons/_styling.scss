@@ -1,7 +1,10 @@
 @import 'constants';
 
 @mixin button-base {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center; 
+    justify-content: center; 
+
     height: $button-spacing-default;
     padding: 0 $button-padding-default;
     margin: $button-margin-default;

@@ -1,12 +1,91 @@
 @import 'constants';
 @import 'styling';
 
-.label {
-    @include label-base;
+span {
+	&.label {
+	    @include label-base;
 
-    @if $include-color-palette {
-        @include label-colors;
-    }
+	    &.rounded {
+	    	@include label-rounded;
+	    }
+
+	    &.outlined {
+	    	background-color: rgba(0,0,0,0);
+	    	color: $color-dark;
+	    }
+
+	    @if $include-color-palette {
+	        @include label-colors;
+	    }
+	}
 }
 
+.label-group {
+	display: flex;
+	flex-wrap: wrap;
 
+
+	.label, .join-labels {
+		margin-right: 0.5rem;
+	}
+}
+
+.join-labels {
+	display: inline-flex; 
+	align-items: center;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+
+	.label {
+		margin-right: 0;
+
+		&:not(:first-child) {
+	        border-bottom-left-radius: 0;
+	        border-top-left-radius: 0;
+	        border-left: 0px;
+    	}
+
+    	&:not(:last-child) {
+			border-bottom-right-radius: 0;
+        	border-top-right-radius: 0;
+	        border-right: 0px;
+    	}
+
+    	&.rounded {
+	    	&:first-child { 
+	    		padding-left: $label-joined-rounded-horizontal-padding;
+	    	}
+	    	&:last-child { 
+	    		padding-right: $label-joined-rounded-horizontal-padding;
+	    	}
+    	}
+	}
+}
+
+@each $size, $fontSize, $height, $vpadding, $hpadding in $label-font-height-vpadding-hpadding {
+    span {
+		&.label {
+		    &.#{$size} {
+		    	font-size: $fontSize;
+		        height: $height;
+		        line-height: $height;
+		        padding: $vpadding $hpadding;
+		    }
+		}
+	}
+
+	.join-labels {
+		.label {
+			&.#{$size} {
+				&.rounded {
+			    	&:first-child { 
+			    		padding-left: $hpadding + 0.2em;
+			    	}
+			    	&:last-child { 
+			    		padding-right: $hpadding + 0.2em;
+			    	}
+		    	}
+		    }
+		}
+	}
+}

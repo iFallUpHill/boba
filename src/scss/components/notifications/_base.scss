@@ -1,22 +1,22 @@
 @import 'styling';
 
-.message {
-    @include message-base;
+.notification {
+    @include notification-base;
     background-color: transparentBG($color-dark);
     border: solid 1px $color-dark;
+    color: $color-dark;
 
-    .message-header {
-        @include message-header-base;
+    // Modifiers
+    &.filled {
         background-color: $color-dark;
         color: $color-white;
     }
 
-    .message-body {
-        @include message-body-base;
-        color: $color-dark;
+    &.outlined {
+        background-color: rgba(0,0,0,0);
     }
 
     @if $include-color-palette {
-        @include message-colors; 
+        @include notification-colors; 
     }
 }

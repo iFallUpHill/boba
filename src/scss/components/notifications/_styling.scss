@@ -1,0 +1,30 @@
+@import 'constants';
+
+@mixin notification-base {
+    border-radius: $border-radius;
+    padding: 1em 1.25em;
+    font-size: 1em;
+    &:not(:last-child) {
+        margin-bottom: 1.5em;
+    }
+}
+
+@mixin notification-colors {
+    @each $colorName, $color in $color-list {
+        &.#{$colorName}{
+            background-color: transparentBG($color);
+            border: solid 1px #{$color};    
+            color: darken-3($color);
+
+            &.filled {
+                background-color: $color;
+                color: $color-white;
+            }
+
+            &.outlined {
+                background-color: rgba(0,0,0,0);
+                color: $color;
+            }
+        }
+    }
+}
