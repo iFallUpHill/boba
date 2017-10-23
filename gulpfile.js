@@ -9,7 +9,7 @@ const gulp    = require('gulp'),
       browserSync = require('browser-sync'),
       isDist  = argv.prod ? true : false,
       minify  = argv.nomin ? false : true,
-      buildAll = argv.buildAll ? true : false;
+      buildAll = argv.buildall ? true : false;
       config  = {
             src: {
                 html: 'src/**/*.html',
