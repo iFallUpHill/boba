@@ -7,6 +7,7 @@
 	.banner-header, .banner-footer {
 		flex-grow: 0;
   		flex-shrink: 0;
+  		padding: $banner-header-footer-padding;
 	}
 
 	.banner-body {

@@ -34,6 +34,10 @@ input[type="reset"],input[type="button"] {
         cursor: not-allowed;
     }
 
+    &.rounded {
+        border-radius: $button-rounded-border-radius;
+    }
+
     &.outlined {
         &:hover, &:focus{
             color: darken-1($color-dark);
