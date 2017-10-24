@@ -5,15 +5,22 @@ $header-font-weight-light:      $base-font-weight-default !default;
 $header-color:                  $color-dark !default;
 $header-vertical-margin:        0.5em;
 $header-margin-top:             0.5em;
-$sub-header-margin-top:         -0.1em;
+$sub-header-margin-top:         -0.05em;
+
+$h1-font-size: 2.25em;
+$h2-font-size: 2em;
+$h3-font-size: 1.75em;
+$h4-font-size: 1.5em;
+$h5-font-size: 1.25em;
+$h6-font-size: 1em;
 
 // Header, Font Size, Line-Height
-$font-sizing-spacing-list: (h1, $base-xxl-font-size, 1.2),
-                           (h2, $base-xl-font-size, 1.3),
-                           (h3, $base-lg-font-size, 1.4),
-                           (h4, $base-md-font-size, 1.4),
-                           (h5, $base-sm-font-size, 1.4),
-                           (h6, $base-xs-font-size, 1.4);
+$font-sizing-spacing-list: (h1, $h1-font-size, 1),
+                           (h2, $h2-font-size, 1),
+                           (h3, $h3-font-size, 1),
+                           (h4, $h4-font-size, 1),
+                           (h5, $h5-font-size, 1),
+                           (h6, $h6-font-size, 1);
 
 // Set default font-family
 body {

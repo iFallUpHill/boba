@@ -5,7 +5,9 @@
     box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
     width: 100%;
     z-index: 3;
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 
     &.fixed {
         position: fixed;
@@ -45,25 +47,25 @@
 
     .logo {
         display: block;
-        float: left;
         font-size: 2em;
         padding: 0.3em 0.6em;
         text-decoration: none;
     }
 
 /* menu */
-    .menu {
+    .right-menu, .left-menu {
         clear: both;
         max-height: 0;
         transition: max-height .4s ease-out;
         position: relative;
+        flex-basis: 100%;
     }
 
     /* menu icon */
     .menu-icon {
         cursor: pointer;
         display: inline-block;
-        float: right;
+        margin-left: auto;
         padding: 1.75em 1.25em;
         position: relative;
         user-select: none;
@@ -102,7 +104,7 @@
         display: none;
 
         &:checked {
-            & ~ .menu {
+            & ~ .right-menu, & ~ .left-menu {
                 max-height: 30em;
             }
             & ~ .menu-icon {
@@ -132,11 +134,16 @@
 	    a {
 	        padding: 1.25em 1.875em;
 	    }
-	    .menu {
+	    .right-menu, .left-menu {
 	        clear: none;
-	        float: right;
-	        max-height: none;
+            max-height: none;
+            flex-basis: auto;
 	    }
+
+        .right-menu {
+            margin-left: auto;
+        }
+
 	    .menu-icon {
 	        display: none;
 	    }

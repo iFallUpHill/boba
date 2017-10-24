@@ -1,6 +1,7 @@
 code {
     &.inline {
         background: whitesmoke;
+        color: darken-3($color-red);
         padding: 0 0.3em;
     }
 }
