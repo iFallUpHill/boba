@@ -17,6 +17,14 @@
     flex-wrap: wrap;
     margin: -1em 0 0 -1em;
 
+    &:not(:last-child) {
+        padding-bottom: 1em;
+    }
+
+    & + hr {
+        margin-top: 0.75em;
+    }
+
     .col {
         @include col-base;
     }

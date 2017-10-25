@@ -42,7 +42,7 @@
             }
         }
     }
-    @each $size, $fontSize, $height, $padding in $form-size-list {
+    @each $size, $fontSize, $height, $padding in $tab-size-list {
         &.#{$size} {
             font-size: $fontSize;
         }

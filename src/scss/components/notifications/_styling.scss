@@ -4,9 +4,8 @@
     border-radius: $border-radius;
     padding: 1em 1.25em;
     font-size: 1em;
-    &:not(:last-child) {
-        margin-bottom: 1.5em;
-    }
+    margin-bottom: 1em;
+
 }
 
 @mixin notification-colors {

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ page_title }} | Build with Boba</title>
+        <link rel="stylesheet" href="/boba.min.css">
+    </head>
+    <body>
+
+    {% include "templates/core/_navbar.njk" %}
+    {% include "templates/docs/core/_header.njk" %}
+    {% include "templates/docs/core/_header_selector.njk" %}
+
+    <div class="section">
+        <div class="container">
+            {% block main %}
+            {% endblock %}
+        </div>
+    </div>
+
+    {% include "templates/core/_footer.njk" %}
+
+    </body>
+</html>

@@ -1,6 +1,6 @@
-$form-font-size-default: 1em;
+$tab-font-size-default: 1em;
 
-$form-size-list: (large, $form-font-size-default + 0.4em),
-                  (medium, $form-font-size-default + 0.2em),
-                  (default, $form-font-size-default),
-                  (small, $form-font-size-default - 0.2em);
+$tab-size-list: (large, $tab-font-size-default + 0.4em),
+                  (medium, $tab-font-size-default + 0.2em),
+                  (default, $tab-font-size-default),
+                  (small, $tab-font-size-default - 0.2em);

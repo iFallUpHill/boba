@@ -3,224 +3,243 @@
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
         <title>Labels | Build with Boba</title>
-        <link rel="stylesheet" href="../boba.min.css">
+        <link rel="stylesheet" href="/boba.min.css">
     </head>
     <body>
 
-        <nav class="navbar fixed">
-            <a href="./" class="logo">boba</a>
-            <input class="menu-btn" type="checkbox" id="menu-btn" />
-            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-            <ul class="menu">
-                <li class="bg-hover-blue lighten-bg-hover-2">
-                    <a href="./buttons.html"><span>Buttons</span></a>
-                </li>
-                <li class="bg-hover-blue lighten-bg-hover-2">
-                    <a href="./typography.html"><span>Typography</span></a>
-                </li>
-                <li class="bg-hover-blue lighten-bg-hover-2">
-                    <a href="./labels.html"><span>Labels</span></a>
-                </li>
-                <li class="bg-hover-blue lighten-bg-hover-2">
-                    <a href="./forms.html"><span>Forms</span></a>
-                </li>
-                <li class="bg-hover-blue lighten-bg-hover-2">
-                    <a href="./grid.html"><span>Grid</span></a>
-                </li>
-                <li class="bg-hover-blue lighten-bg-hover-2">
-                    <a href="./messages.html"><span>Messages</span></a>
-                </li>
-                <li class="bg-hover-blue lighten-bg-hover-2">
-                    <a href="./tables.html"><span>Tables</span></a>
-                </li>
-                <li class="bg-hover-blue lighten-bg-hover-2">
-                    <a href="./tabs.html"><span>Tabs</span></a>
-                </li>
-            </ul>
-        </nav>
-
-        <div class="below-fixed-nav">
-            <div class="banner medium indigo darken-bg-1">
-                <div class="banner-body text-center">
-                  <div class="container">
-                    <h1 class="header text-white">Labels</h1>
-                  </div>
-                </div>
-            </div>
+    <nav class="navbar fixed">
+    <a href="/" class="logo">boba</a>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="right-menu">
+        <li>
+            <a href="/docs/"><span>Docs</span></a>
+        </li>
+        <li>
+            <a href="/about.html"><span>About</span></a>
+        </li>
+        <li>
+            <a href="/download.html"><span>Download</span></a>
+        </li>
+        <li>
+            <a href="/docs/debug.html"><span>DEBUG</span></a>
+        </li>
+    </ul>
+</nav>
+    <div class="below-fixed-nav">
+    <div class="banner medium indigo darken-bg-1">
+        <div class="banner-body text-left">
+          <div class="container">
+            <h1 class="header text-white">Documentation</h1>
+            <h5 class="subheader thin text-white no-margin">Learn how to <span class="bold">build a website with boba</span>, today!</h5>
+          </div>
         </div>
+    </div>
+</div>
+    
 
-        <div class="section">
-            <div class="container">
-                <div class="row">
-                    <div class="col xs-12">
-                        <h1 class="header">Labels</h1>
-                        <h5 class="subheader thin no-margin">Labels come in all colors</h5>                        
-                    </div>
-                    <div class="col xs-12 md-6 col-middle">
-                        <span class="label">Default</span>
-                        <span class="label red">Red</span>
-                        <span class="label orange">Orange</span>
-                        <span class="label yellow">Yellow</span>
-                        <span class="label green">Green</span>
-                        <span class="label teal">Teal</span>
-                        <span class="label blue">Blue</span>
-                        <span class="label indigo">Indigo</span>
-                        <span class="label purple">Purple</span>
-                        <span class="label pink">Pink</span>
-                    </div>
-                    <div class="col xs-12 md-6 col-middle">
-                        <div class="code-block">
-                            <pre class="code"><code data-lang="html">&ltspan class="label green"&gt Green &lt/span&gt</code></pre>
-                        </div>
-                    </div>
-                </div>
-                <hr class="light" />
-                <div class="row">
-                    <div class="col xs-12">
-                        <h1 class="header">Sizes</h1>
-                        <h5 class="subheader thin no-margin">Labels can be resized</h5>                        
-                    </div>
-                    <div class="col xs-12 md-6 col-middle">
-                        <span class="label small">Small</span>
-                        <span class="label">Default</span>
-                        <span class="label medium">Medium</span>
-                        <span class="label large">Large</span>
-                    </div>
-                    <div class="col xs-12 md-6 col-middle">
-                        <div class="code-block">
-                            <pre class="code"><code data-lang="html">&ltspan class="label green"&gt Green &lt/span&gt</code></pre>
-                        </div>
-                    </div>
-                </div>
-                <hr class="light" />
-                <div class="row">
-                    <div class="col xs-12">
-                        <h1 class="header">Styles</h1>
-                        <h5 class="subheader thin no-margin">Change the look of your buttons with ease</h5>
-                    </div>
-                </div>
-                <hr class="light" />
-                <div class="row">
-                    <div class="col xs-12">
-                        <h4 class="header">Rounded</h4>
-                        <h6 class="subheader thin no-margin">Labels can be pill-shaped</h6>
-                    </div>
-                    <div class="col xs-12 md-6 col-middle">
-                        <span class="label rounded">Default</span>
-                        <span class="label red rounded">Red</span>
-                        <span class="label orange rounded">Orange</span>
-                        <span class="label yellow rounded">Yellow</span>
-                        <span class="label green rounded">Green</span>
-                        <span class="label teal rounded">Teal</span>
-                        <span class="label blue rounded">Blue</span>
-                        <span class="label indigo rounded">Indigo</span>
-                        <span class="label purple rounded">Purple</span>
-                        <span class="label pink rounded">Pink</span>
-                    </div>
-                    <div class="col xs-12 md-6 col-middle">
-                        <div class="code-block">
-                            <pre class="code"><code data-lang="html">&ltspan class="label green rounded"&gt Green &lt/span&gt</code></pre>
-                        </div>
-                    </div>
-                </div>
-                <hr class="light" />
-                <div class="row">
-                    <div class="col xs-12">
-                        <h4 class="header">Outlined</h4>
-                        <h6 class="subheader thin no-margin">Your labels will be colored outlines</h6>
-                    </div>
-                    <div class="col xs-12 md-6 col-middle">
-                        <span class="label outlined">Default</span>
-                        <span class="label red outlined">Red</span>
-                        <span class="label orange outlined">Orange</span>
-                        <span class="label yellow outlined">Yellow</span>
-                        <span class="label green outlined">Green</span>
-                        <span class="label teal outlined">Teal</span>
-                        <span class="label blue outlined">Blue</span>
-                        <span class="label indigo outlined">Indigo</span>
-                        <span class="label purple outlined">Purple</span>
-                        <span class="label pink outlined">Pink</span>
-                    </div>
-                    <div class="col xs-12 md-6 col-middle">
-                        <div class="code-block">
-                            <pre class="code"><code data-lang="html">&ltspan class="label green outlined"&gt Green &lt/span&gt</code></pre>
-                        </div>
-                    </div>
-                </div>
-                <hr class="light" />
-                <div class="row">
-                    <div class="col xs-12">
-                        <h1 class="header">Join Labels</h1>
-                        <h5 class="subheader thin no-margin">Combine multiple labels using the <code class="inline">.join-labels</code> class</h5>
-                    </div>
-                    <div class="col xs-12 md-6 col-middle">
-                        <div class="label-group">
-                            <div class="join-labels">
-                              <span class="label outlined">build</span>
-                              <span class="label blue">with</span>
-                              <span class="label orange">boba</span>
-                            </div>
-                            <div class="join-labels">
-                              <span class="label rounded outlined">build</span>
-                              <span class="label blue">with</span>
-                              <span class="label orange rounded">boba</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col xs-12 md-6 col-middle">
-                        <div class="code-block">
-                            <pre class="code"><code data-lang="html">&ltdiv class="join-labels"&gt
-  &ltspan class="label outlined"&gtbuild&lt/span&gt
-  &ltspan class="label blue"&gtwith&lt/span&gt
-  &ltspan class="label orange"&gtboba&lt/span&gt
+    <div class="section">
+        <div class="container">
+            
+
+    <div class="row">
+    <div class="col xs-12">
+        <h1 class="header">Labels</h1>
+        <h5 class="subheader thin no-margin">Labels come in all colors</h5>                        
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <span class="label">Default</span>
+        <span class="label red">Red</span>
+        <span class="label orange">Orange</span>
+        <span class="label yellow">Yellow</span>
+        <span class="label green">Green</span>
+        <span class="label teal">Teal</span>
+        <span class="label blue">Blue</span>
+        <span class="label indigo">Indigo</span>
+        <span class="label purple">Purple</span>
+        <span class="label pink">Pink</span>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <div class="code-block">
+            <pre class="code"><code data-lang="html">&ltspan class="label green"&gt Green &lt/span&gt</code></pre>
+        </div>
+    </div>
+</div>
+    <hr class="light" />
+    <div class="row">
+    <div class="col xs-12">
+        <h1 class="header">Sizes</h1>
+        <h5 class="subheader thin no-margin">Labels can be resized</h5>                        
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <span class="label small">Small</span>
+        <span class="label">Default</span>
+        <span class="label medium">Medium</span>
+        <span class="label large">Large</span>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <div class="code-block">
+            <pre class="code"><code data-lang="html">&ltspan class="label green"&gt Green &lt/span&gt</code></pre>
+        </div>
+    </div>
+</div>
+    <hr class="light" />
+    <div class="row">
+    <div class="col xs-12">
+        <h1 class="header">Styles</h1>
+        <h5 class="subheader thin no-margin">Change the look of your buttons with ease</h5>
+    </div>
+</div>
+
+<hr class="light" />
+<div class="row">
+    <div class="col xs-12">
+        <h4 class="header">Rounded</h4>
+        <h6 class="subheader thin no-margin">Labels can be pill-shaped</h6>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <span class="label rounded">Default</span>
+        <span class="label red rounded">Red</span>
+        <span class="label orange rounded">Orange</span>
+        <span class="label yellow rounded">Yellow</span>
+        <span class="label green rounded">Green</span>
+        <span class="label teal rounded">Teal</span>
+        <span class="label blue rounded">Blue</span>
+        <span class="label indigo rounded">Indigo</span>
+        <span class="label purple rounded">Purple</span>
+        <span class="label pink rounded">Pink</span>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <div class="code-block">
+            <pre class="code"><code data-lang="html">&ltspan class="label green rounded"&gt Green &lt/span&gt</code></pre>
+        </div>
+    </div>
+</div>
+
+<hr class="light" />
+<div class="row">
+    <div class="col xs-12">
+        <h4 class="header">Outlined</h4>
+        <h6 class="subheader thin no-margin">Your labels will be colored outlines</h6>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <span class="label outlined">Default</span>
+        <span class="label red outlined">Red</span>
+        <span class="label orange outlined">Orange</span>
+        <span class="label yellow outlined">Yellow</span>
+        <span class="label green outlined">Green</span>
+        <span class="label teal outlined">Teal</span>
+        <span class="label blue outlined">Blue</span>
+        <span class="label indigo outlined">Indigo</span>
+        <span class="label purple outlined">Purple</span>
+        <span class="label pink outlined">Pink</span>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <div class="code-block">
+            <pre class="code"><code data-lang="html">&ltspan class="label green outlined"&gt Green &lt/span&gt</code></pre>
+        </div>
+    </div>
+</div>
+
+<hr class="light" />
+<div class="row">
+    <div class="col xs-12">
+        <h4 class="header">Combinations</h4>
+        <h6 class="subheader thin no-margin">Use <code class="inline">.rounded</code> with <code class="inline">.outlined</code> to create the perfect label</h6>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <div>
+            <span class="label red rounded outlined">Red</span>
+            <span class="label green rounded outlined">Green</span>
+        </div>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <div class="code-block">
+            <pre class="code"><code data-lang="html">&ltspan class="label red rounded outlined"&gt Red &lt/span&gt
+&ltspan class="label green rounded outlined"&gt Red &lt/span&gt</code></pre>
+        </div>
+    </div>
+</div>
+
+    <hr class="light" />
+    <div class="row">
+	<div class="col xs-12">
+		<h1 class="header">Join Labels</h1>
+		<h5 class="subheader thin no-margin">Combine multiple labels using the <code class="inline">.join-labels</code> class</h5>
+	</div>
+	<div class="col xs-12 md-6 col-middle">
+		<div class="label-group">
+			<div class="join-labels">
+			  <span class="label outlined">build</span>
+			  <span class="label blue">with</span>
+			  <span class="label orange">boba</span>
+			</div>
+			<div class="join-labels">
+			  <span class="label rounded outlined">build</span>
+			  <span class="label blue">with</span>
+			  <span class="label orange rounded">boba</span>
+			</div>
+		</div>
+	</div>
+	<div class="col xs-12 md-6 col-middle">
+		<div class="code-block">
+			<pre class="code"><code data-lang="html">&ltdiv class="join-labels"&gt
+	&ltspan class="label outlined"&gtbuild&lt/span&gt
+	&ltspan class="label blue"&gtwith&lt/span&gt
+	&ltspan class="label orange"&gtboba&lt/span&gt
 &lt/div&gt
 
 &ltdiv class="join-labels"&gt
-  &ltspan class="label rounded outlined"&gtbuild&lt/span&gt
-  &ltspan class="label blue"&gtwith&lt/span&gt
-  &ltspan class="label orange rounded"&gtboba&lt/span&gt
+	&ltspan class="label rounded outlined"&gtbuild&lt/span&gt
+	&ltspan class="label blue"&gtwith&lt/span&gt
+	&ltspan class="label orange rounded"&gtboba&lt/span&gt
 &lt/div&gt</code></pre>
-                        </div>
-                    </div>
-                </div>
-                <hr class="light" />
-                <div class="row">
-                    <div class="col xs-12">
-                        <h1 class="header">Label Groups</h1>
-                        <h5 class="subheader thin no-margin">Keep multiple labels grouped and equally spaced using the <code class="inline">.label-group</code> class</h5>
-                    </div>
-                    <div class="col xs-12 md-6 col-middle">
-                        <div class="label-group">
-                            <span class="label pink">Single Label</span>
-                            <div class="join-labels">
-                              <span class="label purple">Double</span>
-                              <span class="label purple outlined">Label</span>
-                            </div>
-                            <div class="join-labels">
-                              <span class="label">build</span>
-                              <span class="label blue">with</span>
-                              <span class="label orange">boba</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col xs-12 md-6 col-middle">
-                        <div class="code-block">
-                            <pre class="code"><code data-lang="html">&ltdiv class="label-group"&gt
-    &ltspan class="label pink"&gtSingle Label&lt/span&gt
-    &ltdiv class="join-labels"&gt
-      &ltspan class="label purple"&gtDouble&lt/span&gt
-      &ltspan class="label purple outlined"&gtLabel&lt/span&gt
-    &lt/div&gt
-    &ltdiv class="join-labels"&gt
-      &ltspan class="label"&gtbuild&lt/span&gt
-      &ltspan class="label blue"&gtwith&lt/span&gt
-      &ltspan class="label orange"&gtboba&lt/span&gt
-    &lt/div&gt
+		</div>
+	</div>
+</div>
+    <hr class="light" />
+    <div class="row">
+	<div class="col xs-12">
+		<h1 class="header">Label Groups</h1>
+		<h5 class="subheader thin no-margin">Keep multiple labels grouped and equally spaced using the <code class="inline">.label-group</code> class</h5>
+	</div>
+	<div class="col xs-12 md-6 col-middle">
+		<div class="label-group">
+			<span class="label pink">Single Label</span>
+			<div class="join-labels">
+			  <span class="label purple">Double</span>
+			  <span class="label purple outlined">Label</span>
+			</div>
+			<div class="join-labels">
+			  <span class="label">build</span>
+			  <span class="label blue">with</span>
+			  <span class="label orange">boba</span>
+			</div>
+		</div>
+	</div>
+	<div class="col xs-12 md-6 col-middle">
+		<div class="code-block">
+			<pre class="code"><code data-lang="html">&ltdiv class="label-group"&gt
+	&ltspan class="label pink"&gtSingle Label&lt/span&gt
+	&ltdiv class="join-labels"&gt
+		&ltspan class="label purple"&gtDouble&lt/span&gt
+		&ltspan class="label purple outlined"&gtLabel&lt/span&gt
+	&lt/div&gt
+	&ltdiv class="join-labels"&gt
+		&ltspan class="label"&gtbuild&lt/span&gt
+		&ltspan class="label blue"&gtwith&lt/span&gt
+		&ltspan class="label orange"&gtboba&lt/span&gt
+	&lt/div&gt
 &lt/div&gt</code></pre>
-                        </div>
-                    </div>
-                </div>
-            </div>
+		</div>
+	</div>
+</div>
+    
+
         </div>
+    </div>
+
+    
+
     </body>
 </html>

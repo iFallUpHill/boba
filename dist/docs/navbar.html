@@ -3,85 +3,77 @@
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
         <title>Navbar | Build with Boba</title>
-        <link rel="stylesheet" href="../boba.min.css">
+        <link rel="stylesheet" href="/boba.min.css">
     </head>
     <body>
-        <nav class="navbar fixed">
-            <a href="./" class="logo">boba</a>
-            <input class="menu-btn" type="checkbox" id="menu-btn" />
-            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+
+    <nav class="navbar fixed">
+    <a href="/" class="logo">boba</a>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="right-menu">
+        <li>
+            <a href="/docs/"><span>Docs</span></a>
+        </li>
+        <li>
+            <a href="/about.html"><span>About</span></a>
+        </li>
+        <li>
+            <a href="/download.html"><span>Download</span></a>
+        </li>
+        <li>
+            <a href="/docs/debug.html"><span>DEBUG</span></a>
+        </li>
+    </ul>
+</nav>
+    <div class="below-fixed-nav">
+    <div class="banner medium indigo darken-bg-1">
+        <div class="banner-body text-left">
+          <div class="container">
+            <h1 class="header text-white">Documentation</h1>
+            <h5 class="subheader thin text-white no-margin">Learn how to <span class="bold">build a website with boba</span>, today!</h5>
+          </div>
+        </div>
+    </div>
+</div>
+    
+
+    <div class="section">
+        <div class="container">
+            
+
+    <div class="row">
+    <div class="col xs-12">
+        <h1 class="header">Navbar</h1>
+        <h5 class="subheader thin no-margin">A purely css, responsive navbar</h5>
+    </div>
+    <div class="col xs-12 col-middle">
+        <nav class="navbar">
+            <a href=# class="logo">boba</a>
+            <input class="menu-btn" type="checkbox" id="example-nav" />
+            <label class="menu-icon" for="example-nav"><span class="navicon"></span></label>
             <ul class="right-menu">
-                <li class="bg-hover-blue lighten-bg-hover-2">
-                    <a href="./buttons.html"><span>Buttons</span></a>
+                <li>
+                    <a href=#><span>Category</span></a>
                 </li>
-                <li class="bg-hover-blue lighten-bg-hover-2">
-                    <a href="./typography.html"><span>Typography</span></a>
+                <li>
+                    <a href=#><span>Category</span></a>
                 </li>
-                <li class="bg-hover-blue lighten-bg-hover-2">
-                    <a href="./labels.html"><span>Labels</span></a>
+                <li>
+                    <a href=#><span>Category</span></a>
                 </li>
-                <li class="bg-hover-blue lighten-bg-hover-2">
-                    <a href="./forms.html"><span>Forms</span></a>
+                <li>
+                    <a href=#><span>Category</span></a>
                 </li>
-                <li class="bg-hover-blue lighten-bg-hover-2">
-                    <a href="./grid.html"><span>Grid</span></a>
-                </li>
-                <li class="bg-hover-blue lighten-bg-hover-2">
-                    <a href="./messages.html"><span>Messages</span></a>
-                </li>
-                <li class="bg-hover-blue lighten-bg-hover-2">
-                    <a href="./tables.html"><span>Tables</span></a>
-                </li>
-                <li class="bg-hover-blue lighten-bg-hover-2">
-                    <a href="./tabs.html"><span>Tabs</span></a>
+                <li>
+                    <a href=#><span>Category</span></a>
                 </li>
             </ul>
         </nav>
-
-        <div class="below-fixed-nav">
-            <div class="banner medium indigo darken-bg-1">
-                <div class="banner-body text-center">
-                  <div class="container">
-                    <h1 class="header text-white">Navbar</h1>
-                  </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="container">
-                <div class="row">
-                    <div class="col xs-12">
-                        <h1 class="header">Navbar</h1>
-                        <h5 class="subheader thin no-margin">A purely css, responsive navbar</h5>
-                    </div>
-                    <div class="col xs-12 col-middle">
-                        <nav class="navbar">
-                            <a href=# class="logo">boba</a>
-                            <input class="menu-btn" type="checkbox" id="example-nav" />
-                            <label class="menu-icon" for="example-nav"><span class="navicon"></span></label>
-                            <ul class="right-menu">
-                                <li>
-                                    <a href=#><span>Category</span></a>
-                                </li>
-                                <li>
-                                    <a href=#><span>Category</span></a>
-                                </li>
-                                <li>
-                                    <a href=#><span>Category</span></a>
-                                </li>
-                                <li>
-                                    <a href=#><span>Category</span></a>
-                                </li>
-                                <li>
-                                    <a href=#><span>Category</span></a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="col xs-12 col-middle">
-                        <div class="code-block">
-                            <pre class="code"><code data-lang="html">&ltnav class="navbar"&gt
+    </div>
+    <div class="col xs-12 col-middle">
+        <div class="code-block">
+            <pre class="code"><code data-lang="html">&ltnav class="navbar"&gt
     &lta href=# class="logo"&gtboba&lt/a&gt
     &ltinput class="menu-btn" type="checkbox" id="example-nav" /&gt
     &ltlabel class="menu-icon" for="example-nav"&gt&ltspan class="navicon"&gt&lt/span&gt&lt/label&gt
@@ -103,19 +95,19 @@
         &lt/li&gt
     &lt/ul&gt
 &lt/nav&gt</code></pre>
-                        </div>
-                    </div>
-                </div>
-                <hr class="light" />
-                <div class="row">
-                    <div class="col xs-12">
-                        <h1 class="header">Fixed</h3>
-                        <h5 class="subheader thin no-margin">Add the<code class="inline">.fixed</code> class to the navbar to make it stick to the top</h6>
-                        <span>(Don't forget to add the <code class="inline">.below-fixed-nav</code> class to the element directly beneath the navbar to ensure proper spacing from the top of the page!)</span>
-                    </div>
-                    <div class="col xs-12 col-middle">
-                        <div class="code-block">
-                            <pre class="code"><code data-lang="html">&ltnav class="navbar fixed"&gt
+        </div>
+    </div>
+</div>
+    <hr class="light" />
+    <div class="row">
+    <div class="col xs-12">
+        <h1 class="header">Fixed</h3>
+        <h5 class="subheader thin no-margin">Add the<code class="inline">.fixed</code> class to the navbar to make it stick to the top</h6>
+        <span>(Don't forget to add the <code class="inline">.below-fixed-nav</code> class to the element directly beneath the navbar to ensure proper spacing from the top of the page!)</span>
+    </div>
+    <div class="col xs-12 col-middle">
+        <div class="code-block">
+            <pre class="code"><code data-lang="html">&ltnav class="navbar fixed"&gt
     &lta href=# class="logo"&gtboba&lt/a&gt
     &ltinput class="menu-btn" type="checkbox" id="example" /&gt
     &ltlabel class="menu-icon" for="example"&gt&ltspan class="navicon"&gt&lt/span&gt&lt/label&gt
@@ -140,42 +132,42 @@
 &ltdiv class="below-fixed-nav"&gt
     Content Here!
 &lt/div&gt</code></pre>
-                        </div>
-                    </div>
-                </div>
-                <hr class="light" />
-                <div class="row">
-                    <div class="col xs-12">
-                        <h1 class="header">Alignment</h3>
-                        <h5 class="subheader thin no-margin">Nav menu items can be justified to the left by replacing <code class="inline">.right-menu</code> with <code class="inline">.left-menu</code></h5>
-                    </div>
-                    <div class="col xs-12 col-middle">
-                        <nav class="navbar">
-                            <a href=# class="logo">boba</a>
-                            <input class="menu-btn" type="checkbox" id="justify-nav" />
-                            <label class="menu-icon" for="justify-nav"><span class="navicon"></span></label>
-                            <ul class="left-menu">
-                                <li>
-                                    <a href=#><span>Category</span></a>
-                                </li>
-                                <li>
-                                    <a href=#><span>Category</span></a>
-                                </li>
-                                <li>
-                                    <a href=#><span>Category</span></a>
-                                </li>
-                                <li>
-                                    <a href=#><span>Category</span></a>
-                                </li>
-                                <li>
-                                    <a href=#><span>Category</span></a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="col xs-12 col-middle">
-                        <div class="code-block">
-                            <pre class="code"><code data-lang="html">&ltnav class="navbar"&gt
+        </div>
+    </div>
+</div>
+    <hr class="light" />
+    <div class="row">
+    <div class="col xs-12">
+        <h1 class="header">Alignment</h3>
+        <h5 class="subheader thin no-margin">Nav menu items can be justified to the left by replacing <code class="inline">.right-menu</code> with <code class="inline">.left-menu</code></h5>
+    </div>
+    <div class="col xs-12 col-middle">
+        <nav class="navbar">
+            <a href=# class="logo">boba</a>
+            <input class="menu-btn" type="checkbox" id="justify-nav" />
+            <label class="menu-icon" for="justify-nav"><span class="navicon"></span></label>
+            <ul class="left-menu">
+                <li>
+                    <a href=#><span>Category</span></a>
+                </li>
+                <li>
+                    <a href=#><span>Category</span></a>
+                </li>
+                <li>
+                    <a href=#><span>Category</span></a>
+                </li>
+                <li>
+                    <a href=#><span>Category</span></a>
+                </li>
+                <li>
+                    <a href=#><span>Category</span></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="col xs-12 col-middle">
+        <div class="code-block">
+            <pre class="code"><code data-lang="html">&ltnav class="navbar"&gt
     &lta href=# class="logo"&gtboba&lt/a&gt
     &ltinput class="menu-btn" type="checkbox" id="justify-nav" /&gt
     &ltlabel class="menu-icon" for="justify-nav"&gt&ltspan class="navicon"&gt&lt/span&gt&lt/label&gt
@@ -200,180 +192,180 @@
 &ltdiv class="below-fixed-nav"&gt
     Content Here!
 &lt/div&gt</code></pre>
-                        </div>
-                    </div>
-                </div>
-                <hr class="light" />
-                <div class="row">
-                    <div class="col xs-12">
-                        <h1 class="header">Colors</h3>
-                        <h5 class="subheader thin no-margin">Navbars come in all colors</h6>
-                    </div>
-                    <div class="col xs-12 col-middle">
-                        <nav class="navbar red">
-                            <a href=# class="logo">boba</a>
-                            <input class="menu-btn" type="checkbox" id="red-nav" />
-                            <label class="menu-icon" for="red-nav"><span class="navicon"></span></label>
-                            <ul class="right-menu">
-                                <li>
-                                    <a href=#><span>Category</span></a>
-                                </li>
-                                <li>
-                                    <a href=#><span>Category</span></a>
-                                </li>
-                                <li>
-                                    <a href=#><span>Category</span></a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="col xs-12 col-middle">
-                        <nav class="navbar orange">
-                            <a href=# class="logo">boba</a>
-                            <input class="menu-btn" type="checkbox" id="orange-nav" />
-                            <label class="menu-icon" for="orange-nav"><span class="navicon"></span></label>
-                            <ul class="right-menu">
-                                <li>
-                                    <a href=#><span>Category</span></a>
-                                </li>
-                                <li>
-                                    <a href=#><span>Category</span></a>
-                                </li>
-                                <li>
-                                    <a href=#><span>Category</span></a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="col xs-12 col-middle">
-                        <nav class="navbar yellow">
-                            <a href=# class="logo">boba</a>
-                            <input class="menu-btn" type="checkbox" id="yellow-nav" />
-                            <label class="menu-icon" for="yellow-nav"><span class="navicon"></span></label>
-                            <ul class="right-menu">
-                                <li>
-                                    <a href=#><span>Category</span></a>
-                                </li>
-                                <li>
-                                    <a href=#><span>Category</span></a>
-                                </li>
-                                <li>
-                                    <a href=#><span>Category</span></a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="col xs-12 col-middle">
-                        <nav class="navbar green">
-                            <a href=# class="logo">boba</a>
-                            <input class="menu-btn" type="checkbox" id="green-nav" />
-                            <label class="menu-icon" for="green-nav"><span class="navicon"></span></label>
-                            <ul class="right-menu">
-                                <li>
-                                    <a href=#><span>Category</span></a>
-                                </li>
-                                <li>
-                                    <a href=#><span>Category</span></a>
-                                </li>
-                                <li>
-                                    <a href=#><span>Category</span></a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="col xs-12 col-middle">
-                        <nav class="navbar teal">
-                            <a href=# class="logo">boba</a>
-                            <input class="menu-btn" type="checkbox" id="teal-nav" />
-                            <label class="menu-icon" for="teal-nav"><span class="navicon"></span></label>
-                            <ul class="right-menu">
-                                <li>
-                                    <a href=#><span>Category</span></a>
-                                </li>
-                                <li>
-                                    <a href=#><span>Category</span></a>
-                                </li>
-                                <li>
-                                    <a href=#><span>Category</span></a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="col xs-12 col-middle">
-                        <nav class="navbar blue">
-                            <a href=# class="logo">boba</a>
-                            <input class="menu-btn" type="checkbox" id="blue-nav" />
-                            <label class="menu-icon" for="blue-nav"><span class="navicon"></span></label>
-                            <ul class="right-menu">
-                                <li>
-                                    <a href=#><span>Category</span></a>
-                                </li>
-                                <li>
-                                    <a href=#><span>Category</span></a>
-                                </li>
-                                <li>
-                                    <a href=#><span>Category</span></a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="col xs-12 col-middle">
-                        <nav class="navbar indigo">
-                            <a href=# class="logo">boba</a>
-                            <input class="menu-btn" type="checkbox" id="indigo-nav" />
-                            <label class="menu-icon" for="indigo-nav"><span class="navicon"></span></label>
-                            <ul class="right-menu">
-                                <li>
-                                    <a href=#><span>Category</span></a>
-                                </li>
-                                <li>
-                                    <a href=#><span>Category</span></a>
-                                </li>
-                                <li>
-                                    <a href=#><span>Category</span></a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="col xs-12 col-middle">
-                        <nav class="navbar purple">
-                            <a href=# class="logo">boba</a>
-                            <input class="menu-btn" type="checkbox" id="purple-nav" />
-                            <label class="menu-icon" for="purple-nav"><span class="navicon"></span></label>
-                            <ul class="right-menu">
-                                <li>
-                                    <a href=#><span>Category</span></a>
-                                </li>
-                                <li>
-                                    <a href=#><span>Category</span></a>
-                                </li>
-                                <li>
-                                    <a href=#><span>Category</span></a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="col xs-12 col-middle">
-                        <nav class="navbar pink">
-                            <a href=# class="logo">boba</a>
-                            <input class="menu-btn" type="checkbox" id="pink-nav" />
-                            <label class="menu-icon" for="pink-nav"><span class="navicon"></span></label>
-                            <ul class="right-menu">
-                                <li>
-                                    <a href=#><span>Category</span></a>
-                                </li>
-                                <li>
-                                    <a href=#><span>Category</span></a>
-                                </li>
-                                <li>
-                                    <a href=#><span>Category</span></a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="col xs-12 col-middle">
-                        <div class="code-block">
-                            <pre class="code"><code data-lang="html">&ltnav class="navbar green"&gt
+        </div>
+    </div>
+</div>
+    <hr class="light" />
+    <div class="row">
+    <div class="col xs-12">
+        <h1 class="header">Colors</h3>
+        <h5 class="subheader thin no-margin">Navbars come in all colors</h6>
+    </div>
+    <div class="col xs-12 col-middle">
+        <nav class="navbar red">
+            <a href=# class="logo">boba</a>
+            <input class="menu-btn" type="checkbox" id="red-nav" />
+            <label class="menu-icon" for="red-nav"><span class="navicon"></span></label>
+            <ul class="right-menu">
+                <li>
+                    <a href=#><span>Category</span></a>
+                </li>
+                <li>
+                    <a href=#><span>Category</span></a>
+                </li>
+                <li>
+                    <a href=#><span>Category</span></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="col xs-12 col-middle">
+        <nav class="navbar orange">
+            <a href=# class="logo">boba</a>
+            <input class="menu-btn" type="checkbox" id="orange-nav" />
+            <label class="menu-icon" for="orange-nav"><span class="navicon"></span></label>
+            <ul class="right-menu">
+                <li>
+                    <a href=#><span>Category</span></a>
+                </li>
+                <li>
+                    <a href=#><span>Category</span></a>
+                </li>
+                <li>
+                    <a href=#><span>Category</span></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="col xs-12 col-middle">
+        <nav class="navbar yellow">
+            <a href=# class="logo">boba</a>
+            <input class="menu-btn" type="checkbox" id="yellow-nav" />
+            <label class="menu-icon" for="yellow-nav"><span class="navicon"></span></label>
+            <ul class="right-menu">
+                <li>
+                    <a href=#><span>Category</span></a>
+                </li>
+                <li>
+                    <a href=#><span>Category</span></a>
+                </li>
+                <li>
+                    <a href=#><span>Category</span></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="col xs-12 col-middle">
+        <nav class="navbar green">
+            <a href=# class="logo">boba</a>
+            <input class="menu-btn" type="checkbox" id="green-nav" />
+            <label class="menu-icon" for="green-nav"><span class="navicon"></span></label>
+            <ul class="right-menu">
+                <li>
+                    <a href=#><span>Category</span></a>
+                </li>
+                <li>
+                    <a href=#><span>Category</span></a>
+                </li>
+                <li>
+                    <a href=#><span>Category</span></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="col xs-12 col-middle">
+        <nav class="navbar teal">
+            <a href=# class="logo">boba</a>
+            <input class="menu-btn" type="checkbox" id="teal-nav" />
+            <label class="menu-icon" for="teal-nav"><span class="navicon"></span></label>
+            <ul class="right-menu">
+                <li>
+                    <a href=#><span>Category</span></a>
+                </li>
+                <li>
+                    <a href=#><span>Category</span></a>
+                </li>
+                <li>
+                    <a href=#><span>Category</span></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="col xs-12 col-middle">
+        <nav class="navbar blue">
+            <a href=# class="logo">boba</a>
+            <input class="menu-btn" type="checkbox" id="blue-nav" />
+            <label class="menu-icon" for="blue-nav"><span class="navicon"></span></label>
+            <ul class="right-menu">
+                <li>
+                    <a href=#><span>Category</span></a>
+                </li>
+                <li>
+                    <a href=#><span>Category</span></a>
+                </li>
+                <li>
+                    <a href=#><span>Category</span></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="col xs-12 col-middle">
+        <nav class="navbar indigo">
+            <a href=# class="logo">boba</a>
+            <input class="menu-btn" type="checkbox" id="indigo-nav" />
+            <label class="menu-icon" for="indigo-nav"><span class="navicon"></span></label>
+            <ul class="right-menu">
+                <li>
+                    <a href=#><span>Category</span></a>
+                </li>
+                <li>
+                    <a href=#><span>Category</span></a>
+                </li>
+                <li>
+                    <a href=#><span>Category</span></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="col xs-12 col-middle">
+        <nav class="navbar purple">
+            <a href=# class="logo">boba</a>
+            <input class="menu-btn" type="checkbox" id="purple-nav" />
+            <label class="menu-icon" for="purple-nav"><span class="navicon"></span></label>
+            <ul class="right-menu">
+                <li>
+                    <a href=#><span>Category</span></a>
+                </li>
+                <li>
+                    <a href=#><span>Category</span></a>
+                </li>
+                <li>
+                    <a href=#><span>Category</span></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="col xs-12 col-middle">
+        <nav class="navbar pink">
+            <a href=# class="logo">boba</a>
+            <input class="menu-btn" type="checkbox" id="pink-nav" />
+            <label class="menu-icon" for="pink-nav"><span class="navicon"></span></label>
+            <ul class="right-menu">
+                <li>
+                    <a href=#><span>Category</span></a>
+                </li>
+                <li>
+                    <a href=#><span>Category</span></a>
+                </li>
+                <li>
+                    <a href=#><span>Category</span></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="col xs-12 col-middle">
+        <div class="code-block">
+            <pre class="code"><code data-lang="html">&ltnav class="navbar green"&gt
     &lta href=# class="logo"&gtboba&lt/a&gt
     &ltinput class="menu-btn" type="checkbox" id="green-nav" /&gt
     &ltlabel class="menu-icon" for="green-nav"&gt&ltspan class="navicon"&gt&lt/span&gt&lt/label&gt
@@ -392,10 +384,15 @@
 &ltdiv class="below-fixed-nav"&gt
     Content Here!
 &lt/div&gt</code></pre>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
+    </div>
+</div>
+
+
+        </div>
+    </div>
+
+    
+
     </body>
 </html>

@@ -3,81 +3,73 @@
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
         <title>Lists | Build with Boba</title>
-        <link rel="stylesheet" href="../boba.min.css">
+        <link rel="stylesheet" href="/boba.min.css">
     </head>
     <body>
 
-        <nav class="navbar fixed">
-            <a href="./" class="logo">boba</a>
-            <input class="menu-btn" type="checkbox" id="menu-btn" />
-            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-            <ul class="menu">
-                <li class="bg-hover-blue lighten-bg-hover-2">
-                    <a href="./buttons.html"><span>Buttons</span></a>
-                </li>
-                <li class="bg-hover-blue lighten-bg-hover-2">
-                    <a href="./typography.html"><span>Typography</span></a>
-                </li>
-                <li class="bg-hover-blue lighten-bg-hover-2">
-                    <a href="./labels.html"><span>Labels</span></a>
-                </li>
-                <li class="bg-hover-blue lighten-bg-hover-2">
-                    <a href="./forms.html"><span>Forms</span></a>
-                </li>
-                <li class="bg-hover-blue lighten-bg-hover-2">
-                    <a href="./grid.html"><span>Grid</span></a>
-                </li>
-                <li class="bg-hover-blue lighten-bg-hover-2">
-                    <a href="./messages.html"><span>Messages</span></a>
-                </li>
-                <li class="bg-hover-blue lighten-bg-hover-2">
-                    <a href="./tables.html"><span>Tables</span></a>
-                </li>
-                <li class="bg-hover-blue lighten-bg-hover-2">
-                    <a href="./tabs.html"><span>Tabs</span></a>
-                </li>
-            </ul>
-        </nav>
-
-        <div class="below-fixed-nav">
-            <div class="banner medium indigo darken-bg-1">
-                <div class="banner-body text-center">
-                  <div class="container">
-                    <h1 class="header text-white">Lists</h1>
-                  </div>
-                </div>
-            </div>
+    <nav class="navbar fixed">
+    <a href="/" class="logo">boba</a>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="right-menu">
+        <li>
+            <a href="/docs/"><span>Docs</span></a>
+        </li>
+        <li>
+            <a href="/about.html"><span>About</span></a>
+        </li>
+        <li>
+            <a href="/download.html"><span>Download</span></a>
+        </li>
+        <li>
+            <a href="/docs/debug.html"><span>DEBUG</span></a>
+        </li>
+    </ul>
+</nav>
+    <div class="below-fixed-nav">
+    <div class="banner medium indigo darken-bg-1">
+        <div class="banner-body text-left">
+          <div class="container">
+            <h1 class="header text-white">Documentation</h1>
+            <h5 class="subheader thin text-white no-margin">Learn how to <span class="bold">build a website with boba</span>, today!</h5>
+          </div>
         </div>
+    </div>
+</div>
+    
 
-        <div class="section">
-            <div class="container">
-                <div class="row">
-                    <div class="col xs-12">
-                        <h1 class="header">Lists</h1>
-                        <h5 class="subheader thin no-margin">Lists are useful for organizing grouped information</h5>
-                    </div>
-                </div>
-                <hr class="light" />
-                <div class="row">
-                    <div class="col xs-12">
-                        <h4 class="header">Unordered List</h4>
-                        <h6 class="subheader thin no-margin">For non-squential lists</h6>
-                    </div>
-                    <div class="col xs-12 md-6 col-middle">
-						<ul>
-							<li>Option 1</li>
-							<li>Option 2</li>
-							<ul>
-								<li>Option A</li>
-								<li>Option B</li>
-								<li>Option C</li>
-							</ul>
-							<li>Option 3</li>
-						</ul>
-                    </div>
-                    <div class="col xs-12 md-6 col-middle">
-                        <div class="code-block">
-                            <pre class="code"><code data-lang="html">&ltul&gt
+    <div class="section">
+        <div class="container">
+            
+
+    <div class="row">
+    <div class="col xs-12">
+        <h1 class="header">Lists</h1>
+        <h5 class="subheader thin no-margin">Lists are useful for organizing grouped information</h5>
+    </div>
+</div>
+
+<hr class="light" />
+<div class="row">
+    <div class="col xs-12">
+        <h4 class="header">Unordered List</h4>
+        <h6 class="subheader thin no-margin">For non-squential lists</h6>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+		<ul>
+			<li>Option 1</li>
+			<li>Option 2</li>
+			<ul>
+				<li>Option A</li>
+				<li>Option B</li>
+				<li>Option C</li>
+			</ul>
+			<li>Option 3</li>
+		</ul>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <div class="code-block">
+            <pre class="code"><code data-lang="html">&ltul&gt
     &ltli&gtOption 1&lt/li&gt
     &ltli&gtOption 2&lt/li&gt
     &ltul&gt
@@ -87,43 +79,50 @@
     &lt/ul&gt
     &ltli&gtOption 3&lt/li&gt
 &lt/ul&gt</code></pre>
-                        </div>
-                    </div>
-                </div>
-                <hr class="light" />
-                <div class="row">
-                    <div class="col xs-12">
-                        <h4 class="header">Ordered List</h4>
-                        <h6 class="subheader thin no-margin">For squential lists</h6>
-                    </div>
-                    <div class="col xs-12 md-6 col-middle">
-						<ol>
-							<li>Option 1</li>
-							<li>Option 2</li>
-							<ol>
-								<li>Option A</li>
-								<li>Option B</li>
-								<li>Option C</li>
-							</ol>
-							<li>Option 3</li>
-						</ol>
-                    </div>
-                    <div class="col xs-12 md-6 col-middle">
-                        <div class="code-block">
-                            <pre class="code"><code data-lang="html">&ltol&gt
+        </div>
+    </div>
+</div>
+
+<hr class="light" />
+<div class="row">
+    <div class="col xs-12">
+        <h4 class="header">Unordered List</h4>
+        <h6 class="subheader thin no-margin">For non-squential lists</h6>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+		<ul>
+			<li>Option 1</li>
+			<li>Option 2</li>
+			<ul>
+				<li>Option A</li>
+				<li>Option B</li>
+				<li>Option C</li>
+			</ul>
+			<li>Option 3</li>
+		</ul>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <div class="code-block">
+            <pre class="code"><code data-lang="html">&ltul&gt
     &ltli&gtOption 1&lt/li&gt
     &ltli&gtOption 2&lt/li&gt
-    &ltol&gt
+    &ltul&gt
         &ltli&gtOption 4&lt/li&gt
         &ltli&gtOption 5&lt/li&gt
         &ltli&gtOption 6&lt/li&gt
-    &lt/ol&gt
+    &lt/ul&gt
     &ltli&gtOption 3&lt/li&gt
-&lt/ol&gt</code></pre>
-                        </div>
-                    </div>
-                </div>
-            </div>
+&lt/ul&gt</code></pre>
         </div>
+    </div>
+</div>
+
+    
+
+        </div>
+    </div>
+
+    
+
     </body>
 </html>

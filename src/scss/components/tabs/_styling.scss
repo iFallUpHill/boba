@@ -71,31 +71,5 @@
                 }
             }
         }
-        &.hover-#{$colorName} {
-            li {
-                &.active {
-                    a {
-                        &:hover {
-                            background-color: $color !important;
-                        }
-                    }
-                }
-                &:hover {
-                    background-color: $color !important;
-                }
-            }
-            &.boxed {
-                li {
-                    &.active {
-                        &:hover {
-                            background-color: $color !important;
-                        }
-                    }
-                    &:hover {
-                        background-color: $color !important;
-                    }
-                }
-            }
-        }
     }
 }

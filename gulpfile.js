@@ -14,7 +14,8 @@ const gulp    = require('gulp'),
             src: {
                 html: 'src/**/*.html',
                 sass: 'src/scss/all.scss',
-                color_helpers: 'src/scss/color_helpers.scss'
+                color_helpers: 'src/scss/color_helpers.scss',
+                nunjucks_templates: 'src/**/*.+(html|njk)',
             },
             dist: {
                 html: 'dist',
@@ -43,6 +44,7 @@ function getTask(task) {
 
 gulp.task('sass', getTask('sass'));
 gulp.task('html', getTask('html'));
+gulp.task('nunjucks', getTask('nunjucks'));
 
 // --------------------------------------------------------------------
 // Extra Task: Clean
@@ -61,7 +63,7 @@ gulp.task('watch', function() {
         server: './dist'
     });
     gulp.watch(config.watch.sass, ['sass']);
-    gulp.watch(config.src.html, ['html']).on('change', browserSync.reload);
+    gulp.watch(config.src.nunjucks_templates, ['nunjucks']).on('change', browserSync.reload);
 
 });
 
@@ -70,7 +72,7 @@ gulp.task('watch', function() {
 // --------------------------------------------------------------------
 
 gulp.task('build', function(callback) {
-    runSeq('clean', ['sass', 'html'], callback);
+    runSeq('clean', ['sass', 'nunjucks'], callback);
 });
 
 // --------------------------------------------------------------------
@@ -78,5 +80,5 @@ gulp.task('build', function(callback) {
 // --------------------------------------------------------------------
 
 gulp.task('default', function(callback) {
-    runSeq('clean', ['sass', 'html'], 'watch', callback);
+    runSeq('clean', ['sass', 'nunjucks'], 'watch', callback);
 });
