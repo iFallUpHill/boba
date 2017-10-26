@@ -5,18 +5,10 @@
     font-size: 1em;
     appearance: none;
     height: 2.4em;
-    padding: 0.375em 0.625em;
+    padding: 0 $form-padding-default;
     border-radius: $border-radius;
     box-shadow: none;
     box-sizing: border-box;
-    &::placeholder {
-        opacity: 0.25;
-    }
-    &[disabled] {
-        background-color: rgba(0, 0, 0, 0);
-        cursor: not-allowed;
-        opacity: 0.5;
-    }
 }
 
 @mixin select-icon-base {
@@ -36,6 +28,9 @@
         right: 1.125em;
         top: 50%;
         z-index: 4;
+        border: 1px solid $color-dark;
+        border-right: 0;
+        border-top: 0;
     }
 }
 
@@ -43,12 +38,10 @@
     @each $colorName, $color in $color-list {
         &.#{$colorName}{
             border: solid 1px #{$color};
-            color: $color;
-            &::placeholder {
-                color: darken-3($color);
-            }
-            &.filled {
-                background: transparentBG($color);
+
+            &[disabled] {
+                background-color: lighten-2($color);
+                border-color: lighten-2($color);
             }
         }
     }

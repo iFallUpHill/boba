@@ -8,32 +8,31 @@
         font-size: 0.95em;
         margin-bottom: 0.3em;
     }
+
+    // Includes textareas
     input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], select, textarea {
         @include form-component-base;
         background-color: $color-white;
         border: 1px solid $color-dark;
+
         &::placeholder {
-            color: $color-dark;
+            opacity: 0.33;
+            color: darken-3($color-dark);
         }
+
         &[disabled] {
-            color: $color-dark;
-            border-color: $color-dark;
+            cursor: not-allowed;
+            background-color: lighten($color-dark, 48%);
+            border-color: lighten($color-dark, 48%);
         }
-        &.filled {
-          background: transparentBG($color-dark);
-        }
-        @each $size, $fontSize, $height, $padding in $form-size-list {
-            &.#{$size} {
-                height: $height;
-                padding: 0 $padding;
-                font-size: $fontSize;
-            }
-        }
+
+        
         @if $include-color-palette {
             @include form-colors;
         }
     }
 
+    // Excludes textareas
     input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], select {
         &.rounded {
             border-radius: $rounded-border-radius;
@@ -42,14 +41,27 @@
 
     textarea {
         min-height: 4em;
+        padding: 0.75em $form-padding-default;
     }
 
     .select-icon {
         @include select-icon-base;
-        &::after {
-            border: 1px solid $color-dark;
-            border-right: 0;
-            border-top: 0;
+    }
+
+    @each $size, $fontSize, $height, $rpadding in $form-size-list {
+        input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], select, textarea {
+            &.#{$size} {
+                height: $height;
+                font-size: $fontSize;
+            }
+        }
+
+        input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], select {
+            &.#{$size} {
+                &.rounded {
+                    padding: 0 $rpadding;
+                }
+            }
         }
     }
 }
