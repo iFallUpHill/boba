@@ -9,3 +9,23 @@
 @each $suffix, $measurement in $resolution-dict {
 	@include layout-helper(#{$suffix}, #{$measurement});
 }
+
+.hide {
+	display: none !important;
+}
+
+.marginless {
+	margin: 0 !important;
+}
+
+.paddingless {
+	padding: 0 !important;
+}
+
+.radiusless {
+	border-radius: 0 !important;
+}
+
+.shadowless {
+	box-shadow: 0 !important;
+}
