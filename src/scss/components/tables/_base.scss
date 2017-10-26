@@ -27,9 +27,13 @@ table {
 		text-align: left;
 	}
 
-	tr {
-		&:hover {
-			background-color: $table-row-hover-background;
+	&.hoverable {
+		tbody {
+			tr {
+				&:hover {
+					background-color: $table-row-hover-background;
+				}
+			}
 		}
 	}
 
@@ -99,36 +103,22 @@ table {
 				}
 			}
 		}
-		thead, tfoot, tbody {
-			tr {
-				&:hover {
-					background-color: $table-row-striped-hover-background;
-				}
-			}
-		}
-	}
-
-	&.responsive {
-		overflow-x: auto;
-	}
-
-	@if $include-color-palette {
-		@include table-colors;
-
-		&.hover-only {
-			td, th {
-				border-color: $table-border;
-			}
-
-			&.striped {
-				tbody {
-					tr {
-						&:nth-child(odd):not(:hover) {
-							background-color: $table-row-striped-background;
-						}
+		&.hoverable {
+			tbody {
+				tr {
+					&:hover {
+						background-color: $table-row-striped-hover-background;
 					}
 				}
 			}
 		}
+	}
+
+	&.full-width {
+		width: 100%;
+	}
+
+	@if $include-color-palette {
+		@include table-colors;
 	}
 }

@@ -3,10 +3,13 @@
 @mixin table-base {
 	background-color: $table-background;
 	color: $table-color;
-	width: 100%;
 	margin-bottom: $table-margin-bottom;
 	border-spacing: 0px;
     border-collapse: collapse;
+    // Makes tables responsive
+    max-width: 100%;
+    display: block;
+	overflow-x: auto;
 }
 
 @mixin table-colors {
@@ -16,11 +19,16 @@
         		border-color: lighten($color, 12%);
         	}
 
-        	tr {
-				&:hover {
-					background-color: lighten-3($color);
-				}
-			}
+        	&.hoverable {
+        		tbody {
+        			tr {
+						&:hover {
+							background-color: lighten-3($color);
+						}
+					}
+        		}
+        	}
+        	
 
             &.striped {
 				tbody {
@@ -30,13 +38,16 @@
 						}	
 					}
 				}
-				thead, tfoot, tbody {
-					tr {
-						&:hover {
-							background-color: lighten-2($color);
-						}	
-					}
-				}
+
+				&.hoverable {
+	        		tbody {
+	        			tr {
+							&:hover {
+								background-color: lighten-2($color);
+							}
+						}
+	        		}
+	        	}
 			}
         }
     }
