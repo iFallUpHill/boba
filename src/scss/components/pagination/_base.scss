@@ -4,7 +4,7 @@
     @include pagination-base;
 
     // Modifiers
-    &.spacer {
+    &.more-spacing {
         a {
             margin: 0em 0.5em;
         }
@@ -12,15 +12,18 @@
 
     &.inverted {
         a {
+            border: 1px solid rgba(0,0,0,0);
             &.active {
+                border: 1px solid $color-dark;
                 background-color: rgba(0,0,0,0);
                 color: $color-dark;
-                border: 1px solid $color-dark;
                 box-sizing: border-box;
-                &:hover {
-                    background-color: $color-dark;
-                    color: $color-white;
-                }
+            }
+
+            &:hover {
+                border-color: $color-dark;        
+                background-color: $color-dark;
+                color: $color-white;
             }
         }
     }

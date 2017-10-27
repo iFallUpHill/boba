@@ -15,7 +15,7 @@ Gulp commands:
 * `gulp clean` // Deletes the dist folder
 * `gulp build` // Builds the dist folder
 * `gulp sass` // Compiles SASS
-* `gulp html` // Moves HTML pages to dist folder 
+* `gulp nunjucks` // Renders Nunjucks to HTML
 
 Gulp parameters
 * `--prod` // Strips comments, minifies files, builds all variations of css; This overrides all of the other parameters
