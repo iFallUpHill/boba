@@ -1,42 +1,66 @@
 @import 'constants';
 
 @mixin message-base {
-    border-radius: $border-radius;
     font-size: 1em;
     margin-bottom: 1em;
+    border-radius: $border-radius;
+    background-color: transparentBG($color-dark);
+
+    &.bordered {
+        .message-body {
+            border-color: $color-dark;
+        }
+    }
 }
 
 @mixin message-header-base {
+    border: solid 1px rgba(0,0,0,0);
+    border-radius: $border-radius;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: 0;
+    
     align-items: center;
     display: flex;
     justify-content: space-between;
     line-height: 0.5em;
     padding: 0.3em 1em;
     position: relative;
+    background-color: $color-dark;
+    color: $color-white;
+
     & + .message-body {
+        border-top: none;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
-        border-top: none;
     }
 }
 
 @mixin message-body-base {
+    border: solid 1px rgba(0,0,0,0);
+    border-radius: $border-radius;
     padding: 1em 1.25em;
+    color: $color-dark;
 }
 
 @mixin message-colors {
     @each $colorName, $color in $color-list {
         &.#{$colorName}{
             background-color: transparentBG($color);
-            border: solid 1px #{$color};
 
             .message-header {
-                background-color: #{$color};
+                border-color: $color;
+                background-color: $color;
             }
 
             .message-body {
-                
                 color: darken-3($color);
+            }
+
+            &.bordered {
+                .message-body {
+                    border-color: $color;
+                }
             }
         }
     }

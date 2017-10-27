@@ -5,14 +5,15 @@
     padding: 1em 1.25em;
     font-size: 1em;
     margin-bottom: 1em;
-
+    background-color: transparentBG($color-dark);
+    border: solid 1px rgba(0,0,0,0);
+    color: $color-dark;
 }
 
 @mixin notification-colors {
     @each $colorName, $color in $color-list {
         &.#{$colorName}{
             background-color: transparentBG($color);
-            border: solid 1px #{$color};    
             color: darken-3($color);
 
             &.filled {
@@ -20,8 +21,13 @@
                 color: $color-white;
             }
 
+            &.bordered {
+                border-color: $color;
+            }
+
             &.outlined {
                 background-color: rgba(0,0,0,0);
+                border-color: $color;
                 color: $color;
             }
         }

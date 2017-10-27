@@ -2,18 +2,13 @@
 
 .message {
     @include message-base;
-    background-color: transparentBG($color-dark);
-    border: solid 1px $color-dark;
 
     .message-header {
         @include message-header-base;
-        background-color: $color-dark;
-        color: $color-white;
     }
 
     .message-body {
         @include message-body-base;
-        color: $color-dark;
     }
 
     @if $include-color-palette {
