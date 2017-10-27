@@ -1,0 +1,8 @@
+$border-radius: $base-border-radius-default;
+
+$pagination-font-size-default: 0.9em;
+
+$pagination-font-sizing-list:
+(large, $pagination-font-size-default + 0.8em),
+(medium, $pagination-font-size-default + 0.4em),
+(small, $pagination-font-size-default - 0.2em);

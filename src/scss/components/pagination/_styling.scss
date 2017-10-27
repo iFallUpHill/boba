@@ -1,0 +1,58 @@
+@import 'constants';
+
+@mixin pagination-base {
+    display: inline-block;
+    margin-bottom: 1.5em;
+    a {
+        border-radius: $border-radius;
+        padding: 0.5em 0.75em;
+        font-size: $pagination-font-size-default;
+        text-decoration: none;
+        color: $color-black;
+        &.active {
+            background-color: $color-dark;
+            color: $color-white;
+            &:hover {
+                background-color: darken-1($color-dark);
+                color: $color-white;
+            }
+        }
+    }
+}
+
+@mixin pagination-colors {
+    @each $colorName, $color in $color-list {
+        &.#{$colorName} {
+            a {
+                &.active {
+                    background-color: $color;
+                    color: $color-white;
+                    &:hover {
+                        background-color: darken-1($color);
+                    }
+                }
+            }
+
+            &.inverted {
+                a {
+                    &.active {
+                        color: $color;
+                        border: 1px solid $color;
+                        background-color: rgba(0,0,0,0);
+                        &:hover {
+                            background-color: darken-1($color);
+                            border-color: darken-1($color);
+                            color: $color-white;
+                        }
+                    }
+                }
+            }
+
+            &.bordered {
+                a {
+                    border: 1px solid $color;
+                }
+            }
+        }
+    }
+}

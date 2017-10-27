@@ -1,0 +1,49 @@
+@import 'styling';
+
+.pagination {
+    @include pagination-base;
+
+    // Modifiers
+    &.spacer {
+        a {
+            margin: 0em 0.5em;
+        }
+    }
+
+    &.inverted {
+        a {
+            &.active {
+                background-color: rgba(0,0,0,0);
+                color: $color-dark;
+                border: 1px solid $color-dark;
+                box-sizing: border-box;
+                &:hover {
+                    background-color: $color-dark;
+                    color: $color-white;
+                }
+            }
+        }
+    }
+
+    &.rounded {
+        a {
+            border-radius: 50%;
+        }
+    }
+
+    &.bordered {
+        a {
+            border: 1px solid $color-dark
+        }
+    }
+
+    @if $include-color-palette {
+        @include pagination-colors;
+    }
+
+    @each $size, $fontSize in $pagination-font-sizing-list {
+        &.#{$size} {
+            font-size: $fontSize;
+        }
+    }
+}

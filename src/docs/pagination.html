@@ -1,0 +1,16 @@
+{% extends "templates/docs/layout.njk" %}
+{% set page_title ="Pagination" %}
+
+{% block main %}
+
+    {% include "templates/docs/pagination/pagination.njk" %}
+    <hr class="light" />
+    {% include "templates/docs/pagination/sizes.njk" %}
+    <hr class="light" />
+    {% include "templates/docs/pagination/styles.njk" %}
+    <hr class="light" />
+    {% include "templates/docs/pagination/spacers.njk" %}
+    <hr class="light" />
+    {% include "templates/docs/pagination/alignment.njk" %}
+
+{% endblock %}

@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+        <title>Pagination | Build with Boba</title>
+        <link rel="stylesheet" href="/boba.min.css">
+    </head>
+    <body>
+
+    <nav class="navbar fixed">
+    <a href="/" class="logo">boba</a>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="right-menu">
+        <li>
+            <a href="/docs/"><span>Docs</span></a>
+        </li>
+        <li>
+            <a href="/about.html"><span>About</span></a>
+        </li>
+        <li>
+            <a href="/download.html"><span>Download</span></a>
+        </li>
+        <li>
+            <a href="/docs/debug.html"><span>DEBUG</span></a>
+        </li>
+    </ul>
+</nav>
+    <div class="below-fixed-nav">
+    <div class="banner medium indigo darken-bg-1">
+        <div class="banner-body text-left">
+          <div class="container">
+            <h1 class="header text-white">Documentation</h1>
+            <h5 class="subheader thin text-white no-margin">Learn how to <span class="bold">build your website</span> with boba!</h5>
+          </div>
+        </div>
+    </div>
+</div>
+    
+
+    <div class="section">
+        <div class="container">
+            
+
+    <div class="row">
+    <div class="col xs-12">
+        <h1 class="header">Pagination</h1>
+        <h5 class="subheader thin no-margin">Pagination come in all colors</h5>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <div class="pagination red">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <div class="pagination orange">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <div class="pagination yellow">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <div class="pagination green">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <div class="pagination teal">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <div class="pagination blue">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <div class="pagination indigo">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <div class="pagination purple">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <div class="pagination pink">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <div class="code-block">
+            <pre class="code"><code data-lang="html">&ltdiv class="pagination green"&gt
+    &lta href="#"&gt &laquo; &lt/a&gt
+    &lta href="#"&gt 1 &lt/a&gt
+    &lta class="active" href="#"&gt 2 &lt/a&gt
+    &lta href="#"&gt 3 &lt/a&gt
+    &lta href="#"&gt &raquo; &lt/a&gt
+&lt/div&gt</code></pre>
+        </div>
+    </div>
+</div>
+
+    <hr class="light" />
+    <div class="row">
+    <div class="col xs-12">
+        <h1 class="header">Sizes</h1>
+        <h5 class="subheader thin no-margin">Paginations can be resized</h5>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <h4>Small</h4>
+        <div class="pagination small">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <br />
+        <h4>Default</h4>
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <br />
+        <h4>Medium</h4>
+        <div class="pagination medium">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <br />
+        <h4>Large</h4>
+        <div class="pagination large">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <div class="code-block">
+            <pre class="code"><code data-lang="html">&ltdiv class="pagination medium"&gt
+    &lta href="#"&gt &laquo; &lt/a&gt
+    &lta href="#"&gt 1 &lt/a&gt
+    &lta class="active" href="#"&gt 2 &lt/a&gt
+    &lta href="#"&gt 3 &lt/a&gt
+    &lta href="#"&gt &raquo; &lt/a&gt
+&lt/div&gt</code></pre>
+        </div>
+    </div>
+</div>
+
+    <hr class="light" />
+    <div class="row">
+    <div class="col xs-12">
+        <h1 class="header">Styles</h1>
+        <h5 class="subheader thin no-margin">Change the look of your pagination with ease</h5>
+    </div>
+</div>
+
+<hr class="light" />
+<div class="row">
+    <div class="col xs-12">
+        <h4 class="header">Rounded</h4>
+        <h6 class="subheader thin no-margin">Pagination can have a rounded look</h6>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <div class="pagination rounded">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <div class="pagination rounded red">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <div class="pagination rounded orange">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <div class="pagination rounded yellow">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <div class="pagination rounded green">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <div class="pagination rounded teal">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <div class="pagination rounded blue">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <div class="pagination rounded indigo">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <div class="pagination rounded purple">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <div class="pagination rounded pink">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <div class="code-block">
+            <pre class="code"><code data-lang="html">&ltdiv class="pagination rounded green"&gt
+    &lta href="#"&gt &laquo; &lt/a&gt
+    &lta href="#"&gt 1 &lt/a&gt
+    &lta class="active" href="#"&gt 2 &lt/a&gt
+    &lta href="#"&gt 3 &lt/a&gt
+    &lta href="#"&gt &raquo; &lt/a&gt
+&lt/div&gt</code></pre>
+        </div>
+    </div>
+</div>
+
+
+<hr class="light" />
+<div class="row">
+    <div class="col xs-12">
+        <h4 class="header">Inverted</h4>
+        <h6 class="subheader thin no-margin">Pagination can have an inverted look (try hovering them)</h6>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <div class="pagination inverted">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <div class="pagination inverted red">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <div class="pagination inverted orange">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <div class="pagination inverted yellow">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <div class="pagination inverted green">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <div class="pagination inverted teal">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <div class="pagination inverted blue">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <div class="pagination inverted indigo">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <div class="pagination inverted purple">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <div class="pagination inverted pink">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <div class="code-block">
+            <pre class="code"><code data-lang="html">&ltdiv class="pagination inverted green"&gt
+    &lta href="#"&gt &laquo; &lt/a&gt
+    &lta href="#"&gt 1 &lt/a&gt
+    &lta class="active" href="#"&gt 2 &lt/a&gt
+    &lta href="#"&gt 3 &lt/a&gt
+    &lta href="#"&gt &raquo; &lt/a&gt
+&lt/div&gt</code></pre>
+        </div>
+    </div>
+</div>
+
+
+<hr class="light" />
+<div class="row">
+    <div class="col xs-12">
+        <h4 class="header">Combinations</h4>
+        <h6 class="subheader thin no-margin">Use <code class="inline">.rounded</code> and <code class="inline">.inverted</code> in combination </h6>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <div class="pagination inverted rounded">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <div class="pagination inverted rounded red">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <div class="pagination inverted rounded orange">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <div class="pagination inverted rounded yellow">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <div class="pagination inverted rounded green">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <div class="pagination inverted rounded teal">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <div class="pagination inverted rounded blue">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <div class="pagination inverted rounded indigo">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <div class="pagination inverted rounded purple">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <div class="pagination inverted rounded pink">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <div class="code-block">
+            <pre class="code"><code data-lang="html">&ltdiv class="pagination inverted rounded green"&gt
+    &lta href="#"&gt &laquo; &lt/a&gt
+    &lta href="#"&gt 1 &lt/a&gt
+    &lta class="active" href="#"&gt 2 &lt/a&gt
+    &lta href="#"&gt 3 &lt/a&gt
+    &lta href="#"&gt &raquo; &lt/a&gt
+&lt/div&gt</code></pre>
+        </div>
+    </div>
+</div>
+
+
+    <hr class="light" />
+    <div class="row">
+    <div class="col xs-12">
+        <h1 class="header">Spacers</h1>
+        <h5 class="subheader thin no-margin">The <code class="inline">.spacer</code> class spreads out the pagination</h5>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <h4>Default</h4>
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <br />
+        <h4>Spacer</h4>
+        <div class="pagination spacer">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <div class="code-block">
+            <pre class="code"><code data-lang="html">&ltdiv class="pagination medium"&gt
+    &lta href="#"&gt &laquo; &lt/a&gt
+    &lta href="#"&gt 1 &lt/a&gt
+    &lta class="active" href="#"&gt 2 &lt/a&gt
+    &lta href="#"&gt 3 &lt/a&gt
+    &lta href="#"&gt &raquo; &lt/a&gt
+&lt/div&gt</code></pre>
+        </div>
+    </div>
+</div>
+
+    <hr class="light" />
+    <div class="row">
+    <div class="col xs-12">
+        <h1 class="header">Alignment</h1>
+        <h5 class="subheader thin no-margin">Alignment classes help justify your pagination</h5>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <h4>Left</h4>
+        <div class="text-left">
+            <div class="pagination">
+                <a href="#">&laquo;</a>
+                <a href="#">1</a>
+                <a class="active" href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">&raquo;</a>
+            </div>
+        </div>
+        <br />
+        <h4>Default</h4>
+        <div>
+            <div class="pagination">
+                <a href="#">&laquo;</a>
+                <a href="#">1</a>
+                <a class="active" href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">&raquo;</a>
+            </div>
+        </div>
+        <br />
+        <h4>Center</h4>
+        <div class="text-center">
+            <div class="pagination">
+                <a href="#">&laquo;</a>
+                <a href="#">1</a>
+                <a class="active" href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">&raquo;</a>
+            </div>
+        </div>
+        <br />
+        <h4>Right</h4>
+        <div class="text-right">
+            <div class="pagination">
+                <a href="#">&laquo;</a>
+                <a href="#">1</a>
+                <a class="active" href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">&raquo;</a>
+            </div>
+        </div>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <div class="code-block">
+            <pre class="code"><code data-lang="html">&ltdiv class="text-center"&gt
+    &ltdiv class="pagination medium"&gt
+        &lta href="#"&gt &laquo; &lt/a&gt
+        &lta href="#"&gt 1 &lt/a&gt
+        &lta class="active" href="#"&gt 2 &lt/a&gt
+        &lta href="#"&gt 3 &lt/a&gt
+        &lta href="#"&gt &raquo; &lt/a&gt
+    &lt/div&gt
+&lt/div&gt</code></pre>
+        </div>
+    </div>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+
+    </body>
+</html>
