@@ -1,0 +1,84 @@
+@import 'constants';
+@import 'styling';
+
+.breadcrumb {
+    @include breadcrumb-base;
+
+
+    // Separator styles
+    &.pointer-separators {
+        ul li {
+            &::before {
+                content: "»";
+            }
+            &:first-child::before {
+                content:  '';
+            }
+        }
+    }
+    &.arrow-separators {
+        ul li {
+            &::before {
+                content: "\2192";
+            }
+            &:first-child::before {
+                content:  '';
+            }
+        }
+    }
+    &.triangle-separators {
+        ul li {
+            &::before {
+                content: "\25b6";
+            }
+            &:first-child::before {
+                content:  '';
+            }
+        }
+    }
+    &.dash-separators {
+        ul li {
+            &::before {
+                content: "\2013";
+            }
+            &:first-child::before {
+                content:  '';
+            }
+        }
+    }
+    &.bullet-separators {
+        ul li {
+            &::before {
+                content: "\2022";
+            }
+            &:first-child::before {
+                content:  '';
+            }
+        }
+    }
+
+    // Aligners
+    &.center {
+        ul {
+            justify-content: center;
+        }
+    }
+    &.right {
+        ul {
+            justify-content: flex-end;
+        }
+    }
+
+    @if $include-color-palette {
+        @include button-colors;
+    }
+
+    @each $size, $fontSize, $spacing in $breadcrumb-font-sizing-spacing-padding-list {
+        &.#{$size} {
+            height: $spacing;
+            font-size: $fontSize;
+            line-height: $spacing - 2*$breadcrumb-margin-default;
+        }
+    }
+
+}

@@ -1,0 +1,16 @@
+{% extends "templates/docs/layout.njk" %}
+{% set page_title ="Breadcrumb" %}
+
+{% block main %}
+
+    {% include "templates/docs/breadcrumb/breadcrumb.njk" %}
+    <hr class="light" />
+    {% include "templates/docs/breadcrumb/styles.njk" %}
+    <hr class="light" />
+    {% include "templates/docs/breadcrumb/sizes.njk" %}
+    <hr class="light" />
+    {% include "templates/docs/breadcrumb/alignment.njk" %}
+    <hr class="light" />
+    {% include "templates/docs/breadcrumb/combinations.njk" %}
+
+{% endblock %}
