@@ -1,0 +1,26 @@
+@import 'constants';
+@import 'styling';
+
+.progress {
+    display: flex;
+    height: $progress-height-default;
+    overflow: hidden;
+    font-size: $progress-font-size-default;
+    background-color: #e9ecef;
+    border-radius: $progress-border-radius-default;
+    .progress-bar {
+        @include progress-base;
+        @if $include-color-palette {
+            @include progress-colors;
+        }
+    }
+
+
+    @each $size, $fontSize, $height in $progress-sizing-list {
+        &.#{$size} {
+            height: $height;
+            font-size: $fontSize;
+        }
+    }
+
+}

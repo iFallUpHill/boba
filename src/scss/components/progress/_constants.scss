@@ -1,0 +1,7 @@
+$progress-font-size-default: 0.7em;
+$progress-height-default: 1.4em;
+$progress-border-radius-default: 0.25em;
+
+$progress-sizing-list: (large, $progress-font-size-default + 0.4em, $progress-height-default + 0.4em, $progress-border-radius-default + 0.8),
+                                          (medium, $progress-font-size-default + 0.2em, $progress-height-default + 0.2em, $progress-border-radius-default + 0.4),
+                                          (small, $progress-font-size-default - 0.2em, $progress-height-default - 0.2em, $progress-border-radius-default - 0.2);

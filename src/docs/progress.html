@@ -1,0 +1,18 @@
+{% extends "templates/docs/layout.njk" %}
+{% set page_title ="Progress" %}
+
+{% block main %}
+
+    {% include "templates/docs/progress/progress.njk" %}
+    <hr class="light" />
+    {% include "templates/docs/progress/colors.njk" %}
+    <hr class="light" />
+    {% include "templates/docs/progress/sizes.njk" %}
+    <hr class="light" />
+    {% include "templates/docs/progress/styles.njk" %}
+    <hr class="light" />
+    {% include "templates/docs/progress/stacking.njk" %}
+    <hr class="light" />
+    {% include "templates/docs/progress/combination.njk" %}
+
+{% endblock %}
