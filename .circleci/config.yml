@@ -1,0 +1,91 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/boba
+    docker:
+      - image: circleci/node:8.7.0
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Install node modules
+          command: npm install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+  test:
+    working_directory: ~/boba
+    docker:
+      - image: circleci/node:8.7.0
+    steps:
+      - checkout
+      - run:
+          name: Run tests
+          command: echo "No tests for now"
+
+  deployment:
+    working_directory: ~/boba
+    docker:
+      - image: circleci/node:8.7.0
+    steps:
+      - checkout
+      - add_ssh_keys
+      - run:
+          name: Fix host authenticity
+          command: |
+            ssh-keyscan $server_ip >> ~/.ssh/known_hosts
+      - deploy:
+          name: Deploy to dokku
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              [[ ! -e "$(git rev-parse --git-dir)/shallow" ]] || git fetch --unshallow
+              git remote add dokku dokku@$server_ip:buildwithboba
+              git push dokku master
+            fi
+  deploy_success:
+    working_directory: ~/boba
+    docker:
+      - image: circleci/node:8.7.0
+    steps:
+      - checkout
+      - add_ssh_keys
+      - deploy:
+          name: Update production branch
+          command: |
+            [[ ! -e "$(git rev-parse --git-dir)/shallow" ]] || git fetch --unshallow
+            git checkout -b production
+            git remote add github git@github.com:iFallUpHill/boba.git
+            git push github production
+
+workflows:
+  version: 2
+  build_test_deploy:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: master
+      - test:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
+      - deployment:
+          requires:
+            - build
+            - test
+          filters:
+            branches:
+              only: master
+      - deploy_success:
+          requires:
+            - build
+            - test
+            - deployment
+          filters:
+            branches:
+              only: master
+
