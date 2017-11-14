@@ -1,7 +1,7 @@
 @import 'constants';
 @import 'styling';
 
-span {
+span, a {
 	&.label {
 	    @include label-base;
 
@@ -63,7 +63,7 @@ span {
 }
 
 @each $size, $fontSize, $height, $vpadding, $hpadding in $label-font-height-vpadding-hpadding {
-    span {
+    span, a {
 		&.label {
 		    &.#{$size} {
 		    	font-size: $fontSize;

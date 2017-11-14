@@ -15,6 +15,7 @@
     align-items: center;
     margin-bottom: 0.2em;
     height: $label-height;
+    text-decoration: none;
 }
 
 @mixin label-rounded {
