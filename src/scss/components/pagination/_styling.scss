@@ -5,7 +5,7 @@
     margin-bottom: 1.5em;
     a {
         border-radius: $border-radius;
-        padding: 0.35em 0.75em;
+        padding: 0.375em 0.75em;
         font-size: $pagination-font-size-default;
         text-decoration: none;
         color: $color-black;
@@ -15,9 +15,51 @@
             color: $color-white;
         }
 
-        &:hover {
+        &:hover, &:focus {
             background-color: darken-1($color-dark);
             color: $color-white;
+        }
+
+        &:active {
+            background-color: darken-2($color-dark);
+        }
+    }
+
+    &.inverted {
+        a {
+            border: 1px solid rgba(0,0,0,0);
+
+            &.active {
+                border: 1px solid $color-dark;
+                background-color: rgba(0,0,0,0);
+                color: $color-dark;
+                box-sizing: border-box;
+            }
+
+            &:hover, &:focus {
+                border-color: darken-1($color-dark);        
+                background-color: darken-1($color-dark);
+                color: $color-white;
+            }
+
+            &:active {
+                border-color: darken-2($color-dark); 
+                background-color: darken-2($color-dark);
+            }
+        }
+    }
+
+    &.bordered {
+        a {
+            border: 1px solid $color-dark;
+
+            &:hover, &:focus {
+                border-color: darken-1($color-dark);
+            }
+
+            &:active {
+                border-color: darken-2($color-dark);
+            }
         }
     }
 }
@@ -31,8 +73,12 @@
                     color: $color-white;
                 }
 
-                &:hover {
+                &:hover, &:focus {
                     background-color: darken-1($color);
+                }
+
+                &:active {
+                    background-color: darken-2($color);
                 }
             }
 
@@ -46,10 +92,15 @@
                         background-color: rgba(0,0,0,0);
                     }
 
-                    &:hover {
+                    &:hover, &:focus {
                         background-color: darken-1($color);
                         border-color: darken-1($color);
                         color: $color-white;
+                    }
+
+                    &:active {
+                        border: 1px solid darken-2($color);
+                        background-color: darken-2($color);
                     }
                 }
             }
@@ -57,6 +108,14 @@
             &.bordered {
                 a {
                     border: 1px solid $color;
+                
+                    &:hover, &:focus {
+                        border-color: darken-1($color);
+                    }
+
+                    &:active {
+                        border-color: darken-2($color);
+                    }
                 }
             }
         }

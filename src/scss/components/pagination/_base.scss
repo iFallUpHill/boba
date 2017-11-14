@@ -10,33 +10,9 @@
         }
     }
 
-    &.inverted {
-        a {
-            border: 1px solid rgba(0,0,0,0);
-            &.active {
-                border: 1px solid $color-dark;
-                background-color: rgba(0,0,0,0);
-                color: $color-dark;
-                box-sizing: border-box;
-            }
-
-            &:hover {
-                border-color: $color-dark;        
-                background-color: $color-dark;
-                color: $color-white;
-            }
-        }
-    }
-
     &.rounded {
         a {
-            border-radius: 50%;
-        }
-    }
-
-    &.bordered {
-        a {
-            border: 1px solid $color-dark
+            border-radius: $rounded-border-radius;
         }
     }
 
