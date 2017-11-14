@@ -1,0 +1,56 @@
+@import 'constants';
+
+@mixin breadcrumb-base {
+    user-select: none;
+    align-items: stretch;
+    display: flex;
+    font-size: 1rem;
+    overflow: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+
+    ul {
+        align-items: center;
+        display: flex;
+        flex-grow: 1;
+        flex-shrink: 0;
+        justify-content: flex-start;
+        list-style: none;
+
+        li {
+            align-items: center;
+            display: flex;
+
+            &::before {
+                content: '/';
+            }
+
+            &:first-child::before {
+                content:  '';
+            }
+
+            &.active {
+                a {
+                    color: $color-dark;
+                    cursor: default;
+                    pointer-events: none;
+                }
+            }
+
+            &:first-child a {
+                padding-left: 0;
+            }
+
+            a {
+                font-size: $breadcrumb-font-size-default;
+                text-decoration: none;
+                color: $color-blue;
+                cursor: pointer;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                padding: 0.5em 0.75em;
+            }
+        }
+    }
+}
