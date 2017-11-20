@@ -1,0 +1,25 @@
+@import 'constants';
+
+@mixin accordion-menu-header-base {
+	display: block;
+	padding: $accordion-menu-default-vpadding $accordion-menu-default-hpadding;
+}
+
+@mixin accordion-menu-body-base {
+	margin-bottom: $accordion-menu-header-default-margin;
+	overflow: hidden;
+	max-height: 0;
+	transition: max-height .3s ease-in-out;
+
+	ul {
+		&.accordion-submenu {
+			margin-bottom: $accordion-submenu-default-margin;
+			list-style: none;
+
+			li {
+				padding: $accordion-submenu-default-vpadding $accordion-submenu-default-hpadding;
+
+			}
+		}
+	}
+}

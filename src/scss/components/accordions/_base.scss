@@ -1,0 +1,18 @@
+@import 'constants';
+@import 'styling';
+
+.accordion-menu {
+	input:checked ~ {
+		& .accordion-body {
+			max-height: $accordion-menu-max-height;
+		}
+	}
+
+	.accordion-header {
+		@include accordion-menu-header-base;
+	}
+
+	.accordion-body {
+		@include accordion-menu-body-base;
+	}
+}

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+        <title>Accordions | Build with Boba</title>
+        <link rel="stylesheet" href="/boba.min.css">
+    </head>
+    <body>
+
+    <nav class="navbar fixed">
+    <a href="/" class="logo">boba</a>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="right-menu">
+        <li>
+            <a href="/docs/"><span>Docs</span></a>
+        </li>
+        <li>
+            <a href="/about.html"><span>About</span></a>
+        </li>
+        <li>
+            <a href="/download.html"><span>Download</span></a>
+        </li>
+        <li>
+            <a href="/docs/debug.html"><span>DEBUG</span></a>
+        </li>
+    </ul>
+</nav>
+    <div class="below-fixed-nav">
+    <div class="banner medium indigo darken-bg-1">
+        <div class="banner-body text-left">
+          <div class="container">
+            <h1 class="header text-white">Documentation</h1>
+            <h5 class="subheader thin text-white no-margin">Learn how to <span class="bold">build your website</span> with boba!</h5>
+          </div>
+        </div>
+    </div>
+</div>
+    
+
+    <div class="section">
+        <div class="container">
+            
+
+    <div class="row">
+    <div class="col xs-12">
+        <h1 class="header">Accordions</h1>
+        <h5 class="subheader thin no-margin">Accordions are useful for toggling information beneath headers</h5>
+    </div>
+</div>
+
+<hr class="light" />
+<div class="row">
+    <div class="col xs-12">
+        <h4 class="header">Default Accordion</h4>
+        <h6 class="subheader thin no-margin">Each accordion can open and close independently</h6>
+        <h6 class="subheader thin no-margin">Be sure that the input's type is <code class="inline">checkbox</code> and that each of the input's <code class="inline">id</code>s match their label's <code class="inline">for</code>!</h6>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <div class="accordion-menu">
+            <input type="checkbox" id="first-accordion" name="accordion-checkbox" hidden checked />
+            <label class="accordion-header" for="first-accordion">
+                First Accordion
+            </label>
+            <div class="accordion-body">
+                <ul class="accordion-submenu">
+                    <li>Submenu Item 1</li>
+                    <li>Submenu Item 2</li>
+                    <li>Submenu Item 3</li>
+                </ul>
+            </div>
+        </div>
+        <div class="accordion-menu">
+            <input type="checkbox" id="second-accordion" name="accordion-checkbox" hidden />
+            <label class="accordion-header" for="second-accordion">
+                Second Accordion
+            </label>
+            <div class="accordion-body">
+                <ul class="accordion-submenu">
+                    <li>Submenu Item 1</li>
+                    <li>Submenu Item 2</li>
+                    <li>Submenu Item 3</li>
+                </ul>
+            </div>
+        </div>
+        <div class="accordion-menu">
+            <input type="checkbox" id="third-accordion" name="accordion-checkbox" hidden />
+            <label class="accordion-header" for="third-accordion">
+                Third Accordion
+            </label>
+            <div class="accordion-body">
+                <ul class="accordion-submenu">
+                    <li>Submenu Item 1</li>
+                    <li>Submenu Item 2</li>
+                    <li>Submenu Item 3</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <div class="code-block">
+            <pre class="code"><code data-lang="html">&ltdiv class="accordion-menu"&gt
+    &ltinput type="checkbox" id="first-accordion" name="accordion-checkbox" hidden checked /&gt
+    &ltlabel class="accordion-header" for="first-accordion"&gt
+        First Accordion
+    &lt/label&gt
+    &ltdiv class="accordion-body"&gt
+        &ltul class="accordion-submenu"&gt
+            &ltli&gtSubmenu Item 1&lt/li&gt
+            &ltli&gtSubmenu Item 2&lt/li&gt
+            &ltli&gtSubmenu Item 3&lt/li&gt
+        &lt/ul&gt
+    &lt/div&gt
+&lt/div&gt
+&ltdiv class="accordion-menu"&gt
+    &ltinput type="checkbox" id="second-accordion" name="accordion-checkbox" hidden checked /&gt
+    &ltlabel class="accordion-header" for="second-accordion"&gt
+        Second Accordion
+    &lt/label&gt
+    &ltdiv class="accordion-body"&gt
+        &ltul class="accordion-submenu"&gt
+            &ltli&gtSubmenu Item 1&lt/li&gt
+            &ltli&gtSubmenu Item 2&lt/li&gt
+            &ltli&gtSubmenu Item 3&lt/li&gt
+        &lt/ul&gt
+    &lt/div&gt
+&lt/div&gt</code></pre>
+        </div>
+    </div>
+</div>
+
+<hr class="light" />
+<div class="row">
+    <div class="col xs-12">
+        <h4 class="header">Mutually-Exclusive Accordion</h4>
+        <h6 class="subheader thin no-margin">Only one accordion in the group can be opened at a time</h6>
+        <h6 class="subheader thin no-margin">Be sure that the input's type is <code class="inline">radio</code>, that each of the input's <code class="inline">id</code>s match their label's <code class="inline">for</code>, and that each of the inputs have the same <code class="inline">name</code>!</h6>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <div class="accordion-menu">
+            <input type="radio" id="first-me-accordion" name="accordion-radio" hidden checked />
+            <label class="accordion-header" for="first-me-accordion">
+                First Accordion
+            </label>
+            <div class="accordion-body">
+                <ul class="accordion-submenu">
+                    <li>Submenu Item 1</li>
+                    <li>Submenu Item 2</li>
+                    <li>Submenu Item 3</li>
+                </ul>
+            </div>
+        </div>
+        <div class="accordion-menu">
+            <input type="radio" id="second-me-accordion" name="accordion-radio" hidden />
+            <label class="accordion-header" for="second-me-accordion">
+                Second Accordion
+            </label>
+            <div class="accordion-body">
+                <ul class="accordion-submenu">
+                    <li>Submenu Item 1</li>
+                    <li>Submenu Item 2</li>
+                    <li>Submenu Item 3</li>
+                </ul>
+            </div>
+        </div>
+        <div class="accordion-menu">
+            <input type="radio" id="third-me-accordion" name="accordion-radio" hidden />
+            <label class="accordion-header" for="third-me-accordion">
+                Third Accordion
+            </label>
+            <div class="accordion-body">
+                <ul class="accordion-submenu">
+                    <li>Submenu Item 1</li>
+                    <li>Submenu Item 2</li>
+                    <li>Submenu Item 3</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <div class="code-block">
+            <pre class="code"><code data-lang="html">&ltdiv class="accordion-menu"&gt
+    &ltinput type="radio" id="first-me-accordion" name="accordion-radio" hidden checked /&gt
+    &ltlabel class="accordion-header" for="first-me-accordion"&gt
+        First Accordion
+    &lt/label&gt
+    &ltdiv class="accordion-body"&gt
+        &ltul class="accordion-submenu"&gt
+            &ltli&gtSubmenu Item 1&lt/li&gt
+            &ltli&gtSubmenu Item 2&lt/li&gt
+            &ltli&gtSubmenu Item 3&lt/li&gt
+        &lt/ul&gt
+    &lt/div&gt
+&lt/div&gt
+&ltdiv class="accordion-menu"&gt
+    &ltinput type="radio" id="second-me-accordion" name="accordion-radio" hidden /&gt
+    &ltlabel class="accordion-header" for="second-me-accordion"&gt
+        Second Accordion
+    &lt/label&gt
+    &ltdiv class="accordion-body"&gt
+        &ltul class="accordion-submenu"&gt
+            &ltli&gtSubmenu Item 1&lt/li&gt
+            &ltli&gtSubmenu Item 2&lt/li&gt
+            &ltli&gtSubmenu Item 3&lt/li&gt
+        &lt/ul&gt
+    &lt/div&gt
+&lt/div&gt</code></pre>
+        </div>
+    </div>
+</div>
+
+    
+
+        </div>
+    </div>
+
+    
+
+    </body>
+</html>
