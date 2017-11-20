@@ -127,7 +127,7 @@
         }
     }
 
-    @media (min-width: $laptop) {
+    @media screen and (min-width: $laptop) {
 	    li {
 	        float: left;
 	    }

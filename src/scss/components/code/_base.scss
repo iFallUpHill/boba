@@ -6,6 +6,17 @@ code {
         color: darken-3($color-red);
         padding: 0 0.3em;
     }
+
+    font-size: 1em;
+    transition: font-size 0.3s ease-in-out;
+
+    @media screen and (max-width: $laptop) {
+        font-size: 0.9em;
+    }
+
+    @media screen and (max-width: $tablet) {
+        font-size: 0.8em;
+    }
 }
 
 .code-block {
