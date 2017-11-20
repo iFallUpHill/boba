@@ -43,6 +43,6 @@
     }
 }
 
-@each $suffix, $measurement in $resolution-dict {
+@each $suffix, $measurement in $resolution-min-dict {
 	@include default-col-behavior(#{$suffix}, #{$measurement});
 }

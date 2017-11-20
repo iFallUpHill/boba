@@ -6,11 +6,17 @@ $mobile: 0px;
 
 $resolution-suffixes: xs, sm, md, lg, xl;
 
-$resolution-dict: 	(xs, $mobile),
-				 	(sm, $tablet),
-				 	(md, $laptop),
-				 	(lg, $desktop),
-				 	(xl, $desktopHD);
+$resolution-min-dict: 	(xs, $mobile),
+				 		(sm, $tablet),
+				 		(md, $laptop),
+				 		(lg, $desktop),
+				 		(xl, $desktopHD);
+
+$resolution-max-dict: 	(xs, $tablet),
+				 		(sm, $laptop),
+				 		(md, $desktop),
+				 		(lg, $desktopHD),
+				 		(xl, 12000px);
 
 $base-xxl-font-size: 3.5em;
 $base-xl-font-size: 3em;

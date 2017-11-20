@@ -1,4 +1,4 @@
-@mixin layout-helper($suffix, $measurement) {
+@each $suffix, $measurement in $resolution-max-dict {
 	@media screen and (max-width: #{$measurement}) {
 		.hide-#{$suffix} {
 			display: none !important;
@@ -6,11 +6,7 @@
 	}
 }
 
-@each $suffix, $measurement in $resolution-dict {
-	@include layout-helper(#{$suffix}, #{$measurement});
-}
-
-.hide {
+.hide, .hide-xl {
 	display: none !important;
 }
 

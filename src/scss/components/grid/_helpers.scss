@@ -17,6 +17,9 @@
 .row-align-space-around {
 	align-content: space-around;
 }
+.row-align-space-evenly {
+	align-content: space-evenly;
+}
 
 .row-justify-left {
 	justify-content: flex-start;
@@ -27,25 +30,32 @@
 .row-justify-center {
 	justify-content: center;
 }
-.row-space-between {
+.row-justify-stretch {
+	justify-content: stretch;
+}
+.row-justify-space-between {
 	justify-content: space-between;
 }
-.row-space-around {
+.row-justify-space-around {
 	justify-content: space-around;
 }
+.row-justify-space-evenly {
+	justify-content: space-evenly;
+}
+
 .row {
-    &.row-direction-row {
-    	flex-direction: row;
-    }
-    &.row-direction-row-reverse {
-    	flex-direction: row-reverse;
-    }
-    &.row-direction-col {
-    	flex-direction: column;
-    }
-    &.row-direction-col-reverse {
-    	flex-direction: column-reverse;
-    }
+	&.row-direction-row {
+		flex-direction: row;
+	}
+	&.row-direction-row-reverse {
+		flex-direction: row-reverse;
+	}
+	&.row-direction-column {
+		flex-direction: column;
+	}
+	&.row-direction-column-reverse {
+		flex-direction: column-reverse;
+	}
 }
 
 /* Alignment of 'col' */
@@ -59,4 +69,11 @@
 
 .col-bottom {
 	align-self: flex-end;
+}
+
+/* Alignment of content inside a column */
+.vertical-center-content {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
 }

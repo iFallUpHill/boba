@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="col xs-12">
+        <h1 class="header">Offsets</h1>
+        <h5 class="subheader thin no-margin">Offset columns in a row by 1-11 units using <code class="inline">.offset-[screen-size]-[width]</code> classes to create unique layouts.</h5>
+        <h6 class="subheader thin no-margin">Each column can be offset by a maximum of 11 column units. More information on screen-sizes can be found on boba's <a href="./helpers.html" class="text-blue text-hover-green">helper page</a>.</h6>
+    </div>
+    <div class="col xs-12 col-middle">
+        <div class="row">
+            <div class="col xs-4">
+                <div class="bg-red text-center vertical-center-content" style="height:50px">
+                    .col .xs-4
+                </div>
+            </div>
+            <div class="col xs-4 offset-xs-4">
+                <div class="bg-green text-center vertical-center-content" style="height:50px">
+                    .col .xs-4 .offset-xs-4
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col xs-6 offset-xs-3">
+                <div class="bg-orange text-center vertical-center-content" style="height:50px">
+                    .col .xs-6 .offset-xs-3
+                </div>
+            </div>
+            <div class="col">
+                <div class="bg-yellow text-center vertical-center-content" style="height:50px">
+                    .col
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col xs-12 col-middle">
+        <div class="code-block">
+            <pre class="code"><code data-lang="html">&ltdiv class="row"&gt
+    &ltdiv class="col xs-6 offset-xs-3"&gt
+        &ltdiv class="bg-orange text-center vertical-center-content"&gt
+            .col .xs-6 .offset-xs-3
+        &lt/div&gt
+    &lt/div&gt
+    &ltdiv class="col"&gt
+        &ltdiv class="bg-yellow text-center vertical-center-content"&gt
+            .col
+        &lt/div&gt
+    &lt/div&gt
+&lt/div&gt</code></pre>
+        </div>
+    </div>
+</div>
