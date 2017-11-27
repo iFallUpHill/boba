@@ -1,0 +1,99 @@
+@import 'constants';
+
+@mixin sidebar-base {
+	display: flex;
+	flex-flow: nowrap;
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+@mixin sidebar-menu-icon-base {
+	display: block;
+	position: relative;
+	background: $color-white;
+	height: 0.125em;
+	width: 1.125em;
+
+	&:before, &:after {
+		background: $color-white;
+		content: '';
+		display: block;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+	}
+
+	&:before {
+		top: 0.3em;
+	}
+
+	&:after {
+		top: -0.3em;
+	}
+}
+
+@mixin sb-top-navbar-base {
+	display: flex;
+	position: absolute;
+	align-items: center;
+	width: 100%;
+	background: $color-dark;
+
+	&.fixed {
+		position: fixed;
+	}
+}
+
+@mixin sb-side-navbar-base {
+	position: fixed;
+	overflow-y: auto;
+	background: $color-light;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	height: 100vh;
+	width: $sb-side-navbar-width;
+	transform: translateX(-100%);
+	transition: transform .25s ease;
+	z-index: 5;
+
+	&:target, &.active {
+		transform: translateX(0);
+	}
+
+	&:target ~ .sb-main-overlay,
+	&.active ~ .sb-main-overlay {
+		display: block;
+		z-index: 4;
+	}
+}
+
+@mixin sb-main-content-base {
+	flex: 1 1 auto;
+	height: 100%;
+	padding-top: 3.345em;
+}
+
+@mixin sb-main-overlay {
+	background: $color-dark;
+	opacity: 0.3;
+	border-color: transparent;
+	border-radius: 0;
+	display: none;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+@mixin sb-side-navbar-toggle {
+	display: inline-block;
+	position: relative;
+	padding: $sb-side-navbar-toggle-padding;
+	cursor: pointer;
+	user-select: none;
+}

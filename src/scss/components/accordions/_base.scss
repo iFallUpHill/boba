@@ -2,6 +2,7 @@
 @import 'styling';
 
 .accordion-menu {
+
 	input:checked ~ {
 		& .accordion-body {
 			max-height: $accordion-menu-max-height;

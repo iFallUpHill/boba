@@ -3,6 +3,7 @@
 @mixin accordion-menu-header-base {
 	display: block;
 	padding: $accordion-menu-default-vpadding $accordion-menu-default-hpadding;
+	cursor: pointer;
 }
 
 @mixin accordion-menu-body-base {
@@ -18,7 +19,7 @@
 
 			li {
 				padding: $accordion-submenu-default-vpadding $accordion-submenu-default-hpadding;
-
+				cursor: pointer;
 			}
 		}
 	}
