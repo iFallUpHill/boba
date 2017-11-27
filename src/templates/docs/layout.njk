@@ -6,19 +6,27 @@
         <link rel="stylesheet" href="/boba.min.css">
     </head>
     <body>
+        <div class="sidebar-layout">
 
-    {% include "templates/core/_navbar.njk" %}
-    {% include "templates/docs/core/_header.njk" %}
-    {% include "templates/docs/core/_header_selector.njk" %}
+            {% import "templates/docs/core/_topsidenav.njk" as sidebar %}
 
-    <div class="section">
-        <div class="container">
-            {% block main %}
-            {% endblock %}
+            {{ sidebar.generate(active_accordion, active_page) }}
+            
+            <a class="sb-main-overlay" href="#close"></a>
+
+            <div class="sb-main-content">
+                {% include "templates/docs/core/_header.njk" %}
+                <div class="section">
+                    <div class="container">
+                        {% block main %}
+                        {% endblock %}
+                    </div>
+                </div>
+
+                {% include "templates/core/_footer.njk" %}
+
+            </div>
+
         </div>
-    </div>
-
-    {% include "templates/core/_footer.njk" %}
-
     </body>
 </html>
