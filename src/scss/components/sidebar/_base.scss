@@ -16,15 +16,17 @@
 			position: sticky;
 			top: 0;
 			font-size: $sb-side-sticky-region-font-size;
+			padding: $sb-side-content-padding;
 			z-index: 5;
+
+			+ .sb-side-scroll-region {
+				padding-top: 0;
+			}
 		}
 
 		.sb-side-scroll-region {
 			position: relative;
 			overflow-y: auto;
-		}
-
-		.sb-side-content {
 			padding: $sb-side-content-padding;
 		}
 	}
