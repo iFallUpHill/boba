@@ -9,8 +9,9 @@
     flex-direction: row;
     flex-wrap: wrap;
 
-    &.fixed {
-        position: fixed;
+    &.sticky {
+        position: sticky;
+        top: 0;
     }
 
     a {
@@ -99,7 +100,7 @@
         }
     }
 
-  /* menu btn */
+  /* menu button */
     .menu-btn {
         display: none;
 

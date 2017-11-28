@@ -11,27 +11,17 @@
 	.sb-side-navbar {
 		@include sb-side-navbar-base;
 
-		.sb-side-fixed-region {
+		.sb-side-sticky-region {
+			background: $color-light;
 			position: sticky;
 			top: 0;
-			font-size: $sb-side-fixed-region-font-size;
-			width: $sb-side-navbar-width;
-
-			+ .sb-side-scroll-region {
-				max-height: calc(100vh - #{$sb-side-content-fixed-offset});
-				top: $sb-side-content-fixed-offset;
-
-				.sb-side-content {
-					padding-top: 0;
-				}
-			}
+			font-size: $sb-side-sticky-region-font-size;
+			z-index: 5;
 		}
 
 		.sb-side-scroll-region {
-			position: fixed;
+			position: relative;
 			overflow-y: auto;
-			height: 100%;
-			width: $sb-side-navbar-width;
 		}
 
 		.sb-side-content {
@@ -52,17 +42,17 @@
 	}
 
 	// Responsive Helpers
-	@media screen and (min-width: $laptop) {
+	@media screen and (min-width: $desktop) {
 		.sb-top-navbar {
 			display: none;
 		}
 		.sb-side-navbar {
 			flex: 0 0 auto;
-			position: sticky;
+			position: fixed;
 			transform: none;
 		}
 		.sb-main-content {
-			padding-top: 0;
+			padding-left: $sb-side-navbar-width;
 		}
 		.sb-side-navbar-toggle {
 			display: none;

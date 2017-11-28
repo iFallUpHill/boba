@@ -62,14 +62,14 @@ span, a {
 	}
 }
 
-@each $size, $fontSize, $height, $vpadding, $hpadding in $label-font-height-vpadding-hpadding {
+@each $size, $fontSize, $height, $vpadding-top, $hpadding in $label-font-height-vpadding-hpadding {
     span, a {
 		&.label {
 		    &.#{$size} {
 		    	font-size: $fontSize;
 		        height: $height;
 		        line-height: $height;
-		        padding: $vpadding $hpadding;
+		        padding: $vpadding-top $hpadding;
 		    }
 		}
 	}

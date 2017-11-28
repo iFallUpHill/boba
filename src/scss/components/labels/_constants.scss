@@ -2,14 +2,14 @@ $label-vertical-padding: 0.8em;
 $label-horizontal-padding: 0.6em;
 $label-font-size: $base-xxs-font-size;
 $label-line-height: $base-xxs-font-size;
-$label-height: 1.5em;
+$label-height: 1.4em;
 
 $label-border-radius: $border-radius;
 
 $label-rounded-border-radius: 9999px;
 $label-joined-rounded-horizontal-padding: 0.8em;
 
-$label-font-height-vpadding-hpadding: (large, $label-font-size + 0.4em, $label-height + 0.4em, $label-vertical-padding + 0.4em, $label-horizontal-padding + 0.4em),
-                                              (medium, $label-font-size + 0.2em, $label-height + 0.2em, $label-vertical-padding + 0.2em, $label-horizontal-padding + 0.2em),
-                                          	  (small, $label-font-size - 0.2em, $label-height - 0.2em, $label-vertical-padding - 0.2em, $label-horizontal-padding - 0.2em);
+$label-font-height-vpadding-hpadding: 	(large, $label-font-size + 0.4em, $label-height + 0.4em, $label-vertical-padding + 0.4em, $label-horizontal-padding + 0.4em),
+                                              		(medium, $label-font-size + 0.2em, $label-height + 0.2em, $label-vertical-padding + 0.2em, $label-horizontal-padding + 0.2em),
+                                          	  		(small, $label-font-size - 0.2em, $label-height - 0.2em, $label-vertical-padding - 0.2em, $label-horizontal-padding - 0.2em);
 
