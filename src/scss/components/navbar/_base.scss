@@ -1,9 +1,50 @@
 @import 'constants';
 @import 'styling';
+@import 'icon';
 
 /* header */
 .navbar {
     @include navbar-base;
+
+    &.sticky {
+        position: sticky;
+        top: 0;
+    }
+
+    a {
+        color: $color-white;
+    }
+
+    .navbar-menu-items {
+        @include navbar-menu-items-base;
+    }
+
+    .navbar-brand {
+        @include navbar-brand-base;
+    }
+
+    // Hamburger Menu Icon
+    @include navbar-menu-icon;
+
+    // Responsive Helpers
+    @media screen and (min-width: $laptop) {
+    	.navbar-menu-items {
+    		clear: none;
+	        max-height: none;
+	        flex-basis: auto;
+
+	        &.menu-items-right {
+	            margin-left: auto;
+	        }
+    	}
+    	
+	    li {
+	        float: left;
+	    }
+	    a {
+	        padding: 1.25em 1.875em;
+	    }
+	}
 
     @if $include-color-palette {
         @include navbar-colors;

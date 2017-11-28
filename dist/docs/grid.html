@@ -9,7 +9,6 @@
         <div class="sidebar-layout">
 
             
-
             
 
 <div class="sb-top-navbar sticky">
@@ -31,9 +30,11 @@
 			</label>
 			<div class="accordion-body">
 				<ul class="accordion-submenu">
-					<li class=""><a href="/docs/index.html">Home</a></li>
-					<li>Filler 2</li>
-					<li>Filler 3</li>
+					<li class=""><a href="/docs/index.html">Introduction</a></li>
+					<li class=""><a href="/docs/installation.html">Installation</a></li>
+					<li class=""><a href="/docs/customize.html">Customize</a></li>
+					<li class=""><a href="/docs/compatibility.html">Compatibility</a></li>
+					<li class=""><a href="/docs/changelog.html">Changelog</a></li>
 				</ul>
 			</div>
 		</div>
@@ -45,9 +46,20 @@
 			<div class="accordion-body">
 				<ul class="accordion-submenu">
 					<li class=""><a href="/docs/animations.html">Animations</a></li>
+					<li class=""><a href="/docs/breakpoints.html">Breakpoints</a></li>
 					<li class=""><a href="/docs/colors.html">Colors</a></li>
-					<li class=""><a href="/docs/helpers.html">Helpers</a></li>
 					<li class=""><a href="/docs/typography.html">Typography</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="accordion-menu">
+			<input type="checkbox" id="utilities" name="accordion-checkbox" hidden  />
+			<label class="accordion-header " for="utilities">
+				Utilities
+			</label>
+			<div class="accordion-body">
+				<ul class="accordion-submenu">
+					<li class=""><a href="/docs/helpers.html">Helpers</a></li>
 				</ul>
 			</div>
 		</div>
@@ -61,7 +73,7 @@
 					<li class=""><a href="/docs/dividers.html">Dividers</a></li>
 					<li class="bold"><a href="/docs/grid.html">Grid</a></li>
 					<li class=""><a href="/docs/navbar.html">Navbar</a></li>
-					<li class=""><a href="/docs/sidebar.html">Sidebar</a> <span class="label small rounded red">Beta</span></li>
+					<li class=""><a href="/docs/sidebar.html">Sidebar</a></li>
 				</ul>
 			</div>
 		</div>
@@ -117,20 +129,28 @@
 	</div>
 </div>
 
+
             
             <a class="sb-main-overlay" href="#close"></a>
 
             <div class="sb-main-content">
-                <div class="below-fixed-nav">
-    <div class="banner medium indigo darken-bg-1">
-        <div class="banner-body text-left">
-          <div class="container">
-            <h1 class="header text-white">Documentation</h1>
-            <h5 class="subheader thin text-white no-margin">Learn how to <span class="bold">build your website</span> with boba!</h5>
-          </div>
-        </div>
-    </div>
+                
+                
+
+
+<div class="banner medium green darken-bg-3">
+	<div class="banner-body text-left">
+		<div class="container">
+			<h1 class="header text-white">Layout</h1>
+			<h5 class="subheader thin text-white no-margin">Learn how to <span class="bold">build your website</span> with boba!</h5>
+		</div>
+	</div>
 </div>
+
+
+
+
+
                 <div class="section">
                     <div class="container">
                         
@@ -139,9 +159,16 @@
     <div class="col xs-12">
         <h1 class="header">Grid</h1>
         <h5 class="subheader thin no-margin">Grids provide the foundation you need to organize content.</h5>
-        <h6 class="subheader thin no-margin">Use a <code class="inline">.row</code> element to hold <code class="inline">.col</code> elements.</h6>
-        <h6 class="subheader thin no-margin">Unsized column elements will automatically expand to fill a row; Set specific widths from 1-12 using <code class="inline">.[screen-size]-[width]</code> classes.</h6>
-        <h6 class="subheader thin no-margin">Each row can hold a maximum of 12 column units. More information on screen-sizes can be found on boba's <a href="./helpers.html" class="text-blue text-hover-green">helper page.</a></h6>
+        <br />
+        <div class="message blue">
+            <div class="message-header">
+                <p>Clarification</p>
+            </div>
+            <div class="message-body">
+                <p>Use a <code class="inline">.row</code> element to hold up to 12 <code class="inline">.col</code> elements. Unsized column elements will automatically expand to fill a row.</p>
+                <p>Set specific widths from 1-12 using <code class="inline">.[screen-size]-[width]</code> classes. More information on screen-sizes can be found on boba's <a href="./helpers.html" class="text-blue text-hover-green">helper page.</a></p>
+            </div>
+        </div>
     </div>
     <div class="col xs-12 col-middle">
         <div class="row">
@@ -463,7 +490,7 @@
     <div class="row">
     <div class="col xs-12">
         <h1 class="header">Column Alignment</h1>
-        <h5 class="subheader thin no-margin">Vertically align columns within a row.</h5>
+        <h5 class="subheader thin no-margin">Vertically align columns within a row using the <code class="inline">.col-top</code>, <code class="inline">.col-middle</code>, and <code class="inline">.col-bottom</code> classes.</h5>
     </div>
     <div class="col xs-12 col-middle">
         <div class="row" style="height:200px">
@@ -518,23 +545,23 @@
 <div class="row">
     <div class="col xs-12">
         <h4 class="header">Row Align Top</h4>
-        <h6 class="subheader thin no-margin">Align all columns in a row to the top of the row.</h6>
+        <h6 class="subheader thin no-margin">Align all columns in a row to the top of the row using the <code class="inline">.row-align-top</code> class.</h6>
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="row row-align-top" style="height:200px;">
             <div class="col xs-4">
                 <div class="bg-light text-center vertical-center-content" style="height:50px; border: 1px solid #d3d3d3">
-                    .row-align-top
+                    .col .xs-4
                 </div>
             </div>
             <div class="col xs-4">
                 <div class="bg-light text-center vertical-center-content" style="height:100px; border: 1px solid #d3d3d3">
-                    .row-align-top
+                    .col .xs-4
                 </div>
             </div>
             <div class="col xs-4">
                 <div class="bg-light text-center vertical-center-content" style="height:150px; border: 1px solid #d3d3d3">
-                    .row-align-top
+                    .col .xs-4
                 </div>
             </div>
         </div>
@@ -544,17 +571,17 @@
             <pre class="code"><code data-lang="html">&ltdiv class="row row-align-top"&gt
     &ltdiv class="col xs-4"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-align-top
+            .col .xs-4
         &lt/div&gt
     &lt/div&gt
     &ltdiv class="col xs-4"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-align-top
+            .col .xs-4
         &lt/div&gt
     &lt/div&gt
     &ltdiv class="col xs-4"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-align-top
+            .col .xs-4
         &lt/div&gt
     &lt/div&gt
 &lt/div&gt</code></pre>
@@ -566,23 +593,23 @@
 <div class="row">
     <div class="col xs-12">
         <h4 class="header">Row Align Center</h4>
-        <h6 class="subheader thin no-margin">Align all columns in a row to the vertical center of the row.</h6>
+        <h6 class="subheader thin no-margin">Align all columns in a row to the vertical center of the row using the <code class="inline">.row-align-center</code> class.</h6>
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="row row-align-center" style="height:200px;">
             <div class="col xs-4">
                 <div class="bg-light text-center vertical-center-content" style="height:50px; border: 1px solid #d3d3d3">
-                    .row-align-center
+                    .col .xs-4
                 </div>
             </div>
             <div class="col xs-4">
                 <div class="bg-light text-center vertical-center-content" style="height:100px; border: 1px solid #d3d3d3">
-                    .row-align-center
+                    .col .xs-4
                 </div>
             </div>
             <div class="col xs-4">
                 <div class="bg-light text-center vertical-center-content" style="height:150px; border: 1px solid #d3d3d3">
-                    .row-align-center
+                    .col .xs-4
                 </div>
             </div>
         </div>
@@ -592,17 +619,17 @@
             <pre class="code"><code data-lang="html">&ltdiv class="row row-align-center"&gt
     &ltdiv class="col xs-4"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-align-center
+            .col .xs-4
         &lt/div&gt
     &lt/div&gt
     &ltdiv class="col xs-4"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-align-center
+            .col .xs-4
         &lt/div&gt
     &lt/div&gt
     &ltdiv class="col xs-4"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-align-center
+            .col .xs-4
         &lt/div&gt
     &lt/div&gt
 &lt/div&gt</code></pre>
@@ -614,23 +641,23 @@
 <div class="row">
     <div class="col xs-12">
         <h4 class="header">Row Align Bottom</h4>
-        <h6 class="subheader thin no-margin">Align all columns in a row to the bottom of the row.</h6>
+        <h6 class="subheader thin no-margin">Align all columns in a row to the bottom of the row using the <code class="inline">.row-align-bottom</code> class.</h6>
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="row row-align-bottom" style="height:200px;">
             <div class="col xs-4">
                 <div class="bg-light text-center vertical-center-content" style="height:50px; border: 1px solid #d3d3d3">
-                    .row-align-bottom
+                    .col .xs-4
                 </div>
             </div>
             <div class="col xs-4">
                 <div class="bg-light text-center vertical-center-content" style="height:100px; border: 1px solid #d3d3d3">
-                    .row-align-bottom
+                    .col .xs-4
                 </div>
             </div>
             <div class="col xs-4">
                 <div class="bg-light text-center vertical-center-content" style="height:150px; border: 1px solid #d3d3d3">
-                    .row-align-bottom
+                    .col .xs-4
                 </div>
             </div>
         </div>
@@ -640,17 +667,17 @@
             <pre class="code"><code data-lang="html">&ltdiv class="row row-align-bottom"&gt
     &ltdiv class="col xs-4"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-align-bottom
+            .col .xs-4
         &lt/div&gt
     &lt/div&gt
     &ltdiv class="col xs-4"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-align-bottom
+            .col .xs-4
         &lt/div&gt
     &lt/div&gt
     &ltdiv class="col xs-4"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-align-bottom
+            .col .xs-4
         &lt/div&gt
     &lt/div&gt
 &lt/div&gt</code></pre>
@@ -662,24 +689,24 @@
 <div class="row">
     <div class="col xs-12">
         <h4 class="header">Row Align Stretch</h4>
-        <h6 class="subheader thin no-margin">All columns in a row will stretch to the max height of the row.</h6>
+        <h6 class="subheader thin no-margin">All columns in a row will stretch to the max height of the row using the <code class="inline">.row-align-stretch</code> class.</h6>
         <h6 class="subheader thin no-margin">The effect is subtle, but trust us, it works!</h6>
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="row row-align-stretch" style="height:200px;">
             <div class="col xs-4">
                 <div class="bg-light text-center vertical-center-content" style="height:50px; border: 1px solid #d3d3d3">
-                    .row-align-stretch
+                    .col xs-4
                 </div>
             </div>
             <div class="col xs-4">
                 <div class="bg-light text-center vertical-center-content" style="height:100px; border: 1px solid #d3d3d3">
-                    .row-align-stretch
+                    .col xs-4
                 </div>
             </div>
             <div class="col xs-4">
                 <div class="bg-light text-center vertical-center-content" style="height:150px; border: 1px solid #d3d3d3">
-                    .row-align-stretch
+                    .col xs-4
                 </div>
             </div>
         </div>
@@ -689,17 +716,17 @@
             <pre class="code"><code data-lang="html">&ltdiv class="row row-align-stretch"&gt
     &ltdiv class="col xs-4"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-align-stretch
+            .col xs-4
         &lt/div&gt
     &lt/div&gt
     &ltdiv class="col xs-4"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-align-stretch
+            .col xs-4
         &lt/div&gt
     &lt/div&gt
     &ltdiv class="col xs-4"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-align-stretch
+            .col xs-4
         &lt/div&gt
     &lt/div&gt
 &lt/div&gt</code></pre>
@@ -711,28 +738,28 @@
 <div class="row">
     <div class="col xs-12">
         <h4 class="header">Row Align Space Around</h4>
-        <h6 class="subheader thin no-margin">When a row wraps, each sub-row will have equal spacing around them on both sides, including the first/last rows.</h6>
+        <h6 class="subheader thin no-margin">By using the <code class="inline">.row-align-space-around</code> class, when a row wraps, each sub-row will have an equal amount of spacing around them on both sides, including the first/last rows.</h6>
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="row row-align-space-around" style="height: 200px;">
             <div class="col xs-6">
                 <div class="bg-light text-center vertical-center-content" style="height:50px; border: 1px solid #d3d3d3">
-                    .row-align-space-around
+                    .col .xs-6
                 </div>
             </div>
             <div class="col xs-6">
                 <div class="bg-light text-center vertical-center-content" style="height:50px; border: 1px solid #d3d3d3">
-                    .row-align-space-around
+                    .col .xs-6
                 </div>
             </div>
             <div class="col xs-6">
                 <div class="bg-light text-center vertical-center-content" style="height:50px; border: 1px solid #d3d3d3">
-                    .row-align-space-around
+                    .col .xs-6
                 </div>
             </div>
             <div class="col xs-6">
                 <div class="bg-light text-center vertical-center-content" style="height:50px; border: 1px solid #d3d3d3">
-                    .row-align-space-around
+                    .col .xs-6
                 </div>
             </div>
         </div>
@@ -742,22 +769,22 @@
             <pre class="code"><code data-lang="html">&ltdiv class="row row-align-space-around"&gt
     &ltdiv class="col xs-6"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-align-space-around
+            .col .xs-6
         &lt/div&gt
     &lt/div&gt
     &ltdiv class="col xs-6"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-align-space-around
+            .col .xs-6
         &lt/div&gt
     &lt/div&gt
     &ltdiv class="col xs-6"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-align-space-around
+            .col .xs-6
         &lt/div&gt
     &lt/div&gt
     &ltdiv class="col xs-6"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-align-space-around
+            .col .xs-6
         &lt/div&gt
     &lt/div&gt
 &lt/div&gt</code></pre>
@@ -769,28 +796,28 @@
 <div class="row">
     <div class="col xs-12">
         <h4 class="header">Row Align Space Between</h4>
-        <h6 class="subheader thin no-margin">When a row wraps, each sub-row will have equal spacing between them and the first/last rows will be flush to the containing element.</h6>
+        <h6 class="subheader thin no-margin">By using the <code class="inline">.row-align-space-between</code> class, when a row wraps, each sub-row will have equal spacing between them and the first/last rows will be flush to the containing element.</h6>
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="row row-align-space-between" style="height: 200px;">
             <div class="col xs-6">
                 <div class="bg-light text-center vertical-center-content" style="height:50px; border: 1px solid #d3d3d3">
-                    .row-align-space-between
+                    .col .xs-6
                 </div>
             </div>
             <div class="col xs-6">
                 <div class="bg-light text-center vertical-center-content" style="height:50px; border: 1px solid #d3d3d3">
-                    .row-align-space-between
+                    .col .xs-6
                 </div>
             </div>
             <div class="col xs-6">
                 <div class="bg-light text-center vertical-center-content" style="height:50px; border: 1px solid #d3d3d3">
-                    .row-align-space-between
+                    .col .xs-6
                 </div>
             </div>
             <div class="col xs-6">
                 <div class="bg-light text-center vertical-center-content" style="height:50px; border: 1px solid #d3d3d3">
-                    .row-align-space-between
+                    .col .xs-6
                 </div>
             </div>
         </div>
@@ -800,22 +827,22 @@
             <pre class="code"><code data-lang="html">&ltdiv class="row row-align-space-between"&gt
     &ltdiv class="col xs-6"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-align-space-between
+            .col .xs-6
         &lt/div&gt
     &lt/div&gt
     &ltdiv class="col xs-6"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-align-space-between
+            .col .xs-6
         &lt/div&gt
     &lt/div&gt
     &ltdiv class="col xs-6"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-align-space-between
+            .col .xs-6
         &lt/div&gt
     &lt/div&gt
     &ltdiv class="col xs-6"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-align-space-between
+            .col .xs-6
         &lt/div&gt
     &lt/div&gt
 &lt/div&gt</code></pre>
@@ -827,28 +854,28 @@
 <div class="row">
     <div class="col xs-12">
         <h4 class="header">Row Align Space Evenly</h4>
-        <h6 class="subheader thin no-margin">When a row wraps, each sub-row will have equal spacing around them, including the first/last rows.</h6>
+        <h6 class="subheader thin no-margin">By using the <code class="inline">.row-align-space-evenly</code> class, when a row wraps, each sub-row will have equal spacing around them, including the first/last rows.</h6>
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="row row-align-space-evenly" style="height: 200px;">
             <div class="col xs-6">
                 <div class="bg-light text-center vertical-center-content" style="height:50px; border: 1px solid #d3d3d3">
-                    .row-align-space-evenly
+                    .col .xs-6
                 </div>
             </div>
             <div class="col xs-6">
                 <div class="bg-light text-center vertical-center-content" style="height:50px; border: 1px solid #d3d3d3">
-                    .row-align-space-evenly
+                    .col .xs-6
                 </div>
             </div>
             <div class="col xs-6">
                 <div class="bg-light text-center vertical-center-content" style="height:50px; border: 1px solid #d3d3d3">
-                    .row-align-space-evenly
+                    .col .xs-6
                 </div>
             </div>
             <div class="col xs-6">
                 <div class="bg-light text-center vertical-center-content" style="height:50px; border: 1px solid #d3d3d3">
-                    .row-align-space-evenly
+                    .col .xs-6
                 </div>
             </div>
         </div>
@@ -858,22 +885,22 @@
             <pre class="code"><code data-lang="html">&ltdiv class="row row-align-space-evenly"&gt
     &ltdiv class="col xs-6"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-align-space-evenly
+            .col .xs-6
         &lt/div&gt
     &lt/div&gt
     &ltdiv class="col xs-6"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-align-space-evenly
+            .col .xs-6
         &lt/div&gt
     &lt/div&gt
     &ltdiv class="col xs-6"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-align-space-evenly
+            .col .xs-6
         &lt/div&gt
     &lt/div&gt
     &ltdiv class="col xs-6"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-align-space-evenly
+            .col .xs-6
         &lt/div&gt
     &lt/div&gt
 &lt/div&gt</code></pre>
@@ -894,23 +921,23 @@
 <div class="row">
     <div class="col xs-12">
         <h4 class="header">Row Justify Left</h4>
-        <h6 class="subheader thin no-margin">Left align all columns in a row.</h6>
+        <h6 class="subheader thin no-margin">Left align all columns in a row using the <code class="inline">.row-justify-left</code> class.</h6>
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="row row-justify-left">
             <div class="col xs-3">
                 <div class="bg-light text-center vertical-center-content" style="height:100px; border: 1px solid #d3d3d3">
-                    .row-justify-left
+                    .col .xs-3
                 </div>
             </div>
             <div class="col xs-3">
                 <div class="bg-light text-center vertical-center-content" style="height:100px; border: 1px solid #d3d3d3">
-                    .row-justify-left
+                    .col .xs-3
                 </div>
             </div>
             <div class="col xs-3">
                 <div class="bg-light text-center vertical-center-content" style="height:100px; border: 1px solid #d3d3d3">
-                    .row-justify-left
+                    .col .xs-3
                 </div>
             </div>
         </div>
@@ -920,17 +947,17 @@
             <pre class="code"><code data-lang="html">&ltdiv class="row row-justify-left"&gt
     &ltdiv class="col xs-3"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-justify-left
+            .col .xs-3
         &lt/div&gt
     &lt/div&gt
     &ltdiv class="col xs-3"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-justify-left
+            .col .xs-3
         &lt/div&gt
     &lt/div&gt
     &ltdiv class="col xs-3"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-justify-left
+            .col .xs-3
         &lt/div&gt
     &lt/div&gt
 &lt/div&gt</code></pre>
@@ -942,23 +969,23 @@
 <div class="row">
     <div class="col xs-12">
         <h4 class="header">Row Justify Center</h4>
-        <h6 class="subheader thin no-margin">Center align all columns in a row.</h6>
+        <h6 class="subheader thin no-margin">Center align all columns in a row using the <code class="inline">.row-justify-center</code> class.</h6>
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="row row-justify-center">
             <div class="col xs-3">
                 <div class="bg-light text-center vertical-center-content" style="height:100px; border: 1px solid #d3d3d3">
-                    .row-justify-center
+                    .col .xs-3
                 </div>
             </div>
             <div class="col xs-3">
                 <div class="bg-light text-center vertical-center-content" style="height:100px; border: 1px solid #d3d3d3">
-                    .row-justify-center
+                    .col .xs-3
                 </div>
             </div>
             <div class="col xs-3">
                 <div class="bg-light text-center vertical-center-content" style="height:100px; border: 1px solid #d3d3d3">
-                    .row-justify-center
+                    .col .xs-3
                 </div>
             </div>
         </div>
@@ -968,17 +995,17 @@
             <pre class="code"><code data-lang="html">&ltdiv class="row row-justify-center"&gt
     &ltdiv class="col xs-3"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-justify-center
+            .col .xs-3
         &lt/div&gt
     &lt/div&gt
     &ltdiv class="col xs-3"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-justify-center
+            .col .xs-3
         &lt/div&gt
     &lt/div&gt
     &ltdiv class="col xs-3"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-justify-center
+            .col .xs-3
         &lt/div&gt
     &lt/div&gt
 &lt/div&gt</code></pre>
@@ -990,23 +1017,23 @@
 <div class="row">
     <div class="col xs-12">
         <h4 class="header">Row Justify Right</h4>
-        <h6 class="subheader thin no-margin">Right align all columns in a row.</h6>
+        <h6 class="subheader thin no-margin">Right align all columns in a row using the <code class="inline">.row-justify-right</code> class.</h6>
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="row row-justify-right">
             <div class="col xs-3">
                 <div class="bg-light text-center vertical-center-content" style="height:100px; border: 1px solid #d3d3d3">
-                    .row-justify-right
+                    .col .xs-3
                 </div>
             </div>
             <div class="col xs-3">
                 <div class="bg-light text-center vertical-center-content" style="height:100px; border: 1px solid #d3d3d3">
-                    .row-justify-right
+                    .col .xs-3
                 </div>
             </div>
             <div class="col xs-3">
                 <div class="bg-light text-center vertical-center-content" style="height:100px; border: 1px solid #d3d3d3">
-                    .row-justify-right
+                    .col .xs-3
                 </div>
             </div>
         </div>
@@ -1016,17 +1043,17 @@
             <pre class="code"><code data-lang="html">&ltdiv class="row row-justify-right"&gt
     &ltdiv class="col xs-3"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-justify-right
+            .col .xs-3
         &lt/div&gt
     &lt/div&gt
     &ltdiv class="col xs-3"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-justify-right
+            .col .xs-3
         &lt/div&gt
     &lt/div&gt
     &ltdiv class="col xs-3"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-justify-right
+            .col .xs-3
         &lt/div&gt
     &lt/div&gt
 &lt/div&gt</code></pre>
@@ -1038,24 +1065,32 @@
 <div class="row">
     <div class="col xs-12">
         <h4 class="header">Row Justify Stretch</h4>
-        <h6 class="subheader thin no-margin">Stretch all columns in a row to fill the full width of the row.</h6>
-        <h6 class="subheader thin no-margin">Note: This only works for columns that do not have specified widths.</h6>
+        <h6 class="subheader thin no-margin">Stretch all columns in a row to fill the full width of the row using the <code class="inline">.row-justify-stretch</code> class.</h6>
+        <br />
+        <div class="message blue">
+            <div class="message-header">
+                <p>Clarification</p>
+            </div>
+            <div class="message-body">
+                <p>This only works for columns that do not have user-specified widths and is already the default behavior of basic <code class="inline">.col</code> elements.</p>
+            </div>
+        </div>
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="row row-justify-stretch">
             <div class="col">
                 <div class="bg-light text-center vertical-center-content" style="height:100px; border: 1px solid #d3d3d3">
-                    .row-justify-stretch
+                    .col
                 </div>
             </div>
             <div class="col">
                 <div class="bg-light text-center vertical-center-content" style="height:100px; border: 1px solid #d3d3d3">
-                    .row-justify-stretch
+                    .col
                 </div>
             </div>
             <div class="col">
                 <div class="bg-light text-center vertical-center-content" style="height:100px; border: 1px solid #d3d3d3">
-                    .row-justify-stretch
+                    .col
                 </div>
             </div>
         </div>
@@ -1065,17 +1100,17 @@
             <pre class="code"><code data-lang="html">&ltdiv class="row row-justify-stretch"&gt
     &ltdiv class="col"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-justify-stretch
+            .col
         &lt/div&gt
     &lt/div&gt
     &ltdiv class="col"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-justify-stretch
+            .col
         &lt/div&gt
     &lt/div&gt
     &ltdiv class="col"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-justify-stretch
+            .col
         &lt/div&gt
     &lt/div&gt
 &lt/div&gt</code></pre>
@@ -1087,23 +1122,23 @@
 <div class="row">
     <div class="col xs-12">
         <h4 class="header">Row Justify Space Around</h4>
-        <h6 class="subheader thin no-margin">Each column in a row will have equal spacing on both sides, including the first/last columns.</h6>
+        <h6 class="subheader thin no-margin">By using the <code class="inline">.row-justify-space-around</code> class, each column element in a row will have an equal amount of spacing on both sides, including the first/last columns.</h6>
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="row row-justify-space-around">
             <div class="col xs-3">
                 <div class="bg-light text-center vertical-center-content" style="height:100px; border: 1px solid #d3d3d3">
-                    .row-justify-space-around
+                    .col .xs-3
                 </div>
             </div>
             <div class="col xs-3">
                 <div class="bg-light text-center vertical-center-content" style="height:100px; border: 1px solid #d3d3d3">
-                    .row-justify-space-around
+                    .col .xs-3
                 </div>
             </div>
             <div class="col xs-3">
                 <div class="bg-light text-center vertical-center-content" style="height:100px; border: 1px solid #d3d3d3">
-                    .row-justify-space-around
+                    .col .xs-3
                 </div>
             </div>
         </div>
@@ -1113,17 +1148,17 @@
             <pre class="code"><code data-lang="html">&ltdiv class="row row-justify-space-around"&gt
     &ltdiv class="col xs-3"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-justify-space-around
+            .col .xs-3
         &lt/div&gt
     &lt/div&gt
     &ltdiv class="col xs-3"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-justify-space-around
+            .col .xs-3
         &lt/div&gt
     &lt/div&gt
     &ltdiv class="col xs-3"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-justify-space-around
+            .col .xs-3
         &lt/div&gt
     &lt/div&gt
 &lt/div&gt</code></pre>
@@ -1135,23 +1170,23 @@
 <div class="row">
     <div class="col xs-12">
         <h4 class="header">Row Justify Space Between</h4>
-        <h6 class="subheader thin no-margin">Each column in a row will have equal spacing between them and the first/last columns will be flush to the containing row.</h6>
+        <h6 class="subheader thin no-margin">By using the <code class="inline">.row-justify-space-between</code> class, each column in a row will have equal spacing between them and the first/last columns will be flush to the containing row.</h6>
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="row row-justify-space-between">
             <div class="col xs-3">
                 <div class="bg-light text-center vertical-center-content" style="height:100px; border: 1px solid #d3d3d3">
-                    .row-justify-space-between
+                    .col .xs-3
                 </div>
             </div>
             <div class="col xs-3">
                 <div class="bg-light text-center vertical-center-content" style="height:100px; border: 1px solid #d3d3d3">
-                    .row-justify-space-between
+                    .col .xs-3
                 </div>
             </div>
             <div class="col xs-3">
                 <div class="bg-light text-center vertical-center-content" style="height:100px; border: 1px solid #d3d3d3">
-                    .row-justify-space-between
+                    .col .xs-3
                 </div>
             </div>
         </div>
@@ -1161,17 +1196,17 @@
             <pre class="code"><code data-lang="html">&ltdiv class="row row-justify-space-between"&gt
     &ltdiv class="col xs-3"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-justify-space-between
+            .col .xs-3
         &lt/div&gt
     &lt/div&gt
     &ltdiv class="col xs-3"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-justify-space-between
+            .col .xs-3
         &lt/div&gt
     &lt/div&gt
     &ltdiv class="col xs-3"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-justify-space-between
+            .col .xs-3
         &lt/div&gt
     &lt/div&gt
 &lt/div&gt</code></pre>
@@ -1183,23 +1218,23 @@
 <div class="row">
     <div class="col xs-12">
         <h4 class="header">Row Justify Space Evenly</h4>
-        <h6 class="subheader thin no-margin">Each column in a row will have equal spacing around them, including the first/last columns.</h6>
+        <h6 class="subheader thin no-margin">By using the <code class="inline">.row-justify-space-evenly</code> class, each column in a row will have equal spacing around them, including the first/last columns.</h6>
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="row row-justify-space-evenly">
             <div class="col xs-3">
                 <div class="bg-light text-center vertical-center-content" style="height:100px; border: 1px solid #d3d3d3">
-                    .row-justify-space-evenly
+                    .col .xs-3
                 </div>
             </div>
             <div class="col xs-3">
                 <div class="bg-light text-center vertical-center-content" style="height:100px; border: 1px solid #d3d3d3">
-                    .row-justify-space-evenly
+                    .col .xs-3
                 </div>
             </div>
             <div class="col xs-3">
                 <div class="bg-light text-center vertical-center-content" style="height:100px; border: 1px solid #d3d3d3">
-                    .row-justify-space-evenly
+                    .col .xs-3
                 </div>
             </div>
         </div>
@@ -1209,17 +1244,17 @@
             <pre class="code"><code data-lang="html">&ltdiv class="row row-justify-space-evenly"&gt
     &ltdiv class="col xs-3"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-justify-space-evenly
+            .col .xs-3
         &lt/div&gt
     &lt/div&gt
     &ltdiv class="col xs-3"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-justify-space-evenly
+            .col .xs-3
         &lt/div&gt
     &lt/div&gt
     &ltdiv class="col xs-3"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-justify-space-evenly
+            .col .xs-3
         &lt/div&gt
     &lt/div&gt
 &lt/div&gt</code></pre>
@@ -1240,7 +1275,7 @@
 <div class="row">
     <div class="col xs-12">
         <h4 class="header">Row Direction Row (Forward)</h4>
-        <h6 class="subheader thin no-margin">Default behavior for columns in a row; columns will appear in sequential order.</h6>
+        <h6 class="subheader thin no-margin">Default behavior for columns in a row; columns will appear in sequential order when using the <code class="inline">.row-direction-row</code> class.</h6>
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="row row-direction-row">
@@ -1256,7 +1291,7 @@
             </div>
             <div class="col xs-6">
                 <div class="bg-light text-center vertical-center-content" style="height:50px; border: 1px solid #d3d3d3">
-                    .row-direction-row
+                    3
                 </div>
             </div>
         </div>
@@ -1276,7 +1311,7 @@
     &lt/div&gt
     &ltdiv class="col xs-6"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-direction-row
+            3
         &lt/div&gt
     &lt/div&gt
 &lt/div&gt</code></pre>
@@ -1288,7 +1323,7 @@
 <div class="row">
     <div class="col xs-12">
         <h4 class="header">Row Direction Row Reverse</h4>
-        <h6 class="subheader thin no-margin">Columns will appear in reverse-sequential order.</h6>
+        <h6 class="subheader thin no-margin">Columns will appear in reverse-sequential order when using the <code class="inline">.row-direction-row-reverse</code> class.</h6>
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="row row-direction-row-reverse">
@@ -1304,7 +1339,7 @@
             </div>
             <div class="col xs-6">
                 <div class="bg-light text-center vertical-center-content" style="height:50px; border: 1px solid #d3d3d3">
-                    .row-direction-row-reverse
+                    3
                 </div>
             </div>
         </div>
@@ -1324,7 +1359,7 @@
     &lt/div&gt
     &ltdiv class="col xs-6"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-direction-row-reverse
+            3
         &lt/div&gt
     &lt/div&gt
 &lt/div&gt</code></pre>
@@ -1336,8 +1371,16 @@
 <div class="row">
     <div class="col xs-12">
         <h4 class="header">Row Direction Column</h4>
-        <h6 class="subheader thin no-margin">Columns will appear vertically stacked in sequential order.</h6>
-        <h6 class="subheader thin no-margin">Note: Column direction will not respect specified column widths and will stretch all columns to fill one row each.</h6>
+        <h6 class="subheader thin no-margin">Columns will appear vertically stacked in sequential order when using the <code class="inline">.row-direction-column</code> class.</h6>
+        <br />
+        <div class="message blue">
+            <div class="message-header">
+                <p>Clarification</p>
+            </div>
+            <div class="message-body">
+                <p>Column direction will not respect user-specified column widths. All columns will be stretched to fit one full-width column per one row.</p>
+            </div>
+        </div>
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="row row-direction-column">
@@ -1353,7 +1396,7 @@
             </div>
             <div class="col xs-6">
                 <div class="bg-light text-center vertical-center-content" style="height:50px; border: 1px solid #d3d3d3">
-                    .row-direction-column
+                    3
                 </div>
             </div>
         </div>
@@ -1373,7 +1416,7 @@
     &lt/div&gt
     &ltdiv class="col xs-6"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-direction-column
+            3
         &lt/div&gt
     &lt/div&gt
 &lt/div&gt</code></pre>
@@ -1385,8 +1428,16 @@
 <div class="row">
     <div class="col xs-12">
         <h4 class="header">Row Direction Column Reverse</h4>
-        <h6 class="subheader thin no-margin">Columns will appear vertically stacked in reverse-sequential order.</h6>
-        <h6 class="subheader thin no-margin">Note: Column direction will not respect specified column widths and will stretch all columns to fill one row each.</h6>
+        <h6 class="subheader thin no-margin">Columns will appear vertically stacked in reverse-sequential order when using the <code class="inline">.row-direction-column-reverse</code> class.</h6>
+        <br />
+        <div class="message blue">
+            <div class="message-header">
+                <p>Clarification</p>
+            </div>
+            <div class="message-body">
+                <p>Column direction will not respect user-specified column widths. All columns will be stretched to fit one full-width column per one row.</p>
+            </div>
+        </div>
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="row row-direction-column-reverse">
@@ -1402,7 +1453,7 @@
             </div>
             <div class="col xs-6">
                 <div class="bg-light text-center vertical-center-content" style="height:50px; border: 1px solid #d3d3d3">
-                    .row-direction-column-reverse
+                    3
                 </div>
             </div>
         </div>
@@ -1422,7 +1473,7 @@
     &lt/div&gt
     &ltdiv class="col xs-6"&gt
         &ltdiv class="bg-light text-center vertical-center-content"&gt
-            .row-direction-column-reverse
+            3
         &lt/div&gt
     &lt/div&gt
 &lt/div&gt</code></pre>

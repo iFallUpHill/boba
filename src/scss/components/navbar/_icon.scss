@@ -1,0 +1,74 @@
+@import 'constants';
+
+@mixin navbar-menu-icon {
+    .navbar-menu-toggle {
+        cursor: pointer;
+        display: inline-block;
+        margin-left: auto;
+        padding: 1.75em 1.25em;
+        position: relative;
+        user-select: none;
+
+        .navbar-icon {
+            background: $color-white;
+            display: block;
+            height: 0.125em;
+            position: relative;
+            transition: background .2s ease-out;
+            width: 1.125em;
+
+            &:before,
+            &:after {
+                background: $color-white;
+                content: '';
+                display: block;
+                height: 100%;
+                position: absolute;
+                transition: all .2s ease-out;
+                width: 100%;
+            }
+
+            &:before {
+                top: 0.3em;
+            }
+
+            &:after {
+                top: -0.3em;
+            }
+        }
+    }
+
+  /* menu button */
+    .navbar-menu-target {
+        display: none;
+
+        &:checked {
+            & ~ .navbar-menu-items  {
+                max-height: 30em;
+            }
+            & ~ .navbar-menu-toggle {
+                .navbar-icon {
+                    background: transparent;
+                    &:before {
+                        transform: rotate(-45deg);
+                    }
+                    &:after {
+                        transform: rotate(45deg);
+                    }
+                }
+                &:not(.steps) .navbar-icon {
+                    &:before, &:after {
+                        top: 0;
+                    }
+                }
+            }
+
+        }
+    }
+
+    @media screen and (min-width: $laptop) {
+	    .navbar-menu-toggle {
+	        display: none;
+	    }
+	}
+}

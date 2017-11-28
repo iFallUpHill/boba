@@ -9,13 +9,14 @@
         <div class="sidebar-layout">
 
             {% import "templates/docs/core/_topsidenav.njk" as sidebar %}
-
             {{ sidebar.generate(active_accordion, active_page) }}
             
             <a class="sb-main-overlay" href="#close"></a>
 
             <div class="sb-main-content">
-                {% include "templates/docs/core/_header.njk" %}
+                {% import "templates/docs/core/_header.njk" as header %}
+                {{ header.generate(active_accordion) }}
+
                 <div class="section">
                     <div class="container">
                         {% block main %}

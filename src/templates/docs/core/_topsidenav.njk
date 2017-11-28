@@ -19,9 +19,11 @@
 			</label>
 			<div class="accordion-body">
 				<ul class="accordion-submenu">
-					<li class="{{ "bold" if active_page == "index" }}"><a href="/docs/index.html">Home</a></li>
-					<li>Filler 2</li>
-					<li>Filler 3</li>
+					<li class="{{ "bold" if active_page == "index" }}"><a href="/docs/index.html">Introduction</a></li>
+					<li class="{{ "bold" if active_page == "installation" }}"><a href="/docs/installation.html">Installation</a></li>
+					<li class="{{ "bold" if active_page == "customize" }}"><a href="/docs/customize.html">Customize</a></li>
+					<li class="{{ "bold" if active_page == "compatibility" }}"><a href="/docs/compatibility.html">Compatibility</a></li>
+					<li class="{{ "bold" if active_page == "changelog" }}"><a href="/docs/changelog.html">Changelog</a></li>
 				</ul>
 			</div>
 		</div>
@@ -33,9 +35,20 @@
 			<div class="accordion-body">
 				<ul class="accordion-submenu">
 					<li class="{{ "bold" if active_page == "animations" }}"><a href="/docs/animations.html">Animations</a></li>
+					<li class="{{ "bold" if active_page == "breakpoints" }}"><a href="/docs/breakpoints.html">Breakpoints</a></li>
 					<li class="{{ "bold" if active_page == "colors" }}"><a href="/docs/colors.html">Colors</a></li>
-					<li class="{{ "bold" if active_page == "helpers" }}"><a href="/docs/helpers.html">Helpers</a></li>
 					<li class="{{ "bold" if active_page == "typography" }}"><a href="/docs/typography.html">Typography</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="accordion-menu">
+			<input type="checkbox" id="utilities" name="accordion-checkbox" hidden {{ "checked" if active_accordion == "utilities" }} />
+			<label class="accordion-header {{ "bold" if active_accordion == "utilities" }}" for="utilities">
+				Utilities
+			</label>
+			<div class="accordion-body">
+				<ul class="accordion-submenu">
+					<li class="{{ "bold" if active_page == "helpers" }}"><a href="/docs/helpers.html">Helpers</a></li>
 				</ul>
 			</div>
 		</div>
@@ -49,7 +62,7 @@
 					<li class="{{ "bold" if active_page == "dividers" }}"><a href="/docs/dividers.html">Dividers</a></li>
 					<li class="{{ "bold" if active_page == "grid" }}"><a href="/docs/grid.html">Grid</a></li>
 					<li class="{{ "bold" if active_page == "navbar" }}"><a href="/docs/navbar.html">Navbar</a></li>
-					<li class="{{ "bold" if active_page == "sidebar" }}"><a href="/docs/sidebar.html">Sidebar</a> <span class="label small rounded red">Beta</span></li>
+					<li class="{{ "bold" if active_page == "sidebar" }}"><a href="/docs/sidebar.html">Sidebar</a></li>
 				</ul>
 			</div>
 		</div>
@@ -104,4 +117,5 @@
 		</div>
 	</div>
 </div>
+
 {% endmacro %}

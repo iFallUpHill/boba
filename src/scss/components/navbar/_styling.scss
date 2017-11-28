@@ -8,154 +8,53 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
 
-    &.sticky {
-        position: sticky;
-        top: 0;
-    }
+@mixin navbar-menu-items-base {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    clear: both;
+    max-height: 0;
+    transition: max-height .4s ease-out;
+    position: relative;
+    flex-basis: 100%;
 
-    a {
-        color: $color-white;
-    }
-
-    ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        overflow: hidden;
-
-        li {
-	        margin-bottom: 0;
-	        a {
-	            display: block;
-	            padding: 1.25em 1.25em;
-	            text-decoration: none;
-
-	            &:hover, &:focus, &:active {
-	        		color: $color-white;
-		        }
-	        }
-
-	        &:hover, &:focus {
-	        	background-color: darken-1($color-dark);
-	        }
-
-	        &:active {
-	        	background-color: darken-2($color-dark);
-	        }
-	    }
-    }
-
-    .logo {
-        display: block;
-        font-size: 2em;
-        padding: 0.3em 0.6em;
-        text-decoration: none;
-    }
-
-/* menu */
-    .right-menu, .left-menu {
-        clear: both;
-        max-height: 0;
-        transition: max-height .4s ease-out;
-        position: relative;
-        flex-basis: 100%;
-    }
-
-    /* menu icon */
-    .menu-icon {
-        cursor: pointer;
-        display: inline-block;
-        margin-left: auto;
-        padding: 1.75em 1.25em;
-        position: relative;
-        user-select: none;
-
-        .navicon {
-            background: $color-white;
+    li {
+        margin-bottom: 0;
+        a {
             display: block;
-            height: 0.125em;
-            position: relative;
-            transition: background .2s ease-out;
-            width: 1.125em;
+            padding: 1.25em 1.25em;
+            text-decoration: none;
 
-            &:before,
-            &:after {
-                background: $color-white;
-                content: '';
-                display: block;
-                height: 100%;
-                position: absolute;
-                transition: all .2s ease-out;
-                width: 100%;
+            &:hover, &:focus, &:active {
+                color: $color-white;
             }
+        }
 
-            &:before {
-                top: 0.3em;
-            }
+        &:hover, &:focus {
+            background-color: darken-1($color-dark);
+        }
 
-            &:after {
-                top: -0.3em;
-            }
+        &:active {
+            background-color: darken-2($color-dark);
         }
     }
+}
 
-  /* menu button */
-    .menu-btn {
-        display: none;
-
-        &:checked {
-            & ~ .right-menu, & ~ .left-menu {
-                max-height: 30em;
-            }
-            & ~ .menu-icon {
-                .navicon {
-                    background: transparent;
-                    &:before {
-                        transform: rotate(-45deg);
-                    }
-                    &:after {
-                        transform: rotate(45deg);
-                    }
-                }
-                &:not(.steps) .navicon {
-                    &:before, &:after {
-                        top: 0;
-                    }
-                }
-            }
-
-        }
-    }
-
-    @media screen and (min-width: $laptop) {
-	    li {
-	        float: left;
-	    }
-	    a {
-	        padding: 1.25em 1.875em;
-	    }
-	    .right-menu, .left-menu {
-	        clear: none;
-            max-height: none;
-            flex-basis: auto;
-	    }
-
-        .right-menu {
-            margin-left: auto;
-        }
-
-	    .menu-icon {
-	        display: none;
-	    }
-	}
+@mixin navbar-brand-base {
+    display: block;
+    font-size: 2em;
+    padding: 0.3em 0.6em;
+    text-decoration: none;
 }
 
 @mixin navbar-colors {
 	@each $colorName, $color in $color-list {
         &.#{$colorName} {
         	background-color: $color;
-        	ul {
+        	.navbar-menu-items {
 		        li {
 			        &:hover, &:focus {
 			        	background-color: darken-1($color);
