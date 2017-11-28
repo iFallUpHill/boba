@@ -50,7 +50,7 @@
 @mixin sb-side-navbar-base {
 	position: fixed;
 	overflow-y: auto;
-	background: $color-light;
+	background: $sb-side-navbar-color;
 	top: 0;
 	left: 0;
 	bottom: 0;

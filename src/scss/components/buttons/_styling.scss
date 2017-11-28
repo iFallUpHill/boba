@@ -41,6 +41,7 @@
 
             &:active {
                 background-color: darken-2($color);
+                border-color: darken-2($color);
                 outline: 0;
             }
 

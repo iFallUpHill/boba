@@ -23,6 +23,7 @@ input[type="reset"],input[type="button"] {
 
     &:active {
         background-color: darken-2($color-dark);
+        border-color: darken-2($color-dark);
         outline: 0;
     }
 

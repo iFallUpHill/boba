@@ -12,7 +12,7 @@
 		@include sb-side-navbar-base;
 
 		.sb-side-sticky-region {
-			background: $color-light;
+			background: $sb-side-navbar-color;
 			position: sticky;
 			top: 0;
 			font-size: $sb-side-sticky-region-font-size;
