@@ -1,0 +1,12 @@
+{% extends "templates/docs/layout.njk" %}
+{% set page_title ="Borders" %}
+{% set active_accordion ="utilities" %}
+{% set active_page ="borders" %}
+
+{% block main %}
+
+    {% include "templates/docs/borders/borders.njk" %}
+    <hr class="light" />
+    {% include "templates/docs/borders/styles.njk" %}
+
+{% endblock %}

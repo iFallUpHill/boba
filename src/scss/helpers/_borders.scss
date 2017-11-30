@@ -1,0 +1,35 @@
+.border {
+	border-color: $color-dark;
+    border-width: 0.1em;
+    border-style: solid;
+    @if $include-color-palette {
+        @each $colorName, $color in $color-list {
+        	&.#{$colorName} {
+        		border-color: $color;
+        	}
+        }
+    }
+    &.rounded {
+        border-radius: $base-border-radius-default;
+    }
+
+    &.circular {
+        border-radius: 50%;
+    }
+
+    &.dotted {
+        border-style: dotted;
+    }
+
+    &.dashed {
+        border-style: dashed;
+    }
+
+    &.thick {
+        border-width: 0.3em;
+    }
+
+    &.thin {
+        border-width: 0.05em;
+    }
+}

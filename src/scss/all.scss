@@ -42,6 +42,9 @@ $include-color-shades: true;
 // Breakpoint Displays
 @import 'helpers/display';
 
+// Borders
+@import 'helpers/borders';
+
 // Grid Framework
 @import 'components/grid/base';
 // Navbar
