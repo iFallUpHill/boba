@@ -1,0 +1,16 @@
+{% extends "templates/docs/layout.njk" %}
+{% set page_title ="Text" %}
+{% set active_accordion ="utilities" %}
+{% set active_page ="text" %}
+
+{% block main %}
+
+    {% include "templates/docs/text/text.njk" %}
+    <hr class='light' />
+    {% include "templates/docs/text/colors.njk" %}
+    <hr class='light' />
+    {% include "templates/docs/text/alignment.njk" %}
+    <hr class='light' />
+
+
+{% endblock %}

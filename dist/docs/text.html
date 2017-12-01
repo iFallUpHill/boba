@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-        <title>Borders | Build with Boba</title>
+        <title>Text | Build with Boba</title>
         <link rel="stylesheet" href="/boba.min.css">
     </head>
     <body>
@@ -61,8 +61,8 @@
 				<ul class="accordion-submenu">
 					<li class=""><a href="/docs/helpers.html">Helpers</a></li>
 					<li class=""><a href="/docs/media.html">Media</a></li>
-					<li class="bold"><a href="/docs/borders.html">Borders</a></li>
-					<li class=""><a href="/docs/text.html">Text</a></li>
+					<li class=""><a href="/docs/borders.html">Borders</a></li>
+					<li class="bold"><a href="/docs/text.html">Text</a></li>
 					<li class=""><a href="/docs/background.html">Background</a></li>
 					<li class=""><a href="/docs/hover.html">Hover</a></li>
 				</ul>
@@ -162,88 +162,132 @@
 
     <div class="row">
     <div class="col xs-12">
-        <h1 class="header">Borders</h1>
-        <h5 class="subheader thin no-margin">Utility classes to manipulate your borders</h5>
-    </div>
-    <div class="col xs-12 md-6 col-middle">
-        <div>
-            <span class="border bg-light" style="display: inline-flex; height: 50px; width: 50px; margin: 0.2em"></span>
-            <span class="border border-red bg-light" style="display: inline-flex; height: 50px; width: 50px; margin: 0.2em"></span>
-            <span class="border border-orange bg-light" style="display: inline-flex; height: 50px; width: 50px; margin: 0.2em"></span>
-            <span class="border border-yellow bg-light" style="display: inline-flex; height: 50px; width: 50px; margin: 0.2em"></span>
-            <span class="border border-green bg-light" style="display: inline-flex; height: 50px; width: 50px; margin: 0.2em"></span>
-            <span class="border border-teal bg-light" style="display: inline-flex; height: 50px; width: 50px; margin: 0.2em"></span>
-            <span class="border border-blue bg-light" style="display: inline-flex; height: 50px; width: 50px; margin: 0.2em"></span>
-            <span class="border border-indigo bg-light" style="display: inline-flex; height: 50px; width: 50px; margin: 0.2em"></span>
-            <span class="border border-purple bg-light" style="display: inline-flex; height: 50px; width: 50px; margin: 0.2em"></span>
-            <span class="border border-pink bg-light" style="display: inline-flex; height: 50px; width: 50px; margin: 0.2em"></span>
-            <span class="border border-light bg-light" style="display: inline-flex; height: 50px; width: 50px; margin: 0.2em"></span>
-            <span class="border border-dark bg-light" style="display: inline-flex; height: 50px; width: 50px; margin: 0.2em"></span>
-            <span class="border border-black bg-light" style="display: inline-flex; height: 50px; width: 50px; margin: 0.2em"></span>
-            <span class="border border-white bg-light" style="display: inline-flex; height: 50px; width: 50px; margin: 0.2em"></span>
-        </div>
-    </div>
-    <div class="col xs-12 md-6 col-middle">
-        <div class="code-block">
-            <pre class="code"><code data-lang="html">&ltspan class="border border-red bg-light" style="display: inline-block; height: 50px; width: 50px; margin: 0.2em"&gt &lt/span&gt</code></pre>
-        </div>
+        <h1 class="header">Text</h1>
+        <h5 class="subheader thin no-margin">Text classes</h5>
     </div>
 </div>
 
-    <hr class="light" />
+    <hr class='light' />
     <div class="row">
     <div class="col xs-12">
-        <h1 class="header">Styles</h1>
-        <h5 class="subheader thin no-margin">Classes to style your tags</h5>
+        <h1 class="header">Colors</h1>
+        <h5 class="subheader thin no-margin">Text color classes</h5>
     </div>
     <div class="col xs-12 col-middle">
         <table class="bordered">
             <tbody>
                 <tr>
-                    <td rowspan="4"><span class="bold">Corners</span</td>
+                    <td rowspan="15"><span class="bold">Colors</span</td>
                 </tr>
                 <tr>
-                    <td><code class="inline">.rounded</code></td>
-                    <td>Add a <code class="inline">.rounded</code> with to round the corners </td>
-                    <td><span class="border rounded bg-light" style="display: inline-block; height: 50px; width: 50px;"></span></td>
+                    <td colspan="3">To change text color add a <code class="inline">.text-{COLOR}</code> class. Colors are from boba's palette.</td>
                 </tr>
                 <tr>
-                    <td><code class="inline">.circular</code></td>
-                    <td>Add a <code class="inline">.circular</code> with to make a circle</td>
-                    <td><span class="border circular bg-light" style="display: inline-block; height: 50px; width: 50px;"></span></td>
+                    <td><code class="inline">.text-red</code></td>
+                    <td>Add a <code class="inline">.text-red</code> with to make the text red</td>
+                    <td><span class="text-red">Hello World, I'm red</span></td>
                 </tr>
                 <tr>
-                    <td><code class="inline">.no-radius</code></td>
-                    <td>Add a <code class="inline">.no-radius</code> with to sharpen the corners</td>
-                    <td><span class="border no-radius bg-light" style="display: inline-block; height: 50px; width: 50px;"></span></td>
+                    <td><code class="inline">.text-orange</code></td>
+                    <td>Add a <code class="inline">.text-orange</code> with to make the text orange</td>
+                    <td><span class="text-orange">Hello World, I'm orange</span></td>
                 </tr>
                 <tr>
-                    <td rowspan="5"><span class="bold">Lines</span</td>
+                    <td><code class="inline">.text-yellow</code></td>
+                    <td>Add a <code class="inline">.text-yellow</code> with to make the text yellow</td>
+                    <td><span class="text-yellow">Hello World, I'm yellow</span></td>
                 </tr>
                 <tr>
-                    <td><code class="inline">.dotted</code></td>
-                    <td>Add a <code class="inline">.dotted</code> to use a dotted border</td>
-                    <td><span class="border dotted bg-light" style="display: inline-block; height: 50px; width: 50px;"></span></td>
+                    <td><code class="inline">.text-green</code></td>
+                    <td>Add a <code class="inline">.text-green</code> with to make the text green</td>
+                    <td><span class="text-green">Hello World, I'm green</span></td>
                 </tr>
                 <tr>
-                    <td><code class="inline">.dashed</code></td>
-                    <td>Add a <code class="inline">.dashed</code> to use a dashed border</td>
-                    <td><span class="border dashed bg-light" style="display: inline-block; height: 50px; width: 50px;"></span></td>
+                    <td><code class="inline">.text-teal</code></td>
+                    <td>Add a <code class="inline">.text-teal</code> with to make the text teal</td>
+                    <td><span class="text-teal">Hello World, I'm teal</span></td>
                 </tr>
                 <tr>
-                    <td><code class="inline">.thick</code></td>
-                    <td>Add a <code class="inline">.thick</code> to use a thick border</td>
-                    <td><span class="border thick bg-light" style="display: inline-block; height: 50px; width: 50px;"></span></td>
+                    <td><code class="inline">.text-blue</code></td>
+                    <td>Add a <code class="inline">.text-blue</code> with to make the text blue</td>
+                    <td><span class="text-blue">Hello World, I'm blue</span></td>
                 </tr>
                 <tr>
-                    <td><code class="inline">.thin</code></td>
-                    <td>Add a <code class="inline">.thin</code> to use a thin border</td>
-                    <td><span class="border thin bg-light" style="display: inline-block; height: 50px; width: 50px;"></span></td>
+                    <td><code class="inline">.text-indigo</code></td>
+                    <td>Add a <code class="inline">.text-indigo</code> with to make the text indigo</td>
+                    <td><span class="text-indigo">Hello World, I'm indigo</span></td>
+                </tr>
+                <tr>
+                    <td><code class="inline">.text-purple</code></td>
+                    <td>Add a <code class="inline">.text-purple</code> with to make the text purple</td>
+                    <td><span class="text-purple">Hello World, I'm purple</span></td>
+                </tr>
+                <tr>
+                    <td><code class="inline">.text-pink</code></td>
+                    <td>Add a <code class="inline">.text-pink</code> with to make the text pink</td>
+                    <td><span class="text-pink">Hello World, I'm pink</span></td>
+                </tr>
+                <tr>
+                    <td><code class="inline">.text-dark</code></td>
+                    <td>Add a <code class="inline">.text-dark</code> with to make the text dark</td>
+                    <td><span class="text-dark">Hello World, I'm dark</span></td>
+                </tr>
+                <tr>
+                    <td><code class="inline">.text-light</code></td>
+                    <td>Add a <code class="inline">.text-light</code> with to make the text light</td>
+                    <td><span class="text-light">Hello World, I'm light</span></td>
+                </tr>
+                <tr>
+                    <td><code class="inline">.text-black</code></td>
+                    <td>Add a <code class="inline">.text-black</code> with to make the text black</td>
+                    <td><span class="text-black">Hello World, I'm black</span></td>
+                </tr>
+                <tr>
+                    <td><code class="inline">.text-white</code></td>
+                    <td>Add a <code class="inline">.text-white</code> with to make the text white</td>
+                    <td><span class="text-white">Hello World, I'm white</span></td>
                 </tr>
             </tbody>
         </table>
     </div>
 </div>
+
+    <hr class='light' />
+    <div class="row">
+    <div class="col xs-12">
+        <h1 class="header">Alignment</h1>
+        <h5 class="subheader thin no-margin">Text alignment classes</h5>
+    </div>
+    <div class="col xs-12 col-middle">
+        <table class="bordered">
+            <tbody>
+                <tr>
+                    <td rowspan="5"><span class="bold">Alignment</span</td>
+                </tr>
+                <tr>
+                    <td colspan="3">To change text color add a <code class="inline">.text-{ALIGNMENT}</code> class.</td>
+                </tr>
+                <tr>
+                    <td><code class="inline">.text-left</code></td>
+                    <td>Add a <code class="inline">.text-left</code> with to make the text left align</td>
+                    <td><div class="text-left"><span>I'm left</span></div></td>
+                </tr>
+                <tr>
+                    <td><code class="inline">.text-center</code></td>
+                    <td>Add a <code class="inline">.text-center</code> with to make the text center align</td>
+                    <td><div class="text-center"><span>I'm center</span></div></td>
+                </tr>
+                <tr>
+                    <td><code class="inline">.text-right</code></td>
+                    <td>Add a <code class="inline">.text-right</code> with to make the text right align</td>
+                    <td><div class="text-right"><span>I'm right</span></div></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+    <hr class='light' />
 
 
 
