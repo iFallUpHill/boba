@@ -1,0 +1,14 @@
+{% extends "templates/docs/layout.njk" %}
+{% set page_title ="Hovers" %}
+{% set active_accordion ="utilities" %}
+{% set active_page ="hover" %}
+
+{% block main %}
+
+    {% include "templates/docs/hover/hover.njk" %}
+    <hr class="light" />
+    {% include "templates/docs/hover/text_hover.njk" %}
+    <hr class="light" />
+    {% include "templates/docs/hover/bg_hover.njk" %}
+
+{% endblock %}
