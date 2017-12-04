@@ -26,8 +26,8 @@ $base-sm-font-size: 1.5em;
 $base-xs-font-size: 1em;
 $base-xxs-font-size: 0.8em;
 
-$base-font-weight-bold: 900;
-$base-font-weight-semi-bold: 500;
+$base-font-weight-bold: 700;
+$base-font-weight-semi-bold: 600;
 $base-font-weight-default: 400;
 $base-font-weight-light: 300;
 
@@ -39,4 +39,5 @@ $base-border-radius-default: 0.2em;
 $alignment-list:
 (left),
 (center),
-(right);
+(right),
+(justify);

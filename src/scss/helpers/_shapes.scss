@@ -1,0 +1,15 @@
+.shape-rounded {
+    border-radius: $base-border-radius-default;
+}
+
+.shape-circular {
+    border-radius: 50%;
+}
+
+.shape-pill {
+    border-radius: 9999px;
+}
+
+.shape-no-radius {
+	border-radius: 0 !important;
+}

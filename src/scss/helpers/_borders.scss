@@ -1,34 +1,15 @@
-.border {
-	border-color: $color-dark;
-    border-width: 0.1em;
-    border-style: solid;
+.border-dotted {
+    border-style: dotted;
+}
 
-    &.rounded {
-        border-radius: $base-border-radius-default;
-    }
+.border-dashed {
+    border-style: dashed;
+}
 
-    &.circular {
-        border-radius: 50%;
-    }
+.border-thick {
+    border-width: 0.3em;
+}
 
-	&.no-radius {
-		border-radius: 0 !important;
-	}
-
-    &.dotted {
-        border-style: dotted;
-    }
-
-    &.dashed {
-        border-style: dashed;
-    }
-
-    &.thick {
-        border-width: 0.3em;
-    }
-
-    &.thin {
-        border-width: 0.05em;
-    }
-
+.border-thin {
+    border-width: 0.05em;
 }

@@ -4,89 +4,14 @@
 {% set active_page ="index" %}
 
 {% block main %}
-<div class="row">
-    <div class="col xs-12">
-        <h1 class="header">Introduction</h1>
-        <h3 class="subheader thin">tl;dr: a lightweight, modular and CSS only framework</h3>
-    </div>
-</div>
-<div class="row">
-    <div class="col xs-12">
-        <h2 class="thin">Our Story</h2>
-        <div>
-            <strong class="text-hover-purple">Boba</strong> <i>[boh-buh]</i> (also known as bubble tea, boba tea, pearl milk tea, etc.) originates from the distant land of Taiwan.
-            However, our story begins one spring night at 2am in San Francisco. We started discussing the bulky open source frameworks available and decided we
-            deserve better. That's when boba was born, our own light, modular and CSS only framework. Oh, the name? We're just huge boba fanatics.
-            Like really, the saying <i>an apple a day keeps the doctor away</i> was us, except with boba.
-        </div>
-    </div>
-</div>
-<hr class="light" />
-<div class="row">
-    <div class="col xs-12">
-        <h2 class="header thin">Quick Start</h2>
-        <h5 class="subheader thin">Here's a template to help you get started</h5>
-        <div class="row">
-            <div class="col xs-6">
-                <section class="section">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col">
-                        <h1 class="header">
-                          Hello World
-                        </h1>
-                        <h3 class="subheader thin">
-                          boba is the best!
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-            </div>
-            <div class="col xs-6">
-                <div class="code-block">
-                    <pre class="code"><code data-lang="html">&lt!DOCTYPE html&gt
-&lthtml&gt
-  &lthead&gt
-    &ltmeta charset="utf-8"&gt
-    &ltmeta name="viewport" content="width=device-width, initial-scale=1"&gt
-    &lttitle&gtBuild with Boba!&lt/title&gt
-    &ltlink rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/COMINGSOON"&gt
-  &lt/head&gt
-  &ltbody&gt
-    &ltsection class="section"&gt
-      &ltdiv class="container"&gt
-        &ltdiv class="row"&gt
-          &ltdiv class="col"&gt
-            &lth1 class="header"&gt
-              Hello World
-            &lt/h1&gt
-            &lth3 class="subheader thin"&gt
-              boba is the best!
-            &lt/h3&gt
-          &lt/div&gt
-        &lt/div&gt
-      &lt/div&gt
-    &lt/section&gt
-  &lt/body&gt
-&lt/html&gt</code></pre>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<hr class="light">
-<div class="row">
-    <div class="col xs-12">
-        <h2 class="thin">Our Team</h2>
-        <h5 class="thin">We are currently a duo from the University of Waterloo</h5>
-        <div class="col xs-12">
-            <a href="https://github.com/iFallUpHill/" target="_blank">Jason Manson-Hing</a>
-        </div>
-        <div class="col xs-12">
-            <a href="https://github.com/andrewjungg/" target="_blank">Andrew Chung</a>
-        </div>
-    </div>
-</div>
+
+	{% include "templates/docs/index/index.njk" %}
+	<hr class="light" />
+	{% include "templates/docs/index/our_story.njk" %}
+	<hr class="light" />
+	{% include "templates/docs/index/our_team.njk" %}
+
+
+
 
 {% endblock %}

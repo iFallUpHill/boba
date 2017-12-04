@@ -1,90 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>boba | debug</title>
-	<link rel="stylesheet" href="/boba.min.css">
-</head>
-<body>
-	<div class="sidebar-layout">
-	  <div class="sb-top-navbar fixed">
-	  	<a class="sb-side-navbar-toggle" href="#sidebar-example">
-	    	<span class="sb-menu-icon"></span>
-	  	</a>
-	  </div>
+{% extends "templates/docs/layout.njk" %}
+{% set page_title ="Sidebar" %}
+{% set active_accordion ="layout" %}
+{% set active_page ="sidebar" %}
 
- 	  <div id="sidebar-example" class="sb-side-navbar">
- 	  	<div class="sb-side-fixed-region">
-	  		<div class="sb-side-content">
-		  		boba
-		  	</div>
-		  </div>
-	  	<div class="sb-side-scroll-region">
-	  		<div class="sb-side-content">
-		  		<div class="accordion-menu">
-		            <input type="checkbox" id="first-accordion" name="accordion-checkbox" hidden checked />
-		            <label class="accordion-header" for="first-accordion">
-		                First Accordion
-		            </label>
-		            <div class="accordion-body">
-		                <ul class="accordion-submenu">
-		                    <li>Submenu Item 1</li>
-		                    <li>Submenu Item 2</li>
-		                    <li>Submenu Item 3</li>
-		                </ul>
-		            </div>
-		        </div>
-		        <div class="accordion-menu">
-		            <input type="checkbox" id="second-accordion" name="accordion-checkbox" hidden />
-		            <label class="accordion-header" for="second-accordion">
-		                Second Accordion
-		            </label>
-		            <div class="accordion-body">
-		                <ul class="accordion-submenu">
-		                    <li>Submenu Item 1</li>
-		                    <li>Submenu Item 2</li>
-		                    <li>Submenu Item 3</li>
-		                </ul>
-		            </div>
-		        </div>
-		        <div class="accordion-menu">
-		            <input type="checkbox" id="third-accordion" name="accordion-checkbox" hidden />
-		            <label class="accordion-header" for="third-accordion">
-		                Third Accordion
-		            </label>
-		            <div class="accordion-body">
-		                <ul class="accordion-submenu">
-		                    <li>Submenu Item 1</li>
-		                    <li>Submenu Item 2</li>
-		                    <li>Submenu Item 3</li>
-		                </ul>
-		            </div>
-		        </div>
-			</div>
-		</div>
-	  </div> 
-
-	  <a class="sb-main-overlay" href="#close"></a>
-
-	  <div class="sb-main-content">
-	    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris gravida leo odio, ut scelerisque leo elementum ac. Nam sodales eu risus porta lobortis. Praesent ac lorem erat. Fusce metus purus, faucibus volutpat metus placerat, sollicitudin hendrerit felis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam vitae dolor ut libero rutrum facilisis ut sed quam. Praesent lobortis, elit eget commodo rutrum, nisl nulla convallis metus, at varius velit enim id metus. Nam quis lacus dignissim, fringilla urna ac, sollicitudin nisi.
-
-Aliquam convallis, quam bibendum facilisis semper, ipsum lorem commodo tortor, ac rutrum odio elit eget arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus vitae bibendum enim. Mauris nibh est, fringilla sed lacus eget, congue imperdiet dolor. Nullam aliquam volutpat neque id tincidunt. Maecenas imperdiet sollicitudin eros, id molestie enim sagittis eu. Fusce pellentesque sem non ante feugiat, vel venenatis eros dignissim. Pellentesque ornare lobortis massa, et consequat justo vestibulum ut. Aenean consequat dui ac ante ultricies pharetra.
-
-Cras blandit ac ipsum a luctus. Aenean efficitur orci sed nisi vehicula, in congue mauris malesuada. Vivamus mattis lobortis lacus, vitae maximus odio vestibulum eu. Cras magna risus, gravida in purus sed, iaculis facilisis ipsum. Donec imperdiet, erat sed dictum dictum, arcu dui suscipit arcu, et consectetur magna quam efficitur risus. Donec fringilla neque quam, eget efficitur leo aliquet eu. Sed accumsan pellentesque ligula nec varius. Donec venenatis, lectus id interdum iaculis, urna metus tempor lorem, ac venenatis dolor libero vitae sem. Maecenas interdum, eros nec ornare vestibulum, sem nisl euismod massa, et consequat quam orci sed felis. Sed velit leo, commodo in placerat tempus, rutrum et felis. Nulla facilisi. Curabitur faucibus tincidunt tellus, vitae consequat massa consectetur sed. Suspendisse potenti. Pellentesque tristique magna sollicitudin elit aliquam, quis lacinia nulla consequat. Integer ante nisl, euismod ut iaculis quis, venenatis ut diam.
-
-Nam eleifend varius tellus a pharetra. Duis maximus ultricies diam, vel euismod leo interdum nec. Quisque condimentum leo eu finibus porta. Fusce porttitor ligula egestas ex faucibus, sed condimentum purus bibendum. Sed et molestie massa. Morbi et ipsum ante. Suspendisse ac eros erat. Etiam consectetur at nunc in gravida. Donec placerat mauris quis enim aliquet, nec mattis tortor posuere.
-
-Sed ac ligula vel erat rhoncus finibus. Nunc viverra dictum dui vitae rutrum. Sed dapibus consectetur felis et iaculis. Praesent sed pharetra diam. Donec pulvinar mollis tristique. Nunc molestie, felis in lacinia auctor, elit dolor interdum est, vel imperdiet ligula dui eget ligula. Pellentesque a odio nisl. Maecenas iaculis tristique ipsum quis dictum. Maecenas vel mattis elit.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris gravida leo odio, ut scelerisque leo elementum ac. Nam sodales eu risus porta lobortis. Praesent ac lorem erat. Fusce metus purus, faucibus volutpat metus placerat, sollicitudin hendrerit felis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam vitae dolor ut libero rutrum facilisis ut sed quam. Praesent lobortis, elit eget commodo rutrum, nisl nulla convallis metus, at varius velit enim id metus. Nam quis lacus dignissim, fringilla urna ac, sollicitudin nisi.
-
-Aliquam convallis, quam bibendum facilisis semper, ipsum lorem commodo tortor, ac rutrum odio elit eget arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus vitae bibendum enim. Mauris nibh est, fringilla sed lacus eget, congue imperdiet dolor. Nullam aliquam volutpat neque id tincidunt. Maecenas imperdiet sollicitudin eros, id molestie enim sagittis eu. Fusce pellentesque sem non ante feugiat, vel venenatis eros dignissim. Pellentesque ornare lobortis massa, et consequat justo vestibulum ut. Aenean consequat dui ac ante ultricies pharetra.
-
-Cras blandit ac ipsum a luctus. Aenean efficitur orci sed nisi vehicula, in congue mauris malesuada. Vivamus mattis lobortis lacus, vitae maximus odio vestibulum eu. Cras magna risus, gravida in purus sed, iaculis facilisis ipsum. Donec imperdiet, erat sed dictum dictum, arcu dui suscipit arcu, et consectetur magna quam efficitur risus. Donec fringilla neque quam, eget efficitur leo aliquet eu. Sed accumsan pellentesque ligula nec varius. Donec venenatis, lectus id interdum iaculis, urna metus tempor lorem, ac venenatis dolor libero vitae sem. Maecenas interdum, eros nec ornare vestibulum, sem nisl euismod massa, et consequat quam orci sed felis. Sed velit leo, commodo in placerat tempus, rutrum et felis. Nulla facilisi. Curabitur faucibus tincidunt tellus, vitae consequat massa consectetur sed. Suspendisse potenti. Pellentesque tristique magna sollicitudin elit aliquam, quis lacinia nulla consequat. Integer ante nisl, euismod ut iaculis quis, venenatis ut diam.
-
-Nam eleifend varius tellus a pharetra. Duis maximus ultricies diam, vel euismod leo interdum nec. Quisque condimentum leo eu finibus porta. Fusce porttitor ligula egestas ex faucibus, sed condimentum purus bibendum. Sed et molestie massa. Morbi et ipsum ante. Suspendisse ac eros erat. Etiam consectetur at nunc in gravida. Donec placerat mauris quis enim aliquet, nec mattis tortor posuere.
-
-Sed ac ligula vel erat rhoncus finibus. Nunc viverra dictum dui vitae rutrum. Sed dapibus consectetur felis et iaculis. Praesent sed pharetra diam. Donec pulvinar mollis tristique. Nunc molestie, felis in lacinia auctor, elit dolor interdum est, vel imperdiet ligula dui eget ligula. Pellentesque a odio nisl. Maecenas iaculis tristique ipsum quis dictum. Maecenas vel mattis elit.</p>
-	  </div>
-	</div>
-</body>
-</html>
+{% block main %}
+<div class="row">
+    <div class="col xs-12">
+        <h1 class="header">We're Still Building This Page!</h1>
+        <h3 class="subheader thin">Please come back soon.</h3>
+        <h5 class="thin"><a href="https://github.com/iFallUpHill/boba" class="text-hover-orange" target="_blank">View on Github.</a></h5>
+    </div>
+</div>
+{% endblock %}

@@ -1,5 +1,5 @@
 # boba
-A lightweight, modular CSS framework.
+A lightweight, modular, CSS-only design framework.
 
 To build from source:
 

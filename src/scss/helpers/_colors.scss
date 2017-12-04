@@ -75,6 +75,11 @@ $color-shade-list: (lighten-1, lighten-2, lighten-3, darken-1, darken-2, darken-
 			#{$attribute}: #{$color} $important;
             transition:color 0.15s ease-in-out, background 0.15s ease-in-out;
 
+            @if ($attribute == 'border-color') {
+			    border-width: 1px;
+			    border-style: solid;
+			}
+
 			@if $include-color-palette and $include-color-helpers and $include-color-shades {
 				&.lighten-#{$prefix}-1 {
 					#{$attribute}: lighten-1($color) $important;
@@ -108,6 +113,11 @@ $color-shade-list: (lighten-1, lighten-2, lighten-3, darken-1, darken-2, darken-
                 #{$attribute}: #{$color} $important;
                 transition:color 0.15s ease-in-out, background 0.15s ease-in-out;
 
+                @if ($attribute == 'border-color') {
+				    border-width: 1px;
+				    border-style: solid;
+				}
+
                 @if $include-color-palette and $include-color-helpers and $include-color-shades {
 	                &.lighten-#{$prefix}-hover-1 {
 	                    #{$attribute}: lighten-1($color) $important;
@@ -140,6 +150,11 @@ $color-shade-list: (lighten-1, lighten-2, lighten-3, darken-1, darken-2, darken-
             &:active {
                 #{$attribute}: #{$color} $important;
                 transition:color 0.15s ease-in-out, background 0.15s ease-in-out;
+
+                @if ($attribute == 'border-color') {
+				    border-width: 1px;
+				    border-style: solid;
+				}
 
                 @if $include-color-palette and $include-color-helpers and $include-color-shades {
 	                &.lighten-#{$prefix}-active-1 {
