@@ -6,11 +6,11 @@ $mobile: 0px;
 
 $resolution-suffixes: xs, sm, md, lg, xl;
 
-$resolution-min-dict: 	(xs, $mobile),
-				 		(sm, $tablet),
-				 		(md, $laptop),
-				 		(lg, $desktop),
-				 		(xl, $desktopHD);
+$resolution-min-dict: 	(xs, $mobile, $tablet),
+				 		(sm, $tablet, $laptop),
+				 		(md, $laptop, $desktop),
+				 		(lg, $desktop, $desktopHD),
+				 		(xl, $desktopHD, 12000px);
 
 $resolution-max-dict: 	(xs, $tablet),
 				 		(sm, $laptop),

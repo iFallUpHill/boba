@@ -1,5 +1,19 @@
 @each $suffix, $measurement in $resolution-max-dict {
+	@media screen and (min-width: #{$measurement}) {
+		.hide-after-#{$suffix} {
+			display: none !important;
+		}
+	}
+}
+@each $suffix, $measurement in $resolution-min-dict {
 	@media screen and (max-width: #{$measurement}) {
+		.hide-until-#{$suffix} {
+			display: none !important;
+		}
+	}
+}
+@each $suffix, $measurement, $nextSize in $resolution-max-dict {
+	@media screen and (min-width: #{$measurement}) and (max-width: #{$nextSize}){
 		.hide-#{$suffix} {
 			display: none !important;
 		}
