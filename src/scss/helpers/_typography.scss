@@ -138,3 +138,9 @@ h6, .h6 {
 .thin {
     font-weight: $base-font-weight-light;
 }
+
+@each $alignment in $alignment-list {
+    .text-#{$alignment} {
+        text-align: $alignment;
+    }
+}

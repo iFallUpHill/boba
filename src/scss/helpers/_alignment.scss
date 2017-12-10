@@ -1,9 +1,3 @@
-@each $alignment in $alignment-list {
-    .text-#{$alignment} {
-        text-align: $alignment;
-    }
-}
-
 .img-responsive {
 	display: block;
 	height: auto;

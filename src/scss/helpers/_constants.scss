@@ -12,11 +12,11 @@ $resolution-min-dict: 	(xs, $mobile, $tablet),
 				 		(lg, $desktop, $desktopHD),
 				 		(xl, $desktopHD, 12000px);
 
-$resolution-max-dict: 	(xs, $tablet),
-				 		(sm, $laptop),
-				 		(md, $desktop),
-				 		(lg, $desktopHD),
-				 		(xl, 12000px);
+$resolution-max-dict: 	(xs, $tablet - 1px),
+				 		(sm, $laptop - 1px),
+				 		(md, $desktop - 1px),
+				 		(lg, $desktopHD - 1px),
+				 		(xl, 12000px - 1px);
 
 $base-xxl-font-size: 3.5em;
 $base-xl-font-size: 3em;
@@ -41,3 +41,10 @@ $alignment-list:
 (center),
 (right),
 (justify);
+
+$display-list:
+(block),
+(inline),
+(inline-block),
+(flex),
+(inline-flex);

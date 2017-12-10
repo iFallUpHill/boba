@@ -1,0 +1,12 @@
+{% extends "templates/docs/layout.njk" %}
+{% set page_title ="Images" %}
+{% set active_accordion ="utilities" %}
+{% set active_page ="images" %}
+
+{% block main %}
+
+    {% include "templates/docs/images/images.njk" %}
+    <hr class="light" />
+    {% include "templates/docs/images/responsive.njk" %}
+    
+{% endblock %}

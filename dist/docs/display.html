@@ -62,10 +62,9 @@
 					<li class=""><a href="/docs/background.html">Background</a></li>
 					<li class=""><a href="/docs/borders.html">Borders</a></li>
 					<li class="bold"><a href="/docs/display.html">Display</a></li>
-					<li class=""><a href="/docs/media.html">Media</a></li>
-					<li class=""><a href="/docs/position.html">Position</a></li>
-					<li class=""><a href="/docs/resets.html">Resets</a></li>
+					<li class=""><a href="/docs/images.html">Images</a></li>
 					<li class=""><a href="/docs/shapes.html">Shapes</a></li>
+					<li class=""><a href="/docs/spacing.html">Spacing</a></li>
 					<li class=""><a href="/docs/text.html">Text</a></li>
 				</ul>
 			</div>
@@ -169,34 +168,73 @@
     </div>
     <div class="col xs-12 col-middle">
         <div>
+            <table class="bordered">
+                <tbody>
+                    <tr>
+                        <td rowspan="6"><span class="bold">Display Modes</span</td>
+                    </tr>
+                    <tr>
+                        <td><code class="inline">.display-block</code></td>
+                        <td>Forces the display property of an element to <code class="inline">block</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><code class="inline">.display-inline</code></td>
+                        <td>Forces the display property of an element to <code class="inline">inline</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><code class="inline">.display-inline-block</code></td>
+                        <td>Forces the display property of an element to <code class="inline">inline-block</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><code class="inline">.display-flex</code></td>
+                        <td>Forces the display property of an element to <code class="inline">flex</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><code class="inline">.display-inline-flex</code></td>
+                        <td>Forces the display property of an element to <code class="inline">inline-flex</code>.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+    <hr class="light" />
+    <div class="row">
+    <div class="col xs-12">
+        <h1 class="header">Hide</h1>
+        <h5 class="subheader thin no-margin">TBD</h5>
+    </div>
+    <div class="col xs-12 col-middle">
+        <div>
         <table class="bordered">
             <tbody>
                 <tr>
-                    <td rowspan="7"><span class="bold">Hide / Show</span</td>
+                    <td rowspan="7"><span class="bold">Hide</span</td>
                 </tr>
                 <tr>
                     <td><code class="inline">.hide</code></td>
-                    <td>Hides a component</td>
+                    <td>Hides a component for all breakpoints.</td>
                 </tr>
                 <tr>
                     <td><code class="inline">.hide-xs</code></td>
-                    <td>Hides a component only at <code class="inline">xs</code> breakpoint</td>
+                    <td>Hides a component only for the <code class="inline">xs</code> breakpoint.</td>
                 </tr>
                 <tr>
                     <td><code class="inline">.hide-sm</code></td>
-                    <td>Hides a component only at <code class="inline">sm</code> breakpoint</td>
+                    <td>Hides a component only for the <code class="inline">sm</code> breakpoint.</td>
                 </tr>
                 <tr>
                     <td><code class="inline">.hide-md</code></td>
-                    <td>Hides a component only at <code class="inline">md</code> breakpoint</td>
+                    <td>Hides a component only for the <code class="inline">md</code> breakpoint.</td>
                 </tr>
                 <tr>
                     <td><code class="inline">.hide-lg</code></td>
-                    <td>Hides a component only at <code class="inline">lg</code> breakpoint</td>
+                    <td>Hides a component only for the <code class="inline">lg</code> breakpoint.</td>
                 </tr>
                 <tr>
                     <td><code class="inline">.hide-xl</code></td>
-                    <td>Hides a component only at <code class="inline">xl</code> breakpoint</td>
+                    <td>Hides a component only for the <code class="inline">xl</code> breakpoint.</td>
                 </tr>
             </tbody>
         </table>
@@ -207,7 +245,7 @@
     <hr class="light" />
     <div class="row">
     <div class="col xs-12">
-        <h1 class="header">Display Until</h1>
+        <h1 class="header">Hide Until</h1>
         <h5 class="subheader thin no-margin">TBD</h5>
     </div>
     <div class="col xs-12 col-middle">
@@ -219,23 +257,23 @@
                 </tr>
                 <tr>
                     <td><code class="inline">.hide-until-xs</code></td>
-                    <td>Hides a component until <code class="inline">xs</code> breakpoint</td>
+                    <td>Hides a component until the <code class="inline">xs</code> breakpoint.</td>
                 </tr>
                 <tr>
                     <td><code class="inline">.hide-until-sm</code></td>
-                    <td>Hides a component until <code class="inline">sm</code> breakpoint</td>
+                    <td>Hides a component until the <code class="inline">sm</code> breakpoint.</td>
                 </tr>
                 <tr>
                     <td><code class="inline">.hide-until-md</code></td>
-                    <td>Hides a component until <code class="inline">md</code> breakpoint</td>
+                    <td>Hides a component until the <code class="inline">md</code> breakpoint.</td>
                 </tr>
                 <tr>
                     <td><code class="inline">.hide-until-lg</code></td>
-                    <td>Hides a component until <code class="inline">lg</code> breakpoint</td>
+                    <td>Hides a component until the <code class="inline">lg</code> breakpoint.</td>
                 </tr>
                 <tr>
                     <td><code class="inline">.hide-until-xl</code></td>
-                    <td>Hides a component until <code class="inline">xl</code> breakpoint</td>
+                    <td>Hides a component until the <code class="inline">xl</code> breakpoint.</td>
                 </tr>
             </tbody>
         </table>
@@ -246,7 +284,7 @@
     <hr class="light" />
     <div class="row">
     <div class="col xs-12">
-        <h1 class="header">Display After</h1>
+        <h1 class="header">Hide After</h1>
         <h5 class="subheader thin no-margin">TBD</h5>
     </div>
     <div class="col xs-12 col-middle">
@@ -258,23 +296,23 @@
                 </tr>
                 <tr>
                     <td><code class="inline">.hide-after-xs</code></td>
-                    <td>Hides a component after <code class="inline">xs</code> breakpoint</td>
+                    <td>Hides a component after the <code class="inline">xs</code> breakpoint.</td>
                 </tr>
                 <tr>
                     <td><code class="inline">.hide-after-sm</code></td>
-                    <td>Hides a component after <code class="inline">sm</code> breakpoint</td>
+                    <td>Hides a component after the <code class="inline">sm</code> breakpoint.</td>
                 </tr>
                 <tr>
                     <td><code class="inline">.hide-after-md</code></td>
-                    <td>Hides a component after <code class="inline">md</code> breakpoint</td>
+                    <td>Hides a component after the <code class="inline">md</code> breakpoint.</td>
                 </tr>
                 <tr>
                     <td><code class="inline">.hide-after-lg</code></td>
-                    <td>Hides a component after <code class="inline">lg</code> breakpoint</td>
+                    <td>Hides a component after the <code class="inline">lg</code> breakpoint.</td>
                 </tr>
                 <tr>
                     <td><code class="inline">.hide-after-xl</code></td>
-                    <td>Hides a component after <code class="inline">xl</code> breakpoint</td>
+                    <td>Hides a component after the <code class="inline">xl</code> breakpoint.</td>
                 </tr>
             </tbody>
         </table>
