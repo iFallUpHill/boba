@@ -5,15 +5,9 @@
     </div>
     <div class="col xs-12 md-6 col-middle">
         <span class="label">Default</span>
-        <span class="label red">Red</span>
-        <span class="label orange">Orange</span>
-        <span class="label yellow">Yellow</span>
-        <span class="label green">Green</span>
-        <span class="label teal">Teal</span>
-        <span class="label blue">Blue</span>
-        <span class="label indigo">Indigo</span>
-        <span class="label purple">Purple</span>
-        <span class="label pink">Pink</span>
+        {% for color in global_color_list_core %}
+        <span class="label {{ color }}">{{ color | capitalize }}</span>
+        {% endfor %}
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="code-block">

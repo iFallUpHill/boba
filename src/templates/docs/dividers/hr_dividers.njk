@@ -11,42 +11,12 @@
         <span>Light</span>
         <hr class="light" />
     </div>
+    {% for color in global_color_list_core %}
     <div class="col xs-4 col-middle">
-        <span>Red</span>
-        <hr class="red" />
+        <span>{{ color | capitalize }}</span>
+        <hr class="{{ color }}" />
     </div>
-    <div class="col xs-4 col-middle">
-        <span>Orange</span>
-        <hr class="orange" />
-    </div>
-    <div class="col xs-4 col-middle">
-        <span>Yellow</span>
-        <hr class="yellow" />
-    </div>
-    <div class="col xs-4 col-middle">
-        <span>Green</span>
-        <hr class="green" />
-    </div>
-    <div class="col xs-4 col-middle">
-        <span>Teal</span>
-        <hr class="teal" />
-    </div>
-    <div class="col xs-4 col-middle">
-        <span>Blue</span>
-        <hr class="blue" />
-    </div>
-    <div class="col xs-4 col-middle">
-        <span>Indigo</span>
-        <hr class="indigo" />
-    </div>
-    <div class="col xs-4 col-middle">
-        <span>Purple</span>
-        <hr class="purple" />
-    </div>
-    <div class="col xs-4 col-middle">
-        <span>Pink</span>
-        <hr class="pink" />
-    </div>
+    {% endfor %}
     <div class="col xs-12 col-middle">
         <div class="code-block">
             <pre class="code"><code data-lang="html">&lthr class="green" /&gt</code></pre>

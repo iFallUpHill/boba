@@ -5,15 +5,9 @@
     </div>
     <div class="col xs-12 md-6 col-middle">
         <span class="label outlined">Default</span>
-        <span class="label red outlined">Red</span>
-        <span class="label orange outlined">Orange</span>
-        <span class="label yellow outlined">Yellow</span>
-        <span class="label green outlined">Green</span>
-        <span class="label teal outlined">Teal</span>
-        <span class="label blue outlined">Blue</span>
-        <span class="label indigo outlined">Indigo</span>
-        <span class="label purple outlined">Purple</span>
-        <span class="label pink outlined">Pink</span>
+        {% for color in global_color_list_core %}
+        <span class="label {{ color }} outlined ">{{ color | capitalize }}</span>
+        {% endfor %}
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="code-block">

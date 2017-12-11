@@ -8,42 +8,17 @@
     overflow: hidden;
     overflow-x: auto;
     white-space: nowrap;
-    ul {
-        list-style: none;
-        align-items: center;
-        display: flex;
-        flex-grow: 1;
-        flex-shrink: 0;
-        justify-content: flex-start;
-        border-bottom: 1px solid darken-1($color-light);
-    }
-    li {
-        display: block;
-        margin-bottom: 0;
-    }
-    a {
-        cursor: pointer;
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        margin-bottom: -1px;
-        padding: 0.5em 1em;
-        vertical-align: top;
-        border-bottom: 1px solid darken-1($color-light);
-        color: $color-dark;
-    }
-    &.boxed {
-        a {
-            border: 1px solid transparent;
-            border-radius: 3px 3px 0 0;
-        }
-    }
 }
 
 @mixin tabs-colors {
     @each $colorName, $color in $color-list {
         &.#{$colorName} {
             li {
+                a {
+                    &:hover {
+                        border-bottom-color: $color;
+                    }
+                }
                 &.active {
                     a {
                         border-bottom-color: $color;
@@ -63,6 +38,8 @@
                     &.active {
                         a {
                             color: $color;
+                            border-color: $color;
+
                             &:hover {
                                 color: $color-white;
                             }

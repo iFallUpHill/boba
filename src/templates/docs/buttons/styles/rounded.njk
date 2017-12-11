@@ -7,15 +7,9 @@
         <div>
             <button class="rounded">Default</button>
             <br />
-            <button class="red rounded">Red</button>
-            <button class="orange rounded">Orange</button>
-            <button class="yellow rounded">Yellow</button>
-            <button class="green rounded">Green</button>
-            <button class="teal rounded">Teal</button>
-            <button class="blue rounded">Blue</button>
-            <button class="indigo rounded">Indigo</button>
-            <button class="purple rounded">Purple</button>
-            <button class="pink rounded">Pink</button>
+            {% for color in global_color_list_core %}
+            <button class="{{ color }} rounded">{{ color | capitalize }}</button>
+            {% endfor %}
         </div>
     </div>
     <div class="col xs-12 md-6 col-middle">

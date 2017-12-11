@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col xs-12">
+        <h1 class="header">Base</h1>
+        <h5 class="subheader thin no-margin">For more information on how to use our base colors, check out our <a href="/docs/text.html" target="_blank">text</a>, <a href="/docs/background.html" target="_blank">background</a>, and <a href="/docs/borders.html" target="_blank">border</a> utility classes.</h5>
+    </div>
+    <div class="col xs-12 col-middle">
+        <div>
+        <table class="bordered">
+            <tbody>
+                <tr>
+                    <td rowspan="{{ global_color_list_base | length + 1 }}"><span class="bold">Base Colors</span></td>
+                </tr>
+                {% for color in global_color_list_base %}
+                <tr>
+                    <td><code class="inline">.{{ color }}</code></td>
+                    <td class="bg-{{ color }}" style="height: calc(50px - 1em); width: 100%;"></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        </div>
+    </div>
+</div>

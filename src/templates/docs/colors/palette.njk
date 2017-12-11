@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col xs-12">
+        <h1 class="header">Palette</h1>
+        <h5 class="subheader thin no-margin">Most of our components support our full color palette. Check out our <a href="/docs/text.html" target="_blank">text</a>, <a href="/docs/background.html" target="_blank">background</a>, and <a href="/docs/borders.html" target="_blank">border</a> utility classes to get started.</h5>
+    </div>
+    <div class="col xs-12 col-middle">
+        <div>
+        <table class="bordered">
+            <tbody>
+                <tr>
+                    <td rowspan="{{ global_color_list_core | length + 1 }}"><span class="bold">Core Colors</span></td>
+                </tr>
+                {% for color in global_color_list_core %}
+                <tr>
+                    <td><code class="inline">.{{ color }}</code></td>
+                    <td class="bg-{{ color }}" style="height: calc(50px - 1em); width: 100%;"></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        </div>
+    </div>
+</div>

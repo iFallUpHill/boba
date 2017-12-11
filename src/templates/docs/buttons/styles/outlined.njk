@@ -7,15 +7,9 @@
         <div>
             <button class="outlined">Default</button>
             <br />
-            <button class="red outlined">Red</button>
-            <button class="orange outlined">Orange</button>
-            <button class="yellow outlined">Yellow</button>
-            <button class="green outlined">Green</button>
-            <button class="teal outlined">Teal</button>
-            <button class="blue outlined">Blue</button>
-            <button class="indigo outlined">Indigo</button>
-            <button class="purple outlined">Purple</button>
-            <button class="pink outlined">Pink</button>
+            {% for color in global_color_list_core %}
+            <button class="{{ color }} outlined">{{ color | capitalize }}</button>
+            {% endfor %}
         </div>
     </div>
     <div class="col xs-12 md-6 col-middle">

@@ -3,11 +3,12 @@
         <h1 class="header">Colors</h3>
         <h5 class="subheader thin no-margin">Navbars come in all colors</h6>
     </div>
+    {% for color in global_color_list_core %}
     <div class="col xs-12 col-middle">
-        <nav class="navbar red">
+        <nav class="navbar {{ color }}">
             <a href=# class="navbar-brand">boba</a>
-            <input class="navbar-menu-target" type="checkbox" id="example-red" />
-            <label class="navbar-menu-toggle" for="example-red"><span class="navbar-icon"></span></label>
+            <input class="navbar-menu-target" type="checkbox" id="example-{{ color }}" />
+            <label class="navbar-menu-toggle" for="example-{{ color }}"><span class="navbar-icon"></span></label>
             <ul class="navbar-menu-items menu-items-right">
                 <li>
                     <a href=#><span>Category</span></a>
@@ -20,151 +21,8 @@
                 </li>
             </ul>
         </nav>
-    </div>
-    <div class="col xs-12 col-middle">
-        <nav class="navbar orange">
-            <a href=# class="navbar-brand">boba</a>
-            <input class="navbar-menu-target" type="checkbox" id="example-orange" />
-            <label class="navbar-menu-toggle" for="example-orange"><span class="navbar-icon"></span></label>
-            <ul class="navbar-menu-items menu-items-right">
-                <li>
-                    <a href=#><span>Category</span></a>
-                </li>
-                <li>
-                    <a href=#><span>Category</span></a>
-                </li>
-                <li>
-                    <a href=#><span>Category</span></a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-    <div class="col xs-12 col-middle">
-        <nav class="navbar yellow">
-            <a href=# class="navbar-brand">boba</a>
-            <input class="navbar-menu-target" type="checkbox" id="example-yellow" />
-            <label class="navbar-menu-toggle" for="example-yellow"><span class="navbar-icon"></span></label>
-            <ul class="navbar-menu-items menu-items-right">
-                <li>
-                    <a href=#><span>Category</span></a>
-                </li>
-                <li>
-                    <a href=#><span>Category</span></a>
-                </li>
-                <li>
-                    <a href=#><span>Category</span></a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-    <div class="col xs-12 col-middle">
-        <nav class="navbar green">
-            <a href=# class="navbar-brand">boba</a>
-            <input class="navbar-menu-target" type="checkbox" id="example-green" />
-            <label class="navbar-menu-toggle" for="example-green"><span class="navbar-icon"></span></label>
-            <ul class="navbar-menu-items menu-items-right">
-                <li>
-                    <a href=#><span>Category</span></a>
-                </li>
-                <li>
-                    <a href=#><span>Category</span></a>
-                </li>
-                <li>
-                    <a href=#><span>Category</span></a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-    <div class="col xs-12 col-middle">
-        <nav class="navbar teal">
-            <a href=# class="navbar-brand">boba</a>
-            <input class="navbar-menu-target" type="checkbox" id="example-teal" />
-            <label class="navbar-menu-toggle" for="example-teal"><span class="navbar-icon"></span></label>
-            <ul class="navbar-menu-items menu-items-right">
-                <li>
-                    <a href=#><span>Category</span></a>
-                </li>
-                <li>
-                    <a href=#><span>Category</span></a>
-                </li>
-                <li>
-                    <a href=#><span>Category</span></a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-    <div class="col xs-12 col-middle">
-        <nav class="navbar blue">
-            <a href=# class="navbar-brand">boba</a>
-            <input class="navbar-menu-target" type="checkbox" id="example-blue" />
-            <label class="navbar-menu-toggle" for="example-blue"><span class="navbar-icon"></span></label>
-            <ul class="navbar-menu-items menu-items-right">
-                <li>
-                    <a href=#><span>Category</span></a>
-                </li>
-                <li>
-                    <a href=#><span>Category</span></a>
-                </li>
-                <li>
-                    <a href=#><span>Category</span></a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-    <div class="col xs-12 col-middle">
-        <nav class="navbar indigo">
-            <a href=# class="navbar-brand">boba</a>
-            <input class="navbar-menu-target" type="checkbox" id="example-indigo" />
-            <label class="navbar-menu-toggle" for="example-indigo"><span class="navbar-icon"></span></label>
-            <ul class="navbar-menu-items menu-items-right">
-                <li>
-                    <a href=#><span>Category</span></a>
-                </li>
-                <li>
-                    <a href=#><span>Category</span></a>
-                </li>
-                <li>
-                    <a href=#><span>Category</span></a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-    <div class="col xs-12 col-middle">
-        <nav class="navbar purple">
-            <a href=# class="navbar-brand">boba</a>
-            <input class="navbar-menu-target" type="checkbox" id="example-purple" />
-            <label class="navbar-menu-toggle" for="example-purple"><span class="navbar-icon"></span></label>
-            <ul class="navbar-menu-items menu-items-right">
-                <li>
-                    <a href=#><span>Category</span></a>
-                </li>
-                <li>
-                    <a href=#><span>Category</span></a>
-                </li>
-                <li>
-                    <a href=#><span>Category</span></a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-    <div class="col xs-12 col-middle">
-        <nav class="navbar pink">
-            <a href=# class="navbar-brand">boba</a>
-            <input class="navbar-menu-target" type="checkbox" id="example-pink" />
-            <label class="navbar-menu-toggle" for="example-pink"><span class="navbar-icon"></span></label>
-            <ul class="navbar-menu-items menu-items-right">
-                <li>
-                    <a href=#><span>Category</span></a>
-                </li>
-                <li>
-                    <a href=#><span>Category</span></a>
-                </li>
-                <li>
-                    <a href=#><span>Category</span></a>
-                </li>
-            </ul>
-        </nav>
-    </div>
+    </div>           
+    {% endfor %}
     <div class="col xs-12 col-middle">
         <div class="code-block">
             <pre class="code"><code data-lang="html">&ltnav class="navbar green"&gt

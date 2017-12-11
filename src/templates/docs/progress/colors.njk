@@ -4,42 +4,14 @@
         <h5 class="subheader thin no-margin">Change the color of your progress bar using boba's <a href="./colors.html" class="text-blue text-hover-green">color palette</a></h5>
     </div>
     <div class="col xs-12 md-6 col-middle">
+        {% for color in global_color_list_core %}
         <div class="progress">
-            <div class="progress-bar red" style="width:10%">Red</div>
+            <div class="progress-bar {{ color }}" style="width:{{ loop.index * 10 + "%" }}">{{ color | capitalize }}</div>
         </div>
-        </br>
-        <div class="progress">
-            <div class="progress-bar orange" style="width:20%">Orange</div>
-        </div>
-        </br>
-        <div class="progress">
-            <div class="progress-bar yellow" style="width:30%">Yellow</div>
-        </div>
-        </br>
-        <div class="progress">
-            <div class="progress-bar green" style="width:40%">Green</div>
-        </div>
-        </br>
-        <div class="progress">
-            <div class="progress-bar teal" style="width:50%">Teal</div>
-        </div>
-        </br>
-        <div class="progress">
-            <div class="progress-bar blue" style="width:60%">Blue</div>
-        </div>
-        </br>
-        <div class="progress">
-            <div class="progress-bar indigo" style="width:70%">Indigo</div>
-        </div>
-        </br>
-        <div class="progress">
-            <div class="progress-bar purple" style="width:80%">Purple</div>
-        </div>
-        </br>
-        <div class="progress">
-            <div class="progress-bar pink" style="width:90%">Pink</div>
-        </div>
-        </br>
+        {% if loop.index != loop.length %}
+        <br />
+        {% endif %}
+        {% endfor %}
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="code-block">

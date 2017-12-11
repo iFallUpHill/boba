@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col xs-12">
+        <h4 class="header">Active</h4>
+        <h6 class="subheader thin no-margin">For an even more subtle effect, use the active classes to change the color of your text only when someone clicks on it.</h6>
+    </div>
+    <div class="col xs-12 col-middle">
+        <table class="bordered">
+            <tbody>
+                <tr>
+                    <td rowspan="{{ (global_color_list_core | length) + (global_color_list_base | length) + 2 }}"><span class="bold">Active</span></td>
+                </tr>
+                <tr>
+                    <td colspan="3">To change the color of your text on click, add a <code class="inline">.text-active-{COLOR}</code> class.</td>
+                </tr>
+                {% for color in global_color_list_core %}
+                <tr>
+                    <td><code class="inline">.text-active-{{ color }}</code></td>
+                    <td>Add the <code class="inline">.text-active-{{ color }}</code> class to make text {{ color }} on active.</td>
+                    <td class="text-active-{{ color }}"><span>Hello World, I'm {{ color }} on active!</span></td>
+                </tr>
+                {% endfor %}
+                {% for color in global_color_list_base %}
+                <tr>
+                    <td><code class="inline">.text-active-{{ color }}</code></td>
+                    <td>Add the <code class="inline">.text-active-{{ color }}</code> class to make text {{ color }} on active.</td>
+                    <td class="text-active-{{ color }} {{"bg-active-dark lighten-bg-active-2" if (color == "light") or (color == "white") }}"><span>Hello World, I'm {{ color }} on active!</span></td>
+                </tr>   
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>

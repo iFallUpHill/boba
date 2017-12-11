@@ -11,69 +11,15 @@
             <a href="#">3</a>
             <a href="#">&raquo;</a>
         </div>
-        <div class="pagination bordered red">
+        {% for color in global_color_list_core %}
+        <div class="pagination bordered {{ color }}">
             <a href="#">&laquo;</a>
             <a href="#">1</a>
             <a class="active" href="#">2</a>
             <a href="#">3</a>
             <a href="#">&raquo;</a>
         </div>
-        <div class="pagination bordered orange">
-            <a href="#">&laquo;</a>
-            <a href="#">1</a>
-            <a class="active" href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">&raquo;</a>
-        </div>
-        <div class="pagination bordered yellow">
-            <a href="#">&laquo;</a>
-            <a href="#">1</a>
-            <a class="active" href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">&raquo;</a>
-        </div>
-        <div class="pagination bordered green">
-            <a href="#">&laquo;</a>
-            <a href="#">1</a>
-            <a class="active" href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">&raquo;</a>
-        </div>
-        <div class="pagination bordered teal">
-            <a href="#">&laquo;</a>
-            <a href="#">1</a>
-            <a class="active" href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">&raquo;</a>
-        </div>
-        <div class="pagination bordered blue">
-            <a href="#">&laquo;</a>
-            <a href="#">1</a>
-            <a class="active" href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">&raquo;</a>
-        </div>
-        <div class="pagination bordered indigo">
-            <a href="#">&laquo;</a>
-            <a href="#">1</a>
-            <a class="active" href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">&raquo;</a>
-        </div>
-        <div class="pagination bordered purple">
-            <a href="#">&laquo;</a>
-            <a href="#">1</a>
-            <a class="active" href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">&raquo;</a>
-        </div>
-        <div class="pagination bordered pink">
-            <a href="#">&laquo;</a>
-            <a href="#">1</a>
-            <a class="active" href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">&raquo;</a>
-        </div>
+        {% endfor %}
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="code-block">

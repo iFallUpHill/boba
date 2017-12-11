@@ -3,7 +3,20 @@
 
 .tabs {
     @include tabs-base;
+
+    ul {
+        list-style: none;
+        align-items: center;
+        display: flex;
+        flex-grow: 1;
+        flex-shrink: 0;
+        justify-content: flex-start;
+    }
+
     li {
+        display: block;
+        margin-bottom: 0;
+
         &.active {
             a {
                 border-bottom-color: $color-dark;
@@ -22,12 +35,32 @@
             }
         }
     }
+
+    a {
+        cursor: pointer;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin-bottom: -1px;
+        padding: 0.5em 1em;
+        vertical-align: top;
+        border-bottom: 1px solid darken-1($color-light);
+        color: $color-dark;
+        &:hover {
+            border-bottom: 1px solid $color-dark;
+        }
+    }
+    
     &.boxed {
         li {
+            a {
+                border-radius: 3px 3px 0 0;
+                border-bottom: 1px solid darken-1($color-light);
+            }
             &.active {
                 a {
                     background-color: white;
-                    border-color: darken-1($color-light);
+                    border: 1px solid $color-dark;
                     border-bottom-color: transparent !important;
                     color: $color-dark;
                     &:hover {

@@ -7,15 +7,9 @@
         <div>
             <button>Default</button>
             <br />
-            <button class="red">Red</button>
-            <button class="orange">Orange</button>
-            <button class="yellow">Yellow</button>
-            <button class="green">Green</button>
-            <button class="teal">Teal</button>
-            <button class="blue">Blue</button>
-            <button class="indigo">Indigo</button>
-            <button class="purple">Purple</button>
-            <button class="pink">Pink</button>
+            {% for color in global_color_list_core %}
+            <button class="{{ color }}">{{ color | capitalize }}</button>
+            {% endfor %}
         </div>
     </div>
     <div class="col xs-12 md-6 col-middle">

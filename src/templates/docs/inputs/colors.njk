@@ -5,41 +5,14 @@
     </div>
     <div class="col xs-12 md-6">
         <form class="form-control" action="#" method="post">
+            {% for color in global_color_list_core %}
             <div>
-                <input class="red" type="email" name="" value="" placeholder="red@email.com">
+                <input class="{{ color }}" type="email" name="" value="" placeholder="{{ color }}@email.com">
             </div>
+            {% if loop.index != loop.length %}
             <br />
-            <div>
-                <input class="orange" type="email" name="" value="" placeholder="orange@email.com">
-            </div>
-            <br />
-            <div>
-                <input class="yellow" type="email" name="" value="" placeholder="yellow@email.com">
-            </div>
-            <br />
-            <div>
-                <input class="green" type="email" name="" value="" placeholder="green@email.com">
-            </div>
-            <br />
-            <div>
-                <input class="teal" type="email" name="" value="" placeholder="teal@email.com">
-            </div>
-            <br />
-            <div>
-                <input class="blue" type="email" name="" value="" placeholder="blue@email.com">
-            </div>
-            <br />
-            <div>
-                <input class="indigo" type="email" name="" value="" placeholder="indigo@email.com">
-            </div>
-            <br />
-            <div>
-                <input class="purple" type="email" name="" value="" placeholder="purple@email.com">
-            </div>
-            <br />
-            <div>
-                <input class="pink" type="email" name="" value="" placeholder="pink@email.com">
-            </div>
+            {% endif %}
+            {% endfor %}
     	</form>
     </div>
     <div class="col xs-12 md-6 col-middle">

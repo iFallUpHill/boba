@@ -7,76 +7,25 @@
         <table class="bordered">
             <tbody>
                 <tr>
-                    <td rowspan="15"><span class="bold">Colors</span</td>
+                    <td rowspan="{{ (global_color_list_core | length) + (global_color_list_base | length) + 2 }}"><span class="bold">Colors</span></td>
                 </tr>
                 <tr>
-                    <td colspan="3">To change text color add a <code class="inline">.text-{COLOR}</code> class. Colors are from boba's palette.</td>
+                    <td colspan="3">To change the color of your text, add a <code class="inline">.text-{COLOR}</code> class.</td>
                 </tr>
+                {% for color in global_color_list_core %}
                 <tr>
-                    <td><code class="inline">.text-red</code></td>
-                    <td>Add a <code class="inline">.text-red</code> class to make your text red.</td>
-                    <td><span class="text-red">Hello World, I'm red text!</span></td>
+                    <td><code class="inline">.text-{{ color }}</code></td>
+                    <td>Add the <code class="inline">.text-{{ color }}</code> class to make your text {{ color }}.</td>
+                    <td><span class="text-{{ color }}">Hello World, I'm {{ color }} text!</span></td>
                 </tr>
+                {% endfor %}
+                {% for color in global_color_list_base %}
                 <tr>
-                    <td><code class="inline">.text-orange</code></td>
-                    <td>Add a <code class="inline">.text-orange</code> class to make your text orange.</td>
-                    <td><span class="text-orange">Hello World, I'm orange text!</span></td>
+                    <td><code class="inline">.text-{{ color }}</code></td>
+                    <td>Add the <code class="inline">.text-{{ color }}</code> class to make your text {{ color }}.</td>
+                    <td class="{{ "bg-dark lighten-bg-2" if (color == "light") or (color == "white") }}"><span class="text-{{ color }}">Hello World, I'm {{ color }} text!</span></td>
                 </tr>
-                <tr>
-                    <td><code class="inline">.text-yellow</code></td>
-                    <td>Add a <code class="inline">.text-yellow</code> class to make your text yellow.</td>
-                    <td><span class="text-yellow">Hello World, I'm yellow text!</span></td>
-                </tr>
-                <tr>
-                    <td><code class="inline">.text-green</code></td>
-                    <td>Add a <code class="inline">.text-green</code> class to make your text green.</td>
-                    <td><span class="text-green">Hello World, I'm green text!</span></td>
-                </tr>
-                <tr>
-                    <td><code class="inline">.text-teal</code></td>
-                    <td>Add a <code class="inline">.text-teal</code> class to make your text teal.</td>
-                    <td><span class="text-teal">Hello World, I'm teal text!</span></td>
-                </tr>
-                <tr>
-                    <td><code class="inline">.text-blue</code></td>
-                    <td>Add a <code class="inline">.text-blue</code> class to make your text blue.</td>
-                    <td><span class="text-blue">Hello World, I'm blue text!</span></td>
-                </tr>
-                <tr>
-                    <td><code class="inline">.text-indigo</code></td>
-                    <td>Add a <code class="inline">.text-indigo</code> class to make your text indigo.</td>
-                    <td><span class="text-indigo">Hello World, I'm indigo text!</span></td>
-                </tr>
-                <tr>
-                    <td><code class="inline">.text-purple</code></td>
-                    <td>Add a <code class="inline">.text-purple</code> class to make your text purple.</td>
-                    <td><span class="text-purple">Hello World, I'm purple text!</span></td>
-                </tr>
-                <tr>
-                    <td><code class="inline">.text-pink</code></td>
-                    <td>Add a <code class="inline">.text-pink</code> class to make your text pink.</td>
-                    <td><span class="text-pink">Hello World, I'm pink text!</span></td>
-                </tr>
-                <tr>
-                    <td><code class="inline">.text-dark</code></td>
-                    <td>Add a <code class="inline">.text-dark</code> class to make your text dark.</td>
-                    <td><span class="text-dark">Hello World, I'm dark text!</span></td>
-                </tr>
-                <tr>
-                    <td><code class="inline">.text-light</code></td>
-                    <td>Add a <code class="inline">.text-light</code> class to make your text light.</td>
-                    <td class="bg-dark lighten-bg-2"><span class="text-light">Hello World, I'm light text!</span></td>
-                </tr>
-                <tr>
-                    <td><code class="inline">.text-black</code></td>
-                    <td>Add a <code class="inline">.text-black</code> class to make your text black.</td>
-                    <td><span class="text-black">Hello World, I'm black text!</span></td>
-                </tr>
-                <tr>
-                    <td><code class="inline">.text-white</code></td>
-                    <td>Add a <code class="inline">.text-white</code> class to make your text white.</td>
-                    <td class="bg-dark lighten-bg-2"><span class="text-white">Hello World, I'm white text!</span></td>
-                </tr>
+                {% endfor %}
             </tbody>
         </table>
     </div>

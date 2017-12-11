@@ -5,15 +5,9 @@
     </div>
     <div class="col xs-12 md-6 col-middle">
         <span class="label rounded">Default</span>
-        <span class="label red rounded">Red</span>
-        <span class="label orange rounded">Orange</span>
-        <span class="label yellow rounded">Yellow</span>
-        <span class="label green rounded">Green</span>
-        <span class="label teal rounded">Teal</span>
-        <span class="label blue rounded">Blue</span>
-        <span class="label indigo rounded">Indigo</span>
-        <span class="label purple rounded">Purple</span>
-        <span class="label pink rounded">Pink</span>
+        {% for color in global_color_list_core %}
+        <span class="label {{ color }} rounded">{{ color | capitalize }}</span>
+        {% endfor %}
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="code-block">

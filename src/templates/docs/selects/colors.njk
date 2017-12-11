@@ -5,95 +5,20 @@
     </div>
     <div class="col xs-12 md-6 col-middle">
         <form class="form-control" action="#" method="post">
+            {% for color in global_color_list_core %}
             <div>
                 <span class="select-icon">
-                    <select class="red" name="">
-                        <option value="Option 1">Red Select</option>
+                    <select class="{{ color }}" name="">
+                        <option value="Option 1">{{ color | capitalize }} Select</option>
                         <option value="Option 2">Second Option</option>
                         <option value="Option 3">Last Option</option>
                     </select>
                 </span>
             </div>
+            {% if loop.index != loop.length %}
             <br />
-            <div>
-                <span class="select-icon">
-                    <select class="orange" name="">
-                        <option value="Option 1">Orange Select</option>
-                        <option value="Option 2">Second Option</option>
-                        <option value="Option 3">Last Option</option>
-                    </select>
-                </span>
-            </div>
-            <br />
-            <div>
-                <span class="select-icon">
-                    <select class="yellow" name="">
-                        <option value="Option 1">Yellow Select</option>
-                        <option value="Option 2">Second Option</option>
-                        <option value="Option 3">Last Option</option>
-                    </select>
-                </span>
-            </div>
-            <br />
-            <div>
-                <span class="select-icon">
-                    <select class="green" name="">
-                        <option value="Option 1">Green Select</option>
-                        <option value="Option 2">Second Option</option>
-                        <option value="Option 3">Last Option</option>
-                    </select>
-                </span>
-            </div>
-            <br />
-            <div>
-                <span class="select-icon">
-                    <select class="teal" name="">
-                        <option value="Option 1">Teal Select</option>
-                        <option value="Option 2">Second Option</option>
-                        <option value="Option 3">Last Option</option>
-                    </select>
-                </span>
-            </div>
-            <br />
-            <div>
-                <span class="select-icon">
-                    <select class="blue" name="">
-                        <option value="Option 1">Blue Select</option>
-                        <option value="Option 2">Second Option</option>
-                        <option value="Option 3">Last Option</option>
-                    </select>
-                </span>
-            </div>
-            <br />
-            <div>
-                <span class="select-icon">
-                    <select class="indigo" name="">
-                        <option value="Option 1">Indigo Select</option>
-                        <option value="Option 2">Second Option</option>
-                        <option value="Option 3">Last Option</option>
-                    </select>
-                </span>
-            </div>
-            <br />
-            <div>
-                <span class="select-icon">
-                    <select class="purple" name="">
-                        <option value="Option 1">Purple Select</option>
-                        <option value="Option 2">Second Option</option>
-                        <option value="Option 3">Last Option</option>
-                    </select>
-                </span>
-            </div>
-            <br />
-            <div>
-                <span class="select-icon">
-                    <select class="pink" name="">
-                        <option value="Option 1">Pink Select</option>
-                        <option value="Option 2">Second Option</option>
-                        <option value="Option 3">Last Option</option>
-                    </select>
-                </span>
-            </div>
+            {% endif %}
+            {% endfor %}
         </form>
     </div>
     <div class="col xs-12 md-6 col-middle">

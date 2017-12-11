@@ -5,41 +5,14 @@
     </div>
     <div class="col xs-12 md-6 col-middle">
         <form class="form-control" action="#" method="post">
+            {% for color in global_color_list_core %}
             <div>
-                <textarea class="red" name="name" rows="8" cols="80" placeholder="This is a red textarea!"></textarea>
+                <textarea class="{{ color }}" name="name" rows="8" cols="80" placeholder="This is textarea is {{ color }}!"></textarea>
             </div>
+            {% if loop.index != loop.length %}
             <br />
-            <div>
-                <textarea class="orange" name="name" rows="8" cols="80" placeholder="This is an orange textarea!"></textarea>
-            </div>
-            <br />
-            <div>
-                <textarea class="yellow" name="name" rows="8" cols="80" placeholder="This is a yellow textarea!"></textarea>
-            </div>
-            <br />
-            <div>
-                <textarea class="green" name="name" rows="8" cols="80" placeholder="This is a green textarea!"></textarea>
-            </div>
-            <br />
-            <div>
-                <textarea class="teal" name="name" rows="8" cols="80" placeholder="This is a teal textarea!"></textarea>
-            </div>
-            <br />
-            <div>
-                <textarea class="blue" name="name" rows="8" cols="80" placeholder="This is a blue textarea!"></textarea>
-            </div>
-            <br />
-            <div>
-                <textarea class="indigo" name="name" rows="8" cols="80" placeholder="This is an indigo textarea!"></textarea>
-            </div>
-            <br />
-            <div>
-                <textarea class="purple" name="name" rows="8" cols="80" placeholder="This is a purple textarea!"></textarea>
-            </div>
-            <br />
-            <div>
-                <textarea class="pink" name="name" rows="8" cols="80" placeholder="This is a pink textarea!"></textarea>
-            </div>
+            {% endif %}
+            {% endfor %}
         </form>
     </div>
     <div class="col xs-12 md-6 col-middle">
