@@ -18,7 +18,7 @@
 	<a class="button orange" href="/download.html">Get boba!</a>
 </div>
 
-<div id="boba-sidebar" class="sb-side-navbar">
+<div class="sb-side-navbar" id="boba-sidebar">
 	<div class="sb-side-sticky-region">
 		<a href="/">boba</a>
 	</div>
@@ -160,13 +160,202 @@
                 <div class="section">
                     <div class="container">
                         
-<div class="row">
+
+    <div class="row">
     <div class="col xs-12">
-        <h1 class="header">We're Still Building This Page!</h1>
-        <h3 class="subheader thin">Please come back soon.</h3>
-        <h5 class="thin"><a href="https://github.com/iFallUpHill/boba" class="text-hover-orange" target="_blank">View on Github.</a></h5>
+        <h1 class="header">Sidebar</h1>
+        <h5 class="subheader thin">Get the CSS-only sidebar used here on our documentation pages!</h5>
+        <div class="message orange">
+            <div class="message-header">
+                <p>Tip</p>
+            </div>
+            <div class="message-body">
+                <p>Comments have been added to the code snippet to better explain the many sections of our <code class="inline">sidebar-layout</code> component!</p>
+                <p>Make sure the <code class="inline">href</code> on the <code class="inline">sb-side-navbar-toggle</code> matches the <code class="inline">id</code> of the <code class="inline">sb-side-navbar</code>!</p>
+            </div>
+        </div>                        
+    </div>
+    <div class="col xs-12">
+        <div class="code-block">
+            <pre class="code"><code data-lang="html">&ltdiv class="sidebar-layout"&gt
+
+    &lt!-- The top navbar only appears on smaller viewports --&gt
+    &ltdiv class="sb-top-navbar sticky"&gt
+        &lt!-- The hamburger menu that toggles the sidebar on smaller viewports --&gt
+        &lta class="sb-side-navbar-toggle" href="#boba-sidebar"&gt
+            &ltspan class="sb-menu-icon"&gt&lt/span&gt
+        &lt/a&gt
+
+        &lt!-- You can add other content to the top navbar --&gt
+        &lta class="button orange" href="#"&gtButton&lt/a&gt
+    &lt/div&gt
+
+    &lt!-- The sidebar component itself --&gt
+    &ltdiv class="sb-side-navbar" id="boba-sidebar"&gt
+        &ltdiv class="sb-side-sticky-region"&gt
+            &lt!-- Content in this section will stay fixed to the top of the sidebar --&gt 
+
+            &lt!-- For example, add your logo here --&gt 
+            &lta href="#"&gtYour Logo Here&lt/a&gt
+        &lt/div&gt
+        &ltdiv class="sb-side-scroll-region"&gt
+            &lt!-- Content in this section will be scrollable when the sidebar gets long enough --&gt 
+
+            &lt!-- A basic menu using accordions --&gt 
+            &ltdiv class="accordion-menu"&gt
+                &ltinput type="checkbox" id="overview" name="accordion-checkbox"/&gt
+                &ltlabel class="accordion-header" for="overview"&gt
+                    Menu Header
+                &lt/label&gt
+                &ltdiv class="accordion-body"&gt
+                    &ltul class="accordion-submenu"&gt
+                        &ltli&gt&lta href="#"&gtMenu Item 1&lt/a&gt&lt/li&gt
+                        &ltli&gt&lta href="#"&gtMenu Item 2&lt/a&gt&lt/li&gt
+                        &ltli&gt&lta href="#"&gtMenu Item 3&lt/a&gt&lt/li&gt
+                    &lt/ul&gt
+                &lt/div&gt
+            &lt/div&gt
+        &lt/div&gt
+    &lt/div&gt
+
+    &lt!-- The overlay over the main content that is displayed when the sidebar is visible on smaller viewports --&gt        
+    &lta class="sb-main-overlay" href="#close"&gt&lt/a&gt
+
+    &lt!-- The main content container of your page, adjusted to accomodate the sidebar --&gt
+    &ltdiv class="sb-main-content"&gt
+        &lt!-- Add your main page content here --&gt
+
+        &lt!-- This is how we do it --&gt
+        &ltdiv class="section"&gt
+            &ltdiv class="container"&gt
+                &lt!-- Your content goes here --&gt
+            &lt/div&gt
+        &lt/div&gt
+    &lt/div&gt
+&lt/div&gt</code></pre>
+        </div>
     </div>
 </div>
+    <hr class="light" />
+    <div class="row">
+    <div class="col xs-12">
+        <h1 class="header">Components</h1>
+        <h5 class="subheader thin no-margin">An in-depth discussion on the various components of the sidebar.</h5>
+    </div>
+</div>
+
+<hr class="light" />
+<div class="row">
+    <div class="col xs-12">
+        <h4 class="header">Top Navbar</h4>
+        <h6 class="subheader thin ">Use the <code class="inline">sb-top-navbar</code> section to have a top navbar appear on smaller viewports that contains a toggle for the sidebar.</h6> 
+        <div class="message orange">
+            <div class="message-header">
+                <p>Tip</p>
+            </div>
+            <div class="message-body">
+                <p>Add the <code class="inline">.sticky</code> class to your <code class="inline">sb-top-navbar</code> to have the menu stick to the top of the page while scrolling.</p>
+            </div>
+        </div>                         
+    </div>
+    <div class="col xs-12">
+        <div class="code-block">
+            <pre class="code"><code data-lang="html">&lt!-- The top navbar only appears on smaller viewports --&gt
+&ltdiv class="sb-top-navbar sticky"&gt
+    &lt!-- The hamburger menu that toggles the sidebar on smaller viewports --&gt
+    &lta class="sb-side-navbar-toggle" href="#boba-sidebar"&gt
+        &ltspan class="sb-menu-icon"&gt&lt/span&gt
+    &lt/a&gt
+
+    &lt!-- You can add other content to the top navbar --&gt
+    &lta class="button orange" href="#"&gtButton&lt/a&gt
+&lt/div&gt</code></pre>
+        </div>
+    </div>
+</div>
+<hr class="light" />
+<div class="row">
+    <div class="col xs-12">
+        <h4 class="header">Sticky Region</h4>
+        <h6 class="subheader thin ">Use the <code class="inline">sb-side-sticky-region</code> container to stick content to the top of the sidebar.</h6> 
+        <div class="message blue">
+            <div class="message-header">
+                <p>Clarification</p>
+            </div>
+            <div class="message-body">
+                <p>This section must be used within the <code class="inline">sb-side-navbar</code> section of the sidebar.</p>
+                <p>When the sidebar content exceeds the page height, content within this region will stay fixed to the top of the sidebar.</p>
+            </div>
+        </div>                         
+    </div>
+    <div class="col xs-12">
+        <div class="code-block">
+            <pre class="code"><code data-lang="html">&lt!-- Content in this section will stay fixed to the top of the sidebar --&gt 
+&ltdiv class="sb-side-sticky-region"&gt
+    &lt!-- For example, add your logo here --&gt 
+    &lta href="#"&gtYour Logo Here&lt/a&gt
+&lt/div&gt</code></pre>
+        </div>
+    </div>
+</div>
+<hr class="light" />
+<div class="row">
+    <div class="col xs-12">
+        <h4 class="header">Scroll Region</h4>
+        <h6 class="subheader thin ">Use the <code class="inline">sb-side-scroll-region</code> container to stick content to the top of the sidebar.</h6> 
+        <div class="message blue">
+            <div class="message-header">
+                <p>Clarification</p>
+            </div>
+            <div class="message-body">
+                <p>This section must be used within the <code class="inline">sb-side-navbar</code> section of the sidebar.</p>
+                <p>When the sidebar content exceeds the page height, content within this region will be scrollable.</p>
+            </div>
+        </div>                         
+    </div>
+    <div class="col xs-12">
+        <div class="code-block">
+            <pre class="code"><code data-lang="html">&lt!-- Content in this section will be scrollable when the sidebar gets long enough --&gt 
+&ltdiv class="sb-side-scroll-region"&gt
+    &lt!-- A basic menu using accordions --&gt 
+    &ltdiv class="accordion-menu"&gt
+        &ltinput type="checkbox" id="overview" name="accordion-checkbox"/&gt
+        &ltlabel class="accordion-header" for="overview"&gt
+            Menu Header
+        &lt/label&gt
+        &ltdiv class="accordion-body"&gt
+            &ltul class="accordion-submenu"&gt
+                &ltli&gt&lta href="#"&gtMenu Item 1&lt/a&gt&lt/li&gt
+                &ltli&gt&lta href="#"&gtMenu Item 2&lt/a&gt&lt/li&gt
+                &ltli&gt&lta href="#"&gtMenu Item 3&lt/a&gt&lt/li&gt
+            &lt/ul&gt
+        &lt/div&gt
+    &lt/div&gt
+&lt/div&gt</code></pre>
+        </div>
+    </div>
+</div>
+<hr class="light" />
+<div class="row">
+    <div class="col xs-12">
+        <h4 class="header">Main Content</h4>
+        <h6 class="subheader thin ">The <code class="inline">sb-main-content</code> container is offset perfectly so that your main content leaves space for the sidebar.</h6>                         
+    </div>
+    <div class="col xs-12">
+        <div class="code-block">
+            <pre class="code"><code data-lang="html">&lt!-- Add your main page content in this section --&gt
+&ltdiv class="sb-main-content"&gt    
+    &lt!-- This is how we do it --&gt
+    &ltdiv class="section"&gt
+        &ltdiv class="container"&gt
+            &lt!-- Your content goes here --&gt
+        &lt/div&gt
+    &lt/div&gt
+&lt/div&gt</code></pre>
+        </div>
+    </div>
+</div>
+    
 
                     </div>
                 </div>

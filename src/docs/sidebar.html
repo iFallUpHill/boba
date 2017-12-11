@@ -4,11 +4,9 @@
 {% set active_page ="sidebar" %}
 
 {% block main %}
-<div class="row">
-    <div class="col xs-12">
-        <h1 class="header">We're Still Building This Page!</h1>
-        <h3 class="subheader thin">Please come back soon.</h3>
-        <h5 class="thin"><a href="https://github.com/iFallUpHill/boba" class="text-hover-orange" target="_blank">View on Github.</a></h5>
-    </div>
-</div>
+
+    {% include "templates/docs/sidebar/sidebar.njk" %}
+    <hr class="light" />
+    {% include "templates/docs/sidebar/components.njk" %}
+    
 {% endblock %}
