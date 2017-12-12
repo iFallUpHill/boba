@@ -1,0 +1,74 @@
+$flex-align-content-list: 
+(center, center),
+(top, flex-start),
+(bottom, flex-end),
+(stretch, stretch),
+(space-around, space-around),
+(space-between, space-between),
+(space-evenly, space-evenly);
+
+$flex-align-self-list:
+(top, flex-start),
+(middle, center),
+(bottom, flex-end);
+
+$flex-align-items-list:
+(top, flex-start),
+(middle, center),
+(bottom, flex-end);
+
+$flex-justify-content-list: 
+(center, center),
+(left, flex-start),
+(right, flex-end),
+(stretch, stretch),
+(space-around, space-around),
+(space-between, space-between),
+(space-evenly, space-evenly);
+
+$flex-direction-list: 
+(row, row),
+(row-reverse, row-reverse),
+(column, column),
+(column-reverse, column-reverse);
+
+$flex-wrap-list:
+(wrap, wrap),
+(wrap-reverse, wrap-reverse),
+(no-wrap, no-wrap);
+
+@each $suffix, $property in $flex-align-content-list {
+    .align-content-#{$suffix} {
+        align-content: $property;
+    }
+}
+
+@each $suffix, $property in $flex-align-self-list {
+    .align-self-#{$suffix} {
+        align-self: $property;
+    }
+}
+
+@each $suffix, $property in $flex-align-items-list {
+    .align-items-#{$suffix} {
+        align-items: $property;
+    }
+}
+
+@each $suffix, $property in $flex-justify-content-list{
+    .justify-content-#{$suffix} {
+        justify-content: $property;
+    }
+}
+
+@each $suffix, $property in $flex-direction-list {
+    .flex-direction-#{$suffix} {
+        flex-direction: $property;
+    }
+}
+
+@each $suffix, $property in $flex-wrap-list {
+    .flex-wrap-#{$suffix} {
+        flex-wrap: $property;
+    }
+}

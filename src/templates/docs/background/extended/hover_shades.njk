@@ -1,0 +1,49 @@
+{% set light_shades = ['lighten-bg-hover-3', 'lighten-bg-hover-2', 'lighten-bg-hover-1'] %}
+{% set dark_shades = ['darken-bg-hover-1', 'darken-bg-hover-2', 'darken-bg-hover-3'] %}
+
+<div class="row">
+    <div class="col xs-12">
+        <h4 class="header">Hover Shades</h4>
+        <h6 class="subheader thin">Further fine-tune the color of your background on hover by adjusting its shade.</h6>
+        <div class="message blue">
+            <div class="message-header">
+                <p>Clarification</p>
+            </div>
+            <div class="message-body">
+                <p>These classes must be used in conjunction with a <code class="inline">.bg-hover-{COLOR}</code> class.</p>
+            </div>
+        </div> 
+    </div>
+    <div class="col xs-12 col-middle">
+        <table class="bordered">
+            <tbody>
+                <tr>
+                    <td rowspan="{{ (light_shades | length) + (dark_shades | length) + 3}}"><span class="bold">Hover Shades</span></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><p>To change the shade of your colored background on hover, use the <code class="inline">.lighten-bg-hover-{STEP}</code> and <code class="inline">.darken-bg-hover-{STEP}</code> classes.</p>
+                    <p>There are a total of 3 steps in either direction (i.e. a total of 7 shades are available per color).</p></td>
+                </tr>
+                {% for shade in light_shades %}
+                <tr>
+                    <td class="text-center"><code class="inline">.{{ shade }}</code></td>
+                    <td>Add this class to make your background {{ loop.length - loop.index + 1 }} shade{{ "s" if loop.index != 3}} lighter on hover.</td>
+                    <td class="text-hover-white bg-hover-red {{ shade }}"><span>My red background uses {{ shade }}!</span></td>
+                </tr>
+                {% endfor %}
+                <tr>
+                    <td class="text-center">Base Color</td>
+                    <td>This is a default background using <code class="inline">.bg-hover-red</code> for reference.</td>
+                    <td class="text-hover-white bg-hover-red"><span>I'm the default red background!</span></td>
+                </tr>
+                {% for shade in dark_shades %}
+                <tr>
+                    <td class="text-center"><code class="inline">.{{ shade }}</code></td>
+                    <td>Add this class to make your background {{ loop.index }} shade{{ "s" if loop.index != 1}} darker on hover.</td>
+                    <td class="text-hover-white bg-hover-red {{ shade }}"><span>My red background uses {{ shade }}!</span></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,82 +1,32 @@
 <div class="row">
     <div class="col xs-12">
         <h4 class="header">Hover</h4>
-        <h6 class="subheader thin no-margin">Lorum Ipsem</h6>
+        <h6 class="subheader thin no-margin">For a more subtle effect, use the hover classes to change the background color of your element only when someone hovers/focuses on it.</h6>
     </div>
     <div class="col xs-12 col-middle">
         <table class="bordered">
             <tbody>
                 <tr>
-                    <td rowspan="15"><span class="bold">Background Hover</span</td>
+                    <td rowspan="{{ (global_color_list_core | length) + (global_color_list_base | length) + 2 }}"><span class="bold">Hover</span</td>
                 </tr>
                 <tr>
-                    <td colspan="3">To change the background color on hover, add a <code class="inline">.bg-hover-{COLOR}</code> class. Colors are from boba's palette.</td>
+                    <td colspan="3">To change the background color on hover, add a <code class="inline">.bg-hover-{COLOR}</code> class.</td>
                 </tr>
+                {% for color in global_color_list_core %}
                 <tr>
-                    <td><code class="inline">.bg-hover-red</code></td>
-                    <td>Add a <code class="inline">.bg-hover-red</code> with to make the background red on hover</td>
-                    <td class="bg-hover-red text-hover-white"><span>Hello World, I'm red on hover!</span></td>
+                    <td><code class="inline">.bg-hover-{{ color }}</code></td>
+                    <td>Add this class to make the background of an element {{ color }}.</td>
+                    <td class="bg-hover-{{ color }} text-hover-white"><span>My background is {{ color }} on hover!</span></td>
                 </tr>
+                {% endfor %}
+                {% for color in global_color_list_base %}
                 <tr>
-                    <td><code class="inline">.bg-hover-orange</code></td>
-                    <td>Add a <code class="inline">.bg-hover-orange</code> with to make the background orange on hover</td>
-                    <td class="bg-hover-orange text-hover-white"><span>Hello World, I'm orange on hover!</span></td>
+                    <td><code class="inline">.bg-hover-{{ color }}</code></td>
+                    <td>Add this class to make the background of an element {{ color }}.</td>
+                    <td class="bg-hover-{{ color }} {{ "text-hover-white" if (color == "dark") or (color == "black") }}
+                    {{ "bg-dark lighten-bg-2 text-white text-hover-dark" if (color == "white") }}"><span>My background is {{ color }} on hover!</span></td>
                 </tr>
-                <tr>
-                    <td><code class="inline">.bg-hover-yellow</code></td>
-                    <td>Add a <code class="inline">.bg-hover-yellow</code> with to make the background yellow on hover</td>
-                    <td class="bg-hover-yellow text-hover-white"><span>Hello World, I'm yellow on hover!</span></td>
-                </tr>
-                <tr>
-                    <td><code class="inline">.bg-hover-green</code></td>
-                    <td>Add a <code class="inline">.bg-hover-green</code> with to make the background green on hover</td>
-                    <td class="bg-hover-green text-hover-white"><span>Hello World, I'm green on hover!</span></td>
-                </tr>
-                <tr>
-                    <td><code class="inline">.bg-hover-teal</code></td>
-                    <td>Add a <code class="inline">.bg-hover-teal</code> with to make the background teal on hover</td>
-                    <td class="bg-hover-teal text-hover-white"><span>Hello World, I'm teal on hover!</span></td>
-                </tr>
-                <tr>
-                    <td><code class="inline">.bg-hover-blue</code></td>
-                    <td>Add a <code class="inline">.bg-hover-blue</code> with to make the background blue on hover</td>
-                    <td class="bg-hover-blue text-hover-white"><span>Hello World, I'm blue on hover!</span></td>
-                </tr>
-                <tr>
-                    <td><code class="inline">.bg-hover-indigo</code></td>
-                    <td>Add a <code class="inline">.bg-hover-indigo</code> with to make the background indigo on hover</td>
-                    <td class="bg-hover-indigo text-hover-white"><span>Hello World, I'm indigo on hover!</span></td>
-                </tr>
-                <tr>
-                    <td><code class="inline">.bg-hover-purple</code></td>
-                    <td>Add a <code class="inline">.bg-hover-purple</code> with to make the background purple on hover</td>
-                    <td class="bg-hover-purple text-hover-white"><span>Hello World, I'm purple on hover!</span></td>
-                </tr>
-                <tr>
-                    <td><code class="inline">.bg-hover-pink</code></td>
-                    <td>Add a <code class="inline">.bg-hover-pink</code> with to make the background pink on hover</td>
-                    <td class="bg-hover-pink text-hover-white"><span>Hello World, I'm pink on hover!</span></td>
-                </tr>
-                <tr>
-                    <td><code class="inline">.bg-hover-dark</code></td>
-                    <td>Add a <code class="inline">.bg-hover-dark</code> with to make the background dark on hover</td>
-                    <td class="bg-hover-dark text-hover-white"><span>Hello World, I'm dark on hover!</span></td>
-                </tr>
-                <tr>
-                    <td><code class="inline">.bg-hover-light</code></td>
-                    <td>Add a <code class="inline">.bg-hover-light</code> with to make the background light on hover</td>
-                    <td class="bg-hover-light"><span>Hello World, I'm light on hover!</span></td>
-                </tr>
-                <tr>
-                    <td><code class="inline">.bg-hover-black</code></td>
-                    <td>Add a <code class="inline">.bg-hover-black</code> with to make the background black on hover</td>
-                    <td class="bg-hover-black text-hover-white"><span>Hello World, I'm black on hover!</span></td>
-                </tr>
-                <tr>
-                    <td><code class="inline">.bg-hover-white</code></td>
-                    <td>Add a <code class="inline">.bg-hover-white</code> with to make the background white on hover</td>
-                    <td class="bg-dark lighten-bg-2 bg-hover-white text-white text-hover-dark"><span">Hello World, I'm white on hover!</span></td>
-                </tr>
+                {% endfor %}
             </tbody>
         </table>
     </div>

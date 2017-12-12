@@ -1,0 +1,49 @@
+{% set light_shades = ['lighten-text-hover-3', 'lighten-text-hover-2', 'lighten-text-hover-1'] %}
+{% set dark_shades = ['darken-text-hover-1', 'darken-text-hover-2', 'darken-text-hover-3'] %}
+
+<div class="row">
+    <div class="col xs-12">
+        <h4 class="header">Hover Shades</h4>
+        <h6 class="subheader thin">Further fine-tune the color of your text on hover by adjusting its shade.</h6>
+        <div class="message blue">
+            <div class="message-header">
+                <p>Clarification</p>
+            </div>
+            <div class="message-body">
+                <p>These classes must be used in conjunction with a <code class="inline">.text-hover-{COLOR}</code> class.</p>
+            </div>
+        </div> 
+    </div>
+    <div class="col xs-12 col-middle">
+        <table class="bordered">
+            <tbody>
+                <tr>
+                    <td rowspan="{{ (light_shades | length) + (dark_shades | length) + 3}}"><span class="bold">Hover Shades</span></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><p>To change the shade of your colored text on hover, use the <code class="inline">.lighten-text-hover-{STEP}</code> and <code class="inline">.darken-text-hover-{STEP}</code> classes.</p>
+                    <p>There are a total of 3 steps in either direction (i.e. a total of 7 shades are available per color).</p></td>
+                </tr>
+                {% for shade in light_shades %}
+                <tr>
+                    <td class="text-center"><code class="inline">.{{ shade }}</code></td>
+                    <td>Add this class to make your text's hover color {{ loop.length - loop.index + 1 }} shade{{ "s" if loop.index != 3}} lighter.</td>
+                    <td class="text-hover-red {{ shade }}"><span>I'm text with {{ shade }}!</span></td>
+                </tr>
+                {% endfor %}
+                <tr>
+                    <td class="text-center">Base Color</td>
+                    <td>This is default text with <code class="inline">.text-hover-red</code> for reference.</td>
+                    <td class="text-hover-red"><span>I'm text with the default red hover!</span></td>
+                </tr>
+                {% for shade in dark_shades %}
+                <tr>
+                    <td class="text-center"><code class="inline">.{{ shade }}</code></td>
+                    <td>Add this class to make your text's hover color {{ loop.index }} shade{{ "s" if loop.index != 1}} darker.</td>
+                    <td class="text-hover-red {{ shade }}"><span>I'm text with {{ shade }}!</span></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>

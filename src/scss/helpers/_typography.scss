@@ -139,6 +139,12 @@ h6, .h6 {
     font-weight: $base-font-weight-light;
 }
 
+$alignment-list:
+(left),
+(center),
+(right),
+(justify);
+
 @each $alignment in $alignment-list {
     .text-#{$alignment} {
         text-align: $alignment;

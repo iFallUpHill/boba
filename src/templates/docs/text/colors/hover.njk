@@ -15,15 +15,15 @@
                 {% for color in global_color_list_core %}
                 <tr>
                     <td><code class="inline">.text-hover-{{ color }}</code></td>
-                    <td>Add the <code class="inline">.text-hover-{{ color }}</code> class to make text {{ color }} on hover.</td>
-                    <td class="text-hover-{{ color }}"><span>Hello World, I'm {{ color }} on hover!</span></td>
+                    <td>Add this class to make your text {{ color }} on hover.</td>
+                    <td class="text-hover-{{ color }}"><span>I'm {{ color }} on hover!</span></td>
                 </tr>
                 {% endfor %}
                 {% for color in global_color_list_base %}
                 <tr>
                     <td><code class="inline">.text-hover-{{ color }}</code></td>
-                    <td>Add the <code class="inline">.text-hover-{{ color }}</code> class to make text {{ color }} on hover.</td>
-                    <td class="text-hover-{{ color }} {{"bg-hover-dark lighten-bg-hover-2" if (color == "light") or (color == "white") }}"><span>Hello World, I'm {{ color }} on hover!</span></td>
+                    <td>Add this class to make your text {{ color }} on hover.</td>
+                    <td class="text-hover-{{ color }} {{"bg-hover-dark lighten-bg-hover-2" if (color == "light") or (color == "white") }}"><span>I'm {{ color }} on hover!</span></td>
                 </tr>   
                 {% endfor %}
             </tbody>

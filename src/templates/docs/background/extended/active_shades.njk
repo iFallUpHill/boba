@@ -1,0 +1,49 @@
+{% set light_shades = ['lighten-bg-active-3', 'lighten-bg-active-2', 'lighten-bg-active-1'] %}
+{% set dark_shades = ['darken-bg-active-1', 'darken-bg-active-2', 'darken-bg-active-3'] %}
+
+<div class="row">
+    <div class="col xs-12">
+        <h4 class="header">Active Shades</h4>
+        <h6 class="subheader thin">Further fine-tune the color of your background when clicked by adjusting its shade.</h6>
+        <div class="message blue">
+            <div class="message-header">
+                <p>Clarification</p>
+            </div>
+            <div class="message-body">
+                <p>These classes must be used in conjunction with a <code class="inline">.bg-active-{COLOR}</code> class.</p>
+            </div>
+        </div> 
+    </div>
+    <div class="col xs-12 col-middle">
+        <table class="bordered">
+            <tbody>
+                <tr>
+                    <td rowspan="{{ (light_shades | length) + (dark_shades | length) + 3}}"><span class="bold">Active Shades</span></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><p>To change the shade of your colored background when clicked, use the <code class="inline">.lighten-bg-active-{STEP}</code> and <code class="inline">.darken-bg-active-{STEP}</code> classes.</p>
+                    <p>There are a total of 3 steps in either direction (i.e. a total of 7 shades are available per color).</p></td>
+                </tr>
+                {% for shade in light_shades %}
+                <tr>
+                    <td class="text-center"><code class="inline">.{{ shade }}</code></td>
+                    <td>Add this class to make your background {{ loop.length - loop.index + 1 }} shade{{ "s" if loop.index != 3}} lighter when clicked.</td>
+                    <td class="text-active-white bg-active-red {{ shade }}"><span>My red background uses {{ shade }}!</span></td>
+                </tr>
+                {% endfor %}
+                <tr>
+                    <td class="text-center">Base Color</td>
+                    <td>This is a default background using <code class="inline">.bg-hover-red</code> for reference.</td>
+                    <td class="text-active-white bg-active-red"><span>I'm the default red background!</span></td>
+                </tr>
+                {% for shade in dark_shades %}
+                <tr>
+                    <td class="text-center"><code class="inline">.{{ shade }}</code></td>
+                    <td>Add this class to make your background {{ loop.index }} shade{{ "s" if loop.index != 1}} darker when clicked.</td>
+                    <td class="text-active-white bg-active-red {{ shade }}"><span>My red background uses {{ shade }}!</span></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>

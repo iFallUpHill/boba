@@ -10,20 +10,20 @@
                     <td rowspan="{{ (global_color_list_core | length) + (global_color_list_base | length) + 2 }}"><span class="bold">Active</span></td>
                 </tr>
                 <tr>
-                    <td colspan="3">To change the color of your text on click, add a <code class="inline">.text-active-{COLOR}</code> class.</td>
+                    <td colspan="3">To change the color of your text when click, add a <code class="inline">.text-active-{COLOR}</code> class.</td>
                 </tr>
                 {% for color in global_color_list_core %}
                 <tr>
                     <td><code class="inline">.text-active-{{ color }}</code></td>
-                    <td>Add the <code class="inline">.text-active-{{ color }}</code> class to make text {{ color }} on active.</td>
-                    <td class="text-active-{{ color }}"><span>Hello World, I'm {{ color }} on active!</span></td>
+                    <td>Add this class to make your text {{ color }} when clicked.</td>
+                    <td class="text-active-{{ color }}"><span>I'm {{ color }} when clicked!</span></td>
                 </tr>
                 {% endfor %}
                 {% for color in global_color_list_base %}
                 <tr>
                     <td><code class="inline">.text-active-{{ color }}</code></td>
-                    <td>Add the <code class="inline">.text-active-{{ color }}</code> class to make text {{ color }} on active.</td>
-                    <td class="text-active-{{ color }} {{"bg-active-dark lighten-bg-active-2" if (color == "light") or (color == "white") }}"><span>Hello World, I'm {{ color }} on active!</span></td>
+                    <td>Add this class to make your text {{ color }} when clicked.</td>
+                    <td class="text-active-{{ color }} {{"bg-active-dark lighten-bg-active-2" if (color == "light") or (color == "white") }}"><span>I'm {{ color }} when clicked!</span></td>
                 </tr>   
                 {% endfor %}
             </tbody>

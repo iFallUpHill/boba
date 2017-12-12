@@ -1,3 +1,10 @@
+$display-list:
+(block),
+(inline),
+(inline-block),
+(flex),
+(inline-flex);
+
 @each $suffix, $measurement in $resolution-max-dict {
 	@media screen and (min-width: #{$measurement}) {
 		.hide-after-#{$suffix} {
