@@ -1,9 +1,9 @@
-@mixin side-menu-base {
+@mixin menu-base {
     padding: 1em;
     font-size: 1em;
     .menu-label {
         padding: 0.6em 1em;
-        border-radius: 4px 4px 0 0;
+        border-radius: $base-border-radius-default $base-border-radius-default 0 0;
         &:not(:last-child) {
             margin-bottom: 0;
         }
@@ -14,17 +14,24 @@
     ul {
         list-style: none;
         ul {
-            margin: 0.2em 0 0.2em 2.2em
+            margin: $base-border-radius-default 0 $base-border-radius-default 2.2em;
+
+            li {
+                a {
+                    border-top-left-radius: $base-border-radius-default;
+                    border-bottom-left-radius: $base-border-radius-default;
+                }
+            }
         }
         &.menu-list {
             line-height: 1.25;
             border-radius: 0 0 4px 4px;
+
             li {
                 position: relative;
                 margin-bottom: -1px;
                 a {
                     cursor: pointer;
-                    border-radius: 2px;
                     display: block;
                     padding: 0.5em 0.75em;
                 }
@@ -33,25 +40,31 @@
     }
 }
 
-@mixin side-menu-colors {
+@mixin menu-colors {
     @each $colorName, $color in $color-list {
         &.#{$colorName}{
             .menu-label {
-                background-color: darken-1($color);
+                background-color: $color;
                 color: $color-white;
             }
             ul {
                 &.menu-list {
-                    border: 1px solid lighten-2($color);
+                    border: 1px solid lighten-1($color);
+                    border-top: 0;
+
                     li {
                         a {
                             color: $color-dark;
-                            &:hover {
-                                background-color: #{$color};
+                            &.active {
+                                background-color: $color;
                                 color: $color-white;
                             }
-                            &.active {
-                                background-color: #{$color};
+                            &:hover {
+                                background-color: darken-1($color);
+                                color: $color-white;
+                            }
+                            &:active {
+                                background-color: darken-2($color);
                                 color: $color-white;
                             }
                         }

@@ -1,47 +1,36 @@
 @import 'styling';
 
-.side-menu {
-    @include side-menu-base;
+.menu {
+    @include menu-base;
     .menu-label {
-        background-color: darken-1($color-dark);
+        background-color: $color-dark;
         color: $color-white;
     }
     ul {
         &.menu-list {
-            border: 1px solid lighten-2($color-dark);
+            border: 1px solid $color-dark;
+            border-top: 0;
+
             li {
                 a {
                     color: $color-dark;
-                    &:hover {
-                        background-color: $color-dark;
-                        color: $color-white;
-                        border-radius: 0;
-                    }
                     &.active {
                         background-color: $color-dark;
                         color: $color-white;
                     }
-                }
-                &:last-child {
-                    a {
-                        &:hover {
-                            border-radius: 0 0 4px 4px;
-                        }
+                    &:hover {
+                        background-color: darken-1($color-dark);
+                        color: $color-white;
                     }
-                }
-                li {
-                    &:last-child {
-                        a {
-                            &:hover {
-                                border-radius: 0;
-                            }
-                        }
+                    &:hover {
+                        background-color: darken-2($color-dark);
+                        color: $color-white;
                     }
                 }
             }
         }
     }
     @if $include-color-palette {
-        @include side-menu-colors;
+        @include menu-colors;
     }
 }

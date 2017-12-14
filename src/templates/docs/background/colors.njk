@@ -3,16 +3,31 @@
         <h1 class="header">Colors</h1>
         <h5 class="subheader thin no-margin">Easily change the background color of your elements using boba's refreshing palette.</h5>
     </div>
+    <div class="col xs-12 col-middle">
+        <table class="bordered">
+            <tbody>
+                <tr>
+                    <td rowspan="{{ (global_color_list_core | length) + (global_color_list_base | length) + 2 }}"><span class="bold">Colors</span</td>
+                </tr>
+                <tr>
+                    <td colspan="3">To change the background color of an element, add a <code class="inline">.bg-{COLOR}</code> class.</td>
+                </tr>
+                {% for color in global_color_list_core %}
+                <tr>
+                    <td><code class="inline">.bg-{{ color }}</code></td>
+                    <td>Add this class to make the background of an element {{ color }}.</td>
+                    <td class="bg-{{ color }} text-white"><span>My background is {{ color }}!</span></td>
+                </tr>
+                {% endfor %}
+                {% for color in global_color_list_base %}
+                <tr>
+                    <td><code class="inline">.bg-{{ color }}</code></td>
+                    <td>Add this class to make the background of an element {{ color }}.</td>
+                    <td class="bg-{{ color }} {{ "text-white" if (color == "dark") or (color == "black") }}"><span>My background is {{ color }}!</span></td>
+                </tr>
+                {% endfor %}
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
-
-<hr class="light" />
-{% include "templates/docs/background/colors/colors.njk" %}
-
-<hr class="light" />
-{% include "templates/docs/background/colors/hover.njk" %}
-
-<hr class="light" />
-{% include "templates/docs/background/colors/active.njk" %}
-
-<hr class="light" />
-{% include "templates/docs/background/colors/combinations.njk" %}

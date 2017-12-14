@@ -18,14 +18,21 @@
     "framework"
   ],
   "author": "Jason Manson-Hing",
+  "contributors": [
+    {
+      "name": "Jason Manson-Hing"
+    },
+    {
+      "name": "Andrew Chung"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/iFallUpHill/boba/issues"
   },
   "homepage": "https://github.com/iFallUpHill/boba#readme",
-  "devDependencies": {
+  "dependencies" : {
     "babel-preset-es2015": "^6.9.0",
-    "browser-sync": "^2.10.0",
     "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
@@ -36,9 +43,6 @@
     "gulp-if": "^2.0.1",
     "gulp-jshint": "^2.0.0",
     "gulp-notify": "^2.2.0",
-    "gulp-nunjucks": "^3.0.0",
-    "gulp-nunjucks-html": "^2.0.0",
-    "gulp-nunjucks-render": "^2.2.1",
     "gulp-plumber": "^1.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.4",
@@ -51,9 +55,23 @@
     "run-sequence": "^1.1.5",
     "yargs": "^4.8.0"
   },
+  "devDependencies": {
+    "browser-sync": "^2.10.0",
+    "gulp-nunjucks": "^3.0.0",
+    "gulp-nunjucks-html": "^2.0.0",
+    "gulp-nunjucks-render": "^2.2.1"
+  },
   "eslintConfig": {
     "parserOptions": {
       "ecmaVersion": 6
     }
-  }
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "gulpfile.js",
+    "gulp_tasks",
+    "src/scss/",
+    "dist/*.css"
+  ]
 }

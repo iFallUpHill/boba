@@ -11,9 +11,10 @@ $include-color-palette: true;
 // Requires color-palette
 $include-color-helpers: true;
 
-// Enable lighten/darken modifiers on color-helpers
+// Enable extended hover/active base color-helpers
+// As well as lighten/darken modifiers for color-helpers
 // Requires color-palette and color-helpers
-$include-color-shades: true;
+$include-color-helpers-extended: true;
 
 // ------------------------------------------------- //
 // ---------------------  END  --------------------- //

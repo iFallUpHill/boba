@@ -80,7 +80,7 @@ $color-shade-list: (lighten-1, lighten-2, lighten-3, darken-1, darken-2, darken-
 			    border-style: solid;
 			}
 
-			@if $include-color-palette and $include-color-helpers and $include-color-shades {
+			@if $include-color-palette and $include-color-helpers and $include-color-helpers-extended {
 				&.lighten-#{$prefix}-1 {
 					#{$attribute}: lighten-1($color) $important;
 				}
@@ -108,17 +108,16 @@ $color-shade-list: (lighten-1, lighten-2, lighten-3, darken-1, darken-2, darken-
 
 		}
 
-        .#{$prefix}-hover-#{$colorName} {
-            &:not(:active):hover, &:not(:active):focus {
-                #{$attribute}: #{$color} $important;
-                transition:color 0.15s ease-in-out, background 0.15s ease-in-out;
+		@if $include-color-palette and $include-color-helpers and $include-color-helpers-extended {
+	        .#{$prefix}-hover-#{$colorName} {
+	            &:not(:active):hover, &:not(:active):focus {
+	                #{$attribute}: #{$color} $important;
+	                transition:color 0.15s ease-in-out, background 0.15s ease-in-out;
 
-                @if ($attribute == 'border-color') {
-				    border-width: 1px;
-				    border-style: solid;
-				}
-
-                @if $include-color-palette and $include-color-helpers and $include-color-shades {
+	                @if ($attribute == 'border-color') {
+					    border-width: 1px;
+					    border-style: solid;
+					}
 	                &.lighten-#{$prefix}-hover-1 {
 	                    #{$attribute}: lighten-1($color) $important;
 	                }
@@ -146,17 +145,17 @@ $color-shade-list: (lighten-1, lighten-2, lighten-3, darken-1, darken-2, darken-
             }
         }
 
-        .#{$prefix}-active-#{$colorName} {
-            &:active {
-                #{$attribute}: #{$color} $important;
-                transition:color 0.15s ease-in-out, background 0.15s ease-in-out;
+        @if $include-color-palette and $include-color-helpers and $include-color-helpers-extended {
+	        .#{$prefix}-active-#{$colorName} {
+	            &:active {
+	                #{$attribute}: #{$color} $important;
+	                transition:color 0.15s ease-in-out, background 0.15s ease-in-out;
 
-                @if ($attribute == 'border-color') {
-				    border-width: 1px;
-				    border-style: solid;
-				}
+	                @if ($attribute == 'border-color') {
+					    border-width: 1px;
+					    border-style: solid;
+					}
 
-                @if $include-color-palette and $include-color-helpers and $include-color-shades {
 	                &.lighten-#{$prefix}-active-1 {
 	                    #{$attribute}: lighten-1($color) $important;
 	                }
