@@ -1,7 +1,7 @@
 {
   "name": "boba",
   "version": "0.1.0",
-  "description": "A lightweight, modular CSS framework.",
+  "description": "A lightweight, modular, CSS-only framework.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -31,8 +31,8 @@
     "url": "https://github.com/iFallUpHill/boba/issues"
   },
   "homepage": "https://github.com/iFallUpHill/boba#readme",
-  "dependencies" : {
-    "babel-preset-es2015": "^6.9.0",
+  "dependencies": {
+    "babel-preset-env": "^1.6.1",
     "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
