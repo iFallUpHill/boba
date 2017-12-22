@@ -8,11 +8,3 @@
 	align-items: stretch;
 	justify-content: space-between;
 }
-
-@mixin banner-colors {
-	@each $colorName, $color in $color-list {
-        &.#{$colorName} {
-			background-color: $color;
-        }
-    }
-}

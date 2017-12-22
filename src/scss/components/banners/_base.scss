@@ -28,10 +28,6 @@
 		}
 	}
 
-	@if $include-color-palette {
-		@include banner-colors;
-	}
-
 // Sizes
     @each $size, $padding in $banner-vertical-padding-list {
         &.#{$size} {

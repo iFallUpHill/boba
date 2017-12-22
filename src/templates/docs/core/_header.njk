@@ -1,7 +1,7 @@
 {% macro generate(active_accordion) %}
 
 {% if active_accordion == "overview" %}
-<div class="banner medium indigo darken-bg-1">
+<div class="banner medium bg-indigo">
 	<div class="banner-body text-left">
 		<div class="container">
 			<h1 class="header text-white">Overview</h1>
@@ -11,7 +11,7 @@
 </div>
 
 {% elif active_accordion == "core" %}
-<div class="banner medium red darken-bg-2">
+<div class="banner medium bg-red">
 	<div class="banner-body text-left">
 		<div class="container">
 			<h1 class="header text-white">Core</h1>
@@ -21,7 +21,7 @@
 </div>
 
 {% elif active_accordion == "utilities" %}
-<div class="banner medium orange darken-bg-3">
+<div class="banner medium bg-orange">
 	<div class="banner-body text-left">
 		<div class="container">
 			<h1 class="header text-white">Utilities</h1>
@@ -31,7 +31,7 @@
 </div>
 
 {% elif active_accordion == "layout" %}
-<div class="banner medium green darken-bg-3">
+<div class="banner medium bg-green">
 	<div class="banner-body text-left">
 		<div class="container">
 			<h1 class="header text-white">Layout</h1>
@@ -41,7 +41,7 @@
 </div>
 
 {% elif active_accordion == "components" %}
-<div class="banner medium blue darken-bg-1">
+<div class="banner medium bg-blue">
 	<div class="banner-body text-left">
 		<div class="container">
 			<h1 class="header text-white">Components</h1>
@@ -51,7 +51,7 @@
 </div>
 
 {% elif active_accordion == "elements" %}
-<div class="banner medium purple darken-bg-1">
+<div class="banner medium bg-purple">
 	<div class="banner-body text-left">
 		<div class="container">
 			<h1 class="header text-white">Elements</h1>
@@ -61,7 +61,7 @@
 </div>
 
 {% elif active_accordion == "forms" %}
-<div class="banner medium pink darken-bg-3">
+<div class="banner medium bg-pink darken-bg-3">
 	<div class="banner-body text-left">
 		<div class="container">
 			<h1 class="header text-white">Forms</h1>
@@ -71,7 +71,7 @@
 </div>
 
 {% else %} {# Fallback; This should never happen. #}
-<div class="banner medium indigo darken-bg-1">
+<div class="banner medium bg-indigo darken-bg-1">
 	<div class="banner-body text-left">
 		<div class="container">
 			<h1 class="header text-white">Documentation</h1>
