@@ -14,7 +14,7 @@ const gulp    = require('gulp'),
             src: {
                 html: 'src/**/*.html',
                 sass: 'src/scss/all.scss',
-                nunjucks_templates: 'src/**/*.+(html|njk)',
+                nunjucks_templates: 'src/**/*.+(html|njk)'
             },
             dist: {
                 html: 'dist',

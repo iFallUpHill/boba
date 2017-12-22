@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col xs-12">
+        <h4 class="header">Active</h4>
+        <h6 class="subheader thin no-margin">For an even more subtle effect, use the active classes to change the border color of your element only when someone someone clicks on it.</h6>
+    </div>
+    <div class="col xs-12 col-middle">
+        <table class="bordered">
+            <tbody>
+                <tr>
+                    <td rowspan="{{ (global_color_list_core | length) + (global_color_list_base | length) + 2 }}"><span class="bold">Active</span</td>
+                </tr>
+                <tr>
+                    <td colspan="3">To change the border color when clicked, add a <code class="inline">.border-active-{COLOR}</code> class.</td>
+                </tr>
+                {% for color in global_color_list_core %}
+                <tr>
+                    <td class="vertical-align-middle"><code class="inline">.border-active-{{ color }}</code></td>
+                    <td class="vertical-align-middle">Add this class to make the border of an element {{ color }} when clicked.</td>
+                    <td class="vertical-align-middle"><span class="border-light border-active-{{ color }}" style="display: inline-flex; height: 25px; width: 50px;"></span></td>
+                </tr>
+                {% endfor %}
+                {% for color in global_color_list_base %}
+                <tr>
+                    <td class="vertical-align-middle"><code class="inline">.border-active-{{ color }}</code></td>
+                    <td class="vertical-align-middle">Add this class to make the border of an element {{ color }} when clicked.</td>
+                    <td class="vertical-align-middle"><span class="{{ "border-dark" if (color == "light") or (color == "white") else "border-light"}} border-active-{{ color }}" style="display: inline-flex; height: 25px; width: 50px;"></span></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>

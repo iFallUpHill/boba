@@ -20,6 +20,18 @@ table {
 			white-space: nowrap;
 			width: 1%;
 		}
+
+		&.vertical-align-top {
+			vertical-align: top;
+		}
+
+		&.vertical-align-middle {
+			vertical-align: middle;
+		}
+
+		&.vertical-align-bottom {
+			vertical-align: bottom;
+		}
 	}
 
 	th {

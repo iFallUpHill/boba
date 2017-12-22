@@ -1,18 +1,33 @@
 <div class="row">
     <div class="col xs-12">
         <h1 class="header">Colors</h1>
-        <h5 class="subheader thin no-margin">TBD</h5>
+        <h5 class="subheader thin no-margin">Easily change the border color of your elements using boba's eye-catching palette.</h5>
+    </div>
+    <div class="col xs-12 col-middle">
+        <table class="bordered">
+            <tbody>
+                <tr>
+                    <td rowspan="{{ (global_color_list_core | length) + (global_color_list_base | length) + 2 }}"><span class="bold">Colors</span</td>
+                </tr>
+                <tr>
+                    <td colspan="3">To change the border color of an element, add a <code class="inline">.border-{COLOR}</code> class.</td>
+                </tr>
+                {% for color in global_color_list_core %}
+                <tr>
+                    <td class="vertical-align-middle"><code class="inline">.border-{{ color }}</code></td>
+                    <td class="vertical-align-middle">Add this class to make the border of an element {{ color }}.</td>
+                    <td class="vertical-align-middle"><span class="border-{{ color }}" style="display: inline-flex; height: 25px; width: 50px;"></span></td>
+                </tr>
+                {% endfor %}
+                {% for color in global_color_list_base %}
+                <tr>
+                    <td class="vertical-align-middle"><code class="inline">.border-{{ color }}</code></td>
+                    <td class="vertical-align-middle">Add this class to make the border of an element {{ color }}.</td>
+                    <td class="vertical-align-middle {{ "bg-dark lighten-bg-2" if (color == "light") or (color == "white") }}"><span class="border-{{ color }}" style="display: inline-flex; height: 25px; width: 50px;"></span></td>
+                </tr>
+                {% endfor %}
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
-
-<hr class="light" />
-{% include "templates/docs/borders/colors/colors.njk" %}
-
-<hr class="light" />
-{% include "templates/docs/borders/colors/hover.njk" %}
-
-<hr class="light" />
-{% include "templates/docs/borders/colors/active.njk" %}
-
-<hr class="light" />
-{% include "templates/docs/borders/colors/combinations.njk" %}
