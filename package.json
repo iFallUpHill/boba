@@ -20,10 +20,12 @@
   "author": "Jason Manson-Hing",
   "contributors": [
     {
-      "name": "Jason Manson-Hing"
+      "name": "Jason Manson-Hing",
+      "url" : "https://github.com/iFallUpHill/"
     },
     {
-      "name": "Andrew Chung"
+      "name": "Andrew Chung",
+      "url" : "https://github.com/andrewjungg/"
     }
   ],
   "license": "MIT",

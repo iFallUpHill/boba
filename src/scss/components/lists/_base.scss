@@ -15,6 +15,14 @@ ul, ol {
 ul {
 	list-style: disc inside;
 }
+
 ol {
 	list-style: decimal inside;
+
+	li {
+		&:before {
+			content: "";
+			padding-left: 0.35em;
+		}
+	}
 }
