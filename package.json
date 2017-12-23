@@ -1,6 +1,6 @@
 {
   "name": "boba",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A lightweight, modular, CSS-only framework.",
   "main": "index.js",
   "scripts": {
@@ -21,11 +21,11 @@
   "contributors": [
     {
       "name": "Jason Manson-Hing",
-      "url" : "https://github.com/iFallUpHill/"
+      "url": "https://github.com/iFallUpHill/"
     },
     {
       "name": "Andrew Chung",
-      "url" : "https://github.com/andrewjungg/"
+      "url": "https://github.com/andrewjungg/"
     }
   ],
   "license": "MIT",
