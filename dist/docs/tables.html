@@ -748,6 +748,57 @@
     <hr class="light" />
     <div class="row">
     <div class="col xs-12">
+        <h1 class="header">Vertical Alignment</h1>
+        <h5 class="subheader thin no-margin">Easily vertically align the content within a table cell.</h5>
+    </div>
+    <div class="col xs-12 md-6">
+		<table>
+            <caption>Table Caption</caption>
+            <thead>
+                <tr>
+                    <th>Table Header</th>
+                    <th>Table Header</th>
+                    <th>Table Header</th>
+                    <th>Table Header</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="bg-light" style="height: 100px;"></td>
+                    <td class="vertical-align-top text-center">Top</td>
+                    <td class="vertical-align-middle text-center">Middle</td>
+                    <td class="vertical-align-bottom text-center">Bottom</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col xs-12 md-6">
+        <div class="code-block">
+            <pre class="code"><code data-lang="html">&lttable&gt
+    &ltcaption&gtTable Caption&lt/caption&gt
+    &ltthead&gt
+        &lttr&gt
+            &ltth&gtTable Header&lt/th&gt
+            &ltth&gtTable Header&lt/th&gt
+            &ltth&gtTable Header&lt/th&gt
+            &ltth&gtTable Header&lt/th&gt
+        &lt/tr&gt
+    &lt/thead&gt
+    &lttbody&gt
+        &lttr&gt
+            &lttd class="bg-light" style="height: 100px;"&gt&lt/td&gt
+            &lttd class="vertical-align-top"&gtTop&lt/td&gt
+            &lttd class="vertical-align-middle"&gtMiddle&lt/td&gt
+            &lttd class="vertical-align-bottom"&gtBottom&lt/td&gt
+        &lt/tr&gt
+    &lt/tbody&gt
+&lt/table&gt</code></pre>
+        </div>
+    </div>
+</div>
+    <hr class="light" />
+    <div class="row">
+    <div class="col xs-12">
         <h1 class="header">Colors</h1>
         <h5 class="subheader thin no-margin">Change the color of your tables using boba's <a href="./colors.html" class="text-blue text-hover-green">color palette</a></h5>
     </div>

@@ -62,13 +62,13 @@ $flex-wrap-list:
 }
 
 @each $suffix, $property in $flex-direction-list {
-    .flex-direction-#{$suffix} {
+    .flex-#{$suffix} {
         flex-direction: $property;
     }
 }
 
 @each $suffix, $property in $flex-wrap-list {
-    .flex-wrap-#{$suffix} {
+    .flex-#{$suffix} {
         flex-wrap: $property;
     }
 }
