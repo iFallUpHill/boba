@@ -1,12 +1,19 @@
 # boba
 A lightweight, modular, CSS-only design framework.
 
+[![npm](https://img.shields.io/npm/v/boba.svg)]()
+[![npm](https://img.shields.io/npm/l/boba.svg)]()
+[![CircleCI](https://img.shields.io/circleci/project/github/iFallUpHill/boba.svg)]()
+
+[Check out our documentation!](https://buildwithboba.jasonme.me "boba's homepage!")
+
 To build from source:
 
-```
+```bash
 git clone 
+cd boba
 npm install
-gulp
+gulp clean && gulp build --prod
 ```
 
 Gulp commands:
@@ -18,6 +25,6 @@ Gulp commands:
 * `gulp nunjucks` // Renders Nunjucks to HTML
 
 Gulp parameters
-* `--prod` // Strips comments, minifies files, builds all variations of css; This overrides all of the other parameters
-* `--nomin` // Stops minification of files; Useful for debugging
+* `--prod` // Strips comments, removes sourcemaps, minifies files, builds all variations of css; this overrides all of the other parameters
+* `--nomin` // Stops minification of files; useful for debugging
 * `--buildall` // Builds all versions of the framework
