@@ -4,64 +4,12 @@
 {% set active_page ="installation" %}
 
 {% block main %}
-<div class="row">
-    <div class="col xs-12">
-        <h1 class="header">We're Still Building This Page!</h1>
-        <h3 class="subheader thin">Please come back soon.</h3>
-        <h5 class="thin"><a href="https://github.com/iFallUpHill/boba" class="text-hover-orange" target="_blank">View on Github.</a></h5>
-    </div>
-</div>
-<div class="row">
-	<div class="col xs-12">
-		<h2 class="header thin">Quick Start</h2>
-		<h5 class="subheader thin">Here's a template to help you get started</h5>
-		<div class="row">
-			<div class="col xs-6">
-				<section class="section">
-				  <div class="container">
-					<div class="row">
-					  <div class="col">
-						<h1 class="header">
-						  Hello World
-						</h1>
-						<h3 class="subheader thin">
-						  boba is the best!
-						</h3>
-					  </div>
-					</div>
-				  </div>
-				</section>
-			</div>
-			<div class="col xs-6">
-				<div class="code-block">
-					<pre class="code"><code data-lang="html">&lt!DOCTYPE html&gt
-&lthtml&gt
-  &lthead&gt
-	&ltmeta charset="utf-8"&gt
-	&ltmeta name="viewport" content="width=device-width, initial-scale=1"&gt
-	&lttitle&gtBuild with Boba!&lt/title&gt
-	&ltlink rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/COMINGSOON"&gt
-  &lt/head&gt
-  &ltbody&gt
-	&ltsection class="section"&gt
-	  &ltdiv class="container"&gt
-		&ltdiv class="row"&gt
-		  &ltdiv class="col"&gt
-			&lth1 class="header"&gt
-			  Hello World
-			&lt/h1&gt
-			&lth3 class="subheader thin"&gt
-			  boba is the best!
-			&lt/h3&gt
-		  &lt/div&gt
-		&lt/div&gt
-	  &lt/div&gt
-	&lt/section&gt
-  &lt/body&gt
-&lt/html&gt</code></pre>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+
+	{% include "templates/docs/installation/installation.njk" %}
+	<hr class="light" />
+	{% include "templates/docs/installation/methods.njk" %}
+	<hr class="light" />
+	{% include "templates/docs/installation/quick_start.njk" %}
+
+
 {% endblock %}
