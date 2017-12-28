@@ -5,7 +5,7 @@ A lightweight, modular, CSS-only design framework.
 [![npm](https://img.shields.io/npm/l/boba.svg)]()
 [![CircleCI](https://img.shields.io/circleci/project/github/iFallUpHill/boba.svg)]()
 
-[Check out our documentation!](https://buildwithboba.jasonme.me "boba's homepage!")
+[Check out our documentation!](https://buildwithboba.jasonmh.me "boba's homepage!")
 
 To build from source:
 
