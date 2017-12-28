@@ -26,5 +26,6 @@ Gulp commands:
 
 Gulp parameters
 * `--prod` // Strips comments, removes sourcemaps, minifies files, builds all variations of css; this overrides all of the other parameters
+* `--docs` // Includes the documentation css / nunjuck processes in the build
 * `--nomin` // Stops minification of files; useful for debugging
 * `--buildall` // Builds all versions of the framework

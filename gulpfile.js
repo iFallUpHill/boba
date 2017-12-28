@@ -8,20 +8,23 @@ const gulp    = require('gulp'),
       runSeq  = require("run-sequence"),
       browserSync = require('browser-sync'),
       isDist  = argv.prod ? true : false,
+      docs    = argv.docs ? true : false,
       minify  = argv.nomin ? false : true,
       buildAll = argv.buildall ? true : false;
       config  = {
             src: {
                 html: 'src/**/*.html',
                 sass: 'src/scss/all.scss',
-                nunjucks_templates: 'src/**/*.+(html|njk)'
+                nunjucks_templates: 'src/**/*.+(html|njk)',
+                sass_docs: 'src/scss/docs/all.scss'
             },
             dist: {
                 html: 'dist',
                 css: 'dist',
                 min_css: 'boba.min.css',
                 min_css_core: 'boba-core.min.css',
-                min_css_lite: 'boba-lite.min.css'
+                min_css_lite: 'boba-lite.min.css',
+                min_css_docs: 'documentation.css'
             },
             watch: {
               sass: 'src/scss/**/*.scss', 
@@ -34,7 +37,7 @@ const gulp    = require('gulp'),
 
 function getTask(task) {
     return require('./gulp_tasks/' + task)(gulp, config, isDist, 
-                                              minify, buildAll);
+                                            docs, minify, buildAll);
 }
 
 // --------------------------------------------------------------------

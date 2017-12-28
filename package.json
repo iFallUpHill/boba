@@ -74,6 +74,8 @@
     "gulpfile.js",
     "gulp_tasks",
     "src/scss/",
-    "dist/*.css"
+    "!src/scss/docs/",
+    "dist/*.css",
+    "!dist/docs.css"
   ]
 }

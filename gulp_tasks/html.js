@@ -1,10 +1,15 @@
 const gulp 			= require('gulp'),
       browserSync   = require('browser-sync');
 
-module.exports = (gulp, config, isDist, minify, buildAll) => {
+module.exports = (gulp, config, isDist, docs, minify, buildAll) => {
+    
+    docs = isDist ? true : isDist;
+
     return () => {
-        return gulp.src(config.src.html, { base : './src' })
-            .pipe(gulp.dest(config.dist.html))
-            .pipe(browserSync.reload({stream: true}))
+    	if (docs) {
+    		return gulp.src(config.src.html, { base : './src' })
+		            .pipe(gulp.dest(config.dist.html))
+		            .pipe(browserSync.reload({stream: true}))
+    	}
     };
 };

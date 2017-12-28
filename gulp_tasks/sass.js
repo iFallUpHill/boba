@@ -11,8 +11,9 @@ const gulp            = require('gulp'),
       browserSync     = require('browser-sync'),
       onError         = require('./helpers/onError.js');
 
-module.exports = (gulp, config , isDist, minify, buildAll) => {
+module.exports = (gulp, config , isDist, docs, minify, buildAll) => {
 
+    docs = isDist ? true : isDist;
     minify = isDist ? true : minify;
     buildAll = isDist ? true : buildAll;
 
@@ -38,6 +39,28 @@ module.exports = (gulp, config , isDist, minify, buildAll) => {
             .pipe(gulpif(!isDist, sourcemaps.write()))
             .pipe(gulp.dest(config.dist.css))
             .pipe(browserSync.reload({stream: true}))
+
+        if (docs) {
+          gulp.src(config.src.sass_docs)
+            .pipe(gulpif(!isDist, sourcemaps.init()))
+            .pipe(plumber({
+                errorHandler: onError
+            }))
+            .pipe(sass())
+            .pipe(rename(config.dist.min_css_docs))
+            .pipe(autoprefixer( {
+                    remove: false,
+                    browsers: [
+                        'last 2 versions',
+                        '> 5%'
+                    ]
+                }
+            ))
+            .pipe(gulpif(minify, minifyCSS()))
+            .pipe(gulpif(!isDist, sourcemaps.write()))
+            .pipe(gulp.dest(config.dist.css))
+            .pipe(browserSync.reload({stream: true}))
+        }
 
         if (buildAll) {
           // boba-core.min.css
