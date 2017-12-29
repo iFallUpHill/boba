@@ -4,7 +4,7 @@ const gulp 			= require('gulp'),
 
 module.exports = (gulp, config, isDist, docs, minify, buildAll) => {
 
-    docs = isDist ? true : isDist;
+    docs = isDist ? true : docs;
 
     return () => {
         if (docs) {

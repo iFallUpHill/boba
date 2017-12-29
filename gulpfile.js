@@ -45,7 +45,6 @@ function getTask(task) {
 // --------------------------------------------------------------------
 
 gulp.task('sass', getTask('sass'));
-gulp.task('html', getTask('html'));
 gulp.task('nunjucks', getTask('nunjucks'));
 
 // --------------------------------------------------------------------
