@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
+<!DOCTYPE html><html><head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
         <title>Accordions | Build with Boba</title>
         <link rel="stylesheet" href="/boba.min.css">
@@ -25,7 +23,7 @@
 	</div>
 	<div class="sb-side-scroll-region">
 		<div class="accordion-menu">
-			<input type="checkbox" id="overview" name="accordion-checkbox" hidden  />
+			<input type="checkbox" id="overview" name="accordion-checkbox" hidden>
 			<label class="accordion-header " for="overview">
 				Overview
 			</label>
@@ -40,7 +38,7 @@
 			</div>
 		</div>
 		<div class="accordion-menu">
-			<input type="checkbox" id="core" name="accordion-checkbox" hidden  />
+			<input type="checkbox" id="core" name="accordion-checkbox" hidden>
 			<label class="accordion-header " for="core">
 				Core
 			</label>
@@ -53,7 +51,7 @@
 			</div>
 		</div>
 		<div class="accordion-menu">
-			<input type="checkbox" id="utilities" name="accordion-checkbox" hidden  />
+			<input type="checkbox" id="utilities" name="accordion-checkbox" hidden>
 			<label class="accordion-header " for="utilities">
 				Utilities
 			</label>
@@ -72,7 +70,7 @@
 			</div>
 		</div>
 		<div class="accordion-menu">
-			<input type="checkbox" id="layout" name="accordion-checkbox" hidden  />
+			<input type="checkbox" id="layout" name="accordion-checkbox" hidden>
 			<label class="accordion-header " for="layout">
 				Layout
 			</label>
@@ -86,7 +84,7 @@
 			</div>
 		</div>
 		<div class="accordion-menu">
-			<input type="checkbox" id="components" name="accordion-checkbox" hidden checked />
+			<input type="checkbox" id="components" name="accordion-checkbox" hidden checked>
 			<label class="accordion-header bold" for="components">
 				Components
 			</label>
@@ -105,7 +103,7 @@
 			</div>
 		</div>
 		<div class="accordion-menu">
-			<input type="checkbox" id="elements" name="accordion-checkbox" hidden  />
+			<input type="checkbox" id="elements" name="accordion-checkbox" hidden>
 			<label class="accordion-header " for="elements">
 				Elements
 			</label>
@@ -122,7 +120,7 @@
 			</div>
 		</div>
 		<div class="accordion-menu">
-			<input type="checkbox" id="forms" name="accordion-checkbox" hidden  />
+			<input type="checkbox" id="forms" name="accordion-checkbox" hidden>
 			<label class="accordion-header " for="forms">
 				Forms
 			</label>
@@ -172,7 +170,7 @@
     </div>
 </div>
 
-<hr class="light" />
+<hr class="light">
 <div class="row">
     <div class="col xs-12">
         <h4 class="header">Default Accordion</h4>
@@ -181,7 +179,7 @@
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="accordion-menu">
-            <input type="checkbox" id="first-accordion" name="accordion-checkbox" hidden checked />
+            <input type="checkbox" id="first-accordion" name="accordion-checkbox" hidden checked>
             <label class="accordion-header" for="first-accordion">
                 First Accordion
             </label>
@@ -194,7 +192,7 @@
             </div>
         </div>
         <div class="accordion-menu">
-            <input type="checkbox" id="second-accordion" name="accordion-checkbox" hidden />
+            <input type="checkbox" id="second-accordion" name="accordion-checkbox" hidden>
             <label class="accordion-header" for="second-accordion">
                 Second Accordion
             </label>
@@ -207,7 +205,7 @@
             </div>
         </div>
         <div class="accordion-menu">
-            <input type="checkbox" id="third-accordion" name="accordion-checkbox" hidden />
+            <input type="checkbox" id="third-accordion" name="accordion-checkbox" hidden>
             <label class="accordion-header" for="third-accordion">
                 Third Accordion
             </label>
@@ -222,37 +220,38 @@
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="code-block">
-            <pre class="code"><code data-lang="html">&ltdiv class="accordion-menu"&gt
-    &ltinput type="checkbox" id="first-accordion" name="accordion-checkbox" hidden checked /&gt
-    &ltlabel class="accordion-header" for="first-accordion"&gt
+            <pre class="code"><code data-lang="html" class="hljs">&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"accordion-menu"</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"first-accordion"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"accordion-checkbox"</span> <span class="hljs-attr">hidden</span> <span class="hljs-attr">checked</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-header"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"first-accordion"</span>&gt;</span>
         First Accordion
-    &lt/label&gt
-    &ltdiv class="accordion-body"&gt
-        &ltul class="accordion-submenu"&gt
-            &ltli&gtSubmenu Item 1&lt/li&gt
-            &ltli&gtSubmenu Item 2&lt/li&gt
-            &ltli&gtSubmenu Item 3&lt/li&gt
-        &lt/ul&gt
-    &lt/div&gt
-&lt/div&gt
-&ltdiv class="accordion-menu"&gt
-    &ltinput type="checkbox" id="second-accordion" name="accordion-checkbox" hidden checked /&gt
-    &ltlabel class="accordion-header" for="second-accordion"&gt
+    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-body"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-submenu"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Submenu Item 1<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Submenu Item 2<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Submenu Item 3<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+
+&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"accordion-menu"</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"second-accordion"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"accordion-checkbox"</span> <span class="hljs-attr">hidden</span> <span class="hljs-attr">checked</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-header"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"second-accordion"</span>&gt;</span>
         Second Accordion
-    &lt/label&gt
-    &ltdiv class="accordion-body"&gt
-        &ltul class="accordion-submenu"&gt
-            &ltli&gtSubmenu Item 1&lt/li&gt
-            &ltli&gtSubmenu Item 2&lt/li&gt
-            &ltli&gtSubmenu Item 3&lt/li&gt
-        &lt/ul&gt
-    &lt/div&gt
-&lt/div&gt</code></pre>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-body"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-submenu"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Submenu Item 1<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Submenu Item 2<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Submenu Item 3<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code></pre>
         </div>
     </div>
 </div>
 
-<hr class="light" />
+<hr class="light">
 <div class="row">
     <div class="col xs-12">
         <h4 class="header">Mutually-Exclusive Accordion</h4>
@@ -261,7 +260,7 @@
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="accordion-menu">
-            <input type="radio" id="first-me-accordion" name="accordion-radio" hidden checked />
+            <input type="radio" id="first-me-accordion" name="accordion-radio" hidden checked>
             <label class="accordion-header" for="first-me-accordion">
                 First Accordion
             </label>
@@ -274,7 +273,7 @@
             </div>
         </div>
         <div class="accordion-menu">
-            <input type="radio" id="second-me-accordion" name="accordion-radio" hidden />
+            <input type="radio" id="second-me-accordion" name="accordion-radio" hidden>
             <label class="accordion-header" for="second-me-accordion">
                 Second Accordion
             </label>
@@ -287,7 +286,7 @@
             </div>
         </div>
         <div class="accordion-menu">
-            <input type="radio" id="third-me-accordion" name="accordion-radio" hidden />
+            <input type="radio" id="third-me-accordion" name="accordion-radio" hidden>
             <label class="accordion-header" for="third-me-accordion">
                 Third Accordion
             </label>
@@ -302,32 +301,33 @@
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="code-block">
-            <pre class="code"><code data-lang="html">&ltdiv class="accordion-menu"&gt
-    &ltinput type="radio" id="first-me-accordion" name="accordion-radio" hidden checked /&gt
-    &ltlabel class="accordion-header" for="first-me-accordion"&gt
+            <pre class="code"><code data-lang="html" class="hljs">&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"accordion-menu"</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"first-me-accordion"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"accordion-radio"</span> <span class="hljs-attr">hidden</span> <span class="hljs-attr">checked</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-header"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"first-me-accordion"</span>&gt;</span>
         First Accordion
-    &lt/label&gt
-    &ltdiv class="accordion-body"&gt
-        &ltul class="accordion-submenu"&gt
-            &ltli&gtSubmenu Item 1&lt/li&gt
-            &ltli&gtSubmenu Item 2&lt/li&gt
-            &ltli&gtSubmenu Item 3&lt/li&gt
-        &lt/ul&gt
-    &lt/div&gt
-&lt/div&gt
-&ltdiv class="accordion-menu"&gt
-    &ltinput type="radio" id="second-me-accordion" name="accordion-radio" hidden /&gt
-    &ltlabel class="accordion-header" for="second-me-accordion"&gt
+    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-body"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-submenu"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Submenu Item 1<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Submenu Item 2<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Submenu Item 3<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+
+&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"accordion-menu"</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"second-me-accordion"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"accordion-radio"</span> <span class="hljs-attr">hidden</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-header"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"second-me-accordion"</span>&gt;</span>
         Second Accordion
-    &lt/label&gt
-    &ltdiv class="accordion-body"&gt
-        &ltul class="accordion-submenu"&gt
-            &ltli&gtSubmenu Item 1&lt/li&gt
-            &ltli&gtSubmenu Item 2&lt/li&gt
-            &ltli&gtSubmenu Item 3&lt/li&gt
-        &lt/ul&gt
-    &lt/div&gt
-&lt/div&gt</code></pre>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-body"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-submenu"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Submenu Item 1<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Submenu Item 2<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Submenu Item 3<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code></pre>
         </div>
     </div>
 </div>
@@ -338,7 +338,6 @@
                 </div>
             </div>
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
-    </body>
-</html>
+    
+
+</body></html>

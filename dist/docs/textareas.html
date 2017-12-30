@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
+<!DOCTYPE html><html><head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
         <title>Textareas | Build with Boba</title>
         <link rel="stylesheet" href="/boba.min.css">
@@ -25,7 +23,7 @@
 	</div>
 	<div class="sb-side-scroll-region">
 		<div class="accordion-menu">
-			<input type="checkbox" id="overview" name="accordion-checkbox" hidden  />
+			<input type="checkbox" id="overview" name="accordion-checkbox" hidden>
 			<label class="accordion-header " for="overview">
 				Overview
 			</label>
@@ -40,7 +38,7 @@
 			</div>
 		</div>
 		<div class="accordion-menu">
-			<input type="checkbox" id="core" name="accordion-checkbox" hidden  />
+			<input type="checkbox" id="core" name="accordion-checkbox" hidden>
 			<label class="accordion-header " for="core">
 				Core
 			</label>
@@ -53,7 +51,7 @@
 			</div>
 		</div>
 		<div class="accordion-menu">
-			<input type="checkbox" id="utilities" name="accordion-checkbox" hidden  />
+			<input type="checkbox" id="utilities" name="accordion-checkbox" hidden>
 			<label class="accordion-header " for="utilities">
 				Utilities
 			</label>
@@ -72,7 +70,7 @@
 			</div>
 		</div>
 		<div class="accordion-menu">
-			<input type="checkbox" id="layout" name="accordion-checkbox" hidden  />
+			<input type="checkbox" id="layout" name="accordion-checkbox" hidden>
 			<label class="accordion-header " for="layout">
 				Layout
 			</label>
@@ -86,7 +84,7 @@
 			</div>
 		</div>
 		<div class="accordion-menu">
-			<input type="checkbox" id="components" name="accordion-checkbox" hidden  />
+			<input type="checkbox" id="components" name="accordion-checkbox" hidden>
 			<label class="accordion-header " for="components">
 				Components
 			</label>
@@ -105,7 +103,7 @@
 			</div>
 		</div>
 		<div class="accordion-menu">
-			<input type="checkbox" id="elements" name="accordion-checkbox" hidden  />
+			<input type="checkbox" id="elements" name="accordion-checkbox" hidden>
 			<label class="accordion-header " for="elements">
 				Elements
 			</label>
@@ -122,7 +120,7 @@
 			</div>
 		</div>
 		<div class="accordion-menu">
-			<input type="checkbox" id="forms" name="accordion-checkbox" hidden checked />
+			<input type="checkbox" id="forms" name="accordion-checkbox" hidden checked>
 			<label class="accordion-header bold" for="forms">
 				Forms
 			</label>
@@ -180,16 +178,16 @@
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="code-block">
-            <pre class="code"><code data-lang="html">&ltform class="form-control" action="#" method="post"&gt
-    &ltdiv&gt
-        &ltlabel for="email"&gt Default &lt/label&gt
-        &lttextarea name="name" rows="8" cols="80" placeholder="This is a textarea!"&gt&lt/textarea&gt
-    &lt/div&gt
-&lt/form&gt</code></pre>
+            <pre class="code"><code data-lang="html" class="hljs">&lt;form <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-control"</span> action=<span class="hljs-string">"#"</span> method=<span class="hljs-string">"post"</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"email"</span>&gt;</span> Default <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"name"</span> <span class="hljs-attr">rows</span>=<span class="hljs-string">"8"</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"80"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"This is a textarea!"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+&lt;<span class="hljs-regexp">/form&gt;</span></code></pre>
         </div>
     </div>
 </div>
-    <hr class="light" />
+    <hr class="light">
     <div class="row">
     <div class="col xs-12">
         <h1 class="header">Sizes</h1>
@@ -201,17 +199,17 @@
               <label for="message">Small Textarea</label>
               <textarea class="small" name="name" rows="8" cols="80" placeholder="This is a small textarea!"></textarea>
           </div>
-          <br />
+          <br>
           <div>
               <label for="message">Default Textarea</label>
               <textarea name="name" rows="8" cols="80" placeholder="This is the default textarea!"></textarea>
           </div>
-          <br />
+          <br>
           <div>
               <label for="message">Medium Textarea</label>
               <textarea class="medium" name="name" rows="8" cols="80" placeholder="This is a medium textarea!"></textarea>
           </div>
-          <br />
+          <br>
           <div>
               <label for="message">Large Textarea</label>
               <textarea class="large" name="name" rows="8" cols="80" placeholder="This is a large textarea!"></textarea>
@@ -220,31 +218,31 @@
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="code-block">
-            <pre class="code"><code data-lang="html">&ltform class="form-control" action="#" method="post"&gt
-    &ltdiv&gt
-        &ltlabel for="message"&gt Small Textarea &lt/label&gt
-        &lttextarea class="small" name="name" rows="8" cols="80" placeholder="This is a small textarea!"&gt&lt/textarea&gt
-    &lt/div&gt
-    &ltbr /&gt
-    &ltdiv&gt
-        &ltlabel for="message"&gt Default Textarea &lt/label&gt
-        &lttextarea name="name" rows="8" cols="80" placeholder="This is the default textarea!"&gt&lt/textarea&gt
-    &lt/div&gt
-    &ltbr /&gt
-    &ltdiv&gt
-        &ltlabel for="message"&gt Medium Textarea &lt/label&gt
-        &lttextarea class="medium" name="name" rows="8" cols="80" placeholder="This is a medium textarea!"&gt&lt/textarea&gt
-    &lt/div&gt
-    &ltbr /&gt
-    &ltdiv&gt
-        &ltlabel for="message"&gt Large Textarea &lt/label&gt
-        &lttextarea class="large" name="name" rows="8" cols="80" placeholder="This is a large textarea!"&gt&lt/textarea&gt
-    &lt/div&gt
-&lt/form&gt</code></pre>
+            <pre class="code"><code data-lang="html" class="hljs">&lt;form <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-control"</span> action=<span class="hljs-string">"#"</span> method=<span class="hljs-string">"post"</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"message"</span>&gt;</span> Small Textarea <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"small"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"name"</span> <span class="hljs-attr">rows</span>=<span class="hljs-string">"8"</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"80"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"This is a small textarea!"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    &lt;br /&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"message"</span>&gt;</span> Default Textarea <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"name"</span> <span class="hljs-attr">rows</span>=<span class="hljs-string">"8"</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"80"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"This is the default textarea!"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    &lt;br /&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"message"</span>&gt;</span> Medium Textarea <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"medium"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"name"</span> <span class="hljs-attr">rows</span>=<span class="hljs-string">"8"</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"80"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"This is a medium textarea!"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    &lt;br /&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"message"</span>&gt;</span> Large Textarea <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"large"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"name"</span> <span class="hljs-attr">rows</span>=<span class="hljs-string">"8"</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"80"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"This is a large textarea!"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+&lt;<span class="hljs-regexp">/form&gt;</span></code></pre>
         </div>
     </div>
 </div>
-    <hr class="light" />
+    <hr class="light">
     <div class="row">
     <div class="col xs-12">
         <h1 class="header">States</h1>
@@ -260,16 +258,16 @@
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="code-block">
-            <pre class="code"><code data-lang="html">&ltform class="form-control" action="#" method="post"&gt
-    &ltdiv&gt
-        &ltlabel for="message"&gt Disabled Textarea &lt/label&gt
-        &lttextarea disabled name="name" rows="8" cols="80" placeholder="You can't type now!"&gt&lt/textarea&gt
-    &lt/div&gt
-&lt/form&gt</code></pre>
+            <pre class="code"><code data-lang="html" class="hljs">&lt;form <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-control"</span> action=<span class="hljs-string">"#"</span> method=<span class="hljs-string">"post"</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"message"</span>&gt;</span> Disabled Textarea <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">disabled</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"name"</span> <span class="hljs-attr">rows</span>=<span class="hljs-string">"8"</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"80"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"You can't type now!"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+&lt;<span class="hljs-regexp">/form&gt;</span></code></pre>
         </div>
     </div>
 </div>
-    <hr class="light" />
+    <hr class="light">
     <div class="row">
     <div class="col xs-12">
         <h1 class="header">Colors</h1>
@@ -282,56 +280,56 @@
                 <textarea class="red" name="name" rows="8" cols="80" placeholder="This is textarea is red!"></textarea>
             </div>
             
-            <br />
+            <br>
             
             
             <div>
                 <textarea class="orange" name="name" rows="8" cols="80" placeholder="This is textarea is orange!"></textarea>
             </div>
             
-            <br />
+            <br>
             
             
             <div>
                 <textarea class="yellow" name="name" rows="8" cols="80" placeholder="This is textarea is yellow!"></textarea>
             </div>
             
-            <br />
+            <br>
             
             
             <div>
                 <textarea class="green" name="name" rows="8" cols="80" placeholder="This is textarea is green!"></textarea>
             </div>
             
-            <br />
+            <br>
             
             
             <div>
                 <textarea class="teal" name="name" rows="8" cols="80" placeholder="This is textarea is teal!"></textarea>
             </div>
             
-            <br />
+            <br>
             
             
             <div>
                 <textarea class="blue" name="name" rows="8" cols="80" placeholder="This is textarea is blue!"></textarea>
             </div>
             
-            <br />
+            <br>
             
             
             <div>
                 <textarea class="indigo" name="name" rows="8" cols="80" placeholder="This is textarea is indigo!"></textarea>
             </div>
             
-            <br />
+            <br>
             
             
             <div>
                 <textarea class="purple" name="name" rows="8" cols="80" placeholder="This is textarea is purple!"></textarea>
             </div>
             
-            <br />
+            <br>
             
             
             <div>
@@ -343,12 +341,12 @@
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="code-block">
-            <pre class="code"><code data-lang="html">&ltform class="form-control" action="#" method="post"&gt
-    &ltdiv&gt
-        &ltlabel class="text-green" for="email"&gt Green &lt/label&gt
-        &lttextarea class="green" name="name" rows="8" cols="80" placeholder="This is a textarea!"&gt&lt/textarea&gt
-    &lt/div&gt
-&lt/form&gt</code></pre>
+            <pre class="code"><code data-lang="html" class="hljs">&lt;form <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-control"</span> action=<span class="hljs-string">"#"</span> method=<span class="hljs-string">"post"</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-green"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"email"</span>&gt;</span> Green <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"green"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"name"</span> <span class="hljs-attr">rows</span>=<span class="hljs-string">"8"</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"80"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"This is a textarea!"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+&lt;<span class="hljs-regexp">/form&gt;</span></code></pre>
         </div>
     </div>
 </div>
@@ -358,7 +356,6 @@
                 </div>
             </div>
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
-    </body>
-</html>
+    
+
+</body></html>

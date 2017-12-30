@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
+<!DOCTYPE html><html><head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
         <title>Sidebar | Build with Boba</title>
         <link rel="stylesheet" href="/boba.min.css">
@@ -25,7 +23,7 @@
 	</div>
 	<div class="sb-side-scroll-region">
 		<div class="accordion-menu">
-			<input type="checkbox" id="overview" name="accordion-checkbox" hidden  />
+			<input type="checkbox" id="overview" name="accordion-checkbox" hidden>
 			<label class="accordion-header " for="overview">
 				Overview
 			</label>
@@ -40,7 +38,7 @@
 			</div>
 		</div>
 		<div class="accordion-menu">
-			<input type="checkbox" id="core" name="accordion-checkbox" hidden  />
+			<input type="checkbox" id="core" name="accordion-checkbox" hidden>
 			<label class="accordion-header " for="core">
 				Core
 			</label>
@@ -53,7 +51,7 @@
 			</div>
 		</div>
 		<div class="accordion-menu">
-			<input type="checkbox" id="utilities" name="accordion-checkbox" hidden  />
+			<input type="checkbox" id="utilities" name="accordion-checkbox" hidden>
 			<label class="accordion-header " for="utilities">
 				Utilities
 			</label>
@@ -72,7 +70,7 @@
 			</div>
 		</div>
 		<div class="accordion-menu">
-			<input type="checkbox" id="layout" name="accordion-checkbox" hidden checked />
+			<input type="checkbox" id="layout" name="accordion-checkbox" hidden checked>
 			<label class="accordion-header bold" for="layout">
 				Layout
 			</label>
@@ -86,7 +84,7 @@
 			</div>
 		</div>
 		<div class="accordion-menu">
-			<input type="checkbox" id="components" name="accordion-checkbox" hidden  />
+			<input type="checkbox" id="components" name="accordion-checkbox" hidden>
 			<label class="accordion-header " for="components">
 				Components
 			</label>
@@ -105,7 +103,7 @@
 			</div>
 		</div>
 		<div class="accordion-menu">
-			<input type="checkbox" id="elements" name="accordion-checkbox" hidden  />
+			<input type="checkbox" id="elements" name="accordion-checkbox" hidden>
 			<label class="accordion-header " for="elements">
 				Elements
 			</label>
@@ -122,7 +120,7 @@
 			</div>
 		</div>
 		<div class="accordion-menu">
-			<input type="checkbox" id="forms" name="accordion-checkbox" hidden  />
+			<input type="checkbox" id="forms" name="accordion-checkbox" hidden>
 			<label class="accordion-header " for="forms">
 				Forms
 			</label>
@@ -181,66 +179,66 @@
     </div>
     <div class="col xs-12">
         <div class="code-block">
-            <pre class="code"><code data-lang="html">&ltdiv class="sidebar-layout"&gt
+            <pre class="code"><code data-lang="html" class="hljs"><span class="hljs-comment">&lt;!-- Declare the sidebar layout--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sidebar-layout"</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- The top navbar only appears on smaller viewports --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sb-top-navbar sticky"</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- The hamburger menu that toggles the sidebar on smaller viewports --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sb-side-navbar-toggle"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#boba-sidebar"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sb-menu-icon"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 
-    &lt!-- The top navbar only appears on smaller viewports --&gt
-    &ltdiv class="sb-top-navbar sticky"&gt
-        &lt!-- The hamburger menu that toggles the sidebar on smaller viewports --&gt
-        &lta class="sb-side-navbar-toggle" href="#boba-sidebar"&gt
-            &ltspan class="sb-menu-icon"&gt&lt/span&gt
-        &lt/a&gt
+        <span class="hljs-comment">&lt;!-- You can add other content to the top navbar --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button orange"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-        &lt!-- You can add other content to the top navbar --&gt
-        &lta class="button orange" href="#"&gtButton&lt/a&gt
-    &lt/div&gt
+    <span class="hljs-comment">&lt;!-- The sidebar component itself --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sb-side-navbar"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"boba-sidebar"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sb-side-sticky-region"</span>&gt;</span>
+            <span class="hljs-comment">&lt;!-- Content in this section will stay fixed to the top of the sidebar --&gt;</span> 
 
-    &lt!-- The sidebar component itself --&gt
-    &ltdiv class="sb-side-navbar" id="boba-sidebar"&gt
-        &ltdiv class="sb-side-sticky-region"&gt
-            &lt!-- Content in this section will stay fixed to the top of the sidebar --&gt 
+            <span class="hljs-comment">&lt;!-- For example, add your logo here --&gt;</span> 
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Your Logo Here<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sb-side-scroll-region"</span>&gt;</span>
+            <span class="hljs-comment">&lt;!-- Content in this section will be scrollable when the sidebar gets long enough --&gt;</span> 
 
-            &lt!-- For example, add your logo here --&gt 
-            &lta href="#"&gtYour Logo Here&lt/a&gt
-        &lt/div&gt
-        &ltdiv class="sb-side-scroll-region"&gt
-            &lt!-- Content in this section will be scrollable when the sidebar gets long enough --&gt 
-
-            &lt!-- A basic menu using accordions --&gt 
-            &ltdiv class="accordion-menu"&gt
-                &ltinput type="checkbox" id="overview" name="accordion-checkbox"/&gt
-                &ltlabel class="accordion-header" for="overview"&gt
+            <span class="hljs-comment">&lt;!-- A basic menu using accordions --&gt;</span> 
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-menu"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"overview"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"accordion-checkbox"</span>/&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-header"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"overview"</span>&gt;</span>
                     Menu Header
-                &lt/label&gt
-                &ltdiv class="accordion-body"&gt
-                    &ltul class="accordion-submenu"&gt
-                        &ltli&gt&lta href="#"&gtMenu Item 1&lt/a&gt&lt/li&gt
-                        &ltli&gt&lta href="#"&gtMenu Item 2&lt/a&gt&lt/li&gt
-                        &ltli&gt&lta href="#"&gtMenu Item 3&lt/a&gt&lt/li&gt
-                    &lt/ul&gt
-                &lt/div&gt
-            &lt/div&gt
-        &lt/div&gt
-    &lt/div&gt
+                <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-body"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-submenu"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Menu Item 1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Menu Item 2<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Menu Item 3<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-    &lt!-- The overlay over the main content that is displayed when the sidebar is visible on smaller viewports --&gt        
-    &lta class="sb-main-overlay" href="#close"&gt&lt/a&gt
+    <span class="hljs-comment">&lt;!-- The overlay over the main content that is displayed when the sidebar is visible on smaller viewports --&gt;</span>        
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sb-main-overlay"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#close"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 
-    &lt!-- The main content container of your page, adjusted to accomodate the sidebar --&gt
-    &ltdiv class="sb-main-content"&gt
-        &lt!-- Add your main page content here --&gt
+    <span class="hljs-comment">&lt;!-- The main content container of your page, adjusted to accomodate the sidebar --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sb-main-content"</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- Add your main page content here --&gt;</span>
 
-        &lt!-- This is how we format our main content --&gt
-        &ltdiv class="section"&gt
-            &ltdiv class="container"&gt
-                &lt!-- Your content goes here --&gt
-            &lt/div&gt
-        &lt/div&gt
-    &lt/div&gt
-&lt/div&gt</code></pre>
+        <span class="hljs-comment">&lt;!-- This is how we format our main content --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+                <span class="hljs-comment">&lt;!-- Your content goes here --&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
         </div>
     </div>
 </div>
-    <hr class="light" />
+    <hr class="light">
     <div class="row">
     <div class="col xs-12">
         <h1 class="header">Components</h1>
@@ -248,7 +246,7 @@
     </div>
 </div>
 
-<hr class="light" />
+<hr class="light">
 <div class="row">
     <div class="col xs-12">
         <h4 class="header">Top Navbar</h4>
@@ -264,20 +262,20 @@
     </div>
     <div class="col xs-12">
         <div class="code-block">
-            <pre class="code"><code data-lang="html">&lt!-- The top navbar only appears on smaller viewports --&gt
-&ltdiv class="sb-top-navbar sticky"&gt
-    &lt!-- The hamburger menu that toggles the sidebar on smaller viewports --&gt
-    &lta class="sb-side-navbar-toggle" href="#boba-sidebar"&gt
-        &ltspan class="sb-menu-icon"&gt&lt/span&gt
-    &lt/a&gt
+            <pre class="code"><code data-lang="html" class="hljs"><span class="hljs-comment">&lt;!-- The top navbar only appears on smaller viewports --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sb-top-navbar sticky"</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- The hamburger menu that toggles the sidebar on smaller viewports --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sb-side-navbar-toggle"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#boba-sidebar"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sb-menu-icon"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 
-    &lt!-- You can add other content to the top navbar --&gt
-    &lta class="button orange" href="#"&gtButton&lt/a&gt
-&lt/div&gt</code></pre>
+    <span class="hljs-comment">&lt;!-- You can add other content to the top navbar --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button orange"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
         </div>
     </div>
 </div>
-<hr class="light" />
+<hr class="light">
 <div class="row">
     <div class="col xs-12">
         <h4 class="header">Sticky Region</h4>
@@ -294,15 +292,15 @@
     </div>
     <div class="col xs-12">
         <div class="code-block">
-            <pre class="code"><code data-lang="html">&lt!-- Content in this section will stay fixed to the top of the sidebar --&gt 
-&ltdiv class="sb-side-sticky-region"&gt
-    &lt!-- For example, add your logo here --&gt 
-    &lta href="#"&gtYour Logo Here&lt/a&gt
-&lt/div&gt</code></pre>
+            <pre class="code"><code data-lang="html" class="hljs"><span class="hljs-comment">&lt;!-- Content in this section will stay fixed to the top of the sidebar --&gt;</span> 
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sb-side-sticky-region"</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- For example, add your logo here --&gt;</span> 
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Your Logo Here<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
         </div>
     </div>
 </div>
-<hr class="light" />
+<hr class="light">
 <div class="row">
     <div class="col xs-12">
         <h4 class="header">Scroll Region</h4>
@@ -319,27 +317,27 @@
     </div>
     <div class="col xs-12">
         <div class="code-block">
-            <pre class="code"><code data-lang="html">&lt!-- Content in this section will be scrollable when the sidebar gets long enough --&gt 
-&ltdiv class="sb-side-scroll-region"&gt
-    &lt!-- A basic menu using accordions --&gt 
-    &ltdiv class="accordion-menu"&gt
-        &ltinput type="checkbox" id="overview" name="accordion-checkbox"/&gt
-        &ltlabel class="accordion-header" for="overview"&gt
+            <pre class="code"><code data-lang="html" class="hljs"><span class="hljs-comment">&lt;!-- Content in this section will be scrollable when the sidebar gets long enough --&gt;</span> 
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sb-side-scroll-region"</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- A basic menu using accordions --&gt;</span> 
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-menu"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"overview"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"accordion-checkbox"</span>/&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-header"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"overview"</span>&gt;</span>
             Menu Header
-        &lt/label&gt
-        &ltdiv class="accordion-body"&gt
-            &ltul class="accordion-submenu"&gt
-                &ltli&gt&lta href="#"&gtMenu Item 1&lt/a&gt&lt/li&gt
-                &ltli&gt&lta href="#"&gtMenu Item 2&lt/a&gt&lt/li&gt
-                &ltli&gt&lta href="#"&gtMenu Item 3&lt/a&gt&lt/li&gt
-            &lt/ul&gt
-        &lt/div&gt
-    &lt/div&gt
-&lt/div&gt</code></pre>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-body"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-submenu"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Menu Item 1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Menu Item 2<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Menu Item 3<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
         </div>
     </div>
 </div>
-<hr class="light" />
+<hr class="light">
 <div class="row">
     <div class="col xs-12">
         <h4 class="header">Main Content</h4>
@@ -347,15 +345,15 @@
     </div>
     <div class="col xs-12">
         <div class="code-block">
-            <pre class="code"><code data-lang="html">&lt!-- Add your main page content in this section --&gt
-&ltdiv class="sb-main-content"&gt    
-    &lt!-- This is how we format our main content --&gt
-    &ltdiv class="section"&gt
-        &ltdiv class="container"&gt
-            &lt!-- Your content goes here --&gt
-        &lt/div&gt
-    &lt/div&gt
-&lt/div&gt</code></pre>
+            <pre class="code"><code data-lang="html" class="hljs"><span class="hljs-comment">&lt;!-- Add your main page content in this section --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sb-main-content"</span>&gt;</span>    
+    <span class="hljs-comment">&lt;!-- This is how we format our main content --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+            <span class="hljs-comment">&lt;!-- Your content goes here --&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
         </div>
     </div>
 </div>
@@ -365,7 +363,6 @@
                 </div>
             </div>
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
-    </body>
-</html>
+    
+
+</body></html>

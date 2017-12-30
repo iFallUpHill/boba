@@ -1,0 +1,19 @@
+$desktopHD: 1382px;
+$desktop: 992px;
+$laptop: 768px;
+$tablet: 576px;
+$mobile: 0px;
+
+$resolution-suffixes: xs, sm, md, lg, xl;
+
+$resolution-min-dict: 	(xs, $mobile, $tablet),
+				 		(sm, $tablet, $laptop),
+				 		(md, $laptop, $desktop),
+				 		(lg, $desktop, $desktopHD),
+				 		(xl, $desktopHD, 12000px);
+
+$resolution-max-dict: 	(xs, $tablet - 1px),
+				 		(sm, $laptop - 1px),
+				 		(md, $desktop - 1px),
+				 		(lg, $desktopHD - 1px),
+				 		(xl, 12000px - 1px);

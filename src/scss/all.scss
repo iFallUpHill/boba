@@ -26,11 +26,14 @@ $include-color-helpers-extended: true;
 @import 'vendor/normalize';
 @import 'helpers/reset';
 
-// Palette
-@import 'helpers/colors';
-
 // Global Constants
-@import 'helpers/constants';
+@import 'constants/breakpoints';
+@import 'constants/colors';
+@import 'constants/constants';
+@import 'constants/fonts';
+
+// Color Helpers
+@import 'helpers/colors';
 
 // Alignment
 @import 'helpers/alignment';

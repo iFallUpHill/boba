@@ -11,6 +11,7 @@ const gulp    = require('gulp'),
 	  		flags: {
 				isDist: argv.prod ? true : false,
 				docs: argv.docs ? true : false,
+				highlight: argv.highlight ? true : false,
 				minify: argv.nomin ? false : true,
 				buildAll: argv.buildall ? true : false
 	  		},

@@ -1,37 +1,5 @@
-$desktopHD: 1382px;
-$desktop: 992px;
-$laptop: 768px;
-$tablet: 576px;
-$mobile: 0px;
 
-$resolution-suffixes: xs, sm, md, lg, xl;
 
-$resolution-min-dict: 	(xs, $mobile, $tablet),
-				 		(sm, $tablet, $laptop),
-				 		(md, $laptop, $desktop),
-				 		(lg, $desktop, $desktopHD),
-				 		(xl, $desktopHD, 12000px);
 
-$resolution-max-dict: 	(xs, $tablet - 1px),
-				 		(sm, $laptop - 1px),
-				 		(md, $desktop - 1px),
-				 		(lg, $desktopHD - 1px),
-				 		(xl, 12000px - 1px);
 
-$base-xxl-font-size: 3.5em;
-$base-xl-font-size: 3em;
-$base-lg-font-size: 2.5em;
-$base-md-font-size: 2em;
-$base-sm-font-size: 1.5em;
-$base-xs-font-size: 1em;
-$base-xxs-font-size: 0.8em;
 
-$base-font-weight-bold: 700;
-$base-font-weight-semi-bold: 600;
-$base-font-weight-default: 400;
-$base-font-weight-light: 300;
-
-$base-font-family-heading: 'Fira Sans', sans-serif;
-$base-font-family-default: 'Muli', sans-serif;
-
-$base-border-radius-default: 0.2em;
