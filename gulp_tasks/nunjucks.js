@@ -2,9 +2,9 @@ const gulp 			= require('gulp'),
 	  nunjucks 		= require('gulp-nunjucks'),
       browserSync   = require('browser-sync');
 
-module.exports = (gulp, config, isDist, docs, minify, buildAll) => {
+module.exports = (gulp, config) => {
 
-    docs = isDist ? true : docs;
+    const docs = config.flags.isDist ? true : config.flags.docs;
 
     return () => {
         if (docs) {
