@@ -2,7 +2,7 @@
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
         <title>Code | Build with Boba</title>
         <link rel="stylesheet" href="/boba.min.css">
-        <link rel="stylesheet" href="/documentation.css">
+        <link rel="stylesheet" href="/documentation.min.css">
     </head>
     <body>
         <div class="sidebar-layout">
@@ -172,28 +172,27 @@
                 <p>Clarification</p>
             </div>
             <div class="message-body">
-                <p>Syntax highlighting is powered by <a href="https://highlightjs.org/" target="_blank">highlight.js</a>. Boba does not include code syntax highlighting.</p>
+                <p>Syntax highlighting is powered by <a href="http://prismjs.com/" target="_blank">Prism</a>. Boba does not include code syntax highlighting.</p>
             </div>
         </div>
     </div>
     <div class="col xs-12 md-6 col-middle">
 		<div class="code-block">
-            <pre class="code"><code data-lang="javascript" class="hljs">console.<span class="hljs-built_in">log</span>(<span class="hljs-string">"Boba is great!"</span>);</code></pre>
+            <pre class="code"><code class="language-js prism">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Boba is great!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
         </div>
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="code-block">
-            <pre class="code"><code data-lang="html" class="hljs">&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"code-block"</span>&gt;
-    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"code"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">code</span> <span class="hljs-attr">data-lang</span>=<span class="hljs-string">"javascript"</span>&gt;</span>
+            <pre class="code"><code class="language-html prism"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>code-block<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pre</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>code<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>code</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>language-javascript<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
             console.log("Boba is great!");
-        <span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span></span>
-&lt;<span class="hljs-regexp">/div&gt;</span></code></pre>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>code</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pre</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
         </div>
     </div>
 </div>
-
     <hr class="light">
     <div class="row">
     <div class="col xs-12">
@@ -205,7 +204,7 @@
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="code-block">
-            <pre class="code"><code data-lang="html" class="hljs">This is an &lt;<span class="hljs-keyword">code</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"inline"</span>&gt;.example-<span class="hljs-keyword">class</span>&lt;/<span class="hljs-keyword">code</span>&gt;</code></pre>
+            <pre class="code"><code class="language-html prism">This is an <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>code</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>inline<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>.example-class<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>code</span><span class="token punctuation">></span></span></code></pre>
         </div>
     </div>
 </div>
@@ -215,6 +214,7 @@
                 </div>
             </div>
         </div>
+        <script type="text/javascript" src="/documentation.min.js"></script>
     
 
 </body></html>
