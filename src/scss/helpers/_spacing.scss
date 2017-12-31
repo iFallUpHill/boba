@@ -1,0 +1,56 @@
+.border-box {
+	box-sizing: border-box;
+}
+
+.w-100 {
+	width: 100%;
+}
+
+.h-100 {
+	height: 100%;
+}
+
+$spacing-properties-map:
+(m, margin),
+(p, padding);
+
+$spacing-mapping:
+(0, 0em),
+(1, 0.5em),
+(2, 1em),
+(3, 1.5em),
+(4, 2em);
+
+$single-direction-mapping:
+(t, top),
+(b, bottom),
+(l, left),
+(r, right);
+
+$plane-direction-mapping:
+(v, vertical),
+(h, horizontal);
+
+@each $propPrefix, $property in $spacing-properties-map {
+    @each $suffix, $value in $spacing-mapping {
+        .#{$propPrefix}-#{$suffix} {
+            #{$property}: $value !important;
+        }
+
+	    @each $prefix, $direction in $single-direction-mapping {
+	    	.#{$propPrefix}#{$prefix}-#{$suffix} {
+		        #{$property}-#{$direction}: $value !important;
+		    }
+	    }
+
+	    @each $prefix, $direction in $plane-direction-mapping {
+		    .#{$propPrefix}#{$prefix}-#{$suffix} {
+		        @if $direction == vertical {
+		            #{$property}: $value 0 !important;
+		        } @else if ($direction == horizontal) {
+		            #{$property}: 0 $value !important;
+		        }
+		    }
+		} 
+	}
+}

@@ -9,6 +9,8 @@
     <body>
         {% include "templates/core/_navbar.njk" %}
 
+        {% set version_number = versionNumber %}
+        
         {% block main %}
         {% endblock %}
 

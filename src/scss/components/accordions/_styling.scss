@@ -4,6 +4,7 @@
 	display: block;
 	padding: $accordion-menu-default-vpadding $accordion-menu-default-hpadding;
 	cursor: pointer;
+	margin-bottom: $accordion-menu-header-default-margin;
 }
 
 @mixin accordion-menu-body-base {
@@ -20,6 +21,7 @@
 			li {
 				padding: $accordion-submenu-default-vpadding $accordion-submenu-default-hpadding;
 				cursor: pointer;
+				margin-bottom: $accordion-submenu-item-default-margin;
 			}
 		}
 	}

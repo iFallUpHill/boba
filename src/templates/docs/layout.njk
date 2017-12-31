@@ -9,8 +9,9 @@
     <body>
         <div class="sidebar-layout">
 
-            {% import "templates/docs/core/_topsidenav.njk" as sidebar %}
-            {{ sidebar.generate(active_accordion, active_page) }}
+            {% set version_number = versionNumber %}
+            {% import "templates/docs/core/_topsidenav.njk" as sidebar %}            
+            {{ sidebar.generate(active_accordion, active_page, version_number) }}
             
             <a class="sb-main-overlay" href="#close"></a>
 

@@ -6,6 +6,7 @@ const gulp 				= require('gulp'),
 	  browserSync       = require('browser-sync');
 	  onError         	= require('./helpers/onError.js');
 
+const versionNumber   	= require('../package.json').version;
 
 module.exports = (gulp, config) => {
 
@@ -19,7 +20,7 @@ module.exports = (gulp, config) => {
 					.pipe(plumber({
 						errorHandler: onError
 					}))
-					.pipe(nunjucks.compile())
+					.pipe(nunjucks.compile({versionNumber: versionNumber}))
 					.pipe(gulpif(highlight, prism()))
 					.pipe(gulp.dest(config.dist.html))
 					.pipe(browserSync.reload({stream: true}))

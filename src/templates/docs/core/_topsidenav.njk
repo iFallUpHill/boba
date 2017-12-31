@@ -1,4 +1,4 @@
-{% macro generate(active_accordion, active_page) %}
+{% macro generate(active_accordion, active_page, version_number) %}
 
 <div class="sb-top-navbar sticky">
 	<a class="sb-side-navbar-toggle" href="#boba-sidebar">
@@ -8,8 +8,9 @@
 </div>
 
 <div class="sb-side-navbar" id="boba-sidebar">
-	<div class="sb-side-sticky-region">
+	<div class="sb-side-sticky-region display-flex flex-column">
 		<a href="/">boba</a>
+		<span class="version-tag">Version {{ version_number }}</span>
 	</div>
 	<div class="sb-side-scroll-region">
 		<div class="accordion-menu">

@@ -8,6 +8,7 @@
         <div class="sidebar-layout">
 
             
+                        
             
 
 <div class="sb-top-navbar sticky">
@@ -18,8 +19,9 @@
 </div>
 
 <div class="sb-side-navbar" id="boba-sidebar">
-	<div class="sb-side-sticky-region">
+	<div class="sb-side-sticky-region display-flex flex-column">
 		<a href="/">boba</a>
+		<span class="version-tag">Version 1.0.1</span>
 	</div>
 	<div class="sb-side-scroll-region">
 		<div class="accordion-menu">
@@ -409,8 +411,18 @@
     <div class="row">
     <div class="col xs-12">
         <h1 class="header">Offsets</h1>
-        <h5 class="subheader thin no-margin">Offset columns in a row by 1-11 units using <code class="inline">.offset-[screen-size]-[width]</code> classes to create unique layouts.</h5>
-        <h6 class="subheader thin no-margin">Each column can be offset by a maximum of 11 column units. More information on screen-sizes can be found on boba's <a href="./helpers.html" class="text-blue text-hover-green">helper page</a>.</h6>
+        <h5 class="subheader thin">Offset columns in a row by 1-11 units using <code class="inline">.offset-[screen-size]-[width]</code> classes to create unique layouts.</h5>
+
+        <div class="message blue">
+            <div class="message-header">
+                <p>Clarification</p>
+            </div>
+            <div class="message-body">
+                <p>Each column can be offset by a maximum of (12 - column width) column units. More information on screen-sizes can be found on boba's <a href="./helpers.html" class="text-blue text-hover-green">helper page</a>.</p>
+            </div>
+        </div>
+
+    <h6 class="subheader thin no-margin"></h6>
     </div>
     <div class="col xs-12 col-middle">
         <div class="row">
