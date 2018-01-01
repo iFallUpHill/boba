@@ -5,7 +5,6 @@ $header-font-weight-light:      $base-font-weight-default !default;
 $header-color:                  $color-dark !default;
 $header-vertical-margin:        0.5em;
 $header-margin-top:             0.5em;
-$sub-header-margin-top:         -0.05em;
 
 $h1-font-size: 2.25em;
 $h2-font-size: 2em;
@@ -44,7 +43,7 @@ h6, .h6 {
         margin-bottom: 0;
 
         + .subheader {
-            margin-top: $sub-header-margin-top;
+            margin-top: 0;
             line-height: 1.25;
         }
     }
