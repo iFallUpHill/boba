@@ -2,19 +2,37 @@
     <div class="col xs-12">
         <h4 class="header">Top Navbar</h4>
         <h6 class="subheader thin ">Use the <code class="inline">sb-top-navbar</code> section to have a top navbar appear on smaller viewports that contains a toggle for the sidebar.</h6> 
-        <div class="message orange">
+        <div class="message green">
             <div class="message-header">
-                <p>Tip</p>
+                <p>Option</p>
             </div>
             <div class="message-body">
-                <p>Add the <code class="inline">.sticky</code> class to your <code class="inline">sb-top-navbar</code> to have the menu stick to the top of the page while scrolling.</p>
+                <p>Add the <code class="inline">.sticky</code> class to your <code class="inline">sb-top-navbar</code> to have the navbar stick to the top of the page. The navbar will be treated as <code class="inline">position: relative;</code> until the user scrolls down the page at which point it will behave as <code class="inline">position: fixed;</code>.</p>
+                <br />
+                <p>Alternatively, add the <code class="inline">.fixed</code> class to your <code class="inline">sb-top-navbar</code> to have the navbar fixed to the top of the page. A fixed navbar sits on top of the normal page content. Be sure to account for this!</p>
             </div>
         </div>                         
     </div>
     <div class="col xs-12">
+        <h5 class="header mb-1">Sticky</h5>
         <div class="code-block">
             <pre class="code"><code class="language-html">&lt;!-- The top navbar only appears on smaller viewports --&gt;
 &lt;div class="sb-top-navbar sticky"&gt;
+    &lt;!-- The hamburger menu that toggles the sidebar on smaller viewports --&gt;
+    &lt;a class="sb-side-navbar-toggle" href="#boba-sidebar"&gt;
+        &lt;span class="sb-menu-icon"&gt;&lt;/span&gt;
+    &lt;/a&gt;
+
+    &lt;!-- You can add other content to the top navbar --&gt;
+    &lt;a class="button orange" href="#"&gt;Button&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+    </div>
+    <div class="col xs-12">
+        <h5 class="header mb-1">Fixed</h5>
+        <div class="code-block">
+            <pre class="code"><code class="language-html">&lt;!-- The top navbar only appears on smaller viewports --&gt;
+&lt;div class="sb-top-navbar fixed"&gt;
     &lt;!-- The hamburger menu that toggles the sidebar on smaller viewports --&gt;
     &lt;a class="sb-side-navbar-toggle" href="#boba-sidebar"&gt;
         &lt;span class="sb-menu-icon"&gt;&lt;/span&gt;

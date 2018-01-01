@@ -15,7 +15,7 @@
 	<a class="sb-side-navbar-toggle" href="#boba-sidebar">
 		<span class="sb-menu-icon"></span>
 	</a>
-	<a class="button orange" href="/download.html">Get boba!</a>
+	<a class="button orange" href="./installation.html">Get boba!</a>
 </div>
 
 <div class="sb-side-navbar" id="boba-sidebar">
@@ -174,8 +174,9 @@
                 <p>Clarification</p>
             </div>
             <div class="message-body">
-                <p>Use a <code class="inline">.row</code> element to hold up to 12 <code class="inline">.col</code> elements. Unsized column elements will automatically expand to fill a row.</p>
-                <p>Set specific widths from 1-12 using <code class="inline">.[screen-size]-[width]</code> classes. More information on screen-sizes can be found on boba's <a href="./helpers.html" class="text-blue text-hover-green">helper page.</a></p>
+                <p>Use a <code class="inline">.row</code> element to hold up to 12 <code class="inline">.col</code> elements. Unsized column elements will automatically expand to fill the rest of a row.</p>
+                <br>
+                <p>Set specific widths from 1-12 using the <code class="inline">.[screen-size]-[width]</code> classes. More information on screen-sizes can be found on boba's <a href="./breakpoints.html">breakpoint cheat sheet</a>.</p>
             </div>
         </div>
     </div>
@@ -186,7 +187,7 @@
                     1
                 </div>
             </div>
-            <div class="col hide-sm">
+            <div class="col hide-until-md">
                 <div class="bg-dark text-white text-center vertical-center-content" style="height:50px">
                     .col
                 </div>
@@ -198,7 +199,7 @@
                     2
                 </div>
             </div>
-            <div class="col hide-sm">
+            <div class="col hide-until-md">
                 <div class="bg-dark text-white text-center vertical-center-content" style="height:50px">
                     .col
                 </div>
@@ -210,7 +211,7 @@
                     3
                 </div>
             </div>
-            <div class="col hide-sm">
+            <div class="col hide-until-md">
                 <div class="bg-dark text-white text-center vertical-center-content" style="height:50px">
                     .col
                 </div>
@@ -222,7 +223,7 @@
                     4
                 </div>
             </div>
-            <div class="col hide-sm">
+            <div class="col hide-until-md">
                 <div class="bg-dark text-white text-center vertical-center-content" style="height:50px">
                     .col
                 </div>
@@ -234,7 +235,7 @@
                     5
                 </div>
             </div>
-            <div class="col hide-sm">
+            <div class="col hide-until-md">
                 <div class="bg-dark text-white text-center vertical-center-content" style="height:50px">
                     .col
                 </div>
@@ -246,7 +247,7 @@
                     6
                 </div>
             </div>
-            <div class="col hide-sm">
+            <div class="col hide-until-md">
                 <div class="bg-dark text-white text-center vertical-center-content" style="height:50px">
                     .col
                 </div>
@@ -258,7 +259,7 @@
                     7
                 </div>
             </div>
-            <div class="col hide-sm">
+            <div class="col hide-until-md">
                 <div class="bg-dark text-white text-center vertical-center-content" style="height:50px">
                     .col
                 </div>
@@ -270,7 +271,7 @@
                     8
                 </div>
             </div>
-            <div class="col hide-sm">
+            <div class="col hide-until-md">
                 <div class="bg-dark text-white text-center vertical-center-content" style="height:50px">
                     .col
                 </div>
@@ -282,7 +283,7 @@
                     9
                 </div>
             </div>
-            <div class="col hide-sm">
+            <div class="col hide-until-md">
                 <div class="bg-dark text-white text-center vertical-center-content" style="height:50px">
                     .col
                 </div>
@@ -294,7 +295,7 @@
                     10
                 </div>
             </div>
-            <div class="col hide-sm">
+            <div class="col hide-until-md">
                 <div class="bg-dark text-white text-center vertical-center-content" style="height:50px">
                     .col
                 </div>
@@ -306,7 +307,7 @@
                     11
                 </div>
             </div>
-            <div class="col hide-sm">
+            <div class="col hide-until-md">
                 <div class="bg-dark text-white text-center vertical-center-content" style="height:50px">
                     .col
                 </div>
@@ -411,14 +412,14 @@
     <div class="row">
     <div class="col xs-12">
         <h1 class="header">Offsets</h1>
-        <h5 class="subheader thin">Offset columns in a row by 1-11 units using <code class="inline">.offset-[screen-size]-[width]</code> classes to create unique layouts.</h5>
+        <h5 class="subheader thin">Offset columns in a row by 1-11 units using the <code class="inline">.offset-[screen-size]-[width]</code> classes to create unique layouts.</h5>
 
         <div class="message blue">
             <div class="message-header">
                 <p>Clarification</p>
             </div>
             <div class="message-body">
-                <p>Each column can be offset by a maximum of (12 - column width) column units. More information on screen-sizes can be found on boba's <a href="./helpers.html" class="text-blue text-hover-green">helper page</a>.</p>
+                <p>Each column can be offset by a maximum of (12 - column width) column units. More information on screen-sizes can be found on boba's <a href="./breakpoints.html">breakpoint cheat sheet</a>.</p>
             </div>
         </div>
 
@@ -472,7 +473,7 @@
     <div class="row">
     <div class="col xs-12">
         <h1 class="header">Vertical Center Content</h1>
-        <h5 class="subheader thin no-margin">Easily vertically-center content within a column using the <code class="inline">.vertical-center-content</code> class.</h5>
+        <h5 class="subheader thin no-margin">Easily vertically center content within a column using the <code class="inline">.vertical-center-content</code> class.</h5>
     </div>
     <div class="col xs-12 col-middle">
         <div class="row">
@@ -509,7 +510,7 @@
     <div class="row">
     <div class="col xs-12">
         <h1 class="header">Column Alignment</h1>
-        <h5 class="subheader thin no-margin">Vertically align columns within a row using the <code class="inline">.col-top</code>, <code class="inline">.col-middle</code>, and <code class="inline">.col-bottom</code> classes.</h5>
+        <h5 class="subheader thin no-margin">Vertically align columns in a row using the <code class="inline">.col-top</code>, <code class="inline">.col-middle</code>, and <code class="inline">.col-bottom</code> classes.</h5>
     </div>
     <div class="col xs-12 col-middle">
         <div class="row" style="height:200px">
@@ -709,7 +710,7 @@
     <div class="col xs-12">
         <h4 class="header">Row Align Stretch</h4>
         <h6 class="subheader thin no-margin">All columns in a row will stretch to the max height of the row using the <code class="inline">.row-align-stretch</code> class.</h6>
-        <h6 class="subheader thin no-margin">The effect is subtle, but trust us, it works!</h6>
+        <h6 class="subheader thin mt-0">The effect is subtle, but trust us, it works!</h6>
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="row row-align-stretch" style="height:200px;">
@@ -757,7 +758,7 @@
 <div class="row">
     <div class="col xs-12">
         <h4 class="header">Row Align Space Around</h4>
-        <h6 class="subheader thin no-margin">By using the <code class="inline">.row-align-space-around</code> class, when a row wraps, each sub-row will have an equal amount of spacing around them on both sides, including the first/last rows.</h6>
+        <h6 class="subheader thin no-margin">By using the <code class="inline">.row-align-space-around</code> class, when a row wraps, each sub-row will have an equal amount of spacing around them on each side, including the first/last rows.</h6>
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="row row-align-space-around" style="height: 200px;">
@@ -1090,7 +1091,7 @@
                 <p>Clarification</p>
             </div>
             <div class="message-body">
-                <p>This only works for columns that do not have user-specified widths and is already the default behavior of basic <code class="inline">.col</code> elements.</p>
+                <p>This only works for columns that do not have user-specified widths and is the default behavior of basic <code class="inline">.col</code> elements.</p>
             </div>
         </div>
     </div>
@@ -1140,7 +1141,7 @@
 <div class="row">
     <div class="col xs-12">
         <h4 class="header">Row Justify Space Around</h4>
-        <h6 class="subheader thin no-margin">By using the <code class="inline">.row-justify-space-around</code> class, each column element in a row will have an equal amount of spacing on both sides, including the first/last columns.</h6>
+        <h6 class="subheader thin no-margin">By using the <code class="inline">.row-justify-space-around</code> class, each column element in a row will have an equal amount of spacing on each sides, including the first/last columns.</h6>
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="row row-justify-space-around">
@@ -1293,7 +1294,7 @@
 <div class="row">
     <div class="col xs-12">
         <h4 class="header">Row Direction Row (Forward)</h4>
-        <h6 class="subheader thin no-margin">Default behavior for columns in a row; columns will appear in sequential order when using the <code class="inline">.row-direction-row</code> class.</h6>
+        <h6 class="subheader thin no-margin">The default behavior for columns in a row. Columns will appear in sequential order when using the <code class="inline">.row-direction-row</code> class.</h6>
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="row row-direction-row">
@@ -1395,7 +1396,7 @@
                 <p>Clarification</p>
             </div>
             <div class="message-body">
-                <p>Column direction will not respect user-specified column widths. All columns will be stretched to fit one full-width column per one row.</p>
+                <p>Column direction will not respect user-specified column widths. All columns will be stretched to fill the entire row.</p>
             </div>
         </div>
     </div>
@@ -1451,7 +1452,7 @@
                 <p>Clarification</p>
             </div>
             <div class="message-body">
-                <p>Column direction will not respect user-specified column widths. All columns will be stretched to fit one full-width column per one row.</p>
+                <p>Column direction will not respect user-specified column widths. All columns will be stretched to fill the entire row.</p>
             </div>
         </div>
     </div>

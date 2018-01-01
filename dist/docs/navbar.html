@@ -15,7 +15,7 @@
 	<a class="sb-side-navbar-toggle" href="#boba-sidebar">
 		<span class="sb-menu-icon"></span>
 	</a>
-	<a class="button orange" href="/download.html">Get boba!</a>
+	<a class="button orange" href="./installation.html">Get boba!</a>
 </div>
 
 <div class="sb-side-navbar" id="boba-sidebar">
@@ -212,8 +212,24 @@
     <hr class="light">
     <div class="row">
     <div class="col xs-12">
-        <h1 class="header">Sticky</h1>
-        <h5 class="subheader thin no-margin">Add the <code class="inline">.sticky</code> class to the navbar to make it stick to the top of the page.</h5>
+        <h1 class="header">Positioning</h1>
+        <h5 class="subheader thin no-margin">Easily change the positioning behavior of your navbar.</h5>
+    </div>
+</div>
+
+<hr class="light">
+<div class="row">
+    <div class="col xs-12">
+        <h4 class="header">Sticky</h4>
+        <h6 class="subheader thin">Add the <code class="inline">.sticky</code> class to the navbar to make it stick to the top of the page.</h6>
+        <div class="message blue m-0">
+            <div class="message-header">
+                <p>Clarification</p>
+            </div>
+            <div class="message-body">
+                <p>The navbar will be treated as <code class="inline">position: relative;</code> until the user scrolls down the page at which point it will behave as <code class="inline">position: fixed;</code>.</p>
+            </div>
+        </div> 
     </div>
     <div class="col xs-12 col-middle">
         <div class="code-block">
@@ -236,6 +252,44 @@
         </div>
     </div>
 </div>
+
+<hr class="light">
+<div class="row">
+    <div class="col xs-12">
+        <h4 class="header">Fixed</h4>
+        <h6 class="subheader thin">Add the <code class="inline">.fixed</code> class to the navbar to make it fixed to the top of the page.</h6>
+        <div class="message orange m-0">
+            <div class="message-header">
+                <p>Tip</p>
+            </div>
+            <div class="message-body">
+                <p>A fixed navbar sits on top of the normal page content. Be sure to account for this!</p>
+            </div>
+        </div> 
+    </div>
+    <div class="col xs-12 col-middle">
+        <div class="code-block">
+            <pre class="code"><code class="language-html prism"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nav</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>navbar fixed<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span>#</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>navbar-brand<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>boba<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>navbar-menu-target<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>example-fixed<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>navbar-menu-toggle<span class="token punctuation">"</span></span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>example-fixed<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>navbar-icon<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>navbar-menu-items<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span>#</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>Category<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span>#</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>Category<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span>#</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>Category<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nav</span><span class="token punctuation">></span></span></code></pre>
+        </div>
+    </div>
+</div>
+
+
     <hr class="light">
     <div class="row">
     <div class="col xs-12">

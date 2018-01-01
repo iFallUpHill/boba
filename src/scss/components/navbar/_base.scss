@@ -6,6 +6,10 @@
 .navbar {
     @include navbar-base;
 
+    &.fixed {
+        position: fixed;
+    }
+
     &.sticky {
         position: sticky;
         top: 0;

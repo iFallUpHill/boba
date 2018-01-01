@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col xs-12">
         <h1 class="header">Notifications</h1>
-        <h5 class="subheader thin no-margin">Notifications come in all colors</h5>
+        <h5 class="subheader thin no-margin">Notifications come in all of <a href="./colors.html">boba's colors</a>.</h5>
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="notification">
@@ -9,7 +9,7 @@
         </div>
         {% for color in global_color_list_core %}
         <div class="notification {{ color}}">
-            <p>Add a <code>.{{ color}}</code> class.</p>
+            <p>This notification uses the <code>.{{ color}}</code> class.</p>
         </div>
         {% endfor %}
     </div>

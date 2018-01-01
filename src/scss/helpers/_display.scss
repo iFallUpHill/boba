@@ -19,7 +19,7 @@ $display-list:
 		}
 	}
 }
-@each $suffix, $measurement, $nextSize in $resolution-max-dict {
+@each $suffix, $measurement, $nextSize in $resolution-min-dict {
 	@media screen and (min-width: #{$measurement}) and (max-width: #{$nextSize}){
 		.hide-#{$suffix} {
 			display: none !important;
@@ -35,12 +35,4 @@ $display-list:
     .display-#{$displaymode} {
         display: $displaymode !important;
     }
-}
-
-.no-margin {
-	margin: 0 !important;
-}
-
-.no-padding {
-	padding: 0 !important;
 }

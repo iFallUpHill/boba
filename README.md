@@ -7,7 +7,49 @@ A lightweight, modular, CSS-only design framework.
 
 [Check out our documentation!](buildwithboba.jasonmh.me "boba's homepage!")
 
-To build from source:
+## What is boba?
+
+boba was born out of frustration with other CSS design frameworks.
+
+* Lightweight at just ~8KB gzipped
+* Modular; easily add or remove components or classes
+* Semantic class names to speed up development 
+* Responsive, flexbox-based grid system
+* Vibrant, fresh color palette
+* **No JavaScript**
+
+## Is boba for you?
+
+Of course it is!
+
+Be it a smaller project or production-scale website, boba has all of the utilities and components that you need to get started quickly and efficiently. In fact, [our entire website](buildwithboba.jasonmh.me "boba's homepage!"), including [our documentation](buildwithboba.jasonmh.me/docs/ "boba's documentation!"), is built entirely using boba's built-in classes.
+
+## Getting Started
+
+### Installation
+
+boba can be installed manually, requested via CDN, or installed via NPM / yarn. 
+
+Check out [our installation guide](buildwithboba.jasonmh.me/docs/installation.html "installing boba!") for more information.
+
+## Browser Support
+
+Boba uses [autoprefixer](https://github.com/postcss/autoprefixer "autoprefixer") to automatically generate browser-specific prefixes needed to support the latest two versions of each browser.
+
+| Browser | Supported Version |
+| :------ | :---------------: | 
+| Internet Explorer | 10+ |
+| Edge | Last 2 |
+| Mozilla Firefox | Last 2 |
+| Google Chrome | Last 2 |
+| Safari | Last 2 |
+| Opera | Last 2 |
+
+Although most of boba is compatible with Internet Explorer 10+, some HTML5 / CSS3 features may not be fully supported.
+
+## Building boba
+
+You can compile your custom version of boba. Check out [our documentation](buildwithboba.jasonmh.me/docs/customize.html "customize boba!") for more information.
 
 ```bash
 git clone 
@@ -16,15 +58,18 @@ npm install
 gulp clean && gulp build --prod
 ```
 
-Gulp commands:
+#### Gulp Commands
+
 * `gulp` // Default task is watch
 * `gulp watch` // Runs a  watch task to automatically rebuild files when changes are made
 * `gulp clean` // Deletes the dist folder
 * `gulp build` // Builds the dist folder
 * `gulp sass` // Compiles SASS
-* `gulp nunjucks` // Renders Nunjucks to HTML
+* `gulp nunjucks` // Renders Nunjucks to HTML (docs only; requires the `--docs` flag)
+* `gulp scripts` // Compiles JavaScript files into one bundle (docs only; requires the `--docs` flag)
 
-Gulp parameters
+#### Gulp Parameters
+
 * `--prod` // Strips comments, removes sourcemaps, minifies files, builds all variations of css; this overrides all of the other parameters
 * `--docs` // Includes the documentation css / nunjuck processes in the build
 * `--highlight` // Applies syntax highlighting to code blocks in the documentation
