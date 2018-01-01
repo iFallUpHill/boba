@@ -6,14 +6,16 @@ const gulp    = require('gulp'),
 	  argv    = require('yargs').argv,
 	  del     = require('del'),
 	  runSeq  = require("run-sequence"),
-	  browserSync = require('browser-sync'),
+	  browserSync = require("browser-sync"),
+	  validTags = ["major", "minor", "patch"],
 	  config  = {
 	  		flags: {
 				isDist: argv.prod ? true : false,
 				docs: argv.docs ? true : false,
 				highlight: argv.highlight ? true : false,
 				minify: argv.nomin ? false : true,
-				buildAll: argv.buildall ? true : false
+				buildAll: argv.buildall ? true : false,
+				version: validTags.includes(argv.version) ? argv.version : false
 	  		},
 			src: {
 				html: 'src/**/*.html',

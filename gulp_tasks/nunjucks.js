@@ -6,16 +6,48 @@ const gulp 				= require('gulp'),
 	  browserSync       = require('browser-sync');
 	  onError         	= require('./helpers/onError.js');
 
-const versionNumber   	= require('../package.json').version;
-
 module.exports = (gulp, config) => {
 
 	const isDist = config.flags.isDist;
 	const docs =  isDist ? true : config.flags.docs;
-	const highlight =  isDist ? true : config.flags.highlight;
 
 	return () => {
 		if (docs) {
+			const version = config.flags.version;
+			const highlight =  isDist ? true : config.flags.highlight;
+			let versionNumber = require('../package.json').version;
+
+			if (version) {
+				let versionDigits = versionNumber.split('.');
+
+				switch (version) {
+					case "major":
+						versionDigits[0] = (parseInt(versionDigits[0]) + 1).toString();
+						break;
+					case "minor":
+						versionDigits[1] = (parseInt(versionDigits[1]) + 1).toString();
+						break;
+					case "patch":
+						versionDigits[2] = (parseInt(versionDigits[2]) + 1).toString();
+						break;
+					default:
+						break;
+				}
+
+				versionNumber = versionDigits.join('.');		
+			}
+
+			if (isDist) {
+				console.log(" ");
+				console.log("******************************");
+				console.log("* Production Build Detected! *");
+				console.log("* Did you version correctly? *");				
+				console.log("******************************");
+				console.log(" ");
+				console.log("Building docs for version", versionNumber);
+				console.log(" ");
+			}
+
 			return gulp.src(config.src.html, { base : './src' })
 					.pipe(plumber({
 						errorHandler: onError

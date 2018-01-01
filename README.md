@@ -73,5 +73,6 @@ gulp clean && gulp build --prod
 * `--prod` // Strips comments, removes sourcemaps, minifies files, builds all variations of css; this overrides all of the other parameters
 * `--docs` // Includes the documentation css / nunjuck processes in the build
 * `--highlight` // Applies syntax highlighting to code blocks in the documentation
+* `--version` // Accepts 'major', 'minor', and 'patch' as values; used to specify the documentation version target corresponding to an npm version increment
 * `--nomin` // Stops minification of files; useful for debugging
 * `--buildall` // Builds all versions of the framework
