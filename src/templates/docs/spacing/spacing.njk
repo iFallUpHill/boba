@@ -1,33 +1,53 @@
+{% set margin_utilities = ['m', 'mt', 'mb', 'ml', 'mr', 'mv', 'mh'] %}
+{% set padding_utilities = ['p', 'pt', 'pb', 'pl', 'pr', 'pv', 'ph'] %}
+{% set spacing_prose = ['margin', 'padding'] %}
+{% set utilities_prose = ['', 'top', 'bottom', 'left', 'right', 'vertical', 'horizontal'] %}
+{% set iterations = 5 %}
+
+
 <div class="row">
     <div class="col xs-12">
         <h1 class="header">Spacing</h1>
         <h5 class="subheader thin no-margin">Hassle-free spacing classes to make perfect positioning painless.</h5>
     </div>
-    <div class="col xs-12 col-middle">
-        <div>
+
+    {% for spacingUtil in spacing_prose %}
+    <div class="col xs-12 md-6 col-top">
         <table class="bordered">
             <tbody>
-                <tr>
-                    <td rowspan="2"><span class="bold">Content Spacing</span></td>
-                </tr>
-                <tr>
-                    <td><code class="inline">.main-content</code></td>
-                    <td>Add a comfortable amount of padding to a top-level, content-containing element.</td>
-                </tr>
+                {% if spacingUtil == 'margin'  %}
+                    {% set utilArray = margin_utilities %}
+                {% elif spacingUtil == 'padding' %}
+                    {% set utilArray = padding_utilities%}
+                {% endif %}
+                
+                {% for classPrefix in utilArray %}
+                    {% set loopIndex = loop.index0 %}
+                    <tr>
+                        <td rowspan="{{ iterations + 1 }}"><span class="bold">{{ spacingUtil | capitalize }} {{ utilities_prose[loopIndex] | capitalize }}</span></td>
+                    </tr>
 
-                <tr>
-                    <td rowspan="3"><span class="bold">Spacing Resets</span></td>
-                </tr>
-                <tr>
-                    <td><code class="inline">.no-margin</code></td>
-                    <td>Removes all margin from an element.</td>
-                </tr>
-                <tr>
-                    <td><code class="inline">.no-padding</code></td>
-                    <td>Removes all padding from an element.</td>
-                </tr>
+                    {% for i in range(0, iterations) -%}
+                    <tr>
+                        <td class="text-center no-wrap"><code class="inline">.{{ classPrefix }}-{{i}}</code></td>
+                        {% if utilities_prose[loopIndex] == "vertical" %}
+                            <td>Applies <code class="inline">{{ spacingUtil }}: {{ i * 0.5 }}em 0;</code></td>
+                        {% elif utilities_prose[loopIndex] == "horizontal" %}
+                            <td>Applies <code class="inline">{{ spacingUtil }}: 0 {{ i * 0.5 }}em; </code></td>
+                        {% elif loopIndex == 0 %}
+                            <td>Applies <code class="inline">{{ spacingUtil }}: {{ i * 0.5 }}em; </code></td>
+                        {% else %}
+                            <td>Applies <code class="inline">{{ spacingUtil }}-{{ utilities_prose[loopIndex] }}: {{ i * 0.5 }}em;</code></td>
+                        {% endif %}
+                    </tr>
+                    {%- endfor %}
+                    {% if loopIndex != (loop.length -1) %}
+                        <tr><td colspan="3" class="border-none">&nbsp;</td></tr>
+                    {% endif %}
+                {% endfor %}
             </tbody>
         </table>
-        </div>
     </div>
+    {% endfor %}
+
 </div>

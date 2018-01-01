@@ -5,7 +5,7 @@
     @include breadcrumb-base;
 
 
-    // Separator styles
+// Separator styles
     &.pointer-separators {
         ul li {
             &::before {
@@ -57,7 +57,7 @@
         }
     }
 
-    // Aligners
+// Alignment
     &.left {
         ul {
             justify-content: flex-start;
@@ -76,10 +76,12 @@
         }
     }
 
+// Colors
     @if $include-color-palette {
         @include button-colors;
     }
 
+// Sizes
     @each $size, $fontSize, $spacing in $breadcrumb-font-sizing-spacing-padding-list {
         &.#{$size} {
             height: $spacing;

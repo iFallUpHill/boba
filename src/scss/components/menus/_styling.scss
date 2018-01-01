@@ -1,8 +1,10 @@
+@import 'constants';
+
 @mixin menu-base {
 
     .menu-label {
-        padding: 0.6em 1em;
-        border-radius: $base-border-radius-default $base-border-radius-default 0 0;
+        padding: 0.6em $menu-text-left-offset;
+        border-radius: $border-radius $border-radius 0 0;
         &:not(:last-child) {
             margin-bottom: 0;
         }
@@ -13,18 +15,18 @@
     ul {
         list-style: none;
         ul {
-            margin: $base-border-radius-default 0 $base-border-radius-default 2.2em;
+            margin: $border-radius 0 $border-radius 2.2em;
 
             li {
                 a {
-                    border-top-left-radius: $base-border-radius-default;
-                    border-bottom-left-radius: $base-border-radius-default;
+                    border-top-left-radius: $border-radius;
+                    border-bottom-left-radius: $border-radius;
                 }
             }
         }
         &.menu-list {
             line-height: 1.25;
-            border-radius: 0 0 4px 4px;
+            border-radius: 0 0 $border-radius $border-radius;
 
             li {
                 position: relative;
@@ -32,7 +34,7 @@
                 a {
                     cursor: pointer;
                     display: block;
-                    padding: 0.5em 0.75em;
+                    padding: 0.5em $menu-text-left-offset;
                 }
             }
         }

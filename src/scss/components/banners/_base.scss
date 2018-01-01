@@ -4,6 +4,7 @@
 .banner {
 	@include banner-base;
 
+// Banner sections
 	.banner-header, .banner-footer {
 		flex-grow: 0;
   		flex-shrink: 0;

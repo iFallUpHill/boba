@@ -54,7 +54,7 @@
     &.boxed {
         li {
             a {
-                border-radius: 3px 3px 0 0;
+                border-radius: $border-radius $border-radius 0 0;
                 border-bottom: 1px solid darken-1($color-light);
             }
             &.active {
@@ -71,7 +71,7 @@
             }
             &:hover {
                 background-color: $color-dark;
-                border-radius: 3px 3px 0 0;
+                border-radius: $border-radius $border-radius $border-radius $border-radius 0 0;
             }
         }
     }

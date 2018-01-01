@@ -4,7 +4,7 @@
 .progress {
     display: flex;
     overflow: hidden;
-    background-color: #e9ecef;
+    background-color: $progess-bar-background-color;
     border-radius: $progress-border-radius-default;
     font-size: $progress-font-size-default;
     height: $progress-height-default;

@@ -13,3 +13,11 @@
 .border-thin {
     border-width: 0.05em;
 }
+
+.border-transparent {
+    border-color: transparent !important;
+}
+
+.border-none {
+    border: none !important;
+}
