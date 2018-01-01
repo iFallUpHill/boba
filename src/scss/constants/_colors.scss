@@ -66,5 +66,9 @@ $color-shade-list: (lighten-1, lighten-2, lighten-3, darken-1, darken-2, darken-
 }
 
 @function transparentBG($base-color) {
-	@return transparentize($base-color, $transparent-opacity-default);
+	@return rgba-to-rgb(transparentize($base-color, $transparent-opacity-default));
+}
+
+@function rgba-to-rgb($rgba, $background: #fff) {
+	@return mix(rgb(red($rgba), green($rgba), blue($rgba)), $background, alpha($rgba) * 100%)
 }
