@@ -5,7 +5,7 @@ A lightweight, modular, CSS-only design framework.
 [![npm](https://img.shields.io/npm/l/boba.svg)]()
 [![CircleCI](https://img.shields.io/circleci/project/github/iFallUpHill/boba.svg)]()
 
-[Check out our documentation!](buildwithboba.jasonmh.me "boba's homepage!")
+[Check out our documentation!](https://buildwithboba.com/ "boba's homepage!")
 
 ## What is boba?
 
@@ -22,7 +22,7 @@ boba was born out of frustration with other CSS design frameworks.
 
 Of course it is!
 
-Be it a smaller project or production-scale website, boba has all of the utilities and components that you need to get started quickly and efficiently. In fact, [our entire website](buildwithboba.jasonmh.me "boba's homepage!"), including [our documentation](buildwithboba.jasonmh.me/docs/ "boba's documentation!"), is built entirely using boba's built-in classes.
+Be it a smaller project or production-scale website, boba has all of the utilities and components that you need to get started quickly and efficiently. In fact, [our entire website](https://buildwithboba.com/ "boba's homepage!"), including [our documentation](https://buildwithboba.com/docs/ "boba's documentation!"), is built entirely using boba's built-in classes.
 
 ## Getting Started
 
@@ -30,7 +30,7 @@ Be it a smaller project or production-scale website, boba has all of the utiliti
 
 boba can be installed manually, requested via CDN, or installed via NPM / yarn. 
 
-Check out [our installation guide](buildwithboba.jasonmh.me/docs/installation.html "installing boba!") for more information.
+Check out [our installation guide](https://buildwithboba.com/docs/installation.html "installing boba!") for more information.
 
 ## Browser Support
 
@@ -49,7 +49,7 @@ Although most of boba is compatible with Internet Explorer 10+, some HTML5 / CSS
 
 ## Building boba
 
-You can compile your custom version of boba. Check out [our documentation](buildwithboba.jasonmh.me/docs/customize.html "customize boba!") for more information.
+You can compile your custom version of boba. Check out [our documentation](https://buildwithboba.com/docs/customize.html "customize boba!") for more information.
 
 ```bash
 git clone 
