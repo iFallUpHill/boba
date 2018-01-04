@@ -7,8 +7,7 @@ const gulp            = require('gulp'),
 	  babel           = require('gulp-babel'),
 	  gulpif          = require('gulp-if'),
 	  stripDebug      = require('gulp-strip-debug'),
-	  browserSync     = require('browser-sync'),
-	  onError         = require('./helpers/onError.js');
+	  browserSync     = require('browser-sync');
 
 module.exports = (gulp, config) => {
 
@@ -17,20 +16,22 @@ module.exports = (gulp, config) => {
 
 	return () => {
 		if (docs) {
-		  gulp.src(config.src.js_docs)
-			  .pipe(gulpif(!isDist, sourcemaps.init()))
-			  .pipe(plumber({
-				  errorHandler: onError
-			  }))
-			  .pipe(gulpif(isDist, stripDebug()))
-			  .pipe(eslint())
-			  .pipe(eslint.format())
-			  .pipe(babel({presets: ['env']}))
-			  .pipe(gulpif(isDist, uglify()))
-			  .pipe(concat(config.dist.min_js_docs))
-			  .pipe(gulpif(!isDist, sourcemaps.write()))
-			  .pipe(gulp.dest(config.dist.js))
-			  .pipe(browserSync.reload({stream: true}))
-		};
+			gulp.src(config.src.js_docs)
+				.pipe(gulpif(!isDist, sourcemaps.init()))
+				.pipe(plumber({
+					errorHandler: err => {
+						console.error(err);
+					}
+				}))
+				.pipe(gulpif(isDist, stripDebug()))
+				.pipe(eslint())
+				.pipe(eslint.format())
+				.pipe(babel({presets: ['env']}))
+				.pipe(gulpif(isDist, uglify()))
+				.pipe(concat(config.dist.min_js_docs))
+				.pipe(gulpif(!isDist, sourcemaps.write()))
+				.pipe(gulp.dest(config.dist.js))
+				.pipe(browserSync.reload({stream: true}))
+		}
 	}
 };

@@ -4,7 +4,6 @@ const gulp 				= require('gulp'),
 	  prism    			= require('gulp-prism'),
 	  gulpif            = require('gulp-if'),
 	  browserSync       = require('browser-sync');
-	  onError         	= require('./helpers/onError.js');
 
 module.exports = (gulp, config) => {
 
@@ -49,13 +48,14 @@ module.exports = (gulp, config) => {
 			}
 
 			return gulp.src(config.src.html, { base : './src' })
-					.pipe(plumber({
-						errorHandler: onError
-					}))
-					.pipe(nunjucks.compile({versionNumber: versionNumber}))
-					.pipe(gulpif(highlight, prism()))
-					.pipe(gulp.dest(config.dist.html))
-					.pipe(browserSync.reload({stream: true}))
+						.pipe(plumber({
+							errorHandler: err => {
+								console.error(err);
+							}
+						}))
+						.pipe(nunjucks.compile({versionNumber: versionNumber}))
+						.pipe(gulpif(highlight, prism()))
+						.pipe(gulp.dest(config.dist.html))
 		}
 	};
 };

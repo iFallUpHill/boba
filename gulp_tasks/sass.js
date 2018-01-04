@@ -8,8 +8,8 @@ const gulp            = require('gulp'),
 	  sourcemaps      = require('gulp-sourcemaps'),
 	  gulpif          = require('gulp-if'),
 	  replace         = require('gulp-replace'),
-	  browserSync     = require('browser-sync'),
-	  onError         = require('./helpers/onError.js');
+	  browserSync     = require('browser-sync');
+
 
 module.exports = (gulp, config) => {
 
@@ -24,7 +24,9 @@ module.exports = (gulp, config) => {
 		gulp.src(config.src.sass)
 			.pipe(gulpif(!isDist, sourcemaps.init()))
 			.pipe(plumber({
-				errorHandler: onError
+				errorHandler: err => {
+					console.error(err);
+				}
 			}))
 			.pipe(sass())
 			.pipe(rename(config.dist.min_css))
@@ -46,7 +48,9 @@ module.exports = (gulp, config) => {
 			gulp.src(config.src.sass_docs)
 				.pipe(gulpif(!isDist, sourcemaps.init()))
 				.pipe(plumber({
-					errorHandler: onError
+				errorHandler: err => {
+						console.error(err);
+					}
 				}))
 				.pipe(sass())
 				.pipe(rename(config.dist.min_css_docs))
@@ -73,7 +77,9 @@ module.exports = (gulp, config) => {
 				.pipe(replace('$include-color-helpers-extended: true', '$include-color-helpers-extended: false'))
 				.pipe(gulpif(!isDist, sourcemaps.init()))
 				.pipe(plumber({
-					errorHandler: onError
+					errorHandler: err => {
+						console.error(err);
+					}
 				}))
 				.pipe(sass())
 				.pipe(rename(config.dist.min_css_core))
@@ -96,7 +102,9 @@ module.exports = (gulp, config) => {
 				.pipe(replace('$include-color-helpers-extended: true', '$include-color-helpers-extended: false'))
 				.pipe(gulpif(!isDist, sourcemaps.init()))
 				.pipe(plumber({
-					errorHandler: onError
+					errorHandler: err => {
+						console.error(err);
+					}
 				}))
 				.pipe(sass())
 				.pipe(rename(config.dist.min_css_lite))

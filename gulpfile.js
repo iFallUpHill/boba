@@ -55,6 +55,12 @@ gulp.task('sass', getTask('sass'));
 gulp.task('nunjucks', getTask('nunjucks'));
 gulp.task('scripts', getTask('scripts'));
 
+// Wait for nunjucks to finish before reloading browser
+gulp.task('nunjucks-reload', ['nunjucks'], done => {
+	browserSync.reload();
+    done();
+});
+
 // --------------------------------------------------------------------
 // Extra Task: Clean
 // --------------------------------------------------------------------
@@ -72,7 +78,7 @@ gulp.task('watch', function() {
 		server: './dist'
 	});
 	gulp.watch(config.watch.sass, ['sass']);
-	gulp.watch(config.src.nunjucks_templates, ['nunjucks']).on('change', browserSync.reload);
+	gulp.watch(config.src.nunjucks_templates, ['nunjucks-reload']);
 	gulp.watch(config.src.js_docs, ['scripts']);
 });
 
@@ -89,5 +95,5 @@ gulp.task('build', function(callback) {
 // --------------------------------------------------------------------
 
 gulp.task('default', function(callback) {
-	runSeq('clean', ['sass', 'nunjucks', 'scripts'], 'watch', callback);
+	runSeq('clean', ['sass', 'nunjucks-reload', 'scripts'], 'watch', callback);
 });
