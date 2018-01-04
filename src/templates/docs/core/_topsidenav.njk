@@ -42,32 +42,12 @@
 			</div>
 		</div>
 		<div class="accordion-menu">
-			<input type="checkbox" id="utilities" name="accordion-checkbox" hidden {{ "checked" if active_accordion == "utilities" }} />
-			<label class="accordion-header {{ "bold" if active_accordion == "utilities" }}" for="utilities">
-				Utilities
-			</label>
-			<div class="accordion-body">
-				<ul class="accordion-submenu">
-					<li class="{{ "bold" if active_page == "animations" }}"><a href="/docs/animations.html">Animations</a></li>
-					<li class="{{ "bold" if active_page == "background" }}"><a href="/docs/background.html">Background</a></li>
-					<li class="{{ "bold" if active_page == "borders" }}"><a href="/docs/borders.html">Borders</a></li>
-					<li class="{{ "bold" if active_page == "display" }}"><a href="/docs/display.html">Display</a></li>
-					<li class="{{ "bold" if active_page == "flex" }}"><a href="/docs/flex.html">Flex</a></li>
-					<li class="{{ "bold" if active_page == "images" }}"><a href="/docs/images.html">Images</a></li>
-					<li class="{{ "bold" if active_page == "shapes" }}"><a href="/docs/shapes.html">Shapes</a></li>
-					<li class="{{ "bold" if active_page == "spacing" }}"><a href="/docs/spacing.html">Spacing</a></li>
-					<li class="{{ "bold" if active_page == "text" }}"><a href="/docs/text.html">Text</a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="accordion-menu">
 			<input type="checkbox" id="layout" name="accordion-checkbox" hidden {{ "checked" if active_accordion == "layout" }} />
 			<label class="accordion-header {{ "bold" if active_accordion == "layout" }}" for="layout">
 				Layout
 			</label>
 			<div class="accordion-body">
 				<ul class="accordion-submenu">
-					<li class="{{ "bold" if active_page == "dividers" }}"><a href="/docs/dividers.html">Dividers</a></li>
 					<li class="{{ "bold" if active_page == "grid" }}"><a href="/docs/grid.html">Grid</a></li>
 					<li class="{{ "bold" if active_page == "navbar" }}"><a href="/docs/navbar.html">Navbar</a></li>
 					<li class="{{ "bold" if active_page == "sidebar" }}"><a href="/docs/sidebar.html">Sidebar</a></li>
@@ -90,6 +70,7 @@
 					<li class="{{ "bold" if active_page == "notifications" }}"><a href="/docs/notifications.html">Notifications</a></li>
 					<li class="{{ "bold" if active_page == "pagination" }}"><a href="/docs/pagination.html">Pagination</a></li>
 					<li class="{{ "bold" if active_page == "tabs" }}"><a href="/docs/tabs.html">Tabs</a></li>
+					<li class="{{ "bold" if active_page == "tables" }}"><a href="/docs/tables.html">Tables</a></li>
 				</ul>
 			</div>
 		</div>
@@ -103,10 +84,10 @@
 					<li class="{{ "bold" if active_page == "buttons" }}"><a href="/docs/buttons.html">Buttons</a></li>
 					<li class="{{ "bold" if active_page == "code" }}"><a href="/docs/code.html">Code</a></li>
 					<li class="{{ "bold" if active_page == "counters" }}"><a href="/docs/counters.html">Counters</a></li>
+					<li class="{{ "bold" if active_page == "dividers" }}"><a href="/docs/dividers.html">Dividers</a></li>
 					<li class="{{ "bold" if active_page == "labels" }}"><a href="/docs/labels.html">Labels</a></li>
 					<li class="{{ "bold" if active_page == "lists" }}"><a href="/docs/lists.html">Lists</a></li>
 					<li class="{{ "bold" if active_page == "progress" }}"><a href="/docs/progress.html">Progress</a></li>
-					<li class="{{ "bold" if active_page == "tables" }}"><a href="/docs/tables.html">Tables</a></li>
 				</ul>
 			</div>
 		</div>
@@ -120,6 +101,25 @@
 					<li class="{{ "bold" if active_page == "inputs" }}"><a href="/docs/inputs.html">Inputs</a></li>
 					<li class="{{ "bold" if active_page == "selects" }}"><a href="/docs/selects.html">Selects</a></li>
 					<li class="{{ "bold" if active_page == "textareas" }}"><a href="/docs/textareas.html">Textareas</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="accordion-menu">
+			<input type="checkbox" id="utilities" name="accordion-checkbox" hidden {{ "checked" if active_accordion == "utilities" }} />
+			<label class="accordion-header {{ "bold" if active_accordion == "utilities" }}" for="utilities">
+				Utilities
+			</label>
+			<div class="accordion-body">
+				<ul class="accordion-submenu">
+					<li class="{{ "bold" if active_page == "animations" }}"><a href="/docs/animations.html">Animations</a></li>
+					<li class="{{ "bold" if active_page == "background" }}"><a href="/docs/background.html">Background</a></li>
+					<li class="{{ "bold" if active_page == "borders" }}"><a href="/docs/borders.html">Borders</a></li>
+					<li class="{{ "bold" if active_page == "display" }}"><a href="/docs/display.html">Display</a></li>
+					<li class="{{ "bold" if active_page == "flex" }}"><a href="/docs/flex.html">Flex</a></li>
+					<li class="{{ "bold" if active_page == "images" }}"><a href="/docs/images.html">Images</a></li>
+					<li class="{{ "bold" if active_page == "shapes" }}"><a href="/docs/shapes.html">Shapes</a></li>
+					<li class="{{ "bold" if active_page == "spacing" }}"><a href="/docs/spacing.html">Spacing</a></li>
+					<li class="{{ "bold" if active_page == "text" }}"><a href="/docs/text.html">Text</a></li>
 				</ul>
 			</div>
 		</div>

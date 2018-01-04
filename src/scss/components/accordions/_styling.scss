@@ -12,6 +12,7 @@
 	overflow: hidden;
 	max-height: 0;
 	transition: max-height .3s ease-in-out;
+	padding-left: $accordion-submenu-default-body-padding;
 
 	ul {
 		&.accordion-submenu {

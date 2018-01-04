@@ -1,34 +1,34 @@
 // 2D Transformations
 .hover-grow {
-    &:hover{
+    &:hover, &:focus {
         transform: scale(1.05, 1.05);
         transition-duration: 0.3s;
         transition-property: transform;
     }
 }
 .hover-shrink {
-    &:hover{
+    &:hover, &:focus {
         transform: scale(0.95, 0.95);
         transition-duration: 0.3s;
         transition-property: transform;
     }
 }
 .hover-float {
-    &:hover{
+    &:hover, &:focus {
         transform: translateY(-0.35em);
         transition-duration: 0.3s;
         transition-property: transform;
     }
 }
 .hover-sink {
-    &:hover{
+    &:hover, &:focus {
         transform: translateY(0.35em);
         transition-duration: 0.3s;
         transition-property: transform;
     }
 }
 .hover-pulse {
-    &:hover{
+    &:hover, &:focus {
         animation: pulse 1s linear;
         animation-iteration-count: infinite;
         @keyframes pulse {
@@ -48,7 +48,7 @@
     }
 }
 .hover-hop {
-    &:hover{
+    &:hover, &:focus {
         animation: hop 1s ease-in-out;
         animation-iteration-count: infinite;
         @keyframes hop {
@@ -65,7 +65,7 @@
     }
 }
 .hover-bob {
-    &:hover{
+    &:hover, &:focus {
         animation: bob 1s ease-in-out;
         animation-iteration-count: infinite;
         @keyframes bob {

@@ -10,31 +10,33 @@
 			}
 
 			@if $include-color-palette and $include-color-helpers and $include-color-helpers-extended {
-				&.lighten-#{$prefix}-1 {
-					#{$attribute}: lighten-1($color) $important;
-				}
 
-				&.lighten-#{$prefix}-2 {
-					#{$attribute}: lighten-2($color) $important;
-				}
+				@if $colorName != black and $colorName != white {
+					&.lighten-#{$prefix}-1 {
+						#{$attribute}: lighten-1($color) $important;
+					}
 
-				&.lighten-#{$prefix}-3 {
-					#{$attribute}: lighten-3($color) $important;
-				}
+					&.lighten-#{$prefix}-2 {
+						#{$attribute}: lighten-2($color) $important;
+					}
 
-				&.darken-#{$prefix}-1 {
-					#{$attribute}: darken-1($color) $important;
-				}
+					&.lighten-#{$prefix}-3 {
+						#{$attribute}: lighten-3($color) $important;
+					}
 
-				&.darken-#{$prefix}-2 {
-					#{$attribute}: darken-2($color) $important;
-				}
+					&.darken-#{$prefix}-1 {
+						#{$attribute}: darken-1($color) $important;
+					}
 
-				&.darken-#{$prefix}-3 {
-					#{$attribute}: darken-3($color) $important;
+					&.darken-#{$prefix}-2 {
+						#{$attribute}: darken-2($color) $important;
+					}
+
+					&.darken-#{$prefix}-3 {
+						#{$attribute}: darken-3($color) $important;
+					}
 				}
 			}
-
 		}
 
 		@if $include-color-palette and $include-color-helpers and $include-color-helpers-extended {
@@ -47,29 +49,32 @@
 					    border-width: 1px;
 					    border-style: solid;
 					}
-	                &.lighten-#{$prefix}-hover-1 {
-	                    #{$attribute}: lighten-1($color) $important;
-	                }
 
-	                &.lighten-#{$prefix}-hover-2 {
-	                    #{$attribute}: lighten-2($color) $important;
-	                }
+					@if $colorName != black and $colorName != white {
+		                &.lighten-#{$prefix}-hover-1 {
+		                    #{$attribute}: lighten-1($color) $important;
+		                }
 
-	                &.lighten-#{$prefix}-hover-3 {
-	                    #{$attribute}: lighten-3($color) $important;
-	                }
+		                &.lighten-#{$prefix}-hover-2 {
+		                    #{$attribute}: lighten-2($color) $important;
+		                }
 
-	                &.darken-#{$prefix}-hover-1 {
-	                    #{$attribute}: darken-1($color) $important;
-	                }
+		                &.lighten-#{$prefix}-hover-3 {
+		                    #{$attribute}: lighten-3($color) $important;
+		                }
 
-	                &.darken-#{$prefix}-hover-2 {
-	                    #{$attribute}: darken-2($color) $important;
-	                }
+		                &.darken-#{$prefix}-hover-1 {
+		                    #{$attribute}: darken-1($color) $important;
+		                }
 
-	                &.darken-#{$prefix}-hover-3 {
-	                    #{$attribute}: darken-3($color) $important;
-	                }
+		                &.darken-#{$prefix}-hover-2 {
+		                    #{$attribute}: darken-2($color) $important;
+		                }
+
+		                &.darken-#{$prefix}-hover-3 {
+		                    #{$attribute}: darken-3($color) $important;
+		                }
+		            }
 	            }
             }
         }
@@ -85,29 +90,31 @@
 					    border-style: solid;
 					}
 
-	                &.lighten-#{$prefix}-active-1 {
-	                    #{$attribute}: lighten-1($color) $important;
-	                }
+					@if $colorName != black and $colorName != white {
+		                &.lighten-#{$prefix}-active-1 {
+		                    #{$attribute}: lighten-1($color) $important;
+		                }
 
-	                &.lighten-#{$prefix}-active-2 {
-	                    #{$attribute}: lighten-2($color) $important;
-	                }
+		                &.lighten-#{$prefix}-active-2 {
+		                    #{$attribute}: lighten-2($color) $important;
+		                }
 
-	                &.lighten-#{$prefix}-active-3 {
-	                    #{$attribute}: lighten-3($color) $important;
-	                }
+		                &.lighten-#{$prefix}-active-3 {
+		                    #{$attribute}: lighten-3($color) $important;
+		                }
 
-	                &.darken-#{$prefix}-active-1 {
-	                    #{$attribute}: darken-1($color) $important;
-	                }
+		                &.darken-#{$prefix}-active-1 {
+		                    #{$attribute}: darken-1($color) $important;
+		                }
 
-	                &.darken-#{$prefix}-active-2 {
-	                    #{$attribute}: darken-2($color) $important;
-	                }
+		                &.darken-#{$prefix}-active-2 {
+		                    #{$attribute}: darken-2($color) $important;
+		                }
 
-	                &.darken-#{$prefix}-active-3 {
-	                    #{$attribute}: darken-3($color) $important;
-	                }
+		                &.darken-#{$prefix}-active-3 {
+		                    #{$attribute}: darken-3($color) $important;
+		                }
+	            	}
 	            }
             }
         }

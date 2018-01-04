@@ -21,7 +21,7 @@
 <div class="sb-side-navbar" id="boba-sidebar">
 	<div class="sb-side-sticky-region display-flex flex-column">
 		<a href="/">boba</a>
-		<span class="version-tag">Version 1.1.5</span>
+		<span class="version-tag">Version 1.1.6</span>
 	</div>
 	<div class="sb-side-scroll-region">
 		<div class="accordion-menu">
@@ -53,32 +53,12 @@
 			</div>
 		</div>
 		<div class="accordion-menu">
-			<input type="checkbox" id="utilities" name="accordion-checkbox" hidden>
-			<label class="accordion-header " for="utilities">
-				Utilities
-			</label>
-			<div class="accordion-body">
-				<ul class="accordion-submenu">
-					<li class=""><a href="/docs/animations.html">Animations</a></li>
-					<li class=""><a href="/docs/background.html">Background</a></li>
-					<li class=""><a href="/docs/borders.html">Borders</a></li>
-					<li class=""><a href="/docs/display.html">Display</a></li>
-					<li class=""><a href="/docs/flex.html">Flex</a></li>
-					<li class=""><a href="/docs/images.html">Images</a></li>
-					<li class=""><a href="/docs/shapes.html">Shapes</a></li>
-					<li class=""><a href="/docs/spacing.html">Spacing</a></li>
-					<li class=""><a href="/docs/text.html">Text</a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="accordion-menu">
 			<input type="checkbox" id="layout" name="accordion-checkbox" hidden>
 			<label class="accordion-header " for="layout">
 				Layout
 			</label>
 			<div class="accordion-body">
 				<ul class="accordion-submenu">
-					<li class=""><a href="/docs/dividers.html">Dividers</a></li>
 					<li class=""><a href="/docs/grid.html">Grid</a></li>
 					<li class=""><a href="/docs/navbar.html">Navbar</a></li>
 					<li class=""><a href="/docs/sidebar.html">Sidebar</a></li>
@@ -101,6 +81,7 @@
 					<li class=""><a href="/docs/notifications.html">Notifications</a></li>
 					<li class=""><a href="/docs/pagination.html">Pagination</a></li>
 					<li class=""><a href="/docs/tabs.html">Tabs</a></li>
+					<li class=""><a href="/docs/tables.html">Tables</a></li>
 				</ul>
 			</div>
 		</div>
@@ -114,10 +95,10 @@
 					<li class=""><a href="/docs/buttons.html">Buttons</a></li>
 					<li class=""><a href="/docs/code.html">Code</a></li>
 					<li class=""><a href="/docs/counters.html">Counters</a></li>
+					<li class=""><a href="/docs/dividers.html">Dividers</a></li>
 					<li class="bold"><a href="/docs/labels.html">Labels</a></li>
 					<li class=""><a href="/docs/lists.html">Lists</a></li>
 					<li class=""><a href="/docs/progress.html">Progress</a></li>
-					<li class=""><a href="/docs/tables.html">Tables</a></li>
 				</ul>
 			</div>
 		</div>
@@ -131,6 +112,25 @@
 					<li class=""><a href="/docs/inputs.html">Inputs</a></li>
 					<li class=""><a href="/docs/selects.html">Selects</a></li>
 					<li class=""><a href="/docs/textareas.html">Textareas</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="accordion-menu">
+			<input type="checkbox" id="utilities" name="accordion-checkbox" hidden>
+			<label class="accordion-header " for="utilities">
+				Utilities
+			</label>
+			<div class="accordion-body">
+				<ul class="accordion-submenu">
+					<li class=""><a href="/docs/animations.html">Animations</a></li>
+					<li class=""><a href="/docs/background.html">Background</a></li>
+					<li class=""><a href="/docs/borders.html">Borders</a></li>
+					<li class=""><a href="/docs/display.html">Display</a></li>
+					<li class=""><a href="/docs/flex.html">Flex</a></li>
+					<li class=""><a href="/docs/images.html">Images</a></li>
+					<li class=""><a href="/docs/shapes.html">Shapes</a></li>
+					<li class=""><a href="/docs/spacing.html">Spacing</a></li>
+					<li class=""><a href="/docs/text.html">Text</a></li>
 				</ul>
 			</div>
 		</div>
@@ -317,76 +317,76 @@
 
     <hr class="light">
     <div class="row">
-	<div class="col xs-12">
-		<h1 class="header">Join Labels</h1>
-		<h5 class="subheader thin no-margin">Combine multiple labels into one segmented label using the <code class="inline">.join-labels</code> class.</h5>
-	</div>
-	<div class="col xs-12 md-6 col-middle">
-		<div class="label-group">
-			<div class="join-labels">
-			  <span class="label outlined">build</span>
-			  <span class="label blue">with</span>
-			  <span class="label orange">boba</span>
-			</div>
-			<div class="join-labels">
-			  <a class="label rounded outlined" href="#">build</a>
-			  <a class="label blue" href="#">with</a>
-			  <a class="label orange rounded" href="#">boba</a>
-			</div>
-		</div>
-	</div>
-	<div class="col xs-12 md-6 col-middle">
-		<div class="code-block">
-			<pre class="code"><code class="language-html prism"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>join-labels<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>label outlined<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>build<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>label blue<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>with<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>label orange<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>boba<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+    <div class="col xs-12">
+        <h1 class="header">Join Labels</h1>
+        <h5 class="subheader thin no-margin">Combine multiple labels into one segmented label using the <code class="inline">.join-labels</code> class.</h5>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <div class="label-group">
+            <div class="join-labels">
+              <span class="label outlined">build</span>
+              <span class="label blue">with</span>
+              <span class="label orange">boba</span>
+            </div>
+            <div class="join-labels">
+              <a class="label rounded outlined" href="#">build</a>
+              <a class="label blue" href="#">with</a>
+              <a class="label orange rounded" href="#">boba</a>
+            </div>
+        </div>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <div class="code-block">
+            <pre class="code"><code class="language-html prism"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>join-labels<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>label outlined<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>build<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>label blue<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>with<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>label orange<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>boba<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>join-labels<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>label rounded outlined<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>build<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>label blue<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>with<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>label orange rounded<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>boba<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>label rounded outlined<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>build<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>label blue<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>with<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>label orange rounded<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>boba<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
-		</div>
-	</div>
+        </div>
+    </div>
 </div>
     <hr class="light">
     <div class="row">
-	<div class="col xs-12">
-		<h1 class="header">Label Groups</h1>
-		<h5 class="subheader thin no-margin">Keep multiple labels grouped and equally spaced using the <code class="inline">.label-group</code> class.</h5>
-	</div>
-	<div class="col xs-12 md-6 col-middle">
-		<div class="label-group">
-			<span class="label pink">Single Label</span>
-			<div class="join-labels">
-			  <span class="label purple">Double</span>
-			  <span class="label purple outlined">Label</span>
-			</div>
-			<div class="join-labels">
-			  <a class="label" href="#">build</a>
-			  <a class="label blue" href="#">with</a>
-			  <a class="label orange" href="#">boba</a>
-			</div>
-		</div>
-	</div>
-	<div class="col xs-12 md-6 col-middle">
-		<div class="code-block">
-			<pre class="code"><code class="language-html prism"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>label-group<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>label pink<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Single Label<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>join-labels<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>label purple<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Double<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>label purple outlined<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Label<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>join-labels<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>label<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>build<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>label blue<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>with<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>label orange<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>boba<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <div class="col xs-12">
+        <h1 class="header">Label Groups</h1>
+        <h5 class="subheader thin no-margin">Keep multiple labels grouped and equally spaced using the <code class="inline">.label-group</code> class.</h5>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <div class="label-group">
+            <span class="label pink">Single Label</span>
+            <div class="join-labels">
+              <span class="label purple">Double</span>
+              <span class="label purple outlined">Label</span>
+            </div>
+            <div class="join-labels">
+              <a class="label" href="#">build</a>
+              <a class="label blue" href="#">with</a>
+              <a class="label orange" href="#">boba</a>
+            </div>
+        </div>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <div class="code-block">
+            <pre class="code"><code class="language-html prism"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>label-group<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>label pink<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Single Label<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>join-labels<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>label purple<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Double<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>label purple outlined<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Label<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>join-labels<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>label<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>build<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>label blue<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>with<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>label orange<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>boba<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
-		</div>
-	</div>
+        </div>
+    </div>
 </div>
     
 

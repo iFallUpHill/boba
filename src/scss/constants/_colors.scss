@@ -1,4 +1,5 @@
 // Selected by Cathy Du
+// Tweaked by Jason Manson-Hing
 
 $color-blue: #6192F4;
 $color-green: #76D37E;
@@ -13,7 +14,6 @@ $color-dark: #414A63;
 $color-light: #EAEAEA;
 $color-black: #000;
 $color-white: #fff;
-$color-transparent: rgba(0, 0, 0, 0);
 
 $color-list: 	(blue, $color-blue),
 				(green, $color-green),
@@ -27,9 +27,8 @@ $color-list: 	(blue, $color-blue),
 				(dark, $color-dark),
 				(light, $color-light),
 				(black, $color-black),
-				(white, $color-white),
-				(transparent, $color-transparent);
-
+				(white, $color-white);
+				
 // Color shift configuration
 $lighten-1-percent: 8%;
 $lighten-2-percent: 16%;
