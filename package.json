@@ -59,8 +59,6 @@
   "devDependencies": {
     "browser-sync": "^2.20.0",
     "gulp-nunjucks": "^3.1.0",
-    "gulp-nunjucks-html": "^2.0.0",
-    "gulp-nunjucks-render": "^2.2.1",
     "gulp-prism": "^1.1.4"
   },
   "eslintConfig": {
