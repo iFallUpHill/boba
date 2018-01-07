@@ -20,10 +20,11 @@
     transition: max-height .4s ease-out;
     position: relative;
     flex-basis: 100%;
-    align-items: flex-start;
+    align-items: center;
     display: flex;
 
     @media screen and (max-width: $laptop - 1px) {
+        align-items: flex-start;
         flex-direction: column;
     }
 
