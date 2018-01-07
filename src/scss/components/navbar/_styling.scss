@@ -20,9 +20,20 @@
     transition: max-height .4s ease-out;
     position: relative;
     flex-basis: 100%;
+    align-items: flex-start;
+    display: flex;
+
+    @media screen and (max-width: $laptop - 1px) {
+        flex-direction: column;
+    }
 
     li {
         margin-bottom: 0;
+
+        @media screen and (max-width: $laptop - 1px) {
+            width: 100%;
+        }
+
         a {
             display: block;
             padding: 1.25em 1.25em;

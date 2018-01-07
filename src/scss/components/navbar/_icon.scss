@@ -3,11 +3,13 @@
 @mixin navbar-menu-icon {
     .navbar-menu-toggle {
         cursor: pointer;
-        display: inline-block;
+        //display: inline-block;
         margin-left: auto;
         padding: 1.75em 1.25em;
         position: relative;
         user-select: none;
+        display: inline-flex;
+        align-items: center;
 
         .navbar-icon {
             background: $color-white;
