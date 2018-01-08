@@ -30,6 +30,12 @@
         padding: $card-padding-default;
         cursor: pointer;
     }
+
+    + .card-image {
+        img {
+            border-radius: 0;            
+        }
+    }
 }
 
 @mixin card-footer-base {
