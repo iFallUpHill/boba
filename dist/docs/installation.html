@@ -1,6 +1,8 @@
 <!DOCTYPE html><html><head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
         <title>Installation | Build with Boba</title>
+        <meta name="description" content="A lightweight, modular, CSS-only design framework.">        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:400,600|Muli:300,400,700">
         <link rel="stylesheet" href="/boba.min.css">
         <link rel="stylesheet" href="/documentation.min.css">
     </head>
@@ -21,7 +23,7 @@
 <div class="sb-side-navbar" id="boba-sidebar">
 	<div class="sb-side-sticky-region display-flex flex-column">
 		<a href="/">boba</a>
-		<span class="version-tag">Version 1.1.12</span>
+		<span class="version-tag">Version 1.1.13</span>
 	</div>
 	<div class="sb-side-scroll-region">
 		<div class="accordion-menu">
@@ -241,11 +243,95 @@
     </div>
 </div>
 
+	<hr class="light"> 
+	<div class="row">
+    <div class="col xs-12">
+        <h1 class="header">Adding Fonts</h1>
+        <h5 class="subheader thin">Make boba truly your own by adding a custom font.</h5>
+    </div>
+    <div class="col xs-12">
+    	<h3>System UI Fonts (Default)</h3>
+        <p>By default, boba is configured to use the user's platform-specific system UI fonts. These fonts are modern, minimal, and have the added bonus of being <span class="bold">zero latency</span> as every user will already have them installed. If you're looking for the most optimal performance, this is the way to go!</p>
+        <br>
+
+        <h3>Custom Fonts</h3>
+        <p>While boba's default fonts are great, adding a custom font can help make your website stand out and give your brand a unique identity. Luckily with boba, adding your own fonts is simple.</p>
+        <br>
+
+        <h4>1. Select a Font</h4>
+        <p>Find a font that you like. In our case, we chose <a href="https://fonts.google.com/specimen/Fira+Sans" target="_blank">Fira Sans</a> and <a href="https://fonts.google.com/specimen/Muli" target="_blank">Muli</a> from
+        <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>.</p>
+        <br>
+
+        <h4>2. Import the Fonts</h4>
+        <p>Include the fonts in the <code class="inline">head</code> section of your page, just like how you would import boba.</p>
+        <div class="row pb-0">
+            <div class="col xs-12 md-8">
+                <div class="code-block">
+                    <pre class="code">                        <code class="language-html prism"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token comment">&lt;!-- Other Head Content --></span>
+    <span class="token comment">&lt;!-- (Title, Description, etc.) --></span>
+
+    <span class="token comment">&lt;!-- Import Boba --></span> 
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://unpkg.com/boba@1/dist/boba.min.css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    
+    <span class="token comment">&lt;!-- Import your Fonts --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://fonts.googleapis.com/css?family=Fira+Sans:400,600|Muli:300,400,700<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span></code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+        <h4>3. Create a Custom Stylesheet</h4>
+        <p>Create a custom CSS file and include it into your page below your freshly imported fonts.</p>
+        <div class="row pb-0">
+            <div class="col xs-12 md-8">
+                <div class="code-block">
+                    <pre class="code">                        <code class="language-html prism">...
+<span class="token comment">&lt;!-- Import your Fonts --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://fonts.googleapis.com/css?family=Fira+Sans:400,600|Muli:300,400,700<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+
+<span class="token comment">&lt;!-- Import your Custom Stylesheet --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>custom.css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+...</code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+        <h4>4. Override boba's Default Fonts</h4>
+        <p>Inside of your custom CSS file, override boba's default <code class="inline">font-family</code> settings.</p>
+        <br>
+
+        <p>In our case, we want to replace boba's default font with <a href="https://fonts.google.com/specimen/Muli" target="_blank">Muli</a> as well as make our headings use <a href="https://fonts.google.com/specimen/Fira+Sans" target="_blank">Fira Sans</a>. Just to be safe, we will also include system UI fonts as fallback in case our custom fonts fail to load.</p>
+        <div class="row pb-0">
+            <div class="col xs-12 md-8">
+                <div class="code-block">
+                    <pre class="code">                        <code class="language-css prism"><span class="token selector"><span class="token class">.body</span> </span><span class="token punctuation">{</span>
+    <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">"Muli"</span>, -apple-system, BlinkMacSystemFont, <span class="token string">"Segoe UI"</span>, <span class="token string">"Roboto"</span>, <span class="token string">"Oxygen"</span>, <span class="token string">"Ubuntu"</span>, <span class="token string">"Cantarell"</span>, <span class="token string">"Fira Sans"</span>, <span class="token string">"Droid Sans"</span>, <span class="token string">"Helvetica Neue"</span>, sans-serif<span class="token punctuation">;</span>    
+<span class="token punctuation">}</span>
+
+<span class="token selector">h1, <span class="token class">.h1</span>,
+h2, <span class="token class">.h2</span>,
+h3, <span class="token class">.h3</span>,
+h4, <span class="token class">.h4</span>,
+h5, <span class="token class">.h5</span>,
+h6, <span class="token class">.h6</span> </span><span class="token punctuation">{</span>
+    <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">"Fira Sans"</span>, -apple-system, BlinkMacSystemFont, <span class="token string">"Segoe UI"</span>, <span class="token string">"Roboto"</span>, <span class="token string">"Oxygen"</span>, <span class="token string">"Ubuntu"</span>, <span class="token string">"Cantarell"</span>, <span class="token string">"Droid Sans"</span>, <span class="token string">"Helvetica Neue"</span>, sans-serif<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
 	<hr class="light">
 	<div class="row">
     <div class="col xs-12">
         <h1 class="header">Quick Start</h1>
-        <h5 class="subheader thin">Here's a simple template to help you get started with boba!</h5>
+        <h5 class="subheader thin">A simple template to help you get started with boba.</h5>
     </div>
     <div class="col xs-12">
         <nav class="navbar">

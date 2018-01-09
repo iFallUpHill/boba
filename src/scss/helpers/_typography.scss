@@ -1,5 +1,4 @@
 // Header Styling
-$header-font-family:            $base-font-family-heading;
 $header-font-weight:            $base-font-weight-semi-bold !default;
 $header-font-weight-light:      $base-font-weight-default !default;
 $header-color:                  $color-dark !default;
@@ -21,7 +20,7 @@ $font-sizing-spacing-list: (h1, $h1-font-size, 1),
                            (h5, $h5-font-size, 1),
                            (h6, $h6-font-size, 1);
 
-// Set default font-family
+// Set default font-family + Styling
 body {
 	font-family: $base-font-family-default;
 }
@@ -34,7 +33,6 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
     color: $header-color;
-    font-family: $header-font-family;
     font-weight: $header-font-weight;
     margin: 0 0 $header-vertical-margin 0;
     word-break: break-word;

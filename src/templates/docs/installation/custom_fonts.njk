@@ -1,0 +1,86 @@
+<div class="row">
+    <div class="col xs-12">
+        <h1 class="header">Adding Fonts</h1>
+        <h5 class="subheader thin">Make boba truly your own by adding a custom font.</h5>
+    </div>
+    <div class="col xs-12">
+    	<h3>System UI Fonts (Default)</h3>
+        <p>By default, boba is configured to use the user's platform-specific system UI fonts. These fonts are modern, minimal, and have the added bonus of being <span class="bold">zero latency</span> as every user will already have them installed. If you're looking for the most optimal performance, this is the way to go!</p>
+        <br />
+
+        <h3>Custom Fonts</h3>
+        <p>While boba's default fonts are great, adding a custom font can help make your website stand out and give your brand a unique identity. Luckily with boba, adding your own fonts is simple.</p>
+        <br />
+
+        <h4>1. Select a Font</h4>
+        <p>Find a font that you like. In our case, we chose <a href="https://fonts.google.com/specimen/Fira+Sans" target="_blank">Fira Sans</a> and <a href="https://fonts.google.com/specimen/Muli" target="_blank">Muli</a> from
+        <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>.</p>
+        <br />
+
+        <h4>2. Import the Fonts</h4>
+        <p>Include the fonts in the <code class="inline">head</code> section of your page, just like how you would import boba.</p>
+        <div class="row pb-0">
+            <div class="col xs-12 md-8">
+                <div class="code-block">
+                    <pre class="code">
+                        <code class="language-html">&lt;head&gt;
+    &lt;!-- Other Head Content --&gt;
+    &lt;!-- (Title, Description, etc.) --&gt;
+
+    &lt;!-- Import Boba --&gt; 
+    &lt;link rel="stylesheet" href="https://unpkg.com/boba@1/dist/boba.min.css"&gt;
+    
+    &lt;!-- Import your Fonts --&gt;
+    &lt;link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:400,600|Muli:300,400,700"&gt;
+&lt;/head&gt;</code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+        <h4>3. Create a Custom Stylesheet</h4>
+        <p>Create a custom CSS file and include it into your page below your freshly imported fonts.</p>
+        <div class="row pb-0">
+            <div class="col xs-12 md-8">
+                <div class="code-block">
+                    <pre class="code">
+                        <code class="language-html">...
+&lt;!-- Import your Fonts --&gt;
+&lt;link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:400,600|Muli:300,400,700"&gt;
+
+&lt;!-- Import your Custom Stylesheet --&gt;
+&lt;link rel="stylesheet" href="custom.css"&gt;
+...</code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+        <h4>4. Override boba's Default Fonts</h4>
+        <p>Inside of your custom CSS file, override boba's default <code class="inline">font-family</code> settings.</p>
+        <br />
+
+        <p>In our case, we want to replace boba's default font with <a href="https://fonts.google.com/specimen/Muli" target="_blank">Muli</a> as well as make our headings use <a href="https://fonts.google.com/specimen/Fira+Sans" target="_blank">Fira Sans</a>. Just to be safe, we will also include system UI fonts as fallback in case our custom fonts fail to load.</p>
+        <div class="row pb-0">
+            <div class="col xs-12 md-8">
+                <div class="code-block">
+                    <pre class="code">
+                        <code class="language-css">.body {
+    font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;    
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    font-family: "Fira Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Droid Sans", "Helvetica Neue", sans-serif;
+}</code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

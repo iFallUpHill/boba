@@ -17,12 +17,14 @@
 	ul {
 		&.accordion-submenu {
 			margin-bottom: $accordion-submenu-default-margin;
+			padding-left: $accordion-submenu-outer-hpadding;			
 			list-style: none;
 
 			li {
-				padding: $accordion-submenu-default-vpadding $accordion-submenu-default-hpadding;
+				padding: $accordion-submenu-item-vpadding $accordion-submenu-item-hpadding;
 				cursor: pointer;
-				margin-bottom: $accordion-submenu-item-default-margin;
+				margin: 0 0 $accordion-submenu-item-default-margin;
+				margin-top: 0;
 			}
 		}
 	}

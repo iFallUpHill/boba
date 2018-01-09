@@ -6,7 +6,6 @@
 
 	& > .value {
 	  font-size: $counter-value-font-size;
-	  font-family: $counter-font-family;
 	  font-weight: $counter-value-font-weight;
 	  line-height: $counter-value-line-height;
 	  color: $color-dark;
@@ -21,7 +20,6 @@
 
 	& > .desc {
 	  font-size: $counter-desc-font-size;
-	  font-family: $counter-font-family;
 	  font-weight: $counter-desc-font-weight;
 	  color: $color-dark;
 	  text-transform: uppercase;

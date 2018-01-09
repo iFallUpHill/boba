@@ -11,5 +11,8 @@ $base-font-weight-semi-bold: 600;
 $base-font-weight-default: 400;
 $base-font-weight-light: 300;
 
-$base-font-family-heading: 'Fira Sans', sans-serif;
-$base-font-family-default: 'Muli', sans-serif;
+// From https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/
+$base-font-family-default: -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
