@@ -74,6 +74,6 @@
     "src/scss/",
     "!src/scss/docs/",
     "dist/*.css",
-    "!dist/docs.css"
+    "!dist/documentation.min.css"
   ]
 }
