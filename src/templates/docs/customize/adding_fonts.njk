@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row pb-0">
     <div class="col xs-12">
         <h1 class="header">Adding Fonts</h1>
         <h5 class="subheader thin">Truly make boba your own by adding a custom font.</h5>
@@ -45,6 +45,9 @@
                 <div class="code-block">
                     <pre class="code">
                         <code class="language-html">...
+&lt;!-- Import Boba --&gt; 
+&lt;link rel="stylesheet" href="https://unpkg.com/boba@1/dist/boba.min.css"&gt;
+
 &lt;!-- Import your Fonts --&gt;
 &lt;link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:400,600|Muli:300,400,700"&gt;
 
@@ -60,7 +63,7 @@
         <p>Inside of your custom CSS file, override boba's default <code class="inline">font-family</code> settings.</p>
         <br />
 
-        <p>In our case, we want to replace boba's default font with <a href="https://fonts.google.com/specimen/Muli" target="_blank">Muli</a> as well as make our headings use <a href="https://fonts.google.com/specimen/Fira+Sans" target="_blank">Fira Sans</a>. Just to be safe, we will also include system UI fonts as fallback in case our custom fonts fail to load.</p>
+        <p>In our case, we want to replace boba's default font with <a href="https://fonts.google.com/specimen/Muli" target="_blank">Muli</a> as well as make our headings use <a href="https://fonts.google.com/specimen/Fira+Sans" target="_blank">Fira Sans</a>. Just to be safe, we will also include system UI fonts as fallback in case our custom fonts fail to load. <a href="https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/" target="_blank">Learn more</a>.</p>
         <div class="row pb-0">
             <div class="col xs-12 md-8">
                 <div class="code-block">
