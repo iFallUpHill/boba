@@ -4,59 +4,92 @@
         <h5 class="subheader thin no-margin">Easily change the colors of your menu using boba's brilliant <a href="./colors.html">color palette</a>.</h5>
     </div>
     <div class="col xs-12 md-6 col-middle">
-        <div class="menu red">
-            <div class="menu-label">
+        <div class="menu pink">
+            <input type="checkbox" id="first-color-menu" name="color-menu-checkbox" hidden checked />
+            <label class="menu-header" for="first-color-menu">
                 Food
+            </label>
+            <div class="menu-body">
+                <ul class="menu-list">
+                    <li>Macaroon</li>
+                    <li>Shaved Ice</li>
+                </ul>
             </div>
-            <ul class="menu-list">
-                <li><a>Macaroon</a></li>
-                <li><a>Shaved Ice</a></li>
-            </ul>
-            <div class="menu-label">
+        </div>
+        <div class="menu purple">
+            <input type="checkbox" id="second-color-menu" name="color-menu-checkbox" hidden checked />
+            <label class="menu-header" for="second-color-menu">
                 Drinks
+            </label>
+            <div class="menu-body">
+                <ul class="menu-list">
+                    <li>Specials</li>
+                    <li class="nested-menu">
+                        <div class="menu">
+                            <input type="checkbox" id="nested-color-menu" name="color-menu-checkbox" hidden />
+                            <label class="menu-header" for="nested-color-menu">
+                                Milk Tea (Click me!)
+                            </label>
+                            <div class="menu-body">
+                                <ul class="menu-list">
+                                    <li>Classic</li>
+                                    <li>Taro</li>
+                                    <li>Jasmine</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>Cold Brew</li>
+                    <li>Hot Tea</li>
+                </ul>
             </div>
-            <ul class="menu-list">
-                <li><a>Specials</a></li>
-                <li>
-                    <a class="active">Milk Tea</a>
-                    <ul>
-                        <li><a>Classic</a></li>
-                        <li><a>Taro</a></li>
-                        <li><a>Jasmine</a></li>
-                    </ul>
-                </li>
-                <li><a>Cold Brew</a></li>
-                <li><a>Hot Tea</a></li>
-            </ul>
         </div>
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="code-block">
-            <pre class="code"><code class="language-html">&lt;div class="menu red"&gt;
-    &lt;div class="menu-label"&gt;
+            <pre class="code"><code class="language-html">&lt;div class="menu pink"&gt;
+    &lt;input type="checkbox" id="first-color-menu" name="color-menu-checkbox" hidden checked /&gt;
+    &lt;label class="menu-header" for="first-color-menu"&gt;
         Food
+    &lt;/label&gt;
+    &lt;div class="menu-body"&gt;
+        &lt;ul class="menu-list"&gt;
+            &lt;li&gt;Macaroon&lt;/li&gt;
+            &lt;li&gt;Shaved Ice&lt;/li&gt;
+        &lt;/ul&gt;
     &lt;/div&gt;
-    &lt;ul class="menu-list"&gt;
-        &lt;li&gt;&lt;a&gt;Macaroon&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a&gt;Shaved Ice&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;div class="menu-label"&gt;
+&lt;/div&gt;
+
+&lt;div class="menu purple"&gt;
+    &lt;input type="checkbox" id="second-color-menu" name="color-menu-checkbox" hidden checked /&gt;
+    &lt;label class="menu-header" for="second-color-menu"&gt;
         Drinks
+    &lt;/label&gt;
+    &lt;div class="menu-body"&gt;
+        &lt;ul class="menu-list"&gt;
+            &lt;li&gt;Specials&lt;/li&gt;
+
+            &lt;!-- Nest menus using the nested-menu class! --&gt;            
+            &lt;li class="nested-menu"&gt;
+                &lt;div class="menu"&gt;
+                    &lt;input type="checkbox" id="nested-color-menu" name="color-menu-checkbox" hidden /&gt;
+                    &lt;label class="menu-header" for="nested-color-menu"&gt;
+                        Milk Tea (Click me!)
+                    &lt;/label&gt;
+                    &lt;div class="menu-body"&gt;
+                        &lt;ul class="menu-list"&gt;
+                            &lt;li&gt;Classic&lt;/li&gt;
+                            &lt;li&gt;Taro&lt;/li&gt;
+                            &lt;li&gt;Jasmine&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+
+            &lt;li&gt;Cold Brew&lt;/li&gt;
+            &lt;li&gt;Hot Tea&lt;/li&gt;
+        &lt;/ul&gt;
     &lt;/div&gt;
-    &lt;ul class="menu-list"&gt;
-        &lt;li&gt;&lt;a&gt;Specials&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;
-            &lt;a class="active"&gt;Milk Tea&lt;/a&gt;
-            &lt;ul&gt;
-                &lt;li&gt;&lt;a&gt;Classic&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a&gt;Taro&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a&gt;Jasmine&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/li&gt;
-        &lt;li&gt;&lt;a&gt;Cold Brew&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a&gt;Hot Tea&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;/ul&gt;
 &lt;/div&gt;</code></pre>
         </div>
     </div>

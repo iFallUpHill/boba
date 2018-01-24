@@ -22,9 +22,12 @@ module.exports = (gulp, config) => {
 				switch (version) {
 					case "major":
 						versionDigits[0] = (parseInt(versionDigits[0]) + 1).toString();
+						versionDigits[1] = 0;						
+						versionDigits[2] = 0;
 						break;
 					case "minor":
 						versionDigits[1] = (parseInt(versionDigits[1]) + 1).toString();
+						versionDigits[2] = 0;						
 						break;
 					case "patch":
 						versionDigits[2] = (parseInt(versionDigits[2]) + 1).toString();

@@ -1,76 +1,47 @@
 @import 'constants';
 
-@mixin menu-base {
+@mixin accordion-menu-header-base {
+	display: block;
+	padding: $accordion-menu-default-vpadding $accordion-menu-default-hpadding;
+	cursor: pointer;
+}
 
-    .menu-label {
-        padding: 0.6em $menu-text-left-offset;
-        border-radius: $border-radius $border-radius 0 0;
-        &:not(:last-child) {
-            margin-bottom: 0;
-        }
-        &:not(:first-child) {
-            margin-top: 1em;
-        }
-    }
-    ul {
-        list-style: none;
-        ul {
-            margin: $border-radius 0 $border-radius 2.2em;
+@mixin accordion-menu-body-base {
+	margin-bottom: $accordion-menu-header-default-margin;
+	overflow: hidden;
+	max-height: 0;
+	transition: max-height .3s ease-in-out;
+	padding-left: 0;
 
-            li {
-                a {
-                    border-top-left-radius: $border-radius;
-                    border-bottom-left-radius: $border-radius;
+	ul {
+		&.menu-list {
+            margin-bottom: $accordion-submenu-default-margin;
+            margin-left: 0;
+            padding-left: $accordion-submenu-outer-hpadding;			
+			list-style: none;
+
+			li {
+				padding: $accordion-submenu-item-vpadding $accordion-submenu-item-hpadding 0;
+				cursor: pointer;
+				margin: 0 0 $accordion-submenu-item-default-margin;
+
+                &:last-child, &:only-child {
+                    padding-bottom: $accordion-submenu-item-vpadding;
                 }
             }
-        }
-        &.menu-list {
-            line-height: 1.25;
-            border-radius: 0 0 $border-radius $border-radius;
-
-            li {
-                position: relative;
-                margin-bottom: -1px;
-                a {
-                    cursor: pointer;
-                    display: block;
-                    padding: 0.5em $menu-text-left-offset;
-                }
-            }
-        }
+		}
     }
 }
 
 @mixin menu-colors {
     @each $colorName, $color in $color-list {
         &.#{$colorName}{
-            .menu-label {
+            .menu-header {
                 background-color: $color;
-                color: $color-white;
             }
-            ul {
-                &.menu-list {
-                    border: 1px solid lighten-1($color);
-                    border-top: 0;
 
-                    li {
-                        a {
-                            color: $color-dark;
-                            &.active {
-                                background-color: $color;
-                                color: $color-white;
-                            }
-                            &:hover {
-                                background-color: darken-1($color);
-                                color: $color-white;
-                            }
-                            &:active {
-                                background-color: darken-2($color);
-                                color: $color-white;
-                            }
-                        }
-                    }
-                }
+            .menu-body {
+                border-color: $color;
             }
         }
     }
