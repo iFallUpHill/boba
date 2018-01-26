@@ -1,0 +1,20 @@
+@import 'constants';
+@import 'styling';
+
+blockquote {
+    border-left: 0.3rem solid $color-dark;
+	margin: $blockquote-vmargin $blockquote-hmargin;
+    padding: $blockquote-vpadding $blockquote-hpadding;
+    line-height: normal;
+    
+    &:after {
+        content: attr(author);
+        display: block;
+        text-align: right;
+    }
+
+    @if $include-color-palette {
+        @include blockquote-colors;
+    }
+}
+	

@@ -1,0 +1,12 @@
+{% extends "templates/docs/layout.njk" %}
+{% set page_title ="Blockquotes" %}
+{% set active_accordion ="elements" %}
+{% set active_page ="blockquotes" %}
+
+{% block main %}
+    
+    {% include "templates/docs/blockquotes/blockquotes.njk" %}
+    <hr class="light" />
+    {% include "templates/docs/blockquotes/colors.njk" %}    
+
+{% endblock %}

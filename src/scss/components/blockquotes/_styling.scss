@@ -1,0 +1,9 @@
+@import 'constants';
+
+@mixin blockquote-colors {
+    @each $colorName, $color in $color-list {
+        &.#{$colorName} {
+            border-color: $color;
+        }
+    }
+}
