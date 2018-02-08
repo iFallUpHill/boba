@@ -16,4 +16,27 @@
 	.accordion-body {
 		@include accordion-menu-body-base;
 	}
+
+    .accordion-menu {
+        .accordion-header {
+            margin-bottom: 0;
+            padding: 0;
+        }
+
+        .accordion-body {
+            margin-bottom: 0;
+
+            ul {
+                &.accordion-submenu {
+                    margin-bottom: 0;
+
+                    li {
+                        &:last-child, &:only-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

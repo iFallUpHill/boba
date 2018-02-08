@@ -2,7 +2,7 @@
 
 @mixin accordion-menu-header-base {
 	display: block;
-	padding: $accordion-menu-default-vpadding $accordion-menu-default-hpadding;
+	padding: $accordion-menu-default-vpadding $accordion-menu-default-hpadding $accordion-menu-default-vpadding 0;
 	cursor: pointer;
 	margin-bottom: $accordion-menu-header-default-margin;
 }
@@ -12,7 +12,6 @@
 	overflow: hidden;
 	max-height: 0;
 	transition: max-height .3s ease-in-out;
-	padding-left: $accordion-submenu-default-body-padding;
 
 	ul {
 		&.accordion-submenu {
