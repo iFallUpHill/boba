@@ -37,6 +37,7 @@ $darken-1-percent: 8%;
 $darken-2-percent: 16%;
 $darken-3-percent: 24%;
 $transparent-opacity-default: 0.85;
+$desaturate-percent: 33%;
 
 $color-shade-list: (lighten-1, lighten-2, lighten-3, darken-1, darken-2, darken-3);
 
@@ -65,9 +66,14 @@ $color-shade-list: (lighten-1, lighten-2, lighten-3, darken-1, darken-2, darken-
 }
 
 @function transparentBG($base-color) {
-	@return rgba-to-rgb(transparentize($base-color, $transparent-opacity-default));
+    $transparent-opacity: $transparent-opacity-default;
+    @if ($base-color == $color-light) {
+        $transparent-opacity: 0.65;
+    }
+    @return rgba-to-rgb(transparentize($base-color, $transparent-opacity));
 }
 
 @function rgba-to-rgb($rgba, $background: #fff) {
 	@return mix(rgb(red($rgba), green($rgba), blue($rgba)), $background, alpha($rgba) * 100%)
 }
+

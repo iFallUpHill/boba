@@ -10,7 +10,6 @@
 			}
 
 			@if $include-color-palette and $include-color-helpers and $include-color-helpers-extended {
-
 				@if $colorName != black and $colorName != white {
 					&.lighten-#{$prefix}-1 {
 						#{$attribute}: lighten-1($color) $important;
@@ -121,8 +120,21 @@
 	}
 }
 
+@mixin generate-neutral-colors ($attribute, $prefix, $important: null) {
+	@each $colorName, $color in $color-list {
+        @if $include-color-palette and $include-color-helpers {                             
+            @if $colorName != black and $colorName != white {
+                .#{$prefix}-neutral-#{$colorName} {
+                    #{$attribute}: transparentBG($color) $important;
+                }
+            }
+        }
+    }
+}
+
 @if $include-color-palette and $include-color-helpers {
 	@include generate-base-colors(background, bg, !important);
 	@include generate-base-colors(color, text, !important);
 	@include generate-base-colors(border-color, border, !important);
+    @include generate-neutral-colors(background, bg, !important);
 }
