@@ -14,7 +14,7 @@
 	</div>
 	<div class="sb-side-scroll-region">
 		<div class="accordion-menu">
-			<input type="checkbox" id="overview" name="accordion-checkbox" hidden {{ "checked" if active_accordion == "overview" }} />
+			<input type="checkbox" id="overview" name="accordion-checkbox" {{ "checked" if active_accordion == "overview" }} />
 			<label class="accordion-header {{ "bold" if active_accordion == "overview" }}" for="overview">
 				Overview
 			</label>
@@ -29,7 +29,7 @@
 			</div>
 		</div>
 		<div class="accordion-menu">
-			<input type="checkbox" id="core" name="accordion-checkbox" hidden {{ "checked" if active_accordion == "core" }} />
+			<input type="checkbox" id="core" name="accordion-checkbox" {{ "checked" if active_accordion == "core" }} />
 			<label class="accordion-header {{ "bold" if active_accordion == "core" }}" for="core">
 				Core
 			</label>
@@ -42,7 +42,7 @@
 			</div>
 		</div>
 		<div class="accordion-menu">
-			<input type="checkbox" id="layout" name="accordion-checkbox" hidden {{ "checked" if active_accordion == "layout" }} />
+			<input type="checkbox" id="layout" name="accordion-checkbox" {{ "checked" if active_accordion == "layout" }} />
 			<label class="accordion-header {{ "bold" if active_accordion == "layout" }}" for="layout">
 				Layout
 			</label>
@@ -55,7 +55,7 @@
 			</div>
 		</div>
 		<div class="accordion-menu">
-			<input type="checkbox" id="components" name="accordion-checkbox" hidden {{ "checked" if active_accordion == "components" }} />
+			<input type="checkbox" id="components" name="accordion-checkbox" {{ "checked" if active_accordion == "components" }} />
 			<label class="accordion-header {{ "bold" if active_accordion == "components" }}" for="components">
 				Components
 			</label>
@@ -75,7 +75,7 @@
 			</div>
 		</div>
 		<div class="accordion-menu">
-			<input type="checkbox" id="elements" name="accordion-checkbox" hidden {{ "checked" if active_accordion == "elements" }} />
+			<input type="checkbox" id="elements" name="accordion-checkbox" {{ "checked" if active_accordion == "elements" }} />
 			<label class="accordion-header {{ "bold" if active_accordion == "elements" }}" for="elements">
 				Elements
 			</label>
@@ -93,7 +93,7 @@
 			</div>
 		</div>
 		<div class="accordion-menu">
-			<input type="checkbox" id="forms" name="accordion-checkbox" hidden {{ "checked" if active_accordion == "forms" }} />
+			<input type="checkbox" id="forms" name="accordion-checkbox" {{ "checked" if active_accordion == "forms" }} />
 			<label class="accordion-header {{ "bold" if active_accordion == "forms" }}" for="forms">
 				Forms
 			</label>
@@ -108,7 +108,7 @@
 			</div>
 		</div>
 		<div class="accordion-menu">
-			<input type="checkbox" id="utilities" name="accordion-checkbox" hidden {{ "checked" if active_accordion == "utilities" }} />
+			<input type="checkbox" id="utilities" name="accordion-checkbox" {{ "checked" if active_accordion == "utilities" }} />
 			<label class="accordion-header {{ "bold" if active_accordion == "utilities" }}" for="utilities">
 				Utilities
 			</label>
@@ -121,6 +121,7 @@
 					<li class="{{ "bold" if active_page == "flex" }}"><a href="/docs/flex.html">Flex</a></li>
 					<li class="{{ "bold" if active_page == "images" }}"><a href="/docs/images.html">Images</a></li>
 					<li class="{{ "bold" if active_page == "shapes" }}"><a href="/docs/shapes.html">Shapes</a></li>
+					<li class="{{ "bold" if active_page == "sizing" }}"><a href="/docs/sizing.html">Sizing</a></li>
 					<li class="{{ "bold" if active_page == "spacing" }}"><a href="/docs/spacing.html">Spacing</a></li>
 					<li class="{{ "bold" if active_page == "text" }}"><a href="/docs/text.html">Text</a></li>
 				</ul>

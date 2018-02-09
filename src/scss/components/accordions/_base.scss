@@ -2,9 +2,21 @@
 @import 'styling';
 
 .accordion-menu {
+    > input {
+        clip: rect(1px, 1px, 1px, 1px);
+        position: absolute !important;
 
-	input:checked ~ {
-		& .accordion-body {
+        &:focus + .accordion-header {
+            outline: -webkit-focus-ring-color auto 5px; 
+            
+            @-moz-document url-prefix() { 
+                outline: #ffffff dotted 1px;
+            }
+        }
+    }
+
+	> input:checked ~ {
+        & .accordion-body {
 			max-height: $accordion-menu-max-height;
 		}
 	}

@@ -42,13 +42,23 @@
 
   /* menu button */
     .navbar-menu-target {
-        display: none;
+        clip: rect(1px, 1px, 1px, 1px);
+        position: absolute !important;
+
+        &:focus + .navbar-menu-toggle {
+            outline: -webkit-focus-ring-color auto 5px; 
+            
+            @-moz-document url-prefix() { 
+                outline: #ffffff dotted 1px;
+            }
+        }
 
         &:checked {
             & ~ .navbar-menu-items  {
                 max-height: 30em;
             }
             & ~ .navbar-menu-toggle {
+                background: none;
                 .navbar-icon {
                     background: transparent;
                     &:before {
@@ -69,6 +79,9 @@
     }
 
     @media screen and (min-width: $laptop) {
+        .navbar-menu-target {
+            display: none;
+        }
 	    .navbar-menu-toggle {
 	        display: none;
 	    }

@@ -67,7 +67,8 @@
 	@each $colorName, $color in $color-list {
         &.#{$colorName} {
         	background-color: $color;
-        	.navbar-menu-items {
+        	
+            .navbar-menu-items {
 		        li {
 			        &:hover, &:focus {
 			        	background-color: darken-1($color);

@@ -1,7 +1,7 @@
 @import 'constants';
 
 @mixin accordion-menu-header-base {
-	display: block;
+	display: inline-block;
 	padding: $accordion-menu-default-vpadding $accordion-menu-default-hpadding $accordion-menu-default-vpadding 0;
 	cursor: pointer;
 	margin-bottom: $accordion-menu-header-default-margin;
