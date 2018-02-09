@@ -1,6 +1,6 @@
 <!DOCTYPE html><html><head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-        <title>Animations | Build with Boba</title>
+        <title>Radios | Build with Boba</title>
         <meta name="description" content="A lightweight, modular, CSS-only design framework.">        
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:400,600|Muli:300,400,700">
         <link rel="stylesheet" href="/boba.min.css">
@@ -106,28 +106,28 @@
 			</div>
 		</div>
 		<div class="accordion-menu">
-			<input type="checkbox" id="forms" name="accordion-checkbox" hidden>
-			<label class="accordion-header " for="forms">
+			<input type="checkbox" id="forms" name="accordion-checkbox" hidden checked>
+			<label class="accordion-header bold" for="forms">
 				Forms
 			</label>
 			<div class="accordion-body">
 				<ul class="accordion-submenu">
                     <li class=""><a href="/docs/checkboxes.html">Checkboxes</a></li>
 					<li class=""><a href="/docs/inputs.html">Inputs</a></li>
-                    <li class=""><a href="/docs/radios.html">Radios</a></li>
+                    <li class="bold"><a href="/docs/radios.html">Radios</a></li>
 					<li class=""><a href="/docs/selects.html">Selects</a></li>
 					<li class=""><a href="/docs/textareas.html">Textareas</a></li>
 				</ul>
 			</div>
 		</div>
 		<div class="accordion-menu">
-			<input type="checkbox" id="utilities" name="accordion-checkbox" hidden checked>
-			<label class="accordion-header bold" for="utilities">
+			<input type="checkbox" id="utilities" name="accordion-checkbox" hidden>
+			<label class="accordion-header " for="utilities">
 				Utilities
 			</label>
 			<div class="accordion-body">
 				<ul class="accordion-submenu">
-					<li class="bold"><a href="/docs/animations.html">Animations</a></li>
+					<li class=""><a href="/docs/animations.html">Animations</a></li>
 					<li class=""><a href="/docs/background.html">Background</a></li>
 					<li class=""><a href="/docs/borders.html">Borders</a></li>
 					<li class=""><a href="/docs/display.html">Display</a></li>
@@ -151,10 +151,10 @@
                 
 
 
-<div class="banner medium bg-orange">
+<div class="banner medium bg-pink">
 	<div class="banner-body text-left">
 		<div class="container">
-			<h1 class="header text-white">Utilities</h1>
+			<h1 class="header text-white">Forms</h1>
 			<h5 class="subheader thin text-white no-margin">Learn how to <span class="bold">build your website</span> with boba!</h5>
 		</div>
 	</div>
@@ -170,34 +170,7 @@
                         
                         
 
-    <div class="row">
-    <div class="col xs-12">
-        <h1 class="header">Animations</h1>
-        <h5 class="subheader thin no-margin">Add a <code class="inline">.hover-{EFFECT}</code> class to an element to easily give it an animation on hover.</h5>
-    </div>
-    <div class="col xs-12 md-6 col-middle">
-      <div>
-        <button class="hover-grow red">Grow</button>
-        <button class="orange hover-shrink">Shrink</button>
-        <button class="yellow hover-float">Float</button>
-        <button class="green hover-sink">Sink</button>
-        <button class="blue hover-pulse">Pulse</button>
-        <button class="indigo hover-hop">Hop</button>
-        <button class="purple hover-bob">Bob</button>
-      </div>
-    </div>
-    <div class="col xs-12 md-6 col-middle">
-        <div class="code-block">
-            <pre class="code"><code class="language-html prism"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>red hover-grow<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Grow<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>orange hover-shrink<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Shrink<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>yellow hover-float<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Float<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>green hover-sink<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Sink<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>blue hover-pulse<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Pulse<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>indigo hover-bob<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Bob<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>purple hover-hang<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Hang<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span></code></pre>
-        </div>
-    </div>
-</div>
+    
     
 
                     </div>
