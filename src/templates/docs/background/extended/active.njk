@@ -24,7 +24,7 @@
                     <td><code class="inline">.bg-hover-{{ color }}</code></td>
                     <td>Add this class to make the background of an element {{ color }} when clicked.</td>
                     <td class="bg-active-{{ color }} {{ "text-active-white" if (color == "dark") or (color == "black") }}
-                    {{ "bg-dark lighten-bg-2 text-white text-active-dark" if (color == "white") }}"><span>My background is {{ color }} when clicked!</span></td>
+                    {{ "bg-dark text-white text-active-dark" if (color == "white") }}"><span>My background is {{ color }} when clicked!</span></td>
                 </tr>
                 {% endfor %}
             </tbody>

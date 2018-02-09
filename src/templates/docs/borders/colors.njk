@@ -23,7 +23,7 @@
                 <tr>
                     <td class="vertical-align-middle"><code class="inline">.border-{{ color }}</code></td>
                     <td class="vertical-align-middle">Add this class to make the border of an element {{ color }}.</td>
-                    <td class="vertical-align-middle {{ "bg-dark lighten-bg-2" if (color == "light") or (color == "white") }}"><span class="border-{{ color }}" style="display: inline-flex; height: 25px; width: 50px;"></span></td>
+                    <td class="vertical-align-middle {{ "bg-dark" if (color == "light") or (color == "white") }}"><span class="border-{{ color }}" style="display: inline-flex; height: 25px; width: 50px;"></span></td>
                 </tr>
                 {% endfor %}
                 </tr>

@@ -23,7 +23,7 @@
                 <tr>
                     <td><code class="inline">.text-active-{{ color }}</code></td>
                     <td>Add this class to make your text {{ color }} when clicked.</td>
-                    <td class="text-active-{{ color }} {{"bg-active-dark lighten-bg-active-2" if (color == "light") or (color == "white") }}"><span>I'm {{ color }} when clicked!</span></td>
+                    <td class="text-active-{{ color }} {{"bg-active-dark" if (color == "light") or (color == "white") }}"><span>I'm {{ color }} when clicked!</span></td>
                 </tr>   
                 {% endfor %}
             </tbody>

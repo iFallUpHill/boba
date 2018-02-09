@@ -23,7 +23,7 @@
                 <tr>
                     <td><code class="inline">.text-{{ color }}</code></td>
                     <td>Add this class to make your text {{ color }}.</td>
-                    <td class="{{ "bg-dark lighten-bg-2" if (color == "light") or (color == "white") }}"><span class="text-{{ color }}">I'm {{ color }} text!</span></td>
+                    <td class="{{ "bg-dark" if (color == "light") or (color == "white") }}"><span class="text-{{ color }}">I'm {{ color }} text!</span></td>
                 </tr>
                 {% endfor %}
             </tbody>

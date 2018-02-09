@@ -23,7 +23,7 @@
                 <tr>
                     <td><code class="inline">.text-hover-{{ color }}</code></td>
                     <td>Add this class to make your text {{ color }} on hover.</td>
-                    <td class="text-hover-{{ color }} {{"bg-hover-dark lighten-bg-hover-2" if (color == "light") or (color == "white") }}"><span>I'm {{ color }} on hover!</span></td>
+                    <td class="text-hover-{{ color }} {{"bg-hover-dark" if (color == "light") or (color == "white") }}"><span>I'm {{ color }} on hover!</span></td>
                 </tr>   
                 {% endfor %}
             </tbody>

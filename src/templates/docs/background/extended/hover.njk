@@ -24,7 +24,7 @@
                     <td><code class="inline">.bg-hover-{{ color }}</code></td>
                     <td>Add this class to make the background of an element {{ color }} on hover.</td>
                     <td class="bg-hover-{{ color }} {{ "text-hover-white" if (color == "dark") or (color == "black") }}
-                    {{ "bg-dark lighten-bg-2 text-white text-hover-dark" if (color == "white") }}"><span>My background is {{ color }} on hover!</span></td>
+                    {{ "bg-dark text-white text-hover-dark" if (color == "white") }}"><span>My background is {{ color }} on hover!</span></td>
                 </tr>
                 {% endfor %}
             </tbody>
