@@ -120,11 +120,11 @@
 	}
 }
 
-@mixin generate-neutral-colors ($attribute, $prefix, $important: null) {
+@mixin generate-tint-colors ($attribute, $prefix, $important: null) {
 	@each $colorName, $color in $color-list {
         @if $include-color-palette and $include-color-helpers {                             
             @if $colorName != black and $colorName != white {
-                .#{$prefix}-neutral-#{$colorName} {
+                .#{$prefix}-tint-#{$colorName} {
                     #{$attribute}: transparentBG($color) $important;
                 }
             }
@@ -136,5 +136,5 @@
 	@include generate-base-colors(background, bg, !important);
 	@include generate-base-colors(color, text, !important);
 	@include generate-base-colors(border-color, border, !important);
-    @include generate-neutral-colors(background, bg, !important);
+    @include generate-tint-colors(background, bg, !important);
 }
