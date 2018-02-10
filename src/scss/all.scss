@@ -31,6 +31,9 @@ $include-color-helpers-extended: true;
 @import 'constants/constants';
 @import 'constants/fonts';
 
+// Global Mixins
+@import 'mixins/accessibility';
+
 // Color Helpers
 @import 'helpers/colors';
 

@@ -21,7 +21,7 @@
 			list-style: none;
 
 			li {
-				padding: $accordion-submenu-item-vpadding $accordion-submenu-item-hpadding;
+				padding: $accordion-submenu-item-padding;
 				cursor: pointer;
 				margin: 0 0 $accordion-submenu-item-default-margin;
 			}

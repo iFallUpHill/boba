@@ -1,0 +1,13 @@
+@mixin accessible-input {
+    clip: rect(0 0 0 0);
+    position: absolute !important;
+}
+
+
+@mixin accessibile-outlines {
+    outline: -webkit-focus-ring-color auto 5px; 
+    
+    @-moz-document url-prefix() { 
+        outline: #ffffff dotted 1px;
+    }
+}

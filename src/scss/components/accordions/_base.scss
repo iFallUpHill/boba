@@ -2,24 +2,19 @@
 @import 'styling';
 
 .accordion-menu {
-    > input {
-        clip: rect(1px, 1px, 1px, 1px);
-        position: absolute !important;
+    .accordion-toggle {
+        @include accessible-input;
 
         &:focus + .accordion-header {
-            outline: -webkit-focus-ring-color auto 5px; 
-            
-            @-moz-document url-prefix() { 
-                outline: #ffffff dotted 1px;
+            @include accessibile-outlines;
+        }
+
+        &:checked ~ {
+            & .accordion-body {
+                max-height: $accordion-menu-max-height;
             }
         }
     }
-
-	> input:checked ~ {
-        & .accordion-body {
-			max-height: $accordion-menu-max-height;
-		}
-	}
 
 	.accordion-header {
 		@include accordion-menu-header-base;

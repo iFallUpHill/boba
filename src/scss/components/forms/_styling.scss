@@ -5,10 +5,11 @@
     font-size: 1em;
     appearance: none;
     height: 2.4em;
-    padding: 0 $form-padding-default;
+    padding: $form-padding-default;
     border-radius: $border-radius;
     box-shadow: none;
     box-sizing: border-box;
+    font-family: inherit;
 }
 
 @mixin select-icon-base {

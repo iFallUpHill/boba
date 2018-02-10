@@ -10,7 +10,7 @@
     }
 
     // Includes textareas
-    input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], select, textarea {
+    input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], input[type="color"], input[type="date"], select, textarea {
         @include form-component-base;
         background-color: $color-white;
         border: 1px solid $color-dark;
@@ -33,7 +33,7 @@
     }
 
     // Excludes textareas
-    input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], select {
+    input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], input[type="color"], input[type="date"], select {
         &.rounded {
             border-radius: $rounded-border-radius;
         }
@@ -41,7 +41,7 @@
 
     textarea {
         min-height: 4em;
-        padding: 0.75em $form-padding-default;
+        padding: $form-text-area-padding;
     }
 
     .select-icon {
@@ -49,13 +49,13 @@
     }
 
     @each $size, $fontSize, $height, $rpadding in $form-size-list {
-        input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], select, textarea {
+        input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], input[type="color"], input[type="date"], select, textarea {
             &.#{$size} {
                 font-size: $fontSize;
             }
         }
 
-        input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], select {
+        input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], input[type="color"], input[type="date"], select {
             &.#{$size} {
                 &.rounded {
                     padding: 0 $rpadding;
