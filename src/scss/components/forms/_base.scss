@@ -1,19 +1,20 @@
 @import 'constants';
 @import 'styling';
+@import 'clickable';
 
 .form-control {
-
-    label {
-        display: block;
-        font-size: 0.95em;
-        margin-bottom: 0.3em;
-    }
 
     // Includes textareas
     input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], input[type="color"], input[type="date"], select, textarea {
         @include form-component-base;
         background-color: $color-white;
         border: 1px solid $color-dark;
+
+        + label {
+            display: block;
+            font-size: 0.95em;
+            margin-bottom: 0.3em;
+        }
 
         &::placeholder {
             opacity: 0.33;

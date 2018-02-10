@@ -6,7 +6,7 @@
         @include accessible-input;
 
         &:focus + .accordion-header {
-            @include accessibile-outlines;
+            @include accessible-outlines;
         }
 
         &:checked ~ {

@@ -10,3 +10,9 @@ $form-size-list: (large, $form-font-size-default + 0.4em, $form-height-default +
                   (medium, $form-font-size-default + 0.2em, $form-height-default + 0.2em, $form-padding-default + 0.2em),
                   (small, $form-font-size-default - 0.2em, $form-height-default - 0.2em, $form-padding-default - 0.2em);
 
+$clickable-background-transition: background 0.15s ease-in-out;
+$clickable-border-transition: border 0.15s ease-in-out;
+$clickable-color-transition: color 0.15s ease-in-out;
+$clickable-transform-transition: transform 0.15s ease-in-out;
+$clickable-input-size: 1.125em;
+$clickable-label-offset: 0.75rem;

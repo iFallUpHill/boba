@@ -47,3 +47,38 @@
         }
     }
 }
+
+@mixin clickable-colors {
+    @each $colorName, $color in $color-list {
+        .checkbox.#{$colorName} {
+            input[type="checkbox"] {
+                &:checked {
+                    + label {
+                        &:before {
+                            background: #{$color};
+                            border-color: #{$color};
+                        }
+                    }   
+                }
+            }
+        }
+        .radio.#{$colorName} {
+            input[type="radio"] {
+                + label {
+                    &:after {
+                        background: #{$color};
+                    }
+                }
+
+                &:checked {
+                    + label {
+                        &:before {
+                            border-color: #{$color};
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

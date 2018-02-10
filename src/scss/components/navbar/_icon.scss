@@ -45,7 +45,7 @@
         @include accessible-input;
         
         &:focus + .navbar-menu-toggle {
-            @include accessibile-outlines;
+            @include accessible-outlines;
         }
 
         &:checked {

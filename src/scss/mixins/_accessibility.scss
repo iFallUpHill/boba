@@ -4,7 +4,7 @@
 }
 
 
-@mixin accessibile-outlines {
+@mixin accessible-outlines {
     outline: -webkit-focus-ring-color auto 5px; 
     
     @-moz-document url-prefix() { 
