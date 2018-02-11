@@ -60,8 +60,16 @@
                         }
                     }   
                 }
+                
+                &[disabled] {
+                    &:checked + label:before {
+                        background: lighten-2($color);
+                        border-color: lighten-2($color);
+                    }
+                }
             }
         }
+
         .radio.#{$colorName} {
             input[type="radio"] {
                 + label {
@@ -77,8 +85,19 @@
                         }
                     }
                 }
-            }
 
+
+                &[disabled] {
+                    &:checked + label {
+                        &:before {
+                            border-color: lighten-2($color);
+                        }
+                        &:after {
+                            background: lighten-2($color);
+                        }
+                    }
+                }
+            }
         }
     }
 }
