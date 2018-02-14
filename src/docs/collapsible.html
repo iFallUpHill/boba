@@ -1,0 +1,13 @@
+{% extends "templates/docs/layout.njk" %}
+{% set page_title ="Collapsible" %}
+{% set active_accordion ="components" %}
+{% set active_page ="collapsible" %}
+
+{% block main %}
+
+    {% include "templates/docs/collapsible/collapsible.njk" %}
+    <hr class="light" />
+    {% include "templates/docs/collapsible/styles.njk" %}
+    <hr class="light" />
+    
+{% endblock %}

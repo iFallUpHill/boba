@@ -1,0 +1,60 @@
+@import 'constants';
+@import 'styling';
+
+.collapsible {
+    @include collapsible-base;
+
+    .collapsible-toggle {
+        @include accessible-input;
+
+        &:focus + .collapsible-header {
+            @include accessible-outlines;
+        }
+
+        &:checked ~ {
+            & .collapsible-body {
+                max-height: $collapsible-max-height;
+            }
+        }
+    }
+
+	.collapsible-header {
+		@include collapsible-header-base;
+	}
+
+	.collapsible-body {
+		@include collapsible-body-base;
+	}
+
+    .collapsible {
+        .collapsible-header {
+            margin-bottom: 0;
+            padding: 0;
+        }
+
+        .collapsible-body {
+            margin-bottom: 0;
+
+            ul {
+                &.collapsible-submenu {
+                    padding-top: 0.5em;
+                    margin-bottom: 0;
+
+                    li {
+                        &:last-child, &:only-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.styled {
+        @if $include-color-palette {
+            @include menu-colors;
+        }
+
+        @include collapsible-styled;
+    }
+}

@@ -5,11 +5,15 @@ html {
 
 body {
 	margin: 0;
+	line-height: 1.5;
 }
 
 p {
-    line-height: normal;
-    margin: 0;
+    margin: 0 0 1rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 pre {

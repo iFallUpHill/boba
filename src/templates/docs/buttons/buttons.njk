@@ -5,10 +5,10 @@
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div>
-            <button>Default</button>
+            <button class="mv-1">Default</button>
             <br />
             {% for color in global_color_list_core %}
-            <button class="{{ color }}">{{ color | capitalize }}</button>
+            <button class="{{ color }} mv-1">{{ color | capitalize }}</button>
             {% endfor %}
         </div>
     </div>

@@ -11,11 +11,6 @@
 	  color: $color-dark;
 	  text-transform: uppercase;
 	  text-align: center;
-
-	  	// Value is on top of description
-		~ .desc {
-			margin-top: 0rem;
-		}
 	}
 
 	& > .desc {
@@ -24,11 +19,6 @@
 	  color: $color-dark;
 	  text-transform: uppercase;
 	  text-align: center;
-
-	  	// Description is on top of value
-		~ .value {
-			margin-top: 0em;
-		}
 	}
 
 	@each $size, $fontSize in $counter-font-sizing-list {

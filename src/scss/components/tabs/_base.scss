@@ -11,11 +11,13 @@
         flex-grow: 1;
         flex-shrink: 0;
         justify-content: flex-start;
+        padding: 0;
     }
 
     li {
         display: block;
         margin-bottom: 0;
+        padding: 0;
 
         &.active {
             a {
@@ -28,8 +30,10 @@
                 }
             }
         }
-        &:hover {
+        &:hover, &:focus {
             background-color: $color-dark;
+            border-radius: $border-radius $border-radius 0 0;
+            
             a {
                 color: $color-white;
             }
@@ -69,9 +73,9 @@
                     }
                 }
             }
-            &:hover {
+            &:hover, &:focus {
                 background-color: $color-dark;
-                border-radius: $border-radius $border-radius $border-radius $border-radius 0 0;
+                border-radius: $border-radius $border-radius 0 0;
             }
         }
     }

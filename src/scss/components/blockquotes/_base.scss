@@ -3,9 +3,12 @@
 
 blockquote {
     border-left: 0.3rem solid $color-dark;
-	margin: $blockquote-vmargin $blockquote-hmargin;
+	margin: 0 $blockquote-hmargin $blockquote-vmargin;
     padding: $blockquote-vpadding $blockquote-hpadding;
-    line-height: normal;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
     
     &:after {
         content: attr(author);

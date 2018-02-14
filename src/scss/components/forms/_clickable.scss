@@ -5,7 +5,8 @@
     .checkbox, .radio {
         display: block;
         position: relative;
-        margin: 0.75em 0;
+        margin: 0 0 0.75em;
+        line-height: 1.125;
     }
 
     .checkbox input[type="checkbox"], .radio input[type="radio"] {
@@ -14,7 +15,6 @@
         + label {
             display: inline-flex;
             font-size: $form-font-size-default;
-			margin-bottom: 0; 
 
             &:before, &:after {
                 cursor: pointer;

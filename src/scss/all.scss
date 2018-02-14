@@ -85,8 +85,6 @@ $include-color-helpers-extended: true;
 @import 'components/banners/base';
 // Labels
 @import 'components/labels/base';
-// Menu
-@import 'components/menus/base';
 // Counter
 @import 'components/counter/base';
 // Notifications
@@ -97,9 +95,9 @@ $include-color-helpers-extended: true;
 @import 'components/breadcrumbs/base';
 // Progress
 @import 'components/progress/base';
-// Accordion
-@import 'components/accordions/base';
-// Accordion
+// Sidebar
 @import 'components/sidebar/base';
 // Blockquotes
 @import 'components/blockquotes/base';
+// Collapsible
+@import 'components/collapsible/base'

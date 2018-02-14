@@ -1,0 +1,109 @@
+@import 'constants';
+
+@mixin collapsible-base {
+	margin: $collapsible-default-margin;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+@mixin collapsible-header-base {
+	display: inline-block;
+	padding: $collapsible-default-vpadding 0;
+	cursor: pointer;
+	margin-bottom: $collapsible-header-default-margin;
+}
+
+@mixin collapsible-body-base {
+	margin-bottom: $collapsible-header-default-margin;
+	overflow: hidden;
+	max-height: 0;
+	transition: max-height .35s ease-in-out;
+
+	ul {
+		&.collapsible-submenu {
+            margin-top: 0;
+			margin-bottom: $collapsible-submenu-default-margin;
+			padding-left: $collapsible-submenu-outer-hpadding;			
+			list-style: none;
+
+			li {
+				padding: $collapsible-submenu-item-padding;
+				cursor: pointer;
+				margin: 0 0 $collapsible-submenu-item-default-margin;
+			}
+		}
+	}
+}
+
+@mixin collapsible-styled {
+
+	.collapsible-toggle:not(:checked) ~ {
+		.collapsible-header {
+			border-radius: $border-radius;
+		}
+
+		.collapsible-body {
+			border: none;
+			padding: 0;
+			transition: max-height 0.25s ease-in-out, padding 0.4s ease-in-out;
+
+		}
+	}
+
+	.collapsible-header {
+		display: block;
+        padding: $collapsible-styled-header-padding;
+		background: $color-dark;
+        color: $color-white;
+        border-radius: $border-radius $border-radius 0 0;
+	}
+
+	.collapsible-body {
+        border: 1px solid $color-dark;
+        border-top: 0;
+        border-radius: 0 0 $border-radius $border-radius;
+        padding: $collapsible-styled-body-padding;
+
+
+        .collapsible-submenu {
+        	padding-left: 0;
+        }
+	}
+
+	.collapsible {
+		.collapsible-header {
+			border: none;
+	        border-radius: 0;
+	        background: $color-white;        
+	        color: $color-black;
+	        padding: 0;
+		}
+
+		.collapsible-body {
+			border: none;
+			padding: 0;
+
+			.collapsible-submenu {
+				padding-left: $collapsible-submenu-outer-hpadding;	
+			}
+		}
+	}
+
+}
+
+@mixin menu-colors {
+    @each $colorName, $color in $color-list {
+        &.#{$colorName}{
+            .collapsible-header {
+                background: $color;
+            }
+
+            .collapsible-body {
+                border-color: $color;
+            }
+        }
+    }
+}
+

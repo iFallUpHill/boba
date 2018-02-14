@@ -1,4 +1,4 @@
-{% macro generate(active_accordion, active_page, version_number) %}
+{% macro generate(active_collapsible, active_page, version_number) %}
 
 <div class="sb-top-navbar sticky">
 	<a class="sb-side-navbar-toggle" href="#boba-sidebar">
@@ -9,17 +9,17 @@
 
 <div class="sb-side-navbar" id="boba-sidebar">
 	<div class="sb-side-sticky-region display-flex flex-column">
-		<a href="/">boba</a>
-		<span class="version-tag">Version {{ version_number }}</span>
+		<a class="boba-branding" href="/">boba</a>
+		<span class="version-tag boba-branding">Version {{ version_number }}</span>
 	</div>
 	<div class="sb-side-scroll-region">
-		<div class="accordion-menu">
-			<input type="checkbox" class="accordion-toggle" id="overview" name="accordion-checkbox" {{ "checked" if active_accordion == "overview" }} />
-			<label class="accordion-header {{ "bold" if active_accordion == "overview" }}" for="overview">
+		<div class="collapsible">
+			<input type="checkbox" class="collapsible-toggle" id="overview" name="collapsible-checkbox" {{ "checked" if active_collapsible == "overview" }} />
+			<label class="collapsible-header {{ "bold" if active_collapsible == "overview" }}" for="overview">
 				Overview
 			</label>
-			<div class="accordion-body">
-				<ul class="accordion-submenu">
+			<div class="collapsible-body">
+				<ul class="collapsible-submenu">
 					<li class="{{ "bold" if active_page == "index" }}"><a href="/docs/index.html">Introduction</a></li>
 					<li class="{{ "bold" if active_page == "installation" }}"><a href="/docs/installation.html">Installation</a></li>
 					<li class="{{ "bold" if active_page == "customize" }}"><a href="/docs/customize.html">Customize</a></li>
@@ -28,44 +28,43 @@
 				</ul>
 			</div>
 		</div>
-		<div class="accordion-menu">
-			<input type="checkbox" class="accordion-toggle" id="core" name="accordion-checkbox" {{ "checked" if active_accordion == "core" }} />
-			<label class="accordion-header {{ "bold" if active_accordion == "core" }}" for="core">
+		<div class="collapsible">
+			<input type="checkbox" class="collapsible-toggle" id="core" name="collapsible-checkbox" {{ "checked" if active_collapsible == "core" }} />
+			<label class="collapsible-header {{ "bold" if active_collapsible == "core" }}" for="core">
 				Core
 			</label>
-			<div class="accordion-body">
-				<ul class="accordion-submenu">
+			<div class="collapsible-body">
+				<ul class="collapsible-submenu">
 					<li class="{{ "bold" if active_page == "breakpoints" }}"><a href="/docs/breakpoints.html">Breakpoints</a></li>
 					<li class="{{ "bold" if active_page == "colors" }}"><a href="/docs/colors.html">Colors</a></li>
 					<li class="{{ "bold" if active_page == "typography" }}"><a href="/docs/typography.html">Typography</a></li>
 				</ul>
 			</div>
 		</div>
-		<div class="accordion-menu">
-			<input type="checkbox" class="accordion-toggle" id="layout" name="accordion-checkbox" {{ "checked" if active_accordion == "layout" }} />
-			<label class="accordion-header {{ "bold" if active_accordion == "layout" }}" for="layout">
+		<div class="collapsible">
+			<input type="checkbox" class="collapsible-toggle" id="layout" name="collapsible-checkbox" {{ "checked" if active_collapsible == "layout" }} />
+			<label class="collapsible-header {{ "bold" if active_collapsible == "layout" }}" for="layout">
 				Layout
 			</label>
-			<div class="accordion-body">
-				<ul class="accordion-submenu">
+			<div class="collapsible-body">
+				<ul class="collapsible-submenu">
 					<li class="{{ "bold" if active_page == "grid" }}"><a href="/docs/grid.html">Grid</a></li>
 					<li class="{{ "bold" if active_page == "navbar" }}"><a href="/docs/navbar.html">Navbar</a></li>
 					<li class="{{ "bold" if active_page == "sidebar" }}"><a href="/docs/sidebar.html">Sidebar</a></li>
 				</ul>
 			</div>
 		</div>
-		<div class="accordion-menu">
-			<input type="checkbox" class="accordion-toggle" id="components" name="accordion-checkbox" {{ "checked" if active_accordion == "components" }} />
-			<label class="accordion-header {{ "bold" if active_accordion == "components" }}" for="components">
+		<div class="collapsible">
+			<input type="checkbox" class="collapsible-toggle" id="components" name="collapsible-checkbox" {{ "checked" if active_collapsible == "components" }} />
+			<label class="collapsible-header {{ "bold" if active_collapsible == "components" }}" for="components">
 				Components
 			</label>
-			<div class="accordion-body">
-				<ul class="accordion-submenu">
-					<li class="{{ "bold" if active_page == "accordions" }}"><a href="/docs/accordions.html">Accordions</a></li>
+			<div class="collapsible-body">
+				<ul class="collapsible-submenu">
 					<li class="{{ "bold" if active_page == "banners" }}"><a href="/docs/banners.html">Banners</a></li>
 					<li class="{{ "bold" if active_page == "breadcrumbs" }}"><a href="/docs/breadcrumbs.html">Breadcrumbs</a></li>
 					<li class="{{ "bold" if active_page == "cards" }}"><a href="/docs/cards.html">Cards</a></li>
-					<li class="{{ "bold" if active_page == "menus" }}"><a href="/docs/menus.html">Menus</a></li>
+					<li class="{{ "bold" if active_page == "collapsible" }}"><a href="/docs/collapsible.html">Collapsible</a></li>
 					<li class="{{ "bold" if active_page == "messages" }}"><a href="/docs/messages.html">Messages</a></li>
 					<li class="{{ "bold" if active_page == "notifications" }}"><a href="/docs/notifications.html">Notifications</a></li>
 					<li class="{{ "bold" if active_page == "pagination" }}"><a href="/docs/pagination.html">Pagination</a></li>
@@ -74,13 +73,13 @@
 				</ul>
 			</div>
 		</div>
-		<div class="accordion-menu">
-			<input type="checkbox" class="accordion-toggle" id="elements" name="accordion-checkbox" {{ "checked" if active_accordion == "elements" }} />
-			<label class="accordion-header {{ "bold" if active_accordion == "elements" }}" for="elements">
+		<div class="collapsible">
+			<input type="checkbox" class="collapsible-toggle" id="elements" name="collapsible-checkbox" {{ "checked" if active_collapsible == "elements" }} />
+			<label class="collapsible-header {{ "bold" if active_collapsible == "elements" }}" for="elements">
 				Elements
 			</label>
-			<div class="accordion-body">
-				<ul class="accordion-submenu">
+			<div class="collapsible-body">
+				<ul class="collapsible-submenu">
 					<li class="{{ "bold" if active_page == "blockquotes" }}"><a href="/docs/blockquotes.html">Blockquotes</a></li>
 					<li class="{{ "bold" if active_page == "buttons" }}"><a href="/docs/buttons.html">Buttons</a></li>
 					<li class="{{ "bold" if active_page == "code" }}"><a href="/docs/code.html">Code</a></li>
@@ -92,13 +91,13 @@
 				</ul>
 			</div>
 		</div>
-		<div class="accordion-menu">
-			<input type="checkbox" class="accordion-toggle" id="forms" name="accordion-checkbox" {{ "checked" if active_accordion == "forms" }} />
-			<label class="accordion-header {{ "bold" if active_accordion == "forms" }}" for="forms">
+		<div class="collapsible">
+			<input type="checkbox" class="collapsible-toggle" id="forms" name="collapsible-checkbox" {{ "checked" if active_collapsible == "forms" }} />
+			<label class="collapsible-header {{ "bold" if active_collapsible == "forms" }}" for="forms">
 				Forms
 			</label>
-			<div class="accordion-body">
-				<ul class="accordion-submenu">
+			<div class="collapsible-body">
+				<ul class="collapsible-submenu">
                     <li class="{{ "bold" if active_page == "checkboxes" }}"><a href="/docs/checkboxes.html">Checkboxes</a></li>
 					<li class="{{ "bold" if active_page == "inputs" }}"><a href="/docs/inputs.html">Inputs</a></li>
                     <li class="{{ "bold" if active_page == "radios" }}"><a href="/docs/radios.html">Radios</a></li>
@@ -107,13 +106,13 @@
 				</ul>
 			</div>
 		</div>
-		<div class="accordion-menu">
-			<input type="checkbox" class="accordion-toggle" id="utilities" name="accordion-checkbox" {{ "checked" if active_accordion == "utilities" }} />
-			<label class="accordion-header {{ "bold" if active_accordion == "utilities" }}" for="utilities">
+		<div class="collapsible">
+			<input type="checkbox" class="collapsible-toggle" id="utilities" name="collapsible-checkbox" {{ "checked" if active_collapsible == "utilities" }} />
+			<label class="collapsible-header {{ "bold" if active_collapsible == "utilities" }}" for="utilities">
 				Utilities
 			</label>
-			<div class="accordion-body">
-				<ul class="accordion-submenu">
+			<div class="collapsible-body">
+				<ul class="collapsible-submenu">
 					<li class="{{ "bold" if active_page == "animations" }}"><a href="/docs/animations.html">Animations</a></li>
 					<li class="{{ "bold" if active_page == "background" }}"><a href="/docs/background.html">Background</a></li>
 					<li class="{{ "bold" if active_page == "borders" }}"><a href="/docs/borders.html">Borders</a></li>

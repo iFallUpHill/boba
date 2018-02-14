@@ -4,10 +4,10 @@
     display: inline-flex;
     align-items: center; 
     justify-content: center; 
-
+    line-height: $default-line-height;
     height: $button-spacing-default;
     padding: 0 $button-padding-default;
-    margin: $button-margin-default;
+    margin: 0 $button-margin-default;
     font-size: $button-font-size-default;
     font-weight: $base-font-weight-bold;
     border-radius: 0.2em;

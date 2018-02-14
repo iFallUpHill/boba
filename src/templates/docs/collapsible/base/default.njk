@@ -1,0 +1,114 @@
+<div class="row">
+    <div class="col xs-12">
+        <h4 class="header">Default Collapsible</h4>
+        <h6 class="subheader thin">Each collapsible can open and close independently.</h6>
+        <div class="message orange m-0">
+            <div class="message-header">
+                <p>Tip</p>
+            </div>
+            <div class="message-body">
+                <p>Be sure that the input's type is <code class="inline">checkbox</code> and that each of the input's <code class="inline">id</code>s match their label's <code class="inline">for</code>!</p>
+            </div>
+        </div> 
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <div class="collapsible">
+            <input type="checkbox" class="collapsible-toggle" id="first-collapsible" name="collapsible-checkbox" checked />
+            <label class="collapsible-header" for="first-collapsible">
+                First Collapsible
+            </label>
+            <div class="collapsible-body">
+                <ul class="collapsible-submenu">
+                    <li>Submenu Item 1</li>
+                    <li>
+                        <div class="collapsible">
+                            <input type="checkbox" class="collapsible-toggle" id="first-nested-collapsible" name="collapsible-checkbox" />
+                            <label class="collapsible-header" for="first-nested-collapsible">
+                                Submenu Item 2 (Click me!)
+                            </label>
+                            <div class="collapsible-body">
+                                <ul class="collapsible-submenu">
+                                    <li>Nested Menu Item 1</li>
+                                    <li>Nested Menu Item 2</li>
+                                    <li>Nested Menu Item 3</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>Submenu Item 3</li>
+                </ul>
+            </div>
+        </div>
+        <div class="collapsible">
+            <input type="checkbox" class="collapsible-toggle" id="second-collapsible" name="collapsible-checkbox" />
+            <label class="collapsible-header" for="second-collapsible">
+                Second Collapsible
+            </label>
+            <div class="collapsible-body">
+                <h5>You can place anything inside of a collapsible component!</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a ultricies mauris. Donec posuere ultrices tortor. Aliquam fringilla tellus odio, nec vehicula mi placerat nec. Duis bibendum eget ipsum eget dapibus. Aenean sit amet dui at dolor condimentum sagittis.</p>
+            </div>
+        </div>
+        <div class="collapsible">
+            <input type="checkbox" class="collapsible-toggle" id="third-collapsible" name="collapsible-checkbox" />
+            <label class="collapsible-header" for="third-collapsible">
+                Third Collapsible
+            </label>
+            <div class="collapsible-body">
+                <img class="img-responsive" src="http://placehold.it/200x100" alt="Image">
+            </div>
+        </div>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <div class="code-block">
+            <pre class="code"><code class="language-html">&lt;div class="collapsible"&gt;
+    &lt;input type="checkbox" class="collapsible-toggle" id="first-collapsible" name="collapsible-checkbox" checked /&gt;
+    &lt;label class="collapsible-header" for="first-collapsible"&gt;
+        First Collapsible
+    &lt;/label&gt;
+    &lt;div class="collapsible-body"&gt;
+        &lt;ul class="collapsible-submenu"&gt;
+            &lt;li&gt;Submenu Item 1&lt;/li&gt;
+            &lt;li&gt;
+                &lt;div class="collapsible"&gt;
+                    &lt;input type="checkbox" class="collapsible-toggle" id="first-nested-collapsible" name="collapsible-checkbox" /&gt;
+                    &lt;label class="collapsible-header" for="first-nested-collapsible"&gt;
+                        Submenu Item 2 (Click me!)
+                    &lt;/label&gt;
+                    &lt;div class="collapsible-body"&gt;
+                        &lt;ul class="collapsible-submenu"&gt;
+                            &lt;li&gt;Nested Menu Item 1&lt;/li&gt;
+                            &lt;li&gt;Nested Menu Item 2&lt;/li&gt;
+                            &lt;li&gt;Nested Menu Item 3&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li&gt;Submenu Item 3&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="collapsible"&gt;
+    &lt;input type="checkbox" class="collapsible-toggle" id="second-collapsible" name="collapsible-checkbox" checked /&gt;
+    &lt;label class="collapsible-header" for="second-collapsible"&gt;
+        Second Collapsible
+    &lt;/label&gt;
+    &lt;div class="collapsible-body"&gt;
+        &lt;h5&gt;You can place anything inside of a collapsible component!&lt;/h5&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a ultricies mauris. Donec posuere ultrices tortor. Aliquam fringilla tellus odio, nec vehicula mi placerat nec. Duis bibendum eget ipsum eget dapibus. Aenean sit amet dui at dolor condimentum sagittis.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="collapsible"&gt;
+    &lt;input type="checkbox" class="collapsible-toggle" id="third-collapsible" name="collapsible-checkbox" checked /&gt;
+    &lt;label class="collapsible-header" for="third-collapsible"&gt;
+        Third Collapsible
+    &lt;/label&gt;
+    &lt;div class="collapsible-body"&gt;
+        &lt;img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=200%C3%97100&amp;w=200&amp;h=100" alt="Image"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+    </div>
+</div>
