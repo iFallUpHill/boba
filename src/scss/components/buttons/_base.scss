@@ -7,6 +7,7 @@ input[type="reset"],input[type="button"] {
     color: $color-white;
     background-color: $color-dark;
     border: 1px solid $color-dark;
+    transition: background 0.2s ease-in-out, border 0.2s ease-in-out, color 0.2s ease-in-out;
 
     &.inverted, &.outlined {
         color: $color-dark;

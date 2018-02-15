@@ -18,13 +18,15 @@
         display: block;
         margin-bottom: 0;
         padding: 0;
+        border-radius: $border-radius $border-radius 0 0;
 
         &.active {
             a {
                 border-bottom-color: $color-dark;
                 color: $color-dark;
             }
-            &:hover {
+
+            &:hover, &:focus, &:active {
                 a {
                     color: $color-white;
                 }
@@ -32,53 +34,72 @@
         }
         &:hover, &:focus {
             background-color: $color-dark;
-            border-radius: $border-radius $border-radius 0 0;
             
             a {
                 color: $color-white;
             }
         }
-    }
-
-    a {
-        cursor: pointer;
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        margin-bottom: -1px;
-        padding: 0.5em 1em;
-        vertical-align: top;
-        border-bottom: 1px solid darken-1($color-light);
-        color: $color-dark;
-        &:hover {
-            border-bottom: 1px solid $color-dark;
+        &:active {
+            background: darken-1($color-dark);
+            border-color: darken-1($color-dark);
         }
+
+        a {
+            cursor: pointer;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            margin-bottom: -1px;
+            padding: 0.5em 1em;
+            vertical-align: top;
+            border-bottom: 1px solid darken-1($color-light);
+            color: $color-dark;
+            border-radius: $border-radius $border-radius 0 0;
+
+            &:hover, &:focus {
+                border-color: $color-dark;
+            }
+            
+            &:active {
+                border-color: darken-1($color-dark);
+            }
+        }
+        
     }
     
     &.boxed {
         li {
-            a {
-                border-radius: $border-radius $border-radius 0 0;
-                border-bottom: 1px solid darken-1($color-light);
+            &:hover, &:focus {
+                background: $color-dark;
+                border-color: $color-dark;
             }
+
+            &:active {
+                background: darken-1($color-dark);
+                border-color: darken-1($color-dark);
+            }
+
             &.active {
                 a {
-                    background-color: white;
+                    background: transparent;
                     border: 1px solid $color-dark;
                     border-bottom-color: transparent !important;
                     color: $color-dark;
-                    &:hover {
+
+                    &:hover, &:focus {
                         background-color: $color-dark;
                         color: $color-white;
                     }
+
+                    &:active {
+                        background: darken-1($color-dark);
+                        border-color: darken-1($color-dark);
+                    }
                 }
-            }
-            &:hover, &:focus {
-                background-color: $color-dark;
-                border-radius: $border-radius $border-radius 0 0;
             }
         }
     }
+
     @each $size, $fontSize, $height, $padding in $tab-size-list {
         &.#{$size} {
             font-size: $fontSize;

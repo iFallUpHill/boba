@@ -38,7 +38,6 @@
 }
 
 @mixin collapsible-styled {
-
 	.collapsible-toggle:not(:checked) ~ {
 		.collapsible-header {
 			border-radius: $border-radius;
@@ -48,7 +47,6 @@
 			border: none;
 			padding: 0;
 			transition: max-height 0.25s ease-in-out, padding 0.4s ease-in-out;
-
 		}
 	}
 
@@ -58,7 +56,18 @@
 		background: $color-dark;
         color: $color-white;
         border-radius: $border-radius $border-radius 0 0;
-	}
+        transition: background 0.2s ease-in-out, border 0.2s ease-in-out, color 0.2s ease-in-out;
+        
+        &:hover, &:focus {
+            background: darken-1($color-dark);
+            border-color: darken-1($color-dark);
+        }
+
+        &:active {
+            background: darken-2($color-dark);
+            border-color: darken-2($color-dark);
+        }
+    }
 
 	.collapsible-body {
         border: 1px solid $color-dark;
@@ -79,6 +88,12 @@
 	        background: $color-white;        
 	        color: $color-black;
 	        padding: 0;
+            display: inline-block;
+
+            &:hover, &:focus, &:active {
+                background: transparent;
+                border-color: none;
+            }
 		}
 
 		.collapsible-body {
@@ -90,7 +105,6 @@
 			}
 		}
 	}
-
 }
 
 @mixin menu-colors {
@@ -98,6 +112,16 @@
         &.#{$colorName}{
             .collapsible-header {
                 background: $color;
+
+                &:hover, &:focus {
+                    background: darken-1($color);
+                    border-color: darken-1($color);
+                }
+
+                &:active {
+                    background: darken-2($color);
+                    border-color: darken-2($color);
+                }
             }
 
             .collapsible-body {

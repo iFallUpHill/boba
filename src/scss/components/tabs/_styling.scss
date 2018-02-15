@@ -14,25 +14,34 @@
     @each $colorName, $color in $color-list {
         &.#{$colorName} {
             li {
-                a {
-                    &:hover {
-                        border-bottom-color: $color;
-                    }
-                }
                 &.active {
                     a {
                         border-bottom-color: $color;
                         color: $color;
-                        &:hover {
-                            background-color: $color;
+                        &:hover, &:focus {
                             color: $color-white;
                         }
                     }
                 }
-                &:hover {
-                    background-color: $color;
+
+                &:hover, &:focus {
+                    background: $color;
+                }
+
+                &:active {
+                    background: darken-1($color);
+                }
+
+                a {
+                    &:hover, &:focus {
+                        border-bottom-color: $color;
+                    }
+                    &:active {
+                        border-bottom-color: darken-1($color);
+                    }
                 }
             }
+
             &.boxed {
                 li {
                     &.active {
@@ -40,8 +49,13 @@
                             color: $color;
                             border-color: $color;
 
-                            &:hover {
+                            &:hover, &:focus {
                                 color: $color-white;
+                                background: $color;
+                            }
+                            &:active {
+                                background: darken-1($color);
+                                border-color: darken-1($color);
                             }
                         }
                     }
