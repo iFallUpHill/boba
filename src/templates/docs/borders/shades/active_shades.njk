@@ -21,26 +21,30 @@
                     <td rowspan="{{ (light_shades | length) + (dark_shades | length) + 3}}"><span class="bold">Color Shades</span></td>
                 </tr>
                 <tr>
-                    <td colspan="3"><p>To change the shade of your colored border when clicked, use the <code class="inline">.lighten-border-active-{STEP}</code> and <code class="inline">.darken-border-active-{STEP}</code> classes.</p>
-                    <p>There are a total of 3 steps in either direction (i.e. a total of 7 shades are available per color).</p></td>
+                    <td colspan="3">
+                        <p>To change the shade of your colored border when clicked, use the <code class="inline">.lighten-border-active-{STEP}</code> and <code class="inline">.darken-border-active-{STEP}</code> classes.
+                        <br />
+                        There are a total of 3 steps in either direction (i.e. a total of 7 shades are available per color).
+                        </p>
+                    </td>
                 </tr>
                 {% for shade in light_shades %}
                 <tr>
                     <td class="text-center vertical-align-middle"><code class="inline">.{{ shade }}</code></td>
                     <td class="vertical-align-middle">Add this class to make your border {{ loop.length - loop.index + 1 }} shade{{ "s" if loop.index != 3}} lighter when clicked.</td>
-                    <td class="text-center vertical-align-middle"><span class="border-light border-active-red {{ shade }}" style="display: inline-flex; height: 25px; width: 50px;"></span></td>
+                    <td class="text-center vertical-align-middle"><span class="border-light border-active-red {{ shade }}" style="display: inline-block; height: 25px; width: 50px; vertical-align: middle;"></span></td>
                 </tr>
                 {% endfor %}
                 <tr>
                     <td class="text-center vertical-align-middle">Base Color</td>
                     <td class="vertical-align-middle">This is a default border using <code class="inline">.border-active-red</code> for reference.</td>
-                    <td class="text-center vertical-align-middle"><span class="border-light border-active-red" style="display: inline-flex; height: 25px; width: 50px;"></span></td>
+                    <td class="text-center vertical-align-middle"><span class="border-light border-active-red" style="display: inline-block; height: 25px; width: 50px; vertical-align: middle;"></span></td>
                 </tr>
                 {% for shade in dark_shades %}
                 <tr>
                     <td class="text-center vertical-align-middle"><code class="inline">.{{ shade }}</code></td>
                     <td class="vertical-align-middle">Add this class to make your border {{ loop.index }} shade{{ "s" if loop.index != 1}} darker when clicked.</td>
-                    <td class="text-center vertical-align-middle"><span class="border-light border-active-red {{ shade }}" style="display: inline-flex; height: 25px; width: 50px;"></span></td>
+                    <td class="text-center vertical-align-middle"><span class="border-light border-active-red {{ shade }}" style="display: inline-block; height: 25px; width: 50px; vertical-align: middle;"></span></td>
                 </tr>
                 {% endfor %}
             </tbody>

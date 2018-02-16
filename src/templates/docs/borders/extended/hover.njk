@@ -16,14 +16,14 @@
                 <tr>
                     <td class="vertical-align-middle"><code class="inline">.border-hover-{{ color }}</code></td>
                     <td class="vertical-align-middle">Add this class to make the border of an element {{ color }} on hover.</td>
-                    <td class="vertical-align-middle"><span class="border-light border-hover-{{ color }}" style="display: inline-flex; height: 25px; width: 50px;"></span></td>
+                    <td class="vertical-align-middle"><span class="border-light border-hover-{{ color }}" style="display: block; height: 25px; width: 50px;"></span></td>
                 </tr>
                 {% endfor %}
                 {% for color in global_color_list_base %}
                 <tr>
                     <td class="vertical-align-middle"><code class="inline">.border-hover-{{ color }}</code></td>
                     <td class="vertical-align-middle">Add this class to make the border of an element {{ color }} on hover.</td>
-                    <td class="vertical-align-middle"><span class="{{ "border-dark" if (color == "light") or (color == "white") else "border-light"}} border-hover-{{ color }}" style="display: inline-flex; height: 25px; width: 50px;"></span></td>
+                    <td class="vertical-align-middle"><span class="{{ "border-dark" if (color == "light") or (color == "white") else "border-light"}} border-hover-{{ color }}" style="display: block; height: 25px; width: 50px;"></span></td>
                 </tr>
                 {% endfor %}
             </tbody>

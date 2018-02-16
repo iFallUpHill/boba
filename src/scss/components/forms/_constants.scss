@@ -6,13 +6,13 @@ $form-height-default: 2.4em;
 $form-padding-default: 0.3rem 1rem;
 $form-text-area-padding: 0.75rem 1rem;
 
-$form-size-list: (large, $form-font-size-default + 0.4em, $form-height-default + 0.4em, $form-padding-default + 0.4em),
-                  (medium, $form-font-size-default + 0.2em, $form-height-default + 0.2em, $form-padding-default + 0.2em),
-                  (small, $form-font-size-default - 0.2em, $form-height-default - 0.2em, $form-padding-default - 0.2em);
-
 $clickable-background-transition: background 0.15s ease-in-out;
 $clickable-border-transition: border 0.15s ease-in-out;
 $clickable-color-transition: color 0.15s ease-in-out;
 $clickable-transform-transition: transform 0.15s ease-in-out;
-$clickable-input-size: 1.125em;
+$clickable-input-size: 1em;
 $clickable-label-offset: 0.75rem;
+
+$form-size-list: (large, $form-font-size-default + 0.4em, $form-height-default + 0.4em, $form-padding-default + 0.4em),
+                  (medium, $form-font-size-default + 0.2em, $form-height-default + 0.2em, $form-padding-default + 0.2em),
+                  (small, $form-font-size-default - 0.2em, $form-height-default - 0.2em, $form-padding-default - 0.2em);

@@ -10,7 +10,7 @@
 
 @mixin collapsible-header-base {
 	display: inline-block;
-	padding: $collapsible-default-vpadding 0;
+	padding: 0; 
 	cursor: pointer;
 	margin-bottom: $collapsible-header-default-margin;
 }
@@ -32,6 +32,10 @@
 				padding: $collapsible-submenu-item-padding;
 				cursor: pointer;
 				margin: 0 0 $collapsible-submenu-item-default-margin;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
 			}
 		}
 	}
@@ -53,6 +57,7 @@
 	.collapsible-header {
 		display: block;
         padding: $collapsible-styled-header-padding;
+        margin-bottom: 0;
 		background: $color-dark;
         color: $color-white;
         border-radius: $border-radius $border-radius 0 0;

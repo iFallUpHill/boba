@@ -1,105 +1,63 @@
 <div class="row">
+    <div class="col xs-12">
+        <h1 class="header">Checkboxes</h1>
+        <h5 class="subheader thin">Checkboxes let users select individual form items.</h5>
+        <div class="message purple m-0">
+            <div class="message-header">
+                <p>Compatibility</p>
+            </div>
+            <div class="message-body">
+                <p>Be sure that the input's type is <code class="inline">checkbox</code> and that each of the input's <code class="inline">id</code>s match their label's <code class="inline">for</code>!</p>
+                <p>Note that for the <code class="inline">label</code> to be displayed correctly, it must be placed directly after the <code class="inline">input</code> tag.</p>
+            </div>
+        </div> 
+    </div>
     <div class="col xs-12 md-6 col-middle">
         <form class="form-control" action="#" method="post">
             <div class="checkbox">
-                <input id="example-checkbox-1" class="checkbox-input" type="checkbox" checked>
+                <input type="checkbox" id="example-checkbox-1" class="checkbox-input" checked>
                 <label for="example-checkbox-1" class="checkbox-label">
-                    Primary
+                    First Checkbox
                 </label>
             </div>
             <div class="checkbox">
-                <input id="example-checkbox-2" class="checkbox-input" type="checkbox" checked>
+                <input type="checkbox" id="example-checkbox-2" class="checkbox-input" checked>
                 <label for="example-checkbox-2" class="checkbox-label">
-                    Secondary
-                </label>
-            </div>
-            <div class="radio">
-                <input id="example-radio-1" name="example-radio-1" class="radio-input" type="radio">
-                <label for="example-radio-1" class="radio-label">
-                    Radio 1
-                </label>
-            </div>
-            <div class="radio">
-                <input id="example-radio-2" name="example-radio-1" class="radio-input" type="radio" checked>
-                <label for="example-radio-2" class="radio-label">
-                    Radio 2
-                </label>
-            </div>
-            <hr />
-            <div class="checkbox red">
-                <input id="example-checkbox-color-1" class="checkbox-input" type="checkbox" checked>
-                <label for="example-checkbox-color-1" class="checkbox-label">
-                    Primary
-                </label>
-            </div>
-            <div class="checkbox blue">
-                <input id="example-checkbox-color-2" class="checkbox-input" type="checkbox" checked>
-                <label for="example-checkbox-color-2" class="checkbox-label">
-                    Secondary
-                </label>
-            </div>
-            <div class="radio green">
-                <input id="example-radio-color-1" name="example-radio-color-1" class="radio-input" type="radio">
-                <label for="example-radio-color-1" class="radio-label">
-                    Radio 1
-                </label>
-            </div>
-            <div class="radio orange">
-                <input id="example-radio-color-2" name="example-radio-color-1" class="radio-input" type="radio" checked>
-                <label for="example-radio-color-2" class="radio-label">
-                    Radio 2
-                </label>
-            </div>
-            <hr />
-            <div class="checkbox small">
-                <input id="size-checkbox-1" class="checkbox-input" type="checkbox" checked>
-                <label for="size-checkbox-1" class="checkbox-label">
-                    Primary
+                    Second Checkbox
                 </label>
             </div>
             <div class="checkbox">
-                <input id="size-checkbox-2" class="checkbox-input" type="checkbox" checked>
-                <label for="size-checkbox-2" class="checkbox-label">
-                    Primary
-                </label>
-            </div>
-            <div class="checkbox medium">
-                <input id="size-checkbox-3" class="checkbox-input" type="checkbox" checked>
-                <label for="size-checkbox-3" class="checkbox-label">
-                    Primary
-                </label>
-            </div>
-            <div class="checkbox large">
-                <input id="size-checkbox-4" class="checkbox-input" type="checkbox" checked>
-                <label for="size-checkbox-4" class="checkbox-label">
-                    Primary
-                </label>
-            </div>
-            <hr />
-            <div class="radio small">
-                <input id="size-radio-1" name="size-radio-1" class="radio-input" type="radio" checked>
-                <label for="size-radio-1" class="radio-label">
-                    Radio 1
-                </label>
-            </div>
-            <div class="radio">
-                <input id="size-radio-2" name="size-radio-2" class="radio-input" type="radio" checked>
-                <label for="size-radio-2" class="radio-label">
-                    Radio 1
-                </label>
-            </div>
-            <div class="radio medium">
-                <input id="size-radio-3" name="size-radio-3" class="radio-input" type="radio" checked>
-                <label for="size-radio-3" class="radio-label">
-                    Radio 1
-                </label>
-            </div>
-            <div class="radio large">
-                <input id="size-radio-4" name="size-radio-4" class="radio-input" type="radio" checked>
-                <label for="size-radio-4" class="radio-label">
-                    Radio 1
+                <input type="checkbox" id="example-checkbox-3" class="checkbox-input" checked>
+                <label for="example-checkbox-3" class="checkbox-label">
+                    Third Checkbox
                 </label>
             </div>
         </form>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <div class="code-block">
+            <pre class="code"><code class="language-html">&lt;form class="form-control" action="#" method="post"&gt;
+    &lt;div class="checkbox"&gt;
+        &lt;input type="checkbox" id="example-checkbox-1" class="checkbox-input" checked&gt;
+        &lt;label for="example-checkbox-1" class="checkbox-label"&gt;
+            First Checkbox
+        &lt;/label&gt;
+    &lt;/div&gt;
+
+    &lt;div class="checkbox"&gt;
+        &lt;input type="checkbox" id="example-checkbox-2" class="checkbox-input" checked&gt;
+        &lt;label for="example-checkbox-2" class="checkbox-label"&gt;
+            Second Checkbox
+        &lt;/label&gt;
+    &lt;/div&gt;
+
+    &lt;div class="checkbox"&gt;
+        &lt;input type="checkbox" id="example-checkbox-3" class="checkbox-input" checked&gt;
+        &lt;label for="example-checkbox-3" class="checkbox-label"&gt;
+            Third Checkbox
+        &lt;/label&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+        </div>
     </div>
 </div>

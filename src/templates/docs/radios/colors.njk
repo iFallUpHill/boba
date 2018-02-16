@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col xs-12">
+        <h1 class="header">Colors</h1>
+        <h5 class="subheader thin no-margin">Change the color of your radios using boba's eye-catching <a href="./colors.html">color palette</a>.</h5>
+    </div>
+    <div class="col xs-12 md-6">
+        <form class="form-control" action="#" method="post">
+            {% for color in global_color_list_core %}
+            <div class="radio {{ color }}">
+                <input type="radio" id="example-radio-{{ color }}" name="example-radio-{{ color }}" class="radio-input" checked>
+                <label for="example-radio-{{ color }}" class="radio-label">
+                    {{ color | capitalize }} Radio Option
+                </label>
+            </div>
+            {% endfor %}
+    	</form>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <div class="code-block">
+            <pre class="code"><code class="language-html">&lt;form class="form-control" action="#" method="post"&gt;
+    &lt;div class="radio green"&gt;
+        &lt;input type="radio" id="example-radio-green" name="example-radio-green" class="radio-input" checked&gt;
+        &lt;label for="example-radio-green" class="radio-label"&gt;
+            Green Radio Option
+        &lt;/label&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+    </div>
+</div>

@@ -126,11 +126,17 @@ table {
 		}
 	}
 
-	&.full-width {
-		width: 100%;
-	}
-
 	@if $include-color-palette {
 		@include table-colors;
 	}
+}
+
+.full-width-table {
+    width: 100%;
+    overflow-x: auto;
+    
+    table {
+        display: table;
+        width: 100%;
+    }
 }

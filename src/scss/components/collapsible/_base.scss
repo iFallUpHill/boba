@@ -11,8 +11,8 @@
             @include accessible-outlines;
         }
 
-        &:checked ~ {
-            & .collapsible-body {
+        &:checked {
+            ~ .collapsible-body {
                 max-height: $collapsible-max-height;
             }
         }

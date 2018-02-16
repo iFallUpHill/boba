@@ -2,6 +2,6 @@ $breadcrumb-font-size-default: 1em;
 $breadcrumb-spacing-default: 3em;
 $breadcrumb-margin-default: 0.2em;
 
-$breadcrumb-font-sizing-spacing-padding-list: (large, $breadcrumb-font-size-default + 0.4em, $breadcrumb-spacing-default + 0.4em),
-                                          (medium, $breadcrumb-font-size-default + 0.2em, $breadcrumb-spacing-default + 0.2em),
-                                          (small, $breadcrumb-font-size-default - 0.2em, $breadcrumb-spacing-default - 0.2em);
+$breadcrumb-font-sizing-padding-list: (large, $breadcrumb-font-size-default + 0.4em),
+                                          (medium, $breadcrumb-font-size-default + 0.2em),
+                                          (small, $breadcrumb-font-size-default - 0.2em);

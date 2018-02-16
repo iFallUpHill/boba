@@ -1,8 +1,6 @@
 @import 'constants';
 
 @mixin breadcrumb-base {
-    user-select: none;
-    align-items: stretch;
     display: flex;
     font-size: 1rem;
     overflow: hidden;
@@ -17,10 +15,15 @@
         justify-content: flex-start;
         list-style: none;
         padding: 0;
+        margin-bottom: 1rem;
+
 
         li {
             align-items: center;
             display: flex;
+            padding: 0;
+            margin: 0;
+
 
             &::before {
                 content: '/';
@@ -43,14 +46,14 @@
             }
 
             a {
-                font-size: $breadcrumb-font-size-default;
                 text-decoration: none;
                 color: $color-blue;
-                cursor: pointer;
-                align-items: center;
-                display: flex;
-                justify-content: center;
-                padding: 0.5em 0.75em;
+                padding: 0 0.75em;
+
+                &:hover, &:focus {
+                    color: darken-1($color-blue);
+                    text-decoration: underline;
+                }
             }
         }
     }

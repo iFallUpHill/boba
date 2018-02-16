@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col xs-12">
+        <h1 class="header">Colors</h1>
+        <h5 class="subheader thin no-margin">Change the color of your checkboxes using boba's brilliant <a href="./colors.html">color palette</a>.</h5>
+    </div>
+    <div class="col xs-12 md-6">
+        <form class="form-control" action="#" method="post">
+            {% for color in global_color_list_core %}
+            <div class="checkbox {{ color }}">
+                <input type="checkbox" id="example-checkbox-{{ color }}" class="checkbox-input" checked>
+                <label for="example-checkbox-{{ color }}" class="checkbox-label">
+                    {{ color | capitalize }} Checkbox
+                </label>
+            </div>
+            {% endfor %}
+    	</form>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <div class="code-block">
+            <pre class="code"><code class="language-html">&lt;form class="form-control" action="#" method="post"&gt;
+    &lt;div class="checkbox green"&gt;
+        &lt;input type="checkbox" id="example-checkbox-green" class="checkbox-input" checked&gt;
+        &lt;label for="example-checkbox-green" class="checkbox-label"&gt;
+            Green Checkbox
+        &lt;/label&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+    </div>
+</div>

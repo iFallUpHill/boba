@@ -82,11 +82,9 @@
     }
 
 // Sizes
-    @each $size, $fontSize, $spacing in $breadcrumb-font-sizing-spacing-padding-list {
+    @each $size, $fontSize in $breadcrumb-font-sizing-padding-list {
         &.#{$size} {
-            height: $spacing;
             font-size: $fontSize;
-            line-height: $spacing - 2*$breadcrumb-margin-default;
         }
     }
 

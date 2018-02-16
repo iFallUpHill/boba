@@ -21,8 +21,13 @@
                     <td rowspan="{{ (light_shades | length) + (dark_shades | length) + 3}}"><span class="bold">Hover Shades</span></td>
                 </tr>
                 <tr>
-                    <td colspan="3"><p>To change the shade of your colored background on hover, use the <code class="inline">.lighten-bg-hover-{STEP}</code> and <code class="inline">.darken-bg-hover-{STEP}</code> classes.</p>
-                    <p>There are a total of 3 steps in either direction (i.e. a total of 7 shades are available per color).</p></td>
+                    <td colspan="3">
+                        <p>
+                            To change the shade of your colored background on hover, use the <code class="inline">.lighten-bg-hover-{STEP}</code> and <code class="inline">.darken-bg-hover-{STEP}</code> classes.
+                            <br />
+                            There are a total of 3 steps in either direction (i.e. a total of 7 shades are available per color).
+                        </p>
+                    </td>
                 </tr>
                 {% for shade in light_shades %}
                 <tr>
