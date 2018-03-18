@@ -2,8 +2,8 @@
 
 @mixin card-base {
 	position: relative;
-    background-color: $color-white;
     color: $color-dark;
+    background-color: $color-white;
     max-width: 100%;
     margin-bottom: 1em;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.1);

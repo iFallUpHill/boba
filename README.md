@@ -11,7 +11,7 @@ A lightweight, modular, CSS-only design framework.
 
 boba was born out of frustration with other CSS design frameworks.
 
-* Lightweight at just ~9KB gzipped
+* Lightweight at just ~10KB gzipped
 * Modular; easily add or remove components or classes
 * Semantic class names to speed up development 
 * Responsive, flexbox-based grid system

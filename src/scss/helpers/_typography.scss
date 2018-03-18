@@ -1,8 +1,9 @@
 // Header Styling
 $header-font-weight:            $base-font-weight-semi-bold !default;
 $header-font-weight-light:      $base-font-weight-default !default;
-$header-color:                  $color-dark !default;
 $header-vertical-margin:        0.5rem;
+$header-text-color:               $color-black !default;
+$body-text-color:               $color-black !default;
 
 $h1-font-size: 2.25rem;
 $h2-font-size: 2rem;
@@ -22,6 +23,7 @@ $font-sizing-spacing-list: (h1, $h1-font-size, 1),
 // Set default font-family + Styling
 body {
 	font-family: $base-font-family-default;
+    color: $body-text-color;
 }
 
 // Set defaults
@@ -31,7 +33,7 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-    color: $header-color;
+    color: $header-text-color;
     font-weight: $header-font-weight;
     margin: 0 0 $header-vertical-margin;
     word-break: break-word;
@@ -70,7 +72,7 @@ h6, .h6 {
 // Generic Dividers 
 .text-divider {
     display: flex;
-    color: $color-dark;
+    color: $color-black;
     margin: 0.5rem 0px;
     flex-basis: 100%;
     align-items: center;

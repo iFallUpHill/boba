@@ -2,7 +2,6 @@
 
 @mixin banner-base {
 	display: flex;
-	color: $color-dark;
 	background-color: $color-light;
 	flex-direction: column;
 	align-items: stretch;
