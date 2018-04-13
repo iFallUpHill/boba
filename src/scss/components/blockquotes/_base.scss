@@ -9,11 +9,13 @@ blockquote {
     &:last-child {
         margin-bottom: 0;
     }
-    
-    &:after {
-        content: attr(author);
-        display: block;
-        text-align: right;
+
+    .blockquote-footer {
+        color: darken-3($color-light);
+
+        &:before {
+            content: "\2014 \00A0";
+        }
     }
 
     @if $include-color-palette {

@@ -2,18 +2,18 @@
 
 @mixin card-base {
 	position: relative;
-    color: $color-dark;
+    color: $color-black;
     background-color: $color-white;
     max-width: 100%;
     margin-bottom: 1em;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.1);
-    border-radius: $card-border-radius;
+    border-radius: $card-outer-border-radius;
+    border: $card-border-props;
 }
 
 @mixin card-header-base {
 	display: flex;
     align-items: stretch;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    border-bottom: $card-border-props;
 
     .card-header-title {
         display: flex;
@@ -41,7 +41,7 @@
 @mixin card-footer-base {
 	display: flex;
     align-items: stretch;
-    border-top: 1px solid $card-border-color;
+    border-top: $card-border-props;
 
     .card-footer-item {
         display: flex;
@@ -50,7 +50,7 @@
         justify-content: center;
         padding: $card-padding-footer-items;
         &:not(:last-child) {
-            border-right: 1px solid $card-border-color;
+            border-right: $card-border-props;
         }
     }
 }

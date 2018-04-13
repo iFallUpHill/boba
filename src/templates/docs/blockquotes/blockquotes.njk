@@ -7,14 +7,19 @@
                 <p>Tip</p>
             </div>
             <div class="message-body">
-                <p>Use the optional <code class="inline">author</code> attribute to specify the author of the quote.</p>
+                <p>Use the <code class="inline">footer</code> tag with the <code class="inline">blockquote-footer</code> class to specify the source and wrap the name of the source material in a <code class="inline">cite</code> tag.</p> 
             </div>
         </div>
     </div>
     <div class="col xs-12 md-6 col-middle">
         <h3>Example Text</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tortor lorem, scelerisque ut facilisis et, congue in nisl. Integer feugiat massa quis tempus lobortis. Suspendisse mattis ex quis tortor dignissim, quis semper nibh vehicula.</p>
-        <blockquote author="Lorem Ipsum">Etiam porttitor nunc eget varius pulvinar. Vivamus nisl risus, ornare et est in, rutrum egestas nisi. Cras vitae porta nisl. Morbi mollis eros dolor, eget convallis mauris condimentum varius. Duis dictum ipsum sit amet nunc vulputate, vitae porta sem ultricies.</blockquote>
+        <blockquote>
+            <p>
+                Etiam porttitor nunc eget varius pulvinar. Vivamus nisl risus, ornare et est in, rutrum egestas nisi. Cras vitae porta nisl. Morbi mollis eros dolor, eget convallis mauris condimentum varius. Duis dictum ipsum sit amet nunc vulputate, vitae porta sem ultricies.
+            </p>
+            <footer class="blockquote-footer">Lorem Ipsum in their work <cite>Ipsum Lorem</cite></footer>
+        </blockquote>
         <p>Quisque eget efficitur quam, sit amet tempor erat. Cras auctor, velit a faucibus fringilla, nisi massa dictum quam, volutpat varius turpis leo nec turpis. Curabitur a velit et dui suscipit pellentesque. Etiam et mattis nulla.</p>
         <p>Vivamus lorem enim, sollicitudin ut euismod id, efficitur mollis dolor. Donec ipsum tortor, molestie id viverra sit amet, suscipit vel nunc. Curabitur commodo lobortis erat.</p>
     </div>
@@ -24,7 +29,12 @@
 
 &lt;p&gt;...&lt;/p&gt;
 
-&lt;blockquote author="Lorem Ipsum"&gt;Etiam porttitor nunc eget varius pulvinar. Vivamus nisl risus, ornare et est in, rutrum egestas nisi. Cras vitae porta nisl. Morbi mollis eros dolor, eget convallis mauris condimentum varius. Duis dictum ipsum sit amet nunc vulputate, vitae porta sem ultricies.&lt;/blockquote&gt;
+&lt;blockquote&gt;
+    &lt;p&gt;
+        Etiam porttitor nunc eget varius pulvinar. Vivamus nisl risus, ornare et est in, rutrum egestas nisi. Cras vitae porta nisl. Morbi mollis eros dolor, eget convallis mauris condimentum varius. Duis dictum ipsum sit amet nunc vulputate, vitae porta sem ultricies.
+    &lt;/p&gt;
+    &lt;footer class="blockquote-footer"&gt;Lorem Ipsum in their work &lt;cite&gt;Ipsum Lorem&lt;/cite&gt;&lt;/footer&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;...&lt;/p&gt;
 

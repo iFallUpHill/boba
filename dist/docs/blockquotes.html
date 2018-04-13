@@ -23,7 +23,7 @@
 <div class="sb-side-navbar" id="boba-sidebar">
 	<div class="sb-side-sticky-region display-flex flex-column">
 		<a class="boba-branding" href="/">boba</a>
-		<span class="version-tag boba-branding">Version 1.5.0</span>
+		<span class="version-tag boba-branding">Version 1.4.0</span>
 	</div>
 	<div class="sb-side-scroll-region">
 		<div class="collapsible">
@@ -132,6 +132,7 @@
 					<li class=""><a href="/docs/display.html">Display</a></li>
 					<li class=""><a href="/docs/flex.html">Flex</a></li>
 					<li class=""><a href="/docs/images.html">Images</a></li>
+					<li class=""><a href="/docs/shadows.html">Shadows</a></li>
 					<li class=""><a href="/docs/shapes.html">Shapes</a></li>
 					<li class=""><a href="/docs/sizing.html">Sizing</a></li>
 					<li class=""><a href="/docs/spacing.html">Spacing</a></li>
@@ -179,14 +180,19 @@
                 <p>Tip</p>
             </div>
             <div class="message-body">
-                <p>Use the optional <code class="inline">author</code> attribute to specify the author of the quote.</p>
+                <p>Use the <code class="inline">footer</code> tag with the <code class="inline">blockquote-footer</code> class to specify the source and wrap the name of the source material in a <code class="inline">cite</code> tag.</p> 
             </div>
         </div>
     </div>
     <div class="col xs-12 md-6 col-middle">
         <h3>Example Text</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tortor lorem, scelerisque ut facilisis et, congue in nisl. Integer feugiat massa quis tempus lobortis. Suspendisse mattis ex quis tortor dignissim, quis semper nibh vehicula.</p>
-        <blockquote author="Lorem Ipsum">Etiam porttitor nunc eget varius pulvinar. Vivamus nisl risus, ornare et est in, rutrum egestas nisi. Cras vitae porta nisl. Morbi mollis eros dolor, eget convallis mauris condimentum varius. Duis dictum ipsum sit amet nunc vulputate, vitae porta sem ultricies.</blockquote>
+        <blockquote>
+            <p>
+                Etiam porttitor nunc eget varius pulvinar. Vivamus nisl risus, ornare et est in, rutrum egestas nisi. Cras vitae porta nisl. Morbi mollis eros dolor, eget convallis mauris condimentum varius. Duis dictum ipsum sit amet nunc vulputate, vitae porta sem ultricies.
+            </p>
+            <footer class="blockquote-footer">Lorem Ipsum in their work <cite>Ipsum Lorem</cite></footer>
+        </blockquote>
         <p>Quisque eget efficitur quam, sit amet tempor erat. Cras auctor, velit a faucibus fringilla, nisi massa dictum quam, volutpat varius turpis leo nec turpis. Curabitur a velit et dui suscipit pellentesque. Etiam et mattis nulla.</p>
         <p>Vivamus lorem enim, sollicitudin ut euismod id, efficitur mollis dolor. Donec ipsum tortor, molestie id viverra sit amet, suscipit vel nunc. Curabitur commodo lobortis erat.</p>
     </div>
@@ -196,7 +202,12 @@
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>blockquote</span> <span class="token attr-name">author</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Lorem Ipsum<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Etiam porttitor nunc eget varius pulvinar. Vivamus nisl risus, ornare et est in, rutrum egestas nisi. Cras vitae porta nisl. Morbi mollis eros dolor, eget convallis mauris condimentum varius. Duis dictum ipsum sit amet nunc vulputate, vitae porta sem ultricies.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>blockquote</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>blockquote</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
+        Etiam porttitor nunc eget varius pulvinar. Vivamus nisl risus, ornare et est in, rutrum egestas nisi. Cras vitae porta nisl. Morbi mollis eros dolor, eget convallis mauris condimentum varius. Duis dictum ipsum sit amet nunc vulputate, vitae porta sem ultricies.
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>footer</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>blockquote-footer<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Lorem Ipsum in their work <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>cite</span><span class="token punctuation">></span></span>Ipsum Lorem<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>cite</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>footer</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>blockquote</span><span class="token punctuation">></span></span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
 
@@ -208,21 +219,111 @@
     <hr class="light">
     <div class="row">
     <div class="col xs-12">
+        <h1 class="header">Alignment</h1>
+        <h5 class="subheader thin no-margin">Use the <code class="inline">.text-left</code>, <code class="inline">.text-center</code>, and <code class="inline">.text-right</code> helper classes to easily align the text within your blockquote.</h5>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <h3 class="text-left">Left-Aligned</h3>
+        <blockquote class="text-left">
+            <p>
+                Etiam porttitor nunc eget varius pulvinar. Vivamus nisl risus, ornare et est in, rutrum egestas nisi. Cras vitae porta nisl. Morbi mollis eros dolor, eget convallis mauris condimentum varius. Duis dictum ipsum sit amet nunc vulputate, vitae porta sem ultricies.
+            </p>
+            <footer class="blockquote-footer">Left-Aligned Ipsum in <cite>Alignment</cite></footer>
+        </blockquote>
+
+        <h3 class="text-center">Center-Aligned</h3>
+        <blockquote class="text-center">
+            <p>
+                Etiam porttitor nunc eget varius pulvinar. Vivamus nisl risus, ornare et est in, rutrum egestas nisi. Cras vitae porta nisl. Morbi mollis eros dolor, eget convallis mauris condimentum varius. Duis dictum ipsum sit amet nunc vulputate, vitae porta sem ultricies.
+            </p>
+            <footer class="blockquote-footer">Center-Aligned Ipsum in  <cite>Alignment</cite></footer>
+        </blockquote>
+
+        <h3 class="text-right">Right-Aligned</h3>
+        <blockquote class="text-right">
+            <p>
+                Etiam porttitor nunc eget varius pulvinar. Vivamus nisl risus, ornare et est in, rutrum egestas nisi. Cras vitae porta nisl. Morbi mollis eros dolor, eget convallis mauris condimentum varius. Duis dictum ipsum sit amet nunc vulputate, vitae porta sem ultricies.
+            </p>
+            <footer class="blockquote-footer">Right-Aligned Ipsum in  <cite>Alignment</cite></footer>
+        </blockquote>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <div class="code-block">
+            <pre class="code"><code class="language-html prism"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>--</span> <span class="token attr-name">Left-Aligned</span> <span class="token attr-name">--</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>blockquote</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text-left<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
+        Etiam porttitor nunc eget varius pulvinar. Vivamus nisl risus, ornare et est in, rutrum egestas nisi. Cras vitae porta nisl. Morbi mollis eros dolor, eget convallis mauris condimentum varius. Duis dictum ipsum sit amet nunc vulputate, vitae porta sem ultricies.
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>footer</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>blockquote-footer<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Left-Aligned Ipsum in <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>cite</span><span class="token punctuation">></span></span>Alignment<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>cite</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>footer</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>blockquote</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>--</span> <span class="token attr-name">Center-Aligned</span> <span class="token attr-name">--</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>blockquote</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
+        Etiam porttitor nunc eget varius pulvinar. Vivamus nisl risus, ornare et est in, rutrum egestas nisi. Cras vitae porta nisl. Morbi mollis eros dolor, eget convallis mauris condimentum varius. Duis dictum ipsum sit amet nunc vulputate, vitae porta sem ultricies.
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>footer</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>blockquote-footer<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Center-Aligned Ipsum in  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>cite</span><span class="token punctuation">></span></span>Alignment<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>cite</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>footer</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>blockquote</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>--</span> <span class="token attr-name">Right-Aligned</span> <span class="token attr-name">--</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>blockquote</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text-right<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
+        Etiam porttitor nunc eget varius pulvinar. Vivamus nisl risus, ornare et est in, rutrum egestas nisi. Cras vitae porta nisl. Morbi mollis eros dolor, eget convallis mauris condimentum varius. Duis dictum ipsum sit amet nunc vulputate, vitae porta sem ultricies.
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>footer</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>blockquote-footer<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Right-Aligned Ipsum in  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>cite</span><span class="token punctuation">></span></span>Alignment<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>cite</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>footer</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>blockquote</span><span class="token punctuation">></span></span></code></pre>
+        </div>
+    </div>
+</div>
+
+    <hr class="light">
+    <div class="row">
+    <div class="col xs-12">
         <h1 class="header">Colors</h1>
         <h5 class="subheader thin no-margin">Blockquotes come in all of <a href="./colors.html">boba's colors</a>.</h5>
     </div>
     <div class="col xs-12 md-6 col-middle">
-        <blockquote class="red" author="Red Ipsum">Etiam porttitor nunc eget varius pulvinar. Vivamus nisl risus, ornare et est in, rutrum egestas nisi. Cras vitae porta nisl.</blockquote>
-        <blockquote class="green" author="Green Ipsum">Etiam porttitor nunc eget varius pulvinar. Vivamus nisl risus, ornare et est in, rutrum egestas nisi. Cras vitae porta nisl.</blockquote>
-        <blockquote class="blue" author="Blue Ipsum">Etiam porttitor nunc eget varius pulvinar. Vivamus nisl risus, ornare et est in, rutrum egestas nisi. Cras vitae porta nisl.</blockquote>
+        <blockquote class="red">
+            <p>
+                Etiam porttitor nunc eget varius pulvinar. Vivamus nisl risus, ornare et est in, rutrum egestas nisi. Cras vitae porta nisl.
+            </p>
+            <footer class="blockquote-footer">Red Ipsum from <cite>boba's color palette</cite></footer>
+        </blockquote>
+        <blockquote class="green" a="">
+            <p>
+                Etiam porttitor nunc eget varius pulvinar. Vivamus nisl risus, ornare et est in, rutrum egestas nisi. Cras vitae porta nisl.
+            </p>
+            <footer class="blockquote-footer">Green Ipsum from <cite>boba's color palette</cite></footer>
+        </blockquote>
+        <blockquote class="blue">
+            <p>
+                Etiam porttitor nunc eget varius pulvinar. Vivamus nisl risus, ornare et est in, rutrum egestas nisi. Cras vitae porta nisl.
+            </p>
+            <footer class="blockquote-footer">Blue Ipsum from <cite>boba's color palette</cite></footer>
+        </blockquote>
     </div>
     <div class="col xs-12 md-6 col-middle">
         <div class="code-block">
-            <pre class="code"><code class="language-html prism"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>blockquote</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>red<span class="token punctuation">"</span></span> <span class="token attr-name">author</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Red Ipsum<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Etiam porttitor nunc eget varius pulvinar. Vivamus nisl risus, ornare et est in, rutrum egestas nisi. Cras vitae porta nisl.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>blockquote</span><span class="token punctuation">></span></span>
-            
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>blockquote</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>green<span class="token punctuation">"</span></span> <span class="token attr-name">author</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Green Ipsum<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Etiam porttitor nunc eget varius pulvinar. Vivamus nisl risus, ornare et est in, rutrum egestas nisi. Cras vitae porta nisl.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>blockquote</span><span class="token punctuation">></span></span>
+            <pre class="code"><code class="language-html prism"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>blockquote</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
+        Etiam porttitor nunc eget varius pulvinar. Vivamus nisl risus, ornare et est in, rutrum egestas nisi. Cras vitae porta nisl.
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>footer</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>blockquote-footer<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Red Ipsum from <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>cite</span><span class="token punctuation">></span></span>boba's color palette<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>cite</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>footer</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>blockquote</span><span class="token punctuation">></span></span>
 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>blockquote</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>blue<span class="token punctuation">"</span></span> <span class="token attr-name">author</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Blue Ipsum<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Etiam porttitor nunc eget varius pulvinar. Vivamus nisl risus, ornare et est in, rutrum egestas nisi. Cras vitae porta nisl.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>blockquote</span><span class="token punctuation">></span></span></code></pre>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>blockquote</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
+        Etiam porttitor nunc eget varius pulvinar. Vivamus nisl risus, ornare et est in, rutrum egestas nisi. Cras vitae porta nisl.
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>footer</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>blockquote-footer<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Green Ipsum from <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>cite</span><span class="token punctuation">></span></span>boba's color palette<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>cite</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>footer</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>blockquote</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>blockquote</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
+        Etiam porttitor nunc eget varius pulvinar. Vivamus nisl risus, ornare et est in, rutrum egestas nisi. Cras vitae porta nisl.
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>footer</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>blockquote-footer<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Blue Ipsum from <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>cite</span><span class="token punctuation">></span></span>boba's color palette<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>cite</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>footer</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>blockquote</span><span class="token punctuation">></span></span></code></pre>
         </div>
     </div>
 </div>    

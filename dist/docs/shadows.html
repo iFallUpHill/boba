@@ -1,6 +1,6 @@
 <!DOCTYPE html><html><head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-        <title>Animations | Build with Boba</title>
+        <title>Shadows | Build with Boba</title>
         <meta name="description" content="A lightweight, modular, CSS-only design framework.">        
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:400,600|Muli:300,400,700">
         <link rel="stylesheet" href="/boba-extended.min.css">
@@ -126,13 +126,13 @@
 			</label>
 			<div class="collapsible-body">
 				<ul class="collapsible-submenu">
-					<li class="bold"><a href="/docs/animations.html">Animations</a></li>
+					<li class=""><a href="/docs/animations.html">Animations</a></li>
 					<li class=""><a href="/docs/background.html">Background</a></li>
 					<li class=""><a href="/docs/borders.html">Borders</a></li>
 					<li class=""><a href="/docs/display.html">Display</a></li>
 					<li class=""><a href="/docs/flex.html">Flex</a></li>
 					<li class=""><a href="/docs/images.html">Images</a></li>
-					<li class=""><a href="/docs/shadows.html">Shadows</a></li>
+					<li class="bold"><a href="/docs/shadows.html">Shadows</a></li>
 					<li class=""><a href="/docs/shapes.html">Shapes</a></li>
 					<li class=""><a href="/docs/sizing.html">Sizing</a></li>
 					<li class=""><a href="/docs/spacing.html">Spacing</a></li>
@@ -171,35 +171,53 @@
                         
                         
 
-    <div class="row">
+	<div class="row">
     <div class="col xs-12">
-        <h1 class="header">Animations</h1>
-        <h5 class="subheader thin no-margin">Add a <code class="inline">.hover-{EFFECT}</code> class to an element to easily give it an animation on hover.</h5>
+        <h1 class="header">Shadows</h1>
+        <h5 class="subheader thin no-margin">Easily add a sense of depth to your components using these classes.</h5>
     </div>
-    <div class="col xs-12 md-6 col-middle">
-      <div>
-        <button class="hover-grow red mv-1">Grow</button>
-        <button class="orange hover-shrink mv-1">Shrink</button>
-        <button class="yellow hover-float mv-1">Float</button>
-        <button class="green hover-sink mv-1">Sink</button>
-        <button class="blue hover-pulse mv-1">Pulse</button>
-        <button class="indigo hover-hop mv-1">Hop</button>
-        <button class="purple hover-bob mv-1">Bob</button>
-      </div>
-    </div>
-    <div class="col xs-12 md-6 col-middle">
-        <div class="code-block">
-            <pre class="code"><code class="language-html prism"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>red hover-grow<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Grow<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>orange hover-shrink<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Shrink<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>yellow hover-float<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Float<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>green hover-sink<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Sink<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>blue hover-pulse<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Pulse<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>indigo hover-bob<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Bob<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>purple hover-hang<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Hang<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span></code></pre>
-        </div>
+    <div class="col xs-12 col-middle">
+        <table class="bordered">
+            <tbody>
+                <tr>
+                    <td rowspan="7"><span class="bold">Shadow Z-Depth
+                </span></td></tr>
+                <tr>
+                    <td><code class="inline">No Shadow</code></td>
+                    <td>For reference, this is an element with the default z-depth of 0.</td>
+                    <td class="text-center"><span class="bg-light" style="display: inline-block; height: 100px; width: 100px;"></span></td>
+                </tr>
+                <tr>
+                    <td><code class="inline">.shadow-1</code></td>
+                    <td>Add the <code class="inline">.shadow-1</code> class to an element to give it a z-depth of 1.</td>
+                    <td class="text-center"><span class="shadow-1 bg-light" style="display: inline-block; height: 100px; width: 100px;"></span></td>
+                </tr>
+                <tr>
+                    <td><code class="inline">.shadow-2</code></td>
+                    <td>Add the <code class="inline">.shadow-2</code> class to an element to give it a z-depth of 2.</td>
+                    <td class="text-center"><span class="shadow-2 bg-light" style="display: inline-block; height: 100px; width: 100px;"></span></td>
+                </tr>
+                <tr>
+                    <td><code class="inline">.shadow-3</code></td>
+                    <td>Add the <code class="inline">.shadow-3</code> class to an element to give it a z-depth of 3.</td>
+                    <td class="text-center"><span class="shadow-3 bg-light" style="display: inline-block; height: 100px; width: 100px;"></span></td>
+                </tr>
+                <tr>
+                    <td><code class="inline">.shadow-4</code></td>
+                    <td>Add the <code class="inline">.shadow-4</code> class to an element to give it a z-depth of 4.</td>
+                    <td class="text-center"><span class="shadow-4 bg-light" style="display: inline-block; height: 100px; width: 100px;"></span></td>
+                </tr>
+                <tr>
+                    <td><code class="inline">.shadow-5</code></td>
+                    <td>Add the <code class="inline">.shadow-5</code> class to an element to give it a z-depth of 5.</td>
+                    <td class="text-center"><span class="shadow-5 bg-light" style="display: inline-block; height: 100px; width: 100px;"></span></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
-    
+
+
 
                     </div>
                 </div>
