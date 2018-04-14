@@ -52,11 +52,11 @@ h6, .h6 {
     }
 
     &.less-margin {
-        margin-bottom: $header-vertical-margin/2;
+        margin-bottom: $header-vertical-margin/2 !important;
     }
 
     &.no-margin {
-        margin-bottom: 0;
+        margin-bottom: 0 !important;
     }
 
 }

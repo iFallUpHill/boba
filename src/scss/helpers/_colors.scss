@@ -125,7 +125,7 @@
         @if $include-color-palette and $include-color-helpers {                             
             @if $colorName != black and $colorName != white {
                 .#{$prefix}-tint-#{$colorName} {
-                    #{$attribute}: transparentBG($color) $important;
+                    #{$attribute}: tintBG($color) $important;
                 }
             }
         }

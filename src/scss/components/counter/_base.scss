@@ -8,7 +8,7 @@
 	  font-size: $counter-value-font-size;
 	  font-weight: $counter-value-font-weight;
 	  line-height: $counter-value-line-height;
-	  color: $color-dark;
+	  color: $color-black;
 	  text-transform: uppercase;
 	  text-align: center;
 	}
@@ -16,7 +16,7 @@
 	& > .desc {
 	  font-size: $counter-desc-font-size;
 	  font-weight: $counter-desc-font-weight;
-	  color: $color-dark;
+	  color: $color-black;
 	  text-transform: uppercase;
 	  text-align: center;
 	}

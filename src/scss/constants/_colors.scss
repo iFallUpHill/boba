@@ -37,7 +37,7 @@ $darken-1-percent: 8%;
 $darken-2-percent: 16%;
 $darken-3-percent: 24%;
 $transparent-opacity-default: 0.85;
-$desaturate-percent: 33%;
+$tint-mix-amount: 95%;
 
 $color-shade-list: (lighten-1, lighten-2, lighten-3, darken-1, darken-2, darken-3);
 
@@ -71,6 +71,18 @@ $color-shade-list: (lighten-1, lighten-2, lighten-3, darken-1, darken-2, darken-
         $transparent-opacity: 0.65;
     }
     @return rgba-to-rgb(transparentize($base-color, $transparent-opacity));
+}
+
+@function tintBG($base-color) {
+    $transparent-opacity: $transparent-opacity-default;
+    $mix-amount: $tint-mix-amount;
+    $light-grey: rgba-to-rgb(transparentize($color-light, 0.65));
+
+    @if ($base-color == $color-light) {
+        @return $light-grey;
+    }
+
+    @return mix($light-grey, $base-color, $tint-mix-amount);
 }
 
 @function rgba-to-rgb($rgba, $background: #fff) {
