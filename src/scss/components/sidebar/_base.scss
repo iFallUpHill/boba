@@ -18,6 +18,10 @@
 			font-size: $sb-side-sticky-region-font-size;
 			padding: $sb-side-sticky-content-padding;
 			z-index: 5;
+
+            +.sb-side-scroll-region {
+                padding-top: $sb-sticky-scroll-offset-padding;
+            }
 		}
 
 		.sb-side-scroll-region {
