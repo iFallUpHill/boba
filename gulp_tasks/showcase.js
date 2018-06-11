@@ -27,7 +27,7 @@ module.exports = (gulp, config) => {
 
 	const isDist = config.flags.isDist;
     const rebuild = config.flags.rebuildShowcase;
-	const docs =  isDist ? true : config.flags.docs;
+	const docs =  isDist || rebuild ? true : config.flags.docs;
 
 	const screenshotDir = config.src.showcase_screenshots_dir;
 	const websiteList = config.data.showcase;

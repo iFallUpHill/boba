@@ -1,3 +1,4 @@
+#!/bin/bash
 currentDIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 screenshotSource="$currentDIR/../src/screenshots"
 
@@ -13,4 +14,3 @@ for f in "$screenshotSource"/*.png ; do
         echo "Skipping ${filename}"
     fi
 done
-
