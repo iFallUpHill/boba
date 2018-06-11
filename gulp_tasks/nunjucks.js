@@ -56,7 +56,10 @@ module.exports = (gulp, config) => {
 								console.error(err);
 							}
 						}))
-						.pipe(nunjucks.compile({versionNumber: versionNumber}))
+						.pipe(nunjucks.compile({
+								versionNumber: versionNumber,
+								showcaseSites: config.data.showcase
+							}))
 						.pipe(gulpif(highlight, prism()))
 						.pipe(gulp.dest(config.dist.html))
 		}

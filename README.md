@@ -67,12 +67,15 @@ gulp clean && gulp build --prod
 * `gulp sass` // Compiles SASS
 * `gulp nunjucks` // Renders Nunjucks to HTML (docs only; requires the `--docs` flag)
 * `gulp scripts` // Compiles JavaScript files into one bundle (docs only; requires the `--docs` flag)
+* `gulp showcase` // Generates the showcase preview images (docs only; requires the `--docs` flag)
+
 
 #### Gulp Parameters
 
 * `--prod` // Strips comments, removes sourcemaps, minifies files, builds all variations of css; this overrides all of the other parameters
 * `--docs` // Includes the documentation css / nunjuck processes in the build
 * `--highlight` // Applies syntax highlighting to code blocks in the documentation
+* `--rebuildShowcase` // Regenerates the showcase screenshots
 * `--version` // Accepts 'major', 'minor', and 'patch' as values; used to specify the documentation version target corresponding to an npm version increment
 * `--nomin` // Stops minification of files; useful for debugging
 * `--buildall` // Builds all versions of the framework

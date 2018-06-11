@@ -31,7 +31,7 @@ module.exports = (gulp, config) => {
 				.pipe(concat(config.dist.min_js_docs))
 				.pipe(gulpif(!isDist, sourcemaps.write()))
 				.pipe(gulp.dest(config.dist.js))
-				.pipe(browserSync.reload({stream: true}))
+				.pipe(browserSync.reload({stream: true}));
 		}
-	}
+	};
 };
