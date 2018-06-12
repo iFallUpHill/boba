@@ -1,12 +1,21 @@
 html {
-	overflow-x: hidden;
-	overflow-y: scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    box-sizing: border-box;
 }
 
 body {
-	margin: 0;
-	font-size: 1rem;
-	line-height: 1.5;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+img { 
+    box-sizing: content-box; 
 }
 
 p {
@@ -18,5 +27,5 @@ p {
 }
 
 pre {
-	margin: 0;
+    margin: 0;
 }

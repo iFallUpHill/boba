@@ -1,26 +1,26 @@
-<div class="banner bg-yellow darken-bg-2">
-    <div class="banner-body text-center">
-        <div class="container p-3 border-box">
-            <h1 class="header text-white">Showcase</h1>
-            <h5 class="subheader thin text-white mb-2">See what others are building with boba!</h5>
-            <div class="row">
-            	{% for site in showcaseSites %}
-            	<div class="col xs-12 md-6 lg-4">
-            			<div class="card mb-0 border-none shadow-hover-3">
-                            <a href="{{site.url}}" target="_blank">
-        					    <div class="card-image">
-        					        <img src="./showcase/{{ site.screenshotName }}.jpg" alt="{{ site.name }}">
-        					    </div>
-                            </a>
-                            <a href="{{site.url}}" target="_blank" class="no-underline">
-    						    <div class="card-content">
-    	            				<h4>{{ site.name }}</h4>
-    						    </div>
-                            </a>
-						</div>
-            	</div>
-                {% endfor %}
+<div class="w-100 p-4 border-box bg-yellow darken-bg-2">
+    <div class="container p-3 border-box">
+        <div class="row">
+            <div class="col xs-12">
+                <h1 class="header text-white">Showcase</h1>
+                <h5 class="subheader thin text-white">See what others are building with boba!</h5>
             </div>
+            {% for site in showcaseSites %}
+            <div class="col xs-12 md-6 lg-4">
+                    <div class="card mb-0 border-none shadow-hover-3 bg-tint-light">
+                        <a href="{{site.url}}" target="_blank">
+                            <div class="card-image">
+                                <img src="./showcase/{{ site.screenshotName }}.jpg" alt="{{ site.name }}">
+                            </div>
+                        </a>
+                        <a href="{{site.url}}" target="_blank" class="text-center no-underline">
+                            <div class="card-content">
+                                <h4 class="no-margin">{{ site.name }}</h4>
+                            </div>
+                        </a>
+                    </div>
+            </div>
+            {% endfor %}
         </div>
     </div>
 </div>
