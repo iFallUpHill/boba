@@ -1,0 +1,12 @@
+{% extends "templates/docs/layout.njk" %}
+{% set page_title ="Sections" %}
+{% set active_accordion ="layout" %}
+{% set active_page ="sections" %}
+
+{% block main %}
+
+    {% include "templates/docs/sections/sections.njk" %}
+    <hr class="light" />
+    
+{% endblock %}
+

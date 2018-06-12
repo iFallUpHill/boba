@@ -1,6 +1,6 @@
 <!DOCTYPE html><html><head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-        <title>Code | Build with Boba</title>
+        <title>Sections | Build with Boba</title>
         <meta name="description" content="A lightweight, modular, CSS-only design framework.">        
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:400,600|Muli:300,400,700">
         <link rel="stylesheet" href="/boba-extended.min.css">
@@ -55,8 +55,8 @@
 			</div>
 		</div>
 		<div class="collapsible">
-			<input type="checkbox" class="collapsible-toggle" id="layout" name="collapsible-checkbox">
-			<label class="collapsible-header " for="layout">
+			<input type="checkbox" class="collapsible-toggle" id="layout" name="collapsible-checkbox" checked>
+			<label class="collapsible-header bold" for="layout">
 				Layout
 			</label>
 			<div class="collapsible-body">
@@ -64,7 +64,7 @@
 					<li class=""><a href="/docs/containers.html">Containers</a></li>
 					<li class=""><a href="/docs/grid.html">Grid</a></li>
 					<li class=""><a href="/docs/navbar.html">Navbar</a></li>
-					<li class=""><a href="/docs/sections.html">Sections</a></li>
+					<li class="bold"><a href="/docs/sections.html">Sections</a></li>
 					<li class=""><a href="/docs/sidebar.html">Sidebar</a></li>
 				</ul>
 			</div>
@@ -89,15 +89,15 @@
 			</div>
 		</div>
 		<div class="collapsible">
-			<input type="checkbox" class="collapsible-toggle" id="elements" name="collapsible-checkbox" checked>
-			<label class="collapsible-header bold" for="elements">
+			<input type="checkbox" class="collapsible-toggle" id="elements" name="collapsible-checkbox">
+			<label class="collapsible-header " for="elements">
 				Elements
 			</label>
 			<div class="collapsible-body">
 				<ul class="collapsible-submenu">
 					<li class=""><a href="/docs/blockquotes.html">Blockquotes</a></li>
 					<li class=""><a href="/docs/buttons.html">Buttons</a></li>
-					<li class="bold"><a href="/docs/code.html">Code</a></li>
+					<li class=""><a href="/docs/code.html">Code</a></li>
 					<li class=""><a href="/docs/counters.html">Counters</a></li>
 					<li class=""><a href="/docs/dividers.html">Dividers</a></li>
 					<li class=""><a href="/docs/labels.html">Labels</a></li>
@@ -154,10 +154,10 @@
                 
 
 
-<div class="banner medium bg-purple">
+<div class="banner medium bg-green">
 	<div class="banner-body text-left">
 		<div class="container">
-			<h1 class="header text-white">Elements</h1>
+			<h1 class="header text-white">Layout</h1>
 			<h5 class="subheader thin text-white no-margin">Learn how to <span class="bold">build your website</span> with boba!</h5>
 		</div>
 	</div>
@@ -175,50 +175,13 @@
 
     <div class="row">
     <div class="col xs-12">
-        <h1 class="header">Code Block</h1>
-        <h5 class="subheader thin">Make code snippets more manageable.</h5>
-        <div class="message blue">
-            <div class="message-header">
-                <p>Clarification</p>
-            </div>
-            <div class="message-body">
-                <p>Syntax highlighting is powered by <a href="http://prismjs.com/" target="_blank">Prism</a> using <a href="https://github.com/iFallUpHill/gulp-prism" target="_blank">gulp-prism</a>. Boba does not include code syntax highlighting.</p>
-            </div>
-        </div>
-    </div>
-    <div class="col xs-12 md-6 col-middle">
-		<div class="code-block">
-            <pre class="code"><code class="language-js prism">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Boba is great!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-        </div>
-    </div>
-    <div class="col xs-12 md-6 col-middle">
-        <div class="code-block">
-            <pre class="code"><code class="language-html prism"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>code-block<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pre</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>code<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>code</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>language-javascript<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-            console.log("Boba is great!");
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>code</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pre</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
-        </div>
-    </div>
-</div>
-    <hr class="light">
-    <div class="row">
-    <div class="col xs-12">
-        <h1 class="header">Inline Code</h1>
-        <h5 class="subheader thin no-margin">Draw attention to inline code snippets using the <code class="inline">.inline</code> class.</h5>
-    </div>
-    <div class="col xs-12 md-6 col-middle">
-        This is an <code class="inline">.example-class</code>.
-    </div>
-    <div class="col xs-12 md-6 col-middle">
-        <div class="code-block">
-            <pre class="code"><code class="language-html prism">This is an <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>code</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>inline<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>.example-class<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>code</span><span class="token punctuation">></span></span>.</code></pre>
-        </div>
+        <h1 class="header">Sections</h1>
+        <h5 class="subheader thin no-margin">A semantic way to divide different sections of content.</h5>
     </div>
 </div>
 
+    <hr class="light">
+    
 
                     </div>
                 </div>
