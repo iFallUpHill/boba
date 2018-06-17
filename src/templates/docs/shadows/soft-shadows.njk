@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col xs-12">
+        <h1 class="header">Soft Shadows</h1>
+        <h5 class="subheader thin no-margin">Make your content stand out against its background using soft shadows.</h5>
+    </div>
+    <div class="col xs-12 col-middle">
+        <table class="bordered">
+            <tbody>
+                <tr>
+                    <td rowspan="7"><span class="bold">Shadow Diffusion</span</td>
+                </tr>
+                <tr>
+                    <td><code class="inline">No Shadow</code></td>
+                    <td>For reference, this is an element with no shadow.</td>
+                    <td class="text-center"><span class="bg-light" style="display: inline-block; height: 100px; width: 100px;"></span></td>
+                </tr>
+                {% for shadowLevel in range(1, 4) %}
+                <tr>
+                    <td><code class="inline">.soft-shadow-{{shadowLevel}}</code></td>
+                    <td>Add the <code class="inline">.soft-shadow-{{shadowLevel}}</code> class to an element to give it a soft shadow (diffusion amount: {{shadowLevel}}).</td>
+                    <td class="text-center"><span class="soft-shadow-{{shadowLevel}} bg-light" style="display: inline-block; height: 100px; width: 100px;"></span></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
