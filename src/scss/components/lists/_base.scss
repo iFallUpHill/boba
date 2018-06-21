@@ -12,6 +12,18 @@ ul, ol {
 		padding-left: 0.2rem;
 		margin: 0 0 0.25rem;
 	}
+
+    &.inverted-bullets {
+        list-style-type: circle;
+    }
+
+    &.square-bullets {
+        list-style-type: square;
+    }
+
+    &.no-bullets {
+        list-style-type: none;
+    }
 }
 
 ul {
