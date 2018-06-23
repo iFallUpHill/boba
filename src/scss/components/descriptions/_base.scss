@@ -1,0 +1,30 @@
+dl {
+    margin: 0 0 1rem;
+
+    > dt {
+
+    }
+
+    > dd {
+        margin-left: 0;
+
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &.indented {
+        > dd {
+            padding-left: 2em;
+        }
+    }
+
+    &.dividers {
+        > dd {
+            &:not(:last-child) {
+                padding-bottom: 1rem;
+                border-bottom: $color-light 1px solid;
+            }
+        }
+    }
+}
