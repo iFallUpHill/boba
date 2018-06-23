@@ -1,6 +1,6 @@
 <!DOCTYPE html><html><head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-        <title>Shapes | Build with Boba</title>
+        <title>Descriptions | Build with Boba</title>
         <meta name="description" content="A lightweight, modular, CSS-only design framework.">        
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:400,600|Muli:300,400,700">
         <link rel="stylesheet" href="/boba-extended.min.css">
@@ -89,8 +89,8 @@
 			</div>
 		</div>
 		<div class="collapsible">
-			<input type="checkbox" class="collapsible-toggle" id="elements" name="collapsible-checkbox">
-			<label class="collapsible-header " for="elements">
+			<input type="checkbox" class="collapsible-toggle" id="elements" name="collapsible-checkbox" checked>
+			<label class="collapsible-header bold" for="elements">
 				Elements
 			</label>
 			<div class="collapsible-body">
@@ -99,7 +99,7 @@
 					<li class=""><a href="/docs/buttons.html">Buttons</a></li>
 					<li class=""><a href="/docs/code.html">Code</a></li>
 					<li class=""><a href="/docs/counters.html">Counters</a></li>
-					<li class=""><a href="/docs/descriptions.html">Descriptions</a></li>
+					<li class="bold"><a href="/docs/descriptions.html">Descriptions</a></li>
 					<li class=""><a href="/docs/dividers.html">Dividers</a></li>
 					<li class=""><a href="/docs/labels.html">Labels</a></li>
 					<li class=""><a href="/docs/lists.html">Lists</a></li>
@@ -123,8 +123,8 @@
 			</div>
 		</div>
 		<div class="collapsible">
-			<input type="checkbox" class="collapsible-toggle" id="utilities" name="collapsible-checkbox" checked>
-			<label class="collapsible-header bold" for="utilities">
+			<input type="checkbox" class="collapsible-toggle" id="utilities" name="collapsible-checkbox">
+			<label class="collapsible-header " for="utilities">
 				Utilities
 			</label>
 			<div class="collapsible-body">
@@ -136,7 +136,7 @@
 					<li class=""><a href="/docs/flex.html">Flex</a></li>
 					<li class=""><a href="/docs/images.html">Images</a></li>
 					<li class=""><a href="/docs/shadows.html">Shadows</a></li>
-					<li class="bold"><a href="/docs/shapes.html">Shapes</a></li>
+					<li class=""><a href="/docs/shapes.html">Shapes</a></li>
 					<li class=""><a href="/docs/sizing.html">Sizing</a></li>
 					<li class=""><a href="/docs/spacing.html">Spacing</a></li>
 					<li class=""><a href="/docs/text.html">Text</a></li>
@@ -155,10 +155,10 @@
                 
 
 
-<div class="banner medium bg-orange">
+<div class="banner medium bg-purple">
 	<div class="banner-body text-left">
 		<div class="container">
-			<h1 class="header text-white">Utilities</h1>
+			<h1 class="header text-white">Elements</h1>
 			<h5 class="subheader thin text-white no-margin">Learn how to <span class="bold">build your website</span> with boba!</h5>
 		</div>
 	</div>
@@ -176,41 +176,40 @@
 
     <div class="row">
     <div class="col xs-12">
-        <h1 class="header">Shapes</h1>
-        <h5 class="subheader thin no-margin">Easily change the corners and shape of your components using these classes.</h5>
+        <h1 class="header">Descriptions</h1>
+        <h5 class="subheader thin">Semantically group related terms and details using description lists.</h5>
+        <div class="message blue">
+            <div class="message-header">
+                <p>Clarification</p>
+            </div>
+            <div class="message-body">
+                <p>The <span class="bold">description list</span> tag, <code class="inline">dl</code>, is used to define a definition list.</p>
+                <p>Add a <span class="bold">description term</span> tag, <code class="inline">dt</code>, to represent a term to be defined.</p>
+                <p>Use the <span class="bold">description details</span> tag, <code class="inline">dd</code>, after a <i>description term </i> to describe it. Note that a single definition may be used for multiple terms.</p>
+            </div>
+        </div>
     </div>
-    <div class="col xs-12 col-middle">
-        <table class="bordered">
-            <tbody>
-                <tr>
-                    <td rowspan="5"><span class="bold">Element Shapes
-                </span></td></tr>
-                <tr>
-                    <td><code class="inline">.shape-rounded</code></td>
-                    <td>Add the <code class="inline">.shape-rounded</code> class to round the corners of an element.</td>
-                    <td class="text-center"><span class="shape-rounded bg-light border-dark" style="display: inline-block; height: 50px; width: 50px;"></span></td>
-                </tr>
-                <tr>
-                    <td><code class="inline">.shape-no-radius</code></td>
-                    <td>Add the <code class="inline">.shape-no-radius</code> class to sharpen the corners of an element.</td>
-                    <td class="text-center"><span class="shape-no-radius bg-light border-dark" style="display: inline-block; height: 50px; width: 50px;"></span></td>
-                </tr>
-                <tr>
-                    <td><code class="inline">.shape-circular</code></td>
-                    <td>Add the <code class="inline">.shape-circular</code> class to make an element circular.</td>
-                    <td class="text-center"><span class="shape-circular bg-light border-dark" style="display: inline-block; height: 50px; width: 50px;"></span></td>
-                </tr>
-                <tr>
-                    <td><code class="inline">.shape-pill</code></td>
-                    <td>Add the <code class="inline">.shape-pill</code> class to make an element pill-shaped.</td>
-                    <td class="text-center"><span class="shape-pill bg-light border-dark" style="display: inline-block; height: 25px; width: 50px;"></span></td>
-                </tr>
-            </tbody>
-        </table>
+    <div class="col xs-12 md-6 col-middle">
+        <dl>
+            <dt>Description Term 1</dt>
+            <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</dd>
+            <dt>Description Term 2</dt>
+            <dt>Description Term 3</dt>
+            <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</dd>
+            <dt>Description Term 4</dt>
+            <dt>Description Term 5</dt>
+            <dt>Description Term 6</dt>
+            <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</dd>
+        </dl>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <div class="code-block">
+            <pre class="code"><code class="language-html prism"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>green<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> Green <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span></code></pre>
+        </div>
     </div>
 </div>
 
-
+    
 
                     </div>
                 </div>
