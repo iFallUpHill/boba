@@ -76,6 +76,6 @@ gulp clean && gulp build --prod
 * `--docs` // Includes the documentation CSS / nunjuck processes in the build
 * `--highlight` // Applies syntax highlighting to code blocks in the documentation
 * `--rebuildShowcase` // Regenerates the showcase screenshots
-* `--version` // Accepts 'major', 'minor', and 'patch' as values; used to specify the documentation version target corresponding to an npm version increment
+* `--updateType` // Accepts 'major', 'minor', and 'patch' as values; used to specify the documentation version target corresponding to an npm version increment
 * `--nomin` // Stops minification of files; useful for debugging
 * `--buildall` // Builds all versions of the framework

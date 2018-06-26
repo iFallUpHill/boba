@@ -16,7 +16,7 @@ const gulp    = require('gulp'),
                 rebuildShowcase: argv.rebuildShowcase ? true : false,
 				minify: argv.nomin ? false : true,
 				buildAll: argv.buildall ? true : false,
-				version: validTags.includes(argv.version) ? argv.version : false
+				version: validTags.includes(argv.updateType) ? argv.updateType : false
 	  		},
 			src: {
 				html: 'src/**/*.html',
