@@ -2,7 +2,7 @@
 $header-font-weight:            $base-font-weight-semi-bold !default;
 $header-font-weight-light:      $base-font-weight-default !default;
 $header-vertical-margin:        0.5rem;
-$header-text-color:               $color-black !default;
+$header-text-color:             $color-black !default;
 $body-text-color:               $color-black !default;
 
 $h1-font-size: 2.25rem;
@@ -127,8 +127,16 @@ h6, .h6 {
     font-weight: $base-font-weight-bold;
 }
 
+.normal {
+    font-weight: $base-font-weight-default;
+}
+
 .thin {
     font-weight: $base-font-weight-light;
+}
+
+.italic {
+    font-style: italic;
 }
 
 $alignment-list:
