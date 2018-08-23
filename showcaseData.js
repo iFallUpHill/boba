@@ -23,12 +23,6 @@ const websiteList = [
         "screenshotUrl": "http://metaggregator.jasonmh.me",
         "screenshotName": "metaggregator",
     },
-    {
-        "name": "Thomas Broadley",
-        "url": "https://thomasbroadley.com/",
-        "screenshotUrl": "https://thomasbroadley.com/",
-        "screenshotName": "thomasbroadley",
-    },
 ];
 
 module.exports = {
