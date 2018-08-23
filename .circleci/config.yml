@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/boba
     docker:
-      - image: circleci/node:9.11.1
+      - image: circleci/node:10.9.0
     steps:
       - checkout
       - restore_cache:
@@ -18,7 +18,7 @@ jobs:
   test:
     working_directory: ~/boba
     docker:
-      - image: circleci/node:9.11.1
+      - image: circleci/node:10.9.0
     steps:
       - checkout
       - run:
@@ -28,7 +28,7 @@ jobs:
   deployment:
     working_directory: ~/boba
     docker:
-      - image: circleci/node:9.11.1
+      - image: circleci/node:10.9.0
     steps:
       - checkout
       - add_ssh_keys
@@ -47,7 +47,7 @@ jobs:
   deploy_success:
     working_directory: ~/boba
     docker:
-      - image: circleci/node:9.11.1
+      - image: circleci/node:10.9.0
     steps:
       - checkout
       - add_ssh_keys
