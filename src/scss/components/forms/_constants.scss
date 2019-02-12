@@ -16,3 +16,6 @@ $clickable-label-offset: 0.75rem;
 $form-size-list: (large, $form-font-size-default + 0.4em, $form-height-default + 0.4em, $form-padding-default + 0.4em),
                   (medium, $form-font-size-default + 0.2em, $form-height-default + 0.2em, $form-padding-default + 0.2em),
                   (small, $form-font-size-default - 0.2em, $form-height-default - 0.2em, $form-padding-default - 0.2em);
+
+$toggle-background-color: $color-default-fill;
+$toggle-handle-transition: left 0.15s ease-in-out;

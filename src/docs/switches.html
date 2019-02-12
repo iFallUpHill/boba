@@ -1,0 +1,16 @@
+{% extends "templates/docs/layout.njk" %}
+{% set page_title ="Switches" %}
+{% set active_accordion ="forms" %}
+{% set active_page ="switches" %}
+
+{% block main %}
+
+    {% include "templates/docs/switches/switches.njk" %}
+    <hr class="light" /> 
+    {% include "templates/docs/switches/sizes.njk" %}
+    <hr class="light" /> 
+    {% include "templates/docs/switches/states.njk" %}
+    <hr class="light" /> 
+    {% include "templates/docs/switches/colors.njk" %}
+
+{% endblock %}

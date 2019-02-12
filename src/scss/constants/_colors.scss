@@ -15,6 +15,9 @@ $color-light: #EAEAEA;
 $color-black: #252627;
 $color-white: #FFFFFF;
 
+// Default for filling in bars / pills (e.g. progress, toggles, etc.)
+$color-default-fill: #e9ecef;
+
 $color-list: 	(blue, $color-blue),
 				(green, $color-green),
 				(yellow, $color-yellow),

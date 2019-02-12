@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col xs-12">
+        <h1 class="header">Colors</h1>
+        <h5 class="subheader thin no-margin">Change the color of your switches using boba's vibrant <a href="./colors.html">color palette</a>.</h5>
+    </div>
+    <div class="col xs-12 md-6">
+        <form class="form-control" action="#" method="post">
+            {% for color in global_color_list_core %}
+            <div class="switch {{ color }}">
+                <input type="checkbox" id="example-switch-{{ color }}" class="switch-input" checked>
+                <label for="example-switch-{{ color }}" class="switch-label">
+                    {{ color | capitalize }} Switch
+                </label>
+            </div>
+            {% endfor %}
+    	</form>
+    </div>
+    <div class="col xs-12 md-6 col-middle">
+        <div class="code-block">
+            <pre class="code"><code class="language-html">&lt;form class="form-control" action="#" method="post"&gt;
+    &lt;div class="switch green"&gt;
+        &lt;input type="checkbox" id="example-switch-green" class="switch-input" checked&gt;
+        &lt;label for="example-switch-green" class="switch-label"&gt;
+            Green Switch
+        &lt;/label&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+    </div>
+</div>

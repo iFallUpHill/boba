@@ -99,5 +99,24 @@
                 }
             }
         }
+
+        .switch.#{$colorName} {
+            input[type="checkbox"] {
+                &:checked {
+                    + label {
+                        &:before {
+                            background: #{$color};
+                        }
+                    }   
+                }
+                
+                &[disabled] {
+                    &:checked + label:before {
+                        background: lighten-2($color);
+                        border-color: lighten-2($color);
+                    }
+                }
+            }
+        }
     }
 }

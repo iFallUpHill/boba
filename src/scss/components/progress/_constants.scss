@@ -1,7 +1,7 @@
 $progress-font-size-default: 0.7em;
 $progress-height-default: 1.6em;
 $progress-border-radius-default: $base-border-radius-default;
-$progess-bar-background-color: #e9ecef;
+$progess-bar-background-color: $color-default-fill;
 
 $progress-sizing-list: (large, $progress-font-size-default + 0.4em, $progress-height-default + 0.4em, $progress-border-radius-default + 0.8),
                                           (medium, $progress-font-size-default + 0.2em, $progress-height-default + 0.2em, $progress-border-radius-default + 0.4),

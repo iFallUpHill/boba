@@ -1,6 +1,6 @@
 <!DOCTYPE html><html><head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-        <title>Checkboxes | Build with Boba</title>
+        <title>Switches | Build with Boba</title>
         <meta name="description" content="A lightweight, modular, CSS-only design framework.">        
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:400,600|Muli:300,400,700">
         <link rel="stylesheet" href="/boba-extended.min.css">
@@ -114,11 +114,11 @@
 			</label>
 			<div class="collapsible-body">
 				<ul class="collapsible-submenu">
-					<li class="bold"><a href="/docs/checkboxes.html">Checkboxes</a></li>
+					<li class=""><a href="/docs/checkboxes.html">Checkboxes</a></li>
 					<li class=""><a href="/docs/inputs.html">Inputs</a></li>
 					<li class=""><a href="/docs/radios.html">Radios</a></li>
 					<li class=""><a href="/docs/selects.html">Selects</a></li>
-					<li class=""><a href="/docs/switches.html">Switches</a></li>
+					<li class="bold"><a href="/docs/switches.html">Switches</a></li>
 					<li class=""><a href="/docs/textareas.html">Textareas</a></li>
 				</ul>
 			</div>
@@ -177,8 +177,8 @@
 
     <div class="row">
     <div class="col xs-12">
-        <h1 class="header">Checkboxes</h1>
-        <h5 class="subheader thin">Checkboxes let users select individual form items.</h5>
+        <h1 class="header">Switches</h1>
+        <h5 class="subheader thin">Switches let users toggle between enabled and disabled states for a particular setting or option.</h5>
         <div class="message purple m-0">
             <div class="message-header">
                 <p>Compatibility</p>
@@ -191,22 +191,22 @@
     </div>
     <div class="col xs-12 md-6 col-middle">
         <form class="form-control" action="#" method="post">
-            <div class="checkbox">
-                <input type="checkbox" id="example-checkbox-1" class="checkbox-input" checked>
-                <label for="example-checkbox-1" class="checkbox-label">
-                    First Checkbox
+            <div class="switch">
+                <input type="checkbox" id="example-switch-1" class="switch-input" checked>
+                <label for="example-switch-1" class="switch-label">
+                    First Switch
                 </label>
             </div>
-            <div class="checkbox">
-                <input type="checkbox" id="example-checkbox-2" class="checkbox-input" checked>
-                <label for="example-checkbox-2" class="checkbox-label">
-                    Second Checkbox
+            <div class="switch">
+                <input type="checkbox" id="example-switch-2" class="switch-input" checked>
+                <label for="example-switch-2" class="switch-label">
+                    Second Switch
                 </label>
             </div>
-            <div class="checkbox">
-                <input type="checkbox" id="example-checkbox-3" class="checkbox-input" checked>
-                <label for="example-checkbox-3" class="checkbox-label">
-                    Third Checkbox
+            <div class="switch">
+                <input type="checkbox" id="example-switch-3" class="switch-input">
+                <label for="example-switch-3" class="switch-label">
+                    Third Switch
                 </label>
             </div>
         </form>
@@ -214,24 +214,24 @@
     <div class="col xs-12 md-6 col-middle">
         <div class="code-block">
             <pre class="code"><code class="language-html prism"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>form-control<span class="token punctuation">"</span></span> <span class="token attr-name">action</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">method</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>post<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>example-checkbox-1<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox-input<span class="token punctuation">"</span></span> <span class="token attr-name">checked</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>example-checkbox-1<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox-label<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-            First Checkbox
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>switch<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>example-switch-1<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>switch-input<span class="token punctuation">"</span></span> <span class="token attr-name">checked</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>example-switch-1<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>switch-label<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            First Switch
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>example-checkbox-2<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox-input<span class="token punctuation">"</span></span> <span class="token attr-name">checked</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>example-checkbox-2<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox-label<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-            Second Checkbox
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>switch<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>example-switch-2<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>switch-input<span class="token punctuation">"</span></span> <span class="token attr-name">checked</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>example-switch-2<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>switch-label<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            Second Switch
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>example-checkbox-3<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox-input<span class="token punctuation">"</span></span> <span class="token attr-name">checked</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>example-checkbox-3<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox-label<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-            Third Checkbox
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>switch<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>example-switch-3<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>switch-input<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>example-switch-3<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>switch-label<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            Third Switch
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span></code></pre>
@@ -243,32 +243,32 @@
     <div class="row">
     <div class="col xs-12">
         <h1 class="header">Sizes</h1>
-        <h5 class="subheader thin no-margin">Checkboxes can be resized.</h5>
+        <h5 class="subheader thin no-margin">Switches can be resized.</h5>
     </div>
     <div class="col xs-12 md-6 col-middle">
         <form class="form-control" action="#" method="post">
             <div class="checkbox small">
                 <input type="checkbox" id="example-checkbox-small" class="checkbox-input" checked>
                 <label for="example-checkbox-small" class="checkbox-label">
-                    Small Checkbox
+                    Small Switch
                 </label>
             </div>
             <div class="checkbox default">
                 <input type="checkbox" id="example-checkbox-default" class="checkbox-input" checked>
                 <label for="example-checkbox-default" class="checkbox-label">
-                    Default Checkbox
+                    Default Switch
                 </label>
             </div>
             <div class="checkbox medium">
                 <input type="checkbox" id="example-checkbox-medium" class="checkbox-input" checked>
                 <label for="example-checkbox-medium" class="checkbox-label">
-                    Medium Checkbox
+                    Medium Switch
                 </label>
             </div>
             <div class="checkbox large">
                 <input type="checkbox" id="example-checkbox-large" class="checkbox-input" checked>
                 <label for="example-checkbox-large" class="checkbox-label">
-                    Large Checkbox
+                    Large Switch
                 </label>
             </div>
         </form>
@@ -311,20 +311,20 @@
     <div class="row">
     <div class="col xs-12">
         <h1 class="header">States</h1>
-        <h5 class="subheader thin no-margin">Checkboxes can be disabled using the <code class="inline">disabled</code> attribute.</h5>
+        <h5 class="subheader thin no-margin">Switches can be disabled using the <code class="inline">disabled</code> attribute.</h5>
     </div>
     <div class="col xs-12 md-6 col-middle">
         <form class="form-control" action="#" method="post">
-            <div class="checkbox">
-                <input type="checkbox" id="example-checkbox-checked-disabled" class="checkbox-input" checked disabled>
-                <label for="example-checkbox-checked-disabled" class="checkbox-label">
-                    Disabled Checked Checkbox
+            <div class="switch">
+                <input type="checkbox" id="example-switch-checked-disabled" class="switch-input" checked disabled>
+                <label for="example-switch-checked-disabled" class="switch-label">
+                    Disabled Checked Switch
                 </label>
             </div>
-            <div class="checkbox">
-                <input type="checkbox" id="example-checkbox-unchecked-disabled" class="checkbox-input" disabled>
-                <label for="example-checkbox-unchecked-disabled" class="checkbox-label">
-                    Disabled Unchecked Checkbox
+            <div class="switch">
+                <input type="checkbox" id="example-switch-unchecked-disabled" class="switch-input" disabled>
+                <label for="example-switch-unchecked-disabled" class="switch-label">
+                    Disabled Unchecked Switch
                 </label>
             </div>
         </form>
@@ -332,17 +332,16 @@
     <div class="col xs-12 md-6 col-middle">
         <div class="code-block">
             <pre class="code"><code class="language-html prism"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>form-control<span class="token punctuation">"</span></span> <span class="token attr-name">action</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">method</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>post<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>example-checkbox-checked-disabled<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox-input<span class="token punctuation">"</span></span> <span class="token attr-name">checked</span> <span class="token attr-name">disabled</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>example-checkbox-checked-disabled<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox-label<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-            Disabled Checked Checkbox
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>switch<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>example-switch-checked-disabled<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>switch-input<span class="token punctuation">"</span></span> <span class="token attr-name">checked</span> <span class="token attr-name">disabled</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>example-switch-checked-disabled<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>switch-label<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            Disabled Checked Switch
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-    
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>example-checkbox-unchecked-disabled<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox-input<span class="token punctuation">"</span></span> <span class="token attr-name">disabled</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>example-checkbox-unchecked-disabled<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox-label<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-            Disabled Unchecked Checkbox
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>switch<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>example-switch-unchecked-disabled<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>switch-input<span class="token punctuation">"</span></span> <span class="token attr-name">disabled</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>example-switch-unchecked-disabled<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>switch-label<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            Disabled Unchecked Switch
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span></code></pre>
@@ -354,71 +353,71 @@
     <div class="row">
     <div class="col xs-12">
         <h1 class="header">Colors</h1>
-        <h5 class="subheader thin no-margin">Change the color of your checkboxes using boba's brilliant <a href="./colors.html">color palette</a>.</h5>
+        <h5 class="subheader thin no-margin">Change the color of your switches using boba's vibrant <a href="./colors.html">color palette</a>.</h5>
     </div>
     <div class="col xs-12 md-6">
         <form class="form-control" action="#" method="post">
             
-            <div class="checkbox red">
-                <input type="checkbox" id="example-checkbox-red" class="checkbox-input" checked>
-                <label for="example-checkbox-red" class="checkbox-label">
-                    Red Checkbox
+            <div class="switch red">
+                <input type="checkbox" id="example-switch-red" class="switch-input" checked>
+                <label for="example-switch-red" class="switch-label">
+                    Red Switch
                 </label>
             </div>
             
-            <div class="checkbox orange">
-                <input type="checkbox" id="example-checkbox-orange" class="checkbox-input" checked>
-                <label for="example-checkbox-orange" class="checkbox-label">
-                    Orange Checkbox
+            <div class="switch orange">
+                <input type="checkbox" id="example-switch-orange" class="switch-input" checked>
+                <label for="example-switch-orange" class="switch-label">
+                    Orange Switch
                 </label>
             </div>
             
-            <div class="checkbox yellow">
-                <input type="checkbox" id="example-checkbox-yellow" class="checkbox-input" checked>
-                <label for="example-checkbox-yellow" class="checkbox-label">
-                    Yellow Checkbox
+            <div class="switch yellow">
+                <input type="checkbox" id="example-switch-yellow" class="switch-input" checked>
+                <label for="example-switch-yellow" class="switch-label">
+                    Yellow Switch
                 </label>
             </div>
             
-            <div class="checkbox green">
-                <input type="checkbox" id="example-checkbox-green" class="checkbox-input" checked>
-                <label for="example-checkbox-green" class="checkbox-label">
-                    Green Checkbox
+            <div class="switch green">
+                <input type="checkbox" id="example-switch-green" class="switch-input" checked>
+                <label for="example-switch-green" class="switch-label">
+                    Green Switch
                 </label>
             </div>
             
-            <div class="checkbox teal">
-                <input type="checkbox" id="example-checkbox-teal" class="checkbox-input" checked>
-                <label for="example-checkbox-teal" class="checkbox-label">
-                    Teal Checkbox
+            <div class="switch teal">
+                <input type="checkbox" id="example-switch-teal" class="switch-input" checked>
+                <label for="example-switch-teal" class="switch-label">
+                    Teal Switch
                 </label>
             </div>
             
-            <div class="checkbox blue">
-                <input type="checkbox" id="example-checkbox-blue" class="checkbox-input" checked>
-                <label for="example-checkbox-blue" class="checkbox-label">
-                    Blue Checkbox
+            <div class="switch blue">
+                <input type="checkbox" id="example-switch-blue" class="switch-input" checked>
+                <label for="example-switch-blue" class="switch-label">
+                    Blue Switch
                 </label>
             </div>
             
-            <div class="checkbox indigo">
-                <input type="checkbox" id="example-checkbox-indigo" class="checkbox-input" checked>
-                <label for="example-checkbox-indigo" class="checkbox-label">
-                    Indigo Checkbox
+            <div class="switch indigo">
+                <input type="checkbox" id="example-switch-indigo" class="switch-input" checked>
+                <label for="example-switch-indigo" class="switch-label">
+                    Indigo Switch
                 </label>
             </div>
             
-            <div class="checkbox purple">
-                <input type="checkbox" id="example-checkbox-purple" class="checkbox-input" checked>
-                <label for="example-checkbox-purple" class="checkbox-label">
-                    Purple Checkbox
+            <div class="switch purple">
+                <input type="checkbox" id="example-switch-purple" class="switch-input" checked>
+                <label for="example-switch-purple" class="switch-label">
+                    Purple Switch
                 </label>
             </div>
             
-            <div class="checkbox pink">
-                <input type="checkbox" id="example-checkbox-pink" class="checkbox-input" checked>
-                <label for="example-checkbox-pink" class="checkbox-label">
-                    Pink Checkbox
+            <div class="switch pink">
+                <input type="checkbox" id="example-switch-pink" class="switch-input" checked>
+                <label for="example-switch-pink" class="switch-label">
+                    Pink Switch
                 </label>
             </div>
             
@@ -427,10 +426,10 @@
     <div class="col xs-12 md-6 col-middle">
         <div class="code-block">
             <pre class="code"><code class="language-html prism"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>form-control<span class="token punctuation">"</span></span> <span class="token attr-name">action</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">method</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>post<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox green<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>example-checkbox-green<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox-input<span class="token punctuation">"</span></span> <span class="token attr-name">checked</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>example-checkbox-green<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox-label<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-            Green Checkbox
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>switch green<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>example-switch-green<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>switch-input<span class="token punctuation">"</span></span> <span class="token attr-name">checked</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>example-switch-green<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>switch-label<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            Green Switch
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span></code></pre>
@@ -438,7 +437,7 @@
     </div>
 </div>
 
-    
+
 
                     </div>
                 </div>

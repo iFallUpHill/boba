@@ -26,7 +26,7 @@ module.exports = (gulp, config) => {
 				.pipe(gulpif(isDist, stripDebug()))
 				.pipe(eslint())
 				.pipe(eslint.format())
-				.pipe(babel({presets: ['env']}))
+				.pipe(babel({presets: ['@babel/preset-env']}))
 				.pipe(gulpif(isDist, uglify()))
 				.pipe(concat(config.dist.min_js_docs))
 				.pipe(gulpif(!isDist, sourcemaps.write()))

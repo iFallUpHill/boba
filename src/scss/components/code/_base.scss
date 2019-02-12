@@ -1,15 +1,25 @@
 @import 'constants';
 
-code {
+code, kbd, pre, samp {
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     font-size: 0.9em;
     line-height: 1.125;
+}
 
+code {
     &.inline {
         background: whitesmoke;
         color: darken-1($color-red);
         padding: 0.1em 0.3em;
         border-radius: $base-border-radius-default;
     }
+}
+
+kbd {
+    background: $color-dark;
+    border-radius: $base-border-radius-default;
+    color: $color-white;
+    padding: 0.1em 0.3em;
 }
 
 .code-block {
@@ -19,7 +29,6 @@ code {
         background: lighten($color-dark, 66%);
         border: 1px solid darken-1($color-light);
         border-radius: $code-border-radius;
-        font-size: 90%;
         white-space: nowrap;
     }
     pre {

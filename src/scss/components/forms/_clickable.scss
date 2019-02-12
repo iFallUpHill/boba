@@ -2,7 +2,7 @@
 @import 'styling';
 
 .form-control {
-    .checkbox, .radio {
+    .checkbox, .radio, .switch {
         display: block;
         position: relative;
         margin: 0 0 0.75em;
@@ -10,20 +10,17 @@
         box-sizing: initial;
     }
 
-    .checkbox input[type="checkbox"], .radio input[type="radio"] {
+    .checkbox input[type="checkbox"], .radio input[type="radio"], .switch input[type="checkbox"] {
         @include accessible-input;
 
         + label {
             display: inline-flex;
+            align-items: center;
             font-size: $form-font-size-default;
 
             &:before, &:after {
                 cursor: pointer;
             }
-        }
-
-        &:focus + label:before {
-            @include accessible-outlines;
         }
 
         &[disabled] {
@@ -37,8 +34,30 @@
                     cursor: not-allowed;
                 }
             }
+        }
+    }
 
+    .checkbox input[type="checkbox"], .radio input[type="radio"] {
+        &:focus + label:before {
+            @include accessible-outlines;
+        }
+
+        &[disabled] {
 			&:checked + label:before {
+				border-color: lighten($color-dark, 48%);
+			}
+        }
+    }
+
+    .switch input[type="checkbox"] {
+        &:focus + label:after {
+            @include accessible-outlines;
+        }
+
+        &[disabled] {
+            cursor: not-allowed;
+
+			&:checked + label:after {
 				border-color: lighten($color-dark, 48%);
 			}
         }
@@ -189,6 +208,55 @@
             }
         }
 
+    }
+
+    .switch {
+        input[type="checkbox"] {
+            + label {
+                // Background
+                &:before {
+                    content: "";
+                    height: 1.6rem;
+                    width: 3.2rem;
+                    border-radius: 1.6rem;
+                    margin-right: $clickable-label-offset;
+                    background: $toggle-background-color;
+                    transition: $clickable-background-transition, $clickable-border-transition, $clickable-color-transition;
+                }
+
+                // Handle
+                &:after {
+                    background: $color-white;
+                    position: absolute;
+                    border-radius: 50%;
+                    content: "";
+                    display: block;
+                    height: 1.3rem;
+                    width: 1.3rem;
+                    top: 0.13rem;
+                    left: 0.2rem;
+                    transition: $toggle-handle-transition;
+                }
+            }
+    
+            &:checked {
+                + label {
+                    &:before {
+                        background-color: $color-dark;
+                    }
+
+                    &:after {
+                        left: 1.7rem;
+                    }
+                }   
+            }
+			
+			&[disabled] {
+				&:checked + label:before {
+					background: lighten($color-dark, 48%);
+				}
+			}
+        }
     }
 
     @if $include-color-palette {
