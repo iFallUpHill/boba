@@ -13,9 +13,16 @@ $clickable-transform-transition: transform 0.15s ease-in-out;
 $clickable-input-size: 1em;
 $clickable-label-offset: 0.75rem;
 
+$switch-background-width: 2.4em;
+$switch-background-height: 1.3em;
+
+$switch-handle-size: 1em;
+$switch-handle-off-offset: 0.2em;
+$switch-handle-on-offset: 1.2em;
+
+$switch-background-color: $color-default-fill;
+$switch-handle-transition: left 0.15s ease-in-out;
+
 $form-size-list: (large, $form-font-size-default + 0.4em, $form-height-default + 0.4em, $form-padding-default + 0.4em),
                   (medium, $form-font-size-default + 0.2em, $form-height-default + 0.2em, $form-padding-default + 0.2em),
                   (small, $form-font-size-default - 0.2em, $form-height-default - 0.2em, $form-padding-default - 0.2em);
-
-$toggle-background-color: $color-default-fill;
-$toggle-handle-transition: left 0.15s ease-in-out;

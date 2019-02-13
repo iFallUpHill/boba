@@ -216,11 +216,11 @@
                 // Background
                 &:before {
                     content: "";
-                    height: 1.6rem;
-                    width: 3.2rem;
-                    border-radius: 1.6rem;
+                    height: $switch-background-height;
+                    width: $switch-background-width;
+                    border-radius: $rounded-border-radius;
                     margin-right: $clickable-label-offset;
-                    background: $toggle-background-color;
+                    background: $switch-background-color;
                     transition: $clickable-background-transition, $clickable-border-transition, $clickable-color-transition;
                 }
 
@@ -231,11 +231,10 @@
                     border-radius: 50%;
                     content: "";
                     display: block;
-                    height: 1.3rem;
-                    width: 1.3rem;
-                    top: 0.13rem;
-                    left: 0.2rem;
-                    transition: $toggle-handle-transition;
+                    height: $switch-handle-size;
+                    width: $switch-handle-size;
+                    left: $switch-handle-off-offset;
+                    transition: $switch-handle-transition;
                 }
             }
     
@@ -246,7 +245,7 @@
                     }
 
                     &:after {
-                        left: 1.7rem;
+                        left: $switch-handle-on-offset;
                     }
                 }   
             }
@@ -257,6 +256,13 @@
 				}
 			}
         }
+
+        @each $size, $fontSize in $form-size-list {
+            &.#{$size} {
+                font-size: $fontSize;
+            }
+        }
+
     }
 
     @if $include-color-palette {

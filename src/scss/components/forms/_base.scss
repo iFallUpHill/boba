@@ -3,58 +3,58 @@
 @import 'clickable';
 
 .form-control {
-
+    
 	label {
 		display: block;
 		font-size: 0.95em;
 	}	
-
+    
     // Includes textareas
     input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], input[type="color"], input[type="date"], select, textarea {
         @include form-component-base;
         background-color: $color-white;
         border: 1px solid $color-dark;
-
+        
         &::placeholder {
             opacity: 0.33;
             color: darken-3($color-dark);
         }
-
+        
         &[disabled] {
             cursor: not-allowed;
             background-color: lighten($color-dark, 48%);
             border-color: lighten($color-dark, 48%);
         }
-
+        
         
         @if $include-color-palette {
             @include form-colors;
         }
     }
-
+    
     // Excludes textareas
     input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], input[type="color"], input[type="date"], select {
         &.rounded {
             border-radius: $rounded-border-radius;
         }
     }
-
+    
     textarea {
         min-height: 4em;
         padding: $form-text-area-padding;
     }
-
+    
     .select-icon {
         @include select-icon-base;
     }
-
+    
     @each $size, $fontSize, $height, $rpadding in $form-size-list {
         input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], input[type="color"], input[type="date"], select, textarea {
             &.#{$size} {
                 font-size: $fontSize;
             }
         }
-
+        
         input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], input[type="color"], input[type="date"], select {
             &.#{$size} {
                 &.rounded {
