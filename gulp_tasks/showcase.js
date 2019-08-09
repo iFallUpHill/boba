@@ -80,8 +80,4 @@ module.exports = (gulp, config) => {
 				.pipe(browserSync.reload({stream: true}));
 		}
 	};
-
-	return () => {
-
-	}
 };

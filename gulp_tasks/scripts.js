@@ -14,7 +14,7 @@ module.exports = (gulp, config) => {
 	const isDist = config.flags.isDist;
 	const docs =  isDist ? true : config.flags.docs;
 
-	return () => {
+	return (done) => {
 		if (docs) {
 			gulp.src(config.src.js_docs)
 				.pipe(gulpif(!isDist, sourcemaps.init()))
@@ -33,5 +33,6 @@ module.exports = (gulp, config) => {
 				.pipe(gulp.dest(config.dist.js))
 				.pipe(browserSync.reload({stream: true}));
 		}
+		done();
 	};
 };

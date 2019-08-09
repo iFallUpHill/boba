@@ -18,7 +18,7 @@ module.exports = (gulp, config) => {
 	const minify =  isDist ? true : config.flags.minify;
 	const buildAll = isDist ? true : config.flags.buildAll;
 
-	return () => {
+	return (done) => {
 		// boba-extended.min.css
 		// Color helpers, Extended color helpers, Components have color variations
 		gulp.src(config.src.sass)
@@ -30,14 +30,7 @@ module.exports = (gulp, config) => {
 			}))
 			.pipe(sass())
 			.pipe(rename(config.dist.min_css_extended))
-			.pipe(autoprefixer( {
-					remove: false,
-					browsers: [
-						'last 2 versions',
-						'> 5%'
-					]
-				}
-			))
+			.pipe(autoprefixer())
 			.pipe(gulpif(minify, minifyCSS()))
 			.pipe(gulpif(!isDist, sourcemaps.write()))
 			.pipe(gulp.dest(config.dist.css))
@@ -54,14 +47,7 @@ module.exports = (gulp, config) => {
 				}))
 				.pipe(sass())
 				.pipe(rename(config.dist.min_css_docs))
-				.pipe(autoprefixer( {
-					remove: false,
-					browsers: [
-						'last 2 versions',
-						'> 5%'
-					]
-				}
-				))
+				.pipe(autoprefixer())
 				.pipe(gulpif(minify, minifyCSS()))
 				.pipe(gulpif(!isDist, sourcemaps.write()))
 				.pipe(gulp.dest(config.dist.css))
@@ -83,14 +69,7 @@ module.exports = (gulp, config) => {
 				}))
 				.pipe(sass())
 				.pipe(rename(config.dist.min_css_lite))
-				.pipe(autoprefixer( {
-					remove: false,
-					browsers: [
-						'last 2 versions',
-						'> 5%'
-					]
-				}
-				))
+				.pipe(autoprefixer())
 				.pipe(gulpif(minify, minifyCSS()))
 				.pipe(gulpif(!isDist, sourcemaps.write()))
 				.pipe(gulp.dest(config.dist.css))
@@ -108,18 +87,12 @@ module.exports = (gulp, config) => {
 				}))
 				.pipe(sass())
 				.pipe(rename(config.dist.min_css))
-				.pipe(autoprefixer( {
-					remove: false,
-					browsers: [
-						'last 2 versions',
-						'> 5%'
-					]
-				}
-				))
+				.pipe(autoprefixer())
 				.pipe(gulpif(minify, minifyCSS()))
 				.pipe(gulpif(!isDist, sourcemaps.write()))
 				.pipe(gulp.dest(config.dist.css))
 				.pipe(browserSync.reload({stream: true}))
 		}  
+		done();
 	};
 };
