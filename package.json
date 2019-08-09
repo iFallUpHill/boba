@@ -1,6 +1,6 @@
 {
     "name": "boba",
-    "version": "1.7.1",
+    "version": "1.7.2",
     "description": "A lightweight, modular, CSS-only framework.",
     "main": "index.js",
     "scripts": {
